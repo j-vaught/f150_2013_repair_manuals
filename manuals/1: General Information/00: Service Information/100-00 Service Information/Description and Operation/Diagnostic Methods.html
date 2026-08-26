@@ -1,0 +1,578 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="100-00" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="100-00 Service Information" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Description and Operation" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1369980" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>100-00 Service Information</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Description and Operation</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      10/05/2012</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Diagnostic Methods" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Diagnostic Methods
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('100-00','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Effective Diagnostic Techniques 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">The following diagnostic process is critical for consistently successful diagnoses. Random methods work inconsistently and often lead to multiple repairs and the accompanying frustration. 
+</p>
+      <ul type="disc" xmlns:str="http://xsltsl.org/string">
+        <li>
+          Understand and verify the <b>symptom</b>. 
+
+          <ul style="list-style-type: square">
+      <li>
+            Understanding a symptom requires understanding normal operation. 
+
+          </li>
+    </ul>
+          <ul style="list-style-type: square">
+      <li>
+            Duplicate the concern. Re-create the same conditions that demonstrated the original concern (road testing may be necessary). 
+
+          </li>
+    </ul>
+        </li>
+        <li>
+          Determine the responsible <b>system</b>. 
+
+          <ul style="list-style-type: square">
+      <li>
+            Gather data, such as a visual inspection and an OASIS report. 
+
+          </li>
+    </ul>
+          <ul style="list-style-type: square">
+      <li>
+            Perform system tests, such as pressure tests or DTC retrieval. 
+
+          </li>
+    </ul>
+        </li>
+        <li>
+          Identify the responsible <b>component</b>. 
+
+          <ul style="list-style-type: square">
+      <li>
+            Test the suspect component and related parts. 
+
+          </li>
+    </ul>
+        </li>
+        <li>
+          Determine the root <b>cause</b>
+          <ul style="list-style-type: square">
+      <li>
+            Examine related components (wiring faults, misalignments, incorrect adjustments) that may be the actual cause or may have caused the component failure. 
+
+          </li>
+    </ul>
+          <ul style="list-style-type: square">
+      <li>
+            Repair all related faults to avoid repeat failures. 
+
+          </li>
+    </ul>
+          <ul style="list-style-type: square">
+      <li>
+            Verify the repair has corrected the concern (and not created any new ones) using the identical conditions that demonstrated the original concern. 
+
+          </li>
+    </ul>
+        </li>
+      </ul>
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Diagnostic Scan Tool Testing 
+</b></p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Network Test 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">Performing a network test is always recommended for analysis of electronic system concerns. Always solve network issues before addressing individual symptoms or DTCs. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>Recommended Practice:</b> REFER to Symptom Chart in <a data-linkid="ID0ELD" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0ELD"></span> to diagnose a network outage or no response from an individual module (or modules). 
+</p>
+      
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>DTC Retrieval 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">Generally, a good diagnostic strategy is to resolve all on-demand codes related to the system concern. Retrieving all continuous DTCs can also be beneficial to understand historic issues or issues outside of the suspect system that may be affecting your concern. On-demand testing should be done to ensure the fault represented by a continuous DTC is still present. 
+</p>
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          Continuous Memory Diagnostic Trouble Codes (CMDTCs)
+      
+        </b></p>
+        <p xmlns:str="http://xsltsl.org/string">Modules that produce diagnostic trouble codes have a program that evaluates system conditions, normally while the vehicle or system is in use. Module inputs can be checked for values indicating an electrical fault with the monitoring circuit or component. Module outputs can be monitored for correct function. Codes are stored when predefined limits are exceeded and retained even if the ignition is turned off (generally DTC-retention is for 40+ ignition cycles). Not all continuous codes have a matching on-demand code - and vice versa; this varies with different modules. For example, some network communication codes are continuous only. It is important to note that the presence of a continuous DTC does not guarantee that the fault currently exists. 
+</p>
+      
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Ford On-Demand DTCs 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">Ford Motor Company modules have a unique feature that performs a special diagnostic program at the request of the technician (using a scan tool). This "On-demand" diagnostic program can exercise system outputs not normally running when the car is parked and record observed faults. These diagnostic codes are communicated to the scan tool; they are not recorded in module memory. An on-demand test is an effective tool for evaluating real input and output conditions during module activity – activity that might not normally be occurring during service bay conditions. For example, an air suspension module on-demand test can run the compressor, vent the system, and observe the report from the height sensor even when the car is already at correct trim height and not requiring height adjustment. 
+</p>
+      
+      <a name="procsub2_5" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Network Communication DTCs 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">Network DTCs (U-prefix codes) are often a result of intermittent concerns such as damaged wiring or low battery voltage occurrences. Additionally, vehicle repair procedures (such as module reprogramming or diagnostics with modules disconnected) often set network DTCs. Replacing a module to resolve a network DTC is unlikely to resolve the concern. To prevent recurrence of intermittent network concerns, inspect all network wiring, especially in-line and module connectors; test the vehicle battery. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>Recommended practice:</b> Clear the DTC and retest. If the DTC repeats, test the vehicle communication network. 
+</p>
+      
+      <a name="procsub2_6" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>DTC Nomenclature (SAE J2012 and ISO 14229) 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">Many modules use 5-character DTCs followed by a 2-character failure-type code. The failure-type (sometimes called "fault byte") digits provide information about specific fault conditions such as opens or shorts to ground. Continuous memory DTCs have an additional 2-character DTC status code suffix to assist in determining DTC history. 
+</p>
+      
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>
+        Integrated Diagnostic System (IDS)
+       Scan Tool Usage 
+</b></p>
+      <a name="procsub2_7" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>If The <abbr title="Integrated Diagnostic System">IDS</abbr>  Scan Tool Does Not Communicate With The <abbr title="Vehicle Communication Module">VCM</abbr> </b></p>
+        <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Check the <abbr title="Vehicle Communication Module">VCM</abbr>  power; examine the connection to the vehicle. 
+
+          <ul type="disc">
+      <li>
+            The <abbr title="Vehicle Communication Module">VCM</abbr>  LED illumination prove-out confirms power and ground from the <abbr title="Data Link Connector">DLC</abbr>  are provided to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            
+              <b>Recommended Practice:</b> REFER to <a data-linkid="ID0EIH" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EIH"></span>, No Power to the Scan Tool, to diagnose no power to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+          </li>
+    </ul>
+        </li>
+</ol>
+        <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Check the scan tool connection to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </li>
+</ol>
+        <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Follow scan tool instructions to retry. 
+
+        </li>
+</ol>
+      
+      <a name="procsub2_8" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>If The <abbr title="Integrated Diagnostic System">IDS</abbr>  Scan Tool Does Not Communicate With The Vehicle 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Integrated Diagnostic System">IDS</abbr>  scan tool first attempts to communicate with the PCM. After establishing communication with the PCM, the scan tool then attempts to communicate with all other modules on the vehicle. 
+</p>
+        <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Verify the scan tool operation with a known good vehicle. 
+
+        </li>
+</ol>
+        <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Verify the ignition is ON. 
+
+        </li>
+</ol>
+        <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If an <abbr title="Integrated Diagnostic System">IDS</abbr>  session cannot be established with the vehicle (<abbr title="Integrated Diagnostic System">IDS</abbr>  may state "No communication can be established with the PCM"): 
+
+          <ul type="disc">
+      <li>
+            Choose "NO" when the scan tool prompts to retry communication. 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            Enter either a PCM part number, tear tag, or calibration number to identify the vehicle and start a session. 
+
+            <ul style="list-style-type: square">
+          <li>
+              The PCM part number can be determined from <abbr title="On-Line Automotive Service Information System">OASIS</abbr>  -- choose “HVBoM” from the <abbr title="On-Line Automotive Service Information System">OASIS</abbr>  page and search for the PCM part number 
+
+            </li>
+        </ul>
+            <ul style="list-style-type: square">
+          <li>
+              The PCM part number and 4-character tear tag are printed on the PCM label. 
+
+            </li>
+        </ul>
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            Establish a session based on the PCM information (above). 
+
+          </li>
+    </ul>
+        </li>
+</ol>
+        <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Using the tool box menu, run the network test. 
+
+          <ul type="disc">
+      <li>
+            Determine if all modules on the network are unresponsive or if only the PCM does not communicate. 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            
+              <b>Recommended practice:</b> REFER to Symptom Chart in <a data-linkid="ID0ETDAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0ETDAC"></span> to diagnose the network outage or no response from the PCM. 
+
+          </li>
+    </ul>
+        </li>
+</ol>
+      
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Measuring Automotive Circuits 
+</b></p>
+      <a name="procsub2_9" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Wiring Pin (Terminal) Fit And The Use Of Rotunda Flex Probes 
+</b></p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            To avoid wiring pin (terminal) damage, Rotunda Flex Probes NUD105-R025D or equivalent must be used to connect test equipment or jumper wires to pins (terminals). 
+
+          </li>
+          <li>
+            Male to female pin (terminal) fit is critical for correct connection and durability. 
+
+            <ul style="list-style-type: square">
+      <li>
+              Pin (terminal) fit may be checked by using the mating pin (terminal) to test for normal separation force (a damaged pin or terminal will have very low separation force from the mating pin or terminal) 
+
+            </li>
+    </ul>
+            <ul style="list-style-type: square">
+      <li>
+              Correctly checking the separation force of small pins (terminals) may require removal of the connector terminal guide/retainer if it adds drag to the pin (terminal) insertion or removal 
+
+            </li>
+    </ul>
+          </li>
+          <li>
+            Replace damaged connectors or pins (terminals). 
+
+            <ul style="list-style-type: square">
+      <li>
+              Use the Wiring Diagram connector view (cell 150) to identify the correct replacement connector with pigtail. 
+
+            </li>
+    </ul>
+            <ul style="list-style-type: square">
+      <li>
+              Use the Wire Harness Terminal Repair Guide to identify and order the correct replacement pin and pigtail. Available through Ford Dealers, REFER to FMC dealer website, or REFER to <a target="_blank" href="http://www.fcs.dealerconnection.com/wire">www.fcs.dealerconnection.com/wire</a>. 
+
+            </li>
+    </ul>
+          </li>
+        </ul>
+      
+      <a name="procsub2_10" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Checking Power-Providing Circuits 
+</b></p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Measuring a power wire with the intended load disconnected using a <abbr title="Digital Multimeter">DMM</abbr>  will only find open circuits (open fuse or wire). 
+
+          </li>
+          <li>
+            
+              <b>Recommended practice:</b> Circuits carrying approximately 200-1000 mA* may be loaded with the specified test light SGT27000. Measure circuit voltage with a <abbr title="Digital Multimeter">DMM</abbr>  while the test light is connected and illuminated. A reduction in the voltage present during test-light-loading indicates excessive circuit resistance. 
+
+          </li>
+          <li>
+            
+              <b>Recommended practice:</b> Circuits carrying more than one ampere* should be loaded with a device requiring similar current (e.g., a headlamp bulb may be effective). A reduction in the voltage present during loading indicates excessive resistance. 
+
+          </li>
+          <li>
+            *Circuit current is matched to wire gauge/size; Examples: 
+
+            <ul style="list-style-type: square">
+      <li>
+              Conductor sizes of 24 gauge (.5 mm) or smaller are generally used to carry approximately 1 ampere (1000 mA) or less. Use of the test light to load these circuits is appropriate. 
+
+            </li>
+    </ul>
+            <ul style="list-style-type: square">
+      <li>
+              Conductor sizes of 20 gauge (.8 mm) or larger are generally used to carry approximately 5 amperes (5000 mA) or more. Match the substitute load (measure substitute load current first as necessary) to this current level. 
+
+            </li>
+    </ul>
+          </li>
+        </ul>
+      
+      <a name="procsub2_11" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Checking Ground-Providing Circuits 
+</b></p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            The best method of checking ground circuits is to measure the circuit voltage drop during component operation (or attempted operation). 
+
+          </li>
+          <li>
+            An ohmmeter may be accurately used if the battery has been disconnected. 
+
+          </li>
+          <li>
+            
+              <b>Recommended practice:</b> Expect less than 2 ohms for most small diameter (18 gauge and smaller) wires. 
+
+          </li>
+          <li>
+            Ohmmeter accuracy is limited to circuits carrying less than approximately 5 amperes (this is due to the fact that very small resistances, undetectable by a <abbr title="Digital Multimeter">DMM</abbr> , cause significant voltage loss in higher current circuits). 
+
+          </li>
+          <li>
+            
+              <abbr title="Digital Multimeter">DMM</abbr>  ohmmeter readings are easily corrupted by the normal voltage present (battery connected) in many ground circuits. 
+
+            <ul style="list-style-type: square">
+      <li>
+              
+                <b>Recommended practice:</b> Reverse the leads and check for changes in the measurement. Reversing the <abbr title="Digital Multimeter">DMM</abbr>  lead connections should never change the resistance measurement (unless the circuit contains a semi-conductor). Measurement (non-semi-conductor) differences when leads are interchanged at the test points indicate invalid test results. The presence of voltage corrupts the reading, and causes the meter reading to change when the leads are reversed. 
+
+            </li>
+    </ul>
+          </li>
+        </ul>
+      
+      <a name="procsub2_12" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Checking Circuit Continuity 
+</b></p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            
+              <b>Recommended practice:</b> Expect less than 2 ohms of resistance for most wires. 
+
+          </li>
+          <li>
+            Ohmmeter low-resistance resolution (approximately 0.1 ohm) limits its use to circuits carrying less than approximately 5 amperes. This is due to the fact that very small resistances, below the resolution of a <abbr title="Digital Multimeter">DMM</abbr> , cause significant voltage loss in higher current circuits. 
+
+          </li>
+          <li>
+            The <abbr title="Digital Multimeter">DMM</abbr>  applies a small amount of voltage to the circuit or component to calculate resistance. As a result, <abbr title="Digital Multimeter">DMM</abbr>  ohmmeters are very sensitive to any level of voltage present. Voltage present in the circuit will corrupt the <abbr title="Digital Multimeter">DMM</abbr>  reading. 
+
+          </li>
+        </ul>
+      
+      <a name="procsub2_13" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Checking For Unintended Continuity (Shorts) To Other Circuits 
+</b></p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            A <abbr title="Digital Multimeter">DMM</abbr>  ohmmeter may be used to detect undesired circuit connections to: 
+
+            <ul style="list-style-type: square">
+      <li>
+              Ground 
+
+            </li>
+    </ul>
+            <ul style="list-style-type: square">
+      <li>
+              Other unpowered circuits 
+
+            </li>
+    </ul>
+          </li>
+          <li>
+            
+              <b>Recommended practice:</b> Expect greater than 10,000 ohms of resistance between two separate circuits; the best result is an open circuit <abbr title="Digital Multimeter">DMM</abbr>  ohmmeter indication (no detected resistance). 
+
+          </li>
+          <li>
+            Shorts to voltage are checked with a <abbr title="Digital Multimeter">DMM</abbr>  voltmeter 
+
+          </li>
+          <li>
+            
+              <b>Recommended practice:</b> Turn ignition on (with battery connected) and measure the circuit for any voltage present (none should be present) 
+
+          </li>
+        </ul>
+      
+      <a name="procsub2_14" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Checking Circuits By Back-Probing A Connector 
+</b></p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Back-probing should be a testing method of last resort. It should only be employed where a diagnostic step requires a circuit to be tested under actual operating conditions. Back-probing is a risky testing method due to the uncertainty of the probe connection and the possibility of damaging terminals. 
+
+          </li>
+          <li>
+            Do not force test leads or other probes into connectors. Adequate care must be exercised to avoid connector terminal damage while ensuring that good electrical contact is made with the circuit or terminal. Failure to follow these instructions may cause damage to wiring, terminals, or connectors and subsequent electrical faults. 
+
+            <ul style="list-style-type: square">
+      <li>
+              Use Rotunda Back-Probe Pins POMA6411 to assist in making a good test connection and to prevent connector or terminal damage during back-probing. 
+
+            </li>
+    </ul>
+          </li>
+          <li>
+            Do not test for the presence of voltage at a single point where zero volts is a possible result (you cannot tell the difference between a bad probe contact and a zero volt result). 
+
+          </li>
+          <li>
+            Do not test for continuity/opens (using a <abbr title="Digital Multimeter">DMM</abbr>  ohmmeter) between two points (you cannot tell the difference between bad probe contacts and an open circuit). 
+
+          </li>
+          <li>
+            Back-probing may be used where the circuit must be analyzed with the voltage-drop method (if the circuit carries greater than 5 amperes and no other means of testing will definitively eliminate circuit resistance as a possible fault). A zero-volt result indicates incorrect test conditions (no current flow) or bad back-probe connections. 
+
+          </li>
+          <li>
+            Occasionally, module failure mode behavior will change the operation of a circuit when it is opened for testing. Back-probing is an acceptable remedy for these testing dilemmas. 
+
+          </li>
+        </ul>
+      
+      <a name="procsub2_15" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Circuit Analysis Using Jumper Wires (Creating Substitute Circuits) 
+</b></p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Jumper wires may be employed for circuit analysis. 
+
+          </li>
+          <li>
+            
+              <b>Cautions: </b>
+            
+            <ul style="list-style-type: square">
+      <li>
+              Always use fused jumper wires — the recommended universal-testing jumper wire fuse is 2-5 amperes; larger fuse ratings should be used only in special circumstances. 
+
+            </li>
+    </ul>
+            <ul style="list-style-type: square">
+      <li>
+              Use flex probes or equivalent to prevent connector terminal damage (flex probes are not intended to carry higher currents necessary to operate motors such as a cooling fan or blower motor). 
+
+            </li>
+    </ul>
+            <ul style="list-style-type: square">
+      <li>
+              Follow workshop manual testing directions when using jumper wires to avoid component or harness damage due to incorrect jumper connections. 
+
+            </li>
+    </ul>
+            <ul style="list-style-type: square">
+      <li>
+              Never repair a circuit by adding a new wire in parallel to the old one (overlaying the circuit) without fully understanding what caused the circuit to fail. Always find, examine, and repair the fault to correct the root cause and to repair any adjacent wiring that has been damaged. 
+
+            </li>
+    </ul>
+          </li>
+        </ul>
+      
+      <a name="procsub2_16" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Checking Modules 
+</b></p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Generally, module failure rate is very low and therefore replacement modules usually do not resolve the root cause. Incorrect replacement of a module is often the result of inadequate testing. 
+
+            <ul style="list-style-type: square">
+      <li>
+              Understand the correct module function. 
+
+            </li>
+    </ul>
+            <ul style="list-style-type: square">
+      <li>
+              Make sure programmable parameters are set correctly for the function in question (see the list in <a data-linkid="ID0EOAAE" data-sectnum="418-01" class="section-link">Section 
+          418-01</a><span id="spanID0EOAAE"></span>). 
+
+            </li>
+    </ul>
+            <ul style="list-style-type: square">
+      <li>
+              Resolve DTCs first — as directed by Diagnostic Routines. 
+
+            </li>
+    </ul>
+            <ul style="list-style-type: square">
+      <li>
+              Test all inputs, both hard-wired and networked. 
+
+            </li>
+    </ul>
+            <ul style="list-style-type: square">
+      <li>
+              Test outputs (see "Checking module switching circuits" below). 
+
+            </li>
+    </ul>
+            <ul style="list-style-type: square">
+      <li>
+              Check applicable TSBs for module software changes (flash programming). 
+
+            </li>
+    </ul>
+          </li>
+          <li>
+            Checking module switching circuits. 
+
+            <ul style="list-style-type: square">
+      <li>
+              Using the scan tool module-output command function (e.g., <abbr title="Integrated Diagnostic System">IDS</abbr>  Output State Control) to activate components is a fast way to confirm an output is capable of being switched on by the module. Testing that reveals normal module-output function confirms the need to analyze the module inputs. 
+
+            </li>
+    </ul>
+            <ul style="list-style-type: square">
+      <li>
+              Don't apply ground or power directly to module-switched components with jumper wires (unless directed by a workshop manual procedure), as the component can be damaged by a direct connection to ground/power. 
+
+            </li>
+    </ul>
+          </li>
+        </ul>
+      
+    
+  
+
+
