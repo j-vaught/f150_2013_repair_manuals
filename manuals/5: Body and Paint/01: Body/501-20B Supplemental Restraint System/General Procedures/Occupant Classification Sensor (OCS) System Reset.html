@@ -1,0 +1,298 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="501-20B" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="501-20B Supplemental Restraint System" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="General Procedures" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1368551" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>501-20B Supplemental Restraint System</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>General Procedures</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      08/30/2012</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Occupant Classification Sensor (OCS) System Reset" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Occupant Classification Sensor (OCS) System Reset
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('501-20','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS)
+          <br>software with appropriate hardware, or equivalent scan tool 
+
+        </td>
+      </tr>
+    </table>
+    <p xmlns:str="http://xsltsl.org/string"><b><img src="/content/images/workshop/warning.jpg">WARNING: 
+      The following precautions must be taken before carrying out the following procedure on the front passenger seat:
+      <ul style="list-style-type: square">
+        <li>
+          Park the vehicle on level ground.
+        </li>
+        <li>
+          Make sure the occupant classification system (OCS) is stabilized at a temperature in the range of 5°C to 48°C (41°F to 118°F) and is not exposed to temperatures outside that range.
+        </li>
+        <li>
+          Make sure the front passenger seat is empty and dry.
+        </li>
+        <li>
+          Make sure the front passenger seat repair is complete and all attached components (head restraint, seat side shield) are correctly installed.
+        </li>
+        <li>
+          Make sure nothing is placed in the map pockets (if equipped) of the front passenger seat.
+        </li>
+        <li>
+          Make sure nothing is underneath the front passenger seat.
+        </li>
+        <li>
+          Make sure no non-factory installed items (seat covers, DVD screens) are on or contacting the front passenger seat. If any non-factory items were installed to the seat, remove the item(s) and communicate to the customer that any alteration/modification to the front passenger seat may affect performance of the OCS. Refer to the Owner's Literature.
+        </li>
+        <li>
+          Make sure the seat is correctly installed in the vehicle.
+        </li>
+      </ul>
+      Failure to follow these instructions may result in incorrect operation of the OCS and increases the risk of serious personal injury or death in a crash.
+    </b></p>
+    
+      <p xmlns:str="http://xsltsl.org/string"><b>After Deployment 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+        After installation of new <abbr title="Occupant Classification System">OCS</abbr>  system components and completion of <a data-linkid="ID0ECD" data-for="501-20B_s5p10964q0" data-procuid="n744910" class="expand-link">Inspection and Repair After a Supplemental Restraint System (SRS) Deployment</a><span id="spanID0ECD"></span>, the <abbr title="Occupant Classification System Module">OCSM</abbr>  will have DTCs stored in memory. These DTCs will clear after a successful System Reset. 
+
+      </i></p>
+      
+        <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Check that all steps have been carried out as outlined in the <a data-linkid="ID0EUD" data-for="501-20B_s5p10964q0" data-procuid="n744910" class="expand-link">Inspection and Repair After a Supplemental Restraint System (SRS) Deployment</a><span id="spanID0EUD"></span> procedure in this section. 
+
+        </li>
+</ol>
+      
+      
+        <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If no concerns are found, <b>proceed to Step 4 to carry out the System Reset</b>. 
+
+        </li>
+</ol>
+      
+    
+    
+      <p xmlns:str="http://xsltsl.org/string"><b>No Deployment 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+        After installation of new <abbr title="Occupant Classification System">OCS</abbr>  system components (seat track assembly or <abbr title="Occupant Classification System Module">OCSM</abbr> ), the <abbr title="Occupant Classification System Module">OCSM</abbr>  will have DTCs stored in memory. These DTCs will clear after a successful System Reset. 
+
+      </i></p>
+      
+        <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Carry out the <abbr title="Restraints Control Module">RCM</abbr>  self-test. If DTC B00A0:09 is retrieved on-demand, retrieve <abbr title="Occupant Classification System Module">OCSM</abbr>  DTCs. 
+
+          <ul type="disc">
+      <li>
+            If DTCs are retrieved on-demand in the <abbr title="Occupant Classification System Module">OCSM</abbr>  and <b>NO</b> new components have been installed, refer to the Occupant Classification System Module (OCSM)
+       DTC Chart for diagnostic direction. 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            If no DTCs are retrieved on-demand in the <abbr title="Occupant Classification System Module">OCSM</abbr> , CLEAR the DTC from the <abbr title="Restraints Control Module">RCM</abbr>  and carry out the System Reset. 
+
+          </li>
+    </ul>
+        </li>
+</ol>
+      
+    
+    
+      <p xmlns:str="http://xsltsl.org/string"><b>
+        <abbr title="Occupant Classification System">OCS</abbr>  System Reset 
+</b></p>
+      
+        <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Turn the ignition to the OFF position. 
+
+        </li>
+</ol>
+      
+      
+        
+        <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Prepare the passenger seat for a System Reset and make sure: 
+
+          <ul type="disc">
+      <li>
+            the <abbr title="Occupant Classification System">OCS</abbr>  weight sensor bolt harness connections are correct for each sensor at the correct locations. Refer to Wiring Diagrams cell 46 for schematic and connector information. Refer to the illustration for correct sensor location on the seat. 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            the seat wiring harnesses are routed and secured correctly and are not twisted, pinched, pulling down or pushing up on any seat component. Refer to Seat Wire Harness Routing in <a data-linkid="ID0EQAAC" data-sectnum="501-10" class="section-link">Section 
+          501-10</a><span id="spanID0EQAAC"></span>. 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            all seat fasteners have been tightened to specification as identified in the Workshop Manual. Refer to <a data-linkid="ID0E3AAC" data-sectnum="501-10" class="section-link">Section 
+          501-10</a><span id="spanID0E3AAC"></span>. 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            the seat track is correctly aligned (manual seat track) — check the seat track fastener hole alignment, lift the seat adjust bar to align the holes in the track bracket to the holes in the floor.
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            the seat is correctly installed in the vehicle. 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            the passenger safety belt buckle is unbuckled. 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            the front passenger seat is empty and there is nothing underneath the seat. Remove any items from the seat that were not factory installed. 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            the seat backrest is in the upright (vertical) position. 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            the seat is at the mid-point of the seat track travel. 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            the seat height is in its middle position (power seat only). 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            the hysteresis has been removed from the front passenger seat by firmly hitting the back of the seat head restraint 3 times. 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            the vehicle electrical system voltage is <b>below 18 volts and above 11.5 volts</b> before continuing with the <abbr title="Occupant Classification System">OCS</abbr>  System Reset. 
+
+          </li>
+    </ul>
+        </li>
+</ol>
+      <div class="indent3" xmlns:str="http://xsltsl.org/string"><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0132320&amp;w=250&amp;t=JPG" border="1" width="250"></div>
+      
+        <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Turn the ignition ON, <b>wait 8 seconds</b>. 
+
+        </li>
+</ol>
+      
+      
+        <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Carry out the <abbr title="Occupant Classification System">OCS</abbr>  System Reset. 
+
+          <ul type="disc">
+      <li>
+            If the System Reset was successful, carry out the Occupant Classification System (OCS)
+       Zero Seat Weight Test. Refer to <a data-linkid="ID0EHEAC" data-for="501-20B_s5p703774q0" data-procuid="n1368552" class="expand-link">Occupant Classification Sensor (OCS) System Zero Seat Weight Test</a><span id="spanID0EHEAC"></span> in this section. 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            If the System Reset was unsuccessful, <b>proceed to Step 8</b>. 
+
+          </li>
+    </ul>
+        </li>
+</ol>
+      
+      
+        <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          <p><b>NOTE: </b><i>
+            
+              <b>Do not install any new <abbr title="Occupant Classification System">OCS</abbr>  system components at this time. <abbr title="Occupant Classification System">OCS</abbr>  system components should only be installed when directed to do so.</b>
+            
+          </i></p>
+          Carry out the <abbr title="Occupant Classification System Module">OCSM</abbr>  self-test. 
+
+          <ul type="disc">
+      <li>
+            If DTC B00A0:54 is retrieved on-demand, refer to the DTC Charts for diagnostic direction of this DTC. 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            If any other DTCs are retrieved on-demand from the <abbr title="Occupant Classification System Module">OCSM</abbr> , <b>proceed to Step 9</b>. 
+
+          </li>
+    </ul>
+        </li>
+</ol>
+      
+      
+        <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Inspect all the items listed in <b>Step 5</b> for causes of an unsuccessful System Reset, repair as necessary. <b>Retest the system</b>. 
+
+        </li>
+</ol>
+      
+      
+        <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If the System Reset was successful, carry out the <a data-linkid="ID0EEHAC" data-for="501-20B_s5p703774q0" data-procuid="n1368552" class="expand-link">Occupant Classification Sensor (OCS) System Zero Seat Weight Test</a><span id="spanID0EEHAC"></span> in this section. 
+
+          <br>If the System Reset was unsuccessful, install a new passenger seat track assembly. For additional information, refer to <a data-linkid="ID0ELHAC" data-sectnum="501-10" class="section-link">Section 
+          501-10</a><span id="spanID0ELHAC"></span>. 
+
+        </li>
+</ol>
+      
+    
+  
+
+
