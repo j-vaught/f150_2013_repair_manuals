@@ -1,0 +1,556 @@
+<html><head></head><body><svg viewBox="0 0 1100 850" height="100%" width="100%" xmlns:xlink="http://www.w3.org/1999/xlink" id="svgDoc" xmlns="http://www.w3.org/2000/svg">
+  <title>ECAD ED2004003</title>
+  <desc>
+    <cellnumber>4</cellnumber>
+    <pagenumber>3</pagenumber>
+    <engineeringname>ENG_CDSID</engineeringname>
+    <modelyear>2013</modelyear>
+    <modelname>F150</modelname>
+    <qualifierlist>
+      <qualifier></qualifier>
+      <qualifier></qualifier>
+      <qualifier></qualifier>
+    </qualifierlist>
+    <authorcellname>DES_CDSID</authorcellname>
+    <author>CDSID</author>
+    <note></note>
+    <datetime></datetime>
+  </desc>
+  <g font-stretch="semi-condensed" style="fill:none" transform="translate(0, 0) scale(1.0)">
+    <g style="visibility:visible" id="Sheet_3">
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(36, 385) ">BN</text>
+      </g>
+      <rect x="1.98" y="11.239" fill="none" stroke="black" width="582.002" height="269"></rect>
+      <line fill="none" stroke="black" x1="80.978" y1="176.239" x2="97.978" y2="225.24"></line>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(56, 238) ">Reference to another</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(56, 250) ">Cell where circuit is</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(56, 262) ">also shown</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(54, 152) ">UNIT</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(54, 140) ">AUDIO</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(163, 131) ">C290B</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(162, 162) ">17</text>
+      </g>
+      <line fill="none" stroke="black" x1="312.977" y1="141.241" x2="169.977" y2="141.241"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="1051.98,161.238 1051.98,161.238 1051.98,141.241 1051.98,141.241   "></polyline>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="1061.982,166.238 1061.982,166.238 1039.982,166.238   "></polyline>
+      <rect x="1041.98" y="126.24" fill="none" stroke="black" width="29.992" height="50"></rect>
+      <rect x="1040.98" y="125.241" fill="none" stroke="black" width="32.002" height="51.998"></rect>
+      <rect x="622.98" y="13.237" fill="none" stroke="black" width="468.006" height="268.001"></rect>
+      <line fill="none" stroke="black" x1="1056.977" y1="161.238" x2="1056.977" y2="141.241"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="1061.982,160.239 1066.988,158.241 1056.977,154.239 1066.988,151.237 
+   1056.977,147.241 1066.988,144.238 1061.982,142.24   "></polyline>
+      <line fill="none" stroke="black" x1="1061.982" y1="161.238" x2="1061.982" y2="166.238"></line>
+      <line fill="none" stroke="black" x1="1066.988" y1="161.238" x2="1066.988" y2="141.241"></line>
+      <line fill="none" stroke="black" x1="1056.977" y1="161.238" x2="1066.988" y2="161.238"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="1061.982,136.241 1061.982,136.241 1038.973,136.241   "></polyline>
+      <line fill="none" stroke="black" x1="1056.977" y1="141.241" x2="1066.988" y2="141.241"></line>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(998, 126) ">C256A</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(246, 139) ">BK-OG</text>
+      </g>
+      <line fill="none" stroke="black" x1="792.977" y1="377.236" x2="529.98" y2="377.236"></line>
+      <rect x="477.978" y="295.241" fill="none" stroke="black" width="613.009" height="539.999"></rect>
+      <rect x="501.981" y="460.241" fill="none" stroke="black" width="123.998" height="234.996"></rect>
+      <line fill="none" stroke="black" x1="792.977" y1="470.242" x2="792.977" y2="446.244"></line>
+      <line fill="none" stroke="black" x1="738.986" y1="470.242" x2="738.986" y2="445.234"></line>
+      <line fill="none" stroke="black" x1="738.986" y1="438.241" x2="738.986" y2="412.234"></line>
+      <line fill="none" stroke="black" x1="584.98" y1="412.234" x2="584.98" y2="439.24"></line>
+      <line fill="none" stroke="black" x1="529.98" y1="377.236" x2="529.98" y2="439.24"></line>
+      <line fill="none" stroke="black" x1="792.977" y1="439.24" x2="792.977" y2="377.236"></line>
+      <line fill="none" stroke="black" x1="738.986" y1="412.234" x2="584.98" y2="412.234"></line>
+      <line fill="none" stroke="black" x1="866.979" y1="677.244" x2="792.977" y2="677.244"></line>
+      <line fill="none" stroke="black" x1="866.979" y1="712.242" x2="738.986" y2="712.242"></line>
+      <line fill="none" stroke="black" x1="738.986" y1="713.241" x2="738.986" y2="477.246"></line>
+      <line fill="none" stroke="black" x1="792.977" y1="677.244" x2="792.977" y2="476.236"></line>
+      <line fill="none" stroke="black" x1="337.98" y1="141.241" x2="318.982" y2="141.241"></line>
+      <line fill="none" stroke="black" x1="337.98" y1="141.241" x2="337.98" y2="198.239"></line>
+      <rect x="200.979" y="407.239" fill="none" stroke="black" width="138.999" height="308.999"></rect>
+      <rect x="181.982" y="296.24" fill="none" stroke="black" width="267.996" height="539.999"></rect>
+      <line fill="none" stroke="black" x1="232.98" y1="586.236" x2="257.977" y2="586.236"></line>
+      <rect x="674.984" y="21.24" fill="none" stroke="black" width="139.992" height="252.001"></rect>
+      <rect x="682.977" y="29.238" fill="none" stroke="black" width="124.008" height="235.001"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="904.975,75.241 903.986,75.241 900.979,71.24 901.988,71.24 904.975,75.241   
+   "></polyline>
+      <rect x="900.979" y="76.24" fill="none" stroke="black" width="3.008" height="1.998"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="904.975,79.237 903.986,79.237 900.979,83.239 901.988,83.239 904.975,79.237 
+     "></polyline>
+      <line fill="none" stroke="black" x1="922.979" y1="143.239" x2="922.979" y2="84.238"></line>
+      <rect x="917.973" y="143.239" fill="none" stroke="black" width="10.012" height="20.002"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="868.988,710.244 869.977,710.244 872.984,706.237 871.975,706.237 
+   868.988,710.244   "></polyline>
+      <rect x="869.977" y="676.234" fill="none" stroke="black" width="3.008" height="1.998"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="868.988,679.242 869.977,679.242 872.984,683.238 871.975,683.238 
+   868.988,679.242   "></polyline>
+      <rect x="688.98" y="421.236" fill="none" stroke="black" stroke-dasharray="5 5" width="219.002" height="31.002"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="740.984,442.236 740.984,441.238 744.98,438.241 744.98,439.24 
+   740.984,442.236   "></polyline>
+      <line fill="none" stroke="black" x1="738.986" y1="444.246" x2="738.986" y2="442.236"></line>
+      <rect x="737.977" y="442.236" fill="none" stroke="black" width="1.998" height="2.01"></rect>
+      <rect x="736.988" y="441.238" fill="none" stroke="black" width="3.996" height="0.998"></rect>
+      <rect x="790.979" y="442.236" fill="none" stroke="black" width="3.996" height="1"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="790.979,443.236 790.979,442.236 786.982,439.24 786.982,440.239 
+   790.979,443.236   "></polyline>
+      <rect x="791.988" y="439.24" fill="none" stroke="black" width="1.998" height="2.996"></rect>
+      <rect x="791.988" y="471.241" fill="none" stroke="black" width="1.998" height="2.997"></rect>
+      <rect x="790.979" y="474.238" fill="none" stroke="black" width="3.996" height="0.998"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="790.979,475.236 790.979,474.238 786.982,471.241 786.982,472.24 
+   790.979,475.236   "></polyline>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="794.975,475.236 794.975,474.238 798.98,471.241 798.98,472.24 
+   794.975,475.236   "></polyline>
+      <rect x="737.977" y="471.241" fill="none" stroke="black" width="1.998" height="2.997"></rect>
+      <rect x="736.988" y="474.238" fill="none" stroke="black" width="3.996" height="0.998"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="740.984,475.236 740.984,474.238 744.98,471.241 744.98,472.24 
+   740.984,475.236   "></polyline>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(654, 375) ">TN-RD</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(614, 375) ">1175</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(654, 408) ">WH-RD</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(614, 408) ">1174</text>
+      </g>
+      <rect x="493.979" y="452.238" fill="none" stroke="black" width="140.002" height="252.001"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="1026.984,168.236 1027.973,168.236 1030.98,172.238 1029.98,172.238 
+   1026.984,168.236   "></polyline>
+      <rect x="903.986" y="75.241" fill="none" stroke="black" width="0.988" height="3.996"></rect>
+      <rect x="26.977" y="348.238" fill="none" stroke="black" width="111.004" height="363.962"></rect>
+      <rect x="209.981" y="417.24" fill="none" stroke="black" stroke-dasharray="5 5" width="120.001" height="289.996"></rect>
+      <line fill="none" stroke="black" x1="337.98" y1="208.24" x2="337.98" y2="198.239"></line>
+      <line fill="none" stroke="black" x1="1030.98" y1="166.238" x2="1039.982" y2="166.238"></line>
+      <rect x="886.98" y="564.236" fill="none" stroke="black" width="123.998" height="234.996"></rect>
+      <path fill="none" stroke="black" d="M257.977,586.236c0.682,2.761,3.475,4.446,6.236,3.771c1.858-0.462,3.309-1.912,3.765-3.771
+   "></path>
+      <line fill="none" stroke="black" x1="277.979" y1="586.236" x2="329.982" y2="586.236"></line>
+      <line fill="none" stroke="black" x1="227.98" y1="625.241" x2="227.98" y2="454.236"></line>
+      <rect x="312.977" y="140.237" fill="none" stroke="black" width="3.002" height="2.003"></rect>
+      <rect x="315.98" y="139.238" fill="none" stroke="black" width="0.999" height="4.001"></rect>
+      <rect x="316.979" y="140.237" fill="none" stroke="black" width="2.003" height="2.003"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="316.979,143.239 315.98,143.239 312.977,147.241 313.982,147.241 
+   316.979,143.239   "></polyline>
+      <line fill="none" stroke="black" x1="318.982" y1="141.241" x2="316.979" y2="141.241"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="316.979,139.238 315.98,139.238 312.977,135.236 313.982,135.236 
+   316.979,139.238   "></polyline>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(322, 231) ">G301</text>
+      </g>
+      <line fill="none" stroke="black" x1="906.973" y1="228.237" x2="993.984" y2="228.237"></line>
+      <line fill="none" stroke="black" x1="993.984" y1="228.237" x2="993.984" y2="166.238"></line>
+      <line fill="none" stroke="black" x1="906.973" y1="77.239" x2="992.975" y2="77.239"></line>
+      <line fill="none" stroke="black" x1="992.975" y1="136.241" x2="992.975" y2="77.239"></line>
+      <line fill="none" stroke="black" x1="992.975" y1="136.241" x2="1023.977" y2="136.241"></line>
+      <line fill="none" stroke="black" x1="1029.98" y1="136.241" x2="1038.973" y2="136.241"></line>
+      <line fill="none" stroke="black" x1="814.977" y1="77.239" x2="900.979" y2="77.239"></line>
+      <line fill="none" stroke="black" x1="930.98" y1="193.239" x2="969.986" y2="44.239"></line>
+      <rect x="1026.984" y="135.236" fill="none" stroke="black" width="2.996" height="2.003"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="1025.975,138.239 1026.984,138.239 1029.98,142.24 1028.982,142.24 
+   1025.975,138.239   "></polyline>
+      <line fill="none" stroke="black" stroke-dasharray="5 5" x1="1032.979" y1="166.238" x2="1032.979" y2="136.241"></line>
+      <line fill="none" stroke="black" x1="814.977" y1="228.237" x2="900.979" y2="228.237"></line>
+      <line fill="none" stroke="black" x1="906.973" y1="77.239" x2="922.979" y2="84.238"></line>
+      <line fill="none" stroke="black" stroke-dasharray="5 5" x1="898.98" y1="227.238" x2="898.98" y2="77.239"></line>
+      <line fill="none" stroke="black" stroke-dasharray="5 5" x1="792.977" y1="433.246" x2="738.986" y2="433.246"></line>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(291, 133) ">C315-4</text>
+      </g>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="229.978,699.244 225.982,709.234 233.979,709.234 229.978,699.244   "></polyline>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="244.979,704.239 218.978,689.232 244.979,674.236 244.979,704.239   "></polyline>
+      <g>
+        <text font-size="15" fill="black" x="0" y="0" transform="translate(232, 693) ">A</text>
+      </g>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="221.98,464.236 227.98,454.236 232.98,464.236 221.98,464.236   "></polyline>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="291.982,566.234 296.982,556.244 302.982,562.238 291.982,566.234   "></polyline>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="221.98,635.242 227.98,625.241 232.98,635.242 221.98,635.242   "></polyline>
+      <rect x="221.98" y="454.236" fill="none" stroke="black" width="11" height="181.006"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="231.981,452.238 235.977,441.238 242.981,447.232 231.981,452.238   "></polyline>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="353.98,222.237 360.979,213.241 364.98,222.237 353.98,222.237   "></polyline>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(258, 607) ">30A</text>
+      </g>
+      <line fill="none" stroke="black" x1="244.979" y1="689.232" x2="295.978" y2="689.232"></line>
+      <line fill="none" stroke="black" x1="295.978" y1="689.232" x2="295.978" y2="586.236"></line>
+      <line fill="none" stroke="black" x1="907.982" y1="228.237" x2="922.979" y2="218.241"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="653.973,281.239 1090.986,281.239 1090.986,43.24 1095.98,43.24 
+   1095.98,286.239 653.973,286.239 653.973,281.239   "></polyline>
+      <rect x="26.977" y="326.238" fill="none" stroke="black" width="111.004" height="22"></rect>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(50, 342) ">Wire colors</text>
+      </g>
+      <line fill="none" stroke="black" x1="57.979" y1="348.238" x2="57.979" y2="712.2"></line>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(67, 665) ">Violet</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(67, 645) ">Tan</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(67, 625) ">Silver</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(66, 606) ">Red</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(66, 585) ">Pink</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(66, 565) ">Orange</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(66, 546) ">Natural</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(66, 525) ">Light green</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(66, 505) ">Light blue</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(66, 485) ">Grey</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(66, 465) ">Green</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(66, 446) ">Dark green</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(66, 425) ">Dark blue</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(66, 405) ">Blue</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(66, 385) ">Brown</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(67, 365) ">Black</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(37, 665) ">VT</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(67, 705) ">Yellow</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(67, 685) ">White</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(37, 705) ">YE</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(37, 685) ">WH</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(37, 646) ">TN</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(37, 625) ">SR</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(36, 606) ">RD</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(36, 585) ">PK</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(36, 565) ">OG</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(36, 546) ">NA</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(36, 525) ">LG</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(36, 505) ">LB</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(36, 485) ">GY</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(37, 465) ">GN</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(36, 446) ">DG</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(36, 425) ">DB</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(36, 405) ">BU</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(36, 365) ">BK</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(915, 679) ">COMPONENT</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(524, 577) ">COMPONENT</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(708, 144) ">COMPONENT</text>
+      </g>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="859.986,420.237 857.988,409.237 866.979,412.234 859.986,420.237   "></polyline>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(863, 388) ">Optional content</text>
+      </g>
+      <line fill="none" stroke="black" x1="872.984" y1="677.244" x2="886.98" y2="677.244"></line>
+      <line fill="none" stroke="black" x1="806.984" y1="228.237" x2="814.977" y2="228.237"></line>
+      <line fill="none" stroke="black" x1="806.984" y1="77.239" x2="814.977" y2="77.239"></line>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(933, 41) ">Shorting Bar</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(297, 387) ">Busbar</text>
+      </g>
+      <path fill="none" stroke="black" d="M295.978,584.238c1.106,0,2.003,0.901,2.003,1.998c0,1.105-0.897,1.998-2.003,1.998
+   c-1.101,0-1.998-0.893-1.998-1.998C293.98,585.141,294.877,584.238,295.978,584.238z"></path>
+      <path fill="none" stroke="black" d="M257.977,585.237c0.553,0,1.004,0.45,1.004,0.999c0,0.559-0.451,1.01-1.004,1.01
+   c-0.548,0-0.999-0.451-0.999-1.01C256.978,585.688,257.429,585.237,257.977,585.237z"></path>
+      <path fill="none" stroke="black" d="M277.979,585.237c0.553,0,0.999,0.45,0.999,0.999c0,0.559-0.446,1.01-0.999,1.01
+   c-0.553,0-0.999-0.451-0.999-1.01C276.98,585.688,277.426,585.237,277.979,585.237z"></path>
+      <path fill="none" stroke="black" d="M277.979,586.236c-0.682-2.762-3.47-4.447-6.236-3.761
+   c-1.853,0.451-3.303,1.912-3.765,3.761"></path>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(415, 98) ">Pin number</text>
+      </g>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="257.977,123.237 257.977,112.237 266.979,117.238 257.977,123.237   "></polyline>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="206.979,120.24 206.979,109.24 197.982,114.241 206.979,120.24   "></polyline>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(107, 47) ">Circuit Number</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(431, 185) ">Ground numbered for</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(431, 197) ">reference to component</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(431, 209) ">location chart</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(363, 28) ">Connector reference</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(363, 40) ">number for component</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(363, 52) ">location chart</text>
+      </g>
+      <line fill="none" stroke="black" x1="201.978" y1="112.237" x2="166.48" y2="51.239"></line>
+      <line fill="none" stroke="black" x1="339.978" y1="586.236" x2="329.982" y2="586.236"></line>
+      <line fill="none" stroke="black" x1="322.978" y1="109.24" x2="359.98" y2="45.238"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="317.978,117.238 317.978,106.238 326.98,111.238 317.978,117.238   "></polyline>
+      <line fill="none" stroke="black" x1="348.98" y1="119.241" x2="410.979" y2="97.241"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="339.978,123.237 346.982,114.241 350.978,123.237 339.978,123.237   "></polyline>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(350, 502) ">and Fuse rating</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(350, 490) ">Fuse Number</text>
+      </g>
+      <line fill="none" stroke="black" x1="299.979" y1="559.241" x2="353.98" y2="505.24"></line>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(198, 775) ">Cut wire reference</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(198, 787) ">between pages.</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(198, 799) ">Arrows show current</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(198, 811) ">flow from power to</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(198, 823) ">ground</text>
+      </g>
+      <line fill="none" stroke="black" x1="229.978" y1="709.234" x2="229.978" y2="758.24"></line>
+      <line fill="none" stroke="black" x1="262.978" y1="115.24" x2="290.48" y2="69.739"></line>
+      <line fill="none" stroke="black" x1="922.979" y1="218.241" x2="922.979" y2="163.241"></line>
+      <line fill="none" stroke="black" x1="239.979" y1="444.246" x2="294.979" y2="389.246"></line>
+      <line fill="none" stroke="black" x1="934.988" y1="74.237" x2="964.98" y2="45.238"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="926.975,82.24 930.98,71.24 937.975,77.239 926.975,82.24   "></polyline>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="925.986,204.239 926.975,191.241 936.986,195.237 925.986,204.239   "></polyline>
+      <rect x="878.979" y="556.244" fill="none" stroke="black" width="140.002" height="251.99"></rect>
+      <line fill="none" stroke="black" x1="873.973" y1="712.242" x2="886.98" y2="712.242"></line>
+      <line fill="none" stroke="black" x1="529.98" y1="460.241" x2="529.98" y2="445.234"></line>
+      <line fill="none" stroke="black" x1="584.98" y1="460.241" x2="584.98" y2="445.234"></line>
+      <line fill="none" stroke="black" stroke-dasharray="5 5" x1="875.98" y1="712.242" x2="875.98" y2="677.244"></line>
+      <line fill="none" stroke="black" stroke-dasharray="5 5" x1="792.977" y1="467.234" x2="738.986" y2="467.234"></line>
+      <line fill="none" stroke="black" stroke-dasharray="5 5" x1="584.98" y1="447.232" x2="529.98" y2="447.232"></line>
+      <line fill="none" stroke="black" x1="769.988" y1="478.234" x2="777.98" y2="503.242"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="956.988,503.242 930.98,503.242 777.98,503.242   "></polyline>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(812, 486) ">in the same connector</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(812, 474) ">Two connections (pins)</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(962, 521) ">connector</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(962, 509) ">terminals for the same</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(962, 497) ">Dashed line indicates</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(821, 448) ">ONLY</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(821, 436) ">SUPER CAB</text>
+      </g>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="766.98,469.232 764.982,480.232 773.984,477.246 766.98,469.232   "></polyline>
+      <line fill="none" stroke="black" x1="862.973" y1="410.236" x2="870.986" y2="392.232"></line>
+      <line fill="none" stroke="black" x1="362.982" y1="218.241" x2="424.981" y2="196.241"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="27.982,280.24 584.98,280.24 584.98,43.24 589.98,43.24 589.98,285.24 
+   27.982,285.24 27.982,280.24   "></polyline>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="507.98,835.24 1090.986,835.24 1090.986,325.239 1095.98,325.239 
+   1094.982,840.246 507.98,840.246 507.98,835.24   "></polyline>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="209.981,836.239 449.979,836.239 449.979,326.238 454.979,326.238 
+   454.979,841.234 209.981,841.234 209.981,836.239   "></polyline>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="30.979,836.239 151.979,836.239 151.979,325.239 156.979,325.239 
+   156.979,841.234 30.979,841.234 30.979,836.239   "></polyline>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(248, 50) ">with another</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(248, 26) ">Wire insulation</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(248, 38) ">is one color (BK)</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(248, 62) ">color stripe (OG)</text>
+      </g>
+      <rect x="7.98" y="296.24" fill="none" stroke="black" width="143.999" height="539.999"></rect>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(905, 98) ">13</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(907, 247) ">14</text>
+      </g>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="904.975,226.239 903.986,226.239 900.979,222.237 901.988,222.237 
+   904.975,226.239   "></polyline>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="904.975,230.24 903.986,230.24 900.979,234.236 901.988,234.236 
+   904.975,230.24   "></polyline>
+      <rect x="900.979" y="227.238" fill="none" stroke="black" width="3.008" height="2.003"></rect>
+      <line fill="none" stroke="black" x1="906.973" y1="228.237" x2="904.975" y2="228.237"></line>
+      <rect x="904.975" y="227.238" fill="none" stroke="black" width="1.997" height="2.003"></rect>
+      <rect x="903.986" y="226.239" fill="none" stroke="black" width="0.988" height="4.001"></rect>
+      <line fill="none" stroke="black" x1="906.973" y1="77.239" x2="904.975" y2="77.239"></line>
+      <rect x="904.975" y="76.24" fill="none" stroke="black" width="1.997" height="1.998"></rect>
+      <rect x="1025.975" y="134.237" fill="none" stroke="black" width="1.01" height="4.001"></rect>
+      <rect x="1023.977" y="135.236" fill="none" stroke="black" width="1.998" height="2.003"></rect>
+      <line fill="none" stroke="black" x1="1023.977" y1="136.241" x2="1025.975" y2="136.241"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="1025.975,134.237 1026.984,134.237 1029.98,130.241 1028.982,130.241 
+   1025.975,134.237   "></polyline>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="1026.984,164.24 1027.973,164.24 1030.98,160.239 1029.98,160.239 
+   1026.984,164.24   "></polyline>
+      <line fill="none" stroke="black" x1="1024.986" y1="166.238" x2="1026.984" y2="166.238"></line>
+      <rect x="1024.986" y="165.239" fill="none" stroke="black" width="1.998" height="1.998"></rect>
+      <rect x="1026.984" y="164.24" fill="none" stroke="black" width="0.987" height="3.996"></rect>
+      <rect x="1027.973" y="165.239" fill="none" stroke="black" width="3.008" height="1.998"></rect>
+      <line fill="none" stroke="black" x1="993.984" y1="166.238" x2="1024.986" y2="166.238"></line>
+      <line fill="none" stroke="black" x1="1061.982" y1="160.239" x2="1061.982" y2="161.238"></line>
+      <line fill="none" stroke="black" x1="1061.982" y1="142.24" x2="1061.982" y2="141.241"></line>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(1038, 87) ">PASS</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(1038, 99) ">AIR BAG</text>
+      </g>
+      <line fill="none" stroke="black" x1="338.979" y1="214.24" x2="336.981" y2="214.24"></line>
+      <line fill="none" stroke="black" x1="341.981" y1="211.237" x2="333.978" y2="211.237"></line>
+      <line fill="none" stroke="black" x1="330.981" y1="208.24" x2="344.978" y2="208.24"></line>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(517, 437) ">6</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(595, 447) ">C912</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(573, 438) ">2</text>
+      </g>
+      <rect x="528.981" y="442.236" fill="none" stroke="black" width="1.998" height="2.998"></rect>
+      <rect x="527.982" y="441.238" fill="none" stroke="black" width="3.996" height="0.998"></rect>
+      <rect x="528.981" y="439.24" fill="none" stroke="black" width="1.998" height="1.998"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="531.979,441.238 531.979,442.236 535.98,445.234 535.98,444.246 
+   531.979,441.238   "></polyline>
+      <line fill="none" stroke="black" x1="529.98" y1="439.24" x2="529.98" y2="441.238"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="527.982,441.238 527.982,442.236 523.981,445.234 523.981,444.246 
+   527.982,441.238   "></polyline>
+      <rect x="583.982" y="442.236" fill="none" stroke="black" width="1.992" height="2.998"></rect>
+      <rect x="582.982" y="441.238" fill="none" stroke="black" width="4.002" height="0.998"></rect>
+      <rect x="583.982" y="439.24" fill="none" stroke="black" width="1.992" height="1.998"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="586.984,441.238 586.984,442.236 590.98,445.234 590.98,444.246 
+   586.984,441.238   "></polyline>
+      <line fill="none" stroke="black" x1="584.98" y1="439.24" x2="584.98" y2="441.238"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="582.982,441.238 582.982,442.236 578.98,445.234 578.98,444.246 
+   582.982,441.238   "></polyline>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(755, 578) rotate(-90)">WH-RD</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(733, 578) rotate(-90)">1174</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(809, 577) rotate(-90)">TN-RD</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(787, 577) rotate(-90)">1175</text>
+      </g>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="736.988,442.236 736.988,441.238 732.98,438.241 732.98,439.24 
+   736.988,442.236   "></polyline>
+      <rect x="737.977" y="438.241" fill="none" stroke="black" width="1.998" height="2.997"></rect>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(698, 439) ">C314</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(749, 447) ">4</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(801, 447) ">9</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(699, 478) ">C315</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(746, 484) ">9</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(797, 485) ">1</text>
+      </g>
+      <rect x="791.988" y="443.236" fill="none" stroke="black" width="1.998" height="1.998"></rect>
+      <line fill="none" stroke="black" x1="792.977" y1="445.234" x2="792.977" y2="443.236"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="794.975,443.236 794.975,442.236 798.98,439.24 798.98,440.239 
+   794.975,443.236   "></polyline>
+      <rect x="737.977" y="475.236" fill="none" stroke="black" width="1.998" height="2.01"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="736.988,475.236 736.988,474.238 732.98,471.241 732.98,472.24 
+   736.988,475.236   "></polyline>
+      <line fill="none" stroke="black" x1="738.986" y1="477.246" x2="738.986" y2="475.236"></line>
+      <rect x="791.988" y="475.236" fill="none" stroke="black" width="1.998" height="2.01"></rect>
+      <line fill="none" stroke="black" x1="792.977" y1="477.246" x2="792.977" y2="475.236"></line>
+      <rect x="868.988" y="675.246" fill="none" stroke="black" width="0.988" height="3.996"></rect>
+      <rect x="866.979" y="676.234" fill="none" stroke="black" width="2.01" height="1.998"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="868.988,675.246 869.977,675.246 872.984,671.239 871.975,671.239 
+   868.988,675.246   "></polyline>
+      <line fill="none" stroke="black" x1="866.979" y1="677.244" x2="868.988" y2="677.244"></line>
+      <rect x="869.977" y="711.232" fill="none" stroke="black" width="3.008" height="2.009"></rect>
+      <rect x="868.988" y="710.244" fill="none" stroke="black" width="0.988" height="3.996"></rect>
+      <rect x="866.979" y="711.232" fill="none" stroke="black" width="2.01" height="2.009"></rect>
+      <line fill="none" stroke="black" x1="866.979" y1="712.242" x2="868.988" y2="712.242"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="868.988,714.24 869.977,714.24 872.984,718.236 871.975,718.236 
+   868.988,714.24   "></polyline>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(839, 666) ">C921</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(859, 692) ">5</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(852, 726) ">10</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(209, 139) ">1204</text>
+      </g>
+      <line fill="none" stroke="black" x1="1061.982" y1="141.241" x2="1061.982" y2="136.241"></line>
+      <line fill="none" stroke="black" x1="1047.975" y1="164.24" x2="1051.98" y2="161.238"></line>
+      <line fill="none" stroke="black" x1="1048.984" y1="138.239" x2="1051.98" y2="141.241"></line>
+      <rect x="103.977" y="133.238" fill="none" stroke="black" stroke-dasharray="5 5" width="53.002" height="17.999"></rect>
+      <rect x="100.98" y="130.241" fill="none" stroke="black" width="59.001" height="23.998"></rect>
+      <line fill="none" stroke="black" x1="169.977" y1="141.241" x2="167.979" y2="141.241"></line>
+      <rect x="167.979" y="140.237" fill="none" stroke="black" width="1.998" height="2.003"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="167.979,143.239 166.98,143.239 163.978,147.241 164.982,147.241 
+   167.979,143.239   "></polyline>
+      <rect x="166.98" y="139.238" fill="none" stroke="black" width="0.999" height="4.001"></rect>
+      <rect x="163.978" y="140.237" fill="none" stroke="black" width="3.002" height="2.003"></rect>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="167.979,139.238 166.98,139.238 163.978,135.236 164.982,135.236 
+   167.979,139.238   "></polyline>
+      <line fill="none" stroke="black" x1="165.981" y1="141.241" x2="159.982" y2="141.241"></line>
+      <line fill="none" stroke="black" x1="159.982" y1="141.241" x2="156.979" y2="141.241"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="76.982,167.237 85.979,174.241 76.982,178.237 76.982,167.237   "></polyline>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(54, 164) ">130-1</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(217, 672) ">13-3</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(254, 578) ">F106</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(1038, 116) ">151-10</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(321, 243) ">10-7</text>
+      </g>
+    </g>
+  </g>
+</svg></body></html>

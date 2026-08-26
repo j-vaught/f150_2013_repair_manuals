@@ -1,0 +1,542 @@
+<html><head></head><body><svg viewBox="0 0 1100 850" height="100%" width="100%" xmlns:xlink="http://www.w3.org/1999/xlink" id="svgDoc" xmlns="http://www.w3.org/2000/svg">
+  <title>ECAD ED2042004</title>
+  <desc>
+    <cellnumber>42</cellnumber>
+    <pagenumber>4</pagenumber>
+    <engineeringname>ENG_CDSID</engineeringname>
+    <modelyear>2013</modelyear>
+    <modelname>F150</modelname>
+    <qualifierlist>
+      <qualifier></qualifier>
+      <qualifier></qualifier>
+      <qualifier></qualifier>
+    </qualifierlist>
+    <authorcellname>DES_CDSID</authorcellname>
+    <author>CDSID</author>
+    <note></note>
+    <datetime></datetime>
+  </desc>
+  <g font-stretch="semi-condensed" style="fill:none" transform="translate(0, 0) scale(1.0)">
+    <g style="visibility:visible" id="Sheet_4">
+      <g id="VLN04A">
+        <line fill="none" stroke="black" stroke-width="6.000025" x1="506.128" y1="447.494" x2="669.512" y2="447.494"></line>
+        <line fill="none" stroke="violet" stroke-width="5.000025" x1="506.128" y1="447.494" x2="669.512" y2="447.494"></line>
+        <line fill="none" stroke="gray" stroke-width="1.000025" x1="506.128" y1="447.494" x2="669.512" y2="447.494"></line>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(568, 442) ">VT-GY</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(518, 442) ">VLN04</text>
+      </g>
+      <g id="GD133A">
+        <polyline fill="none" stroke="black" stroke-width="6.000025" points="927.452,566.055 1041.883,566.055 1041.883,830.896    "></polyline>
+        <polyline fill="none" stroke="black" stroke-width="5.000025" points="927.452,566.055 1041.883,566.055 1041.883,830.896    "></polyline>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(1035, 766) rotate(-90)">GD133</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(1057, 766) rotate(-90)">BK</text>
+      </g>
+      <g id="RR116A">
+        <line fill="none" stroke="black" stroke-width="6.000025" x1="668.977" y1="348.538" x2="157.5" y2="348.538"></line>
+        <line fill="none" stroke="brown" stroke-width="5.000025" x1="668.977" y1="348.538" x2="157.5" y2="348.538"></line>
+        <line fill="none" stroke="green" stroke-width="1.000025" x1="668.977" y1="348.538" x2="157.5" y2="348.538"></line>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(373, 344) ">RR116</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(420, 344) ">BN-GN</text>
+      </g>
+      <g id="CBP41B">
+        <line fill="none" stroke="black" stroke-width="6.000025" x1="668.977" y1="221.677" x2="414.497" y2="221.677"></line>
+        <line fill="none" stroke="blue" stroke-width="5.000025" x1="668.977" y1="221.677" x2="414.497" y2="221.677"></line>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(518, 217) ">CBP41</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(565, 217) ">BU</text>
+      </g>
+      <g id="CBP41A">
+        <polyline fill="none" stroke="black" stroke-width="6.000025" points="414.497,221.677 70.526,221.677 70.526,135.502    "></polyline>
+        <polyline fill="none" stroke="blue" stroke-width="5.000025" points="414.497,221.677 70.526,221.677 70.526,135.502    "></polyline>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(226, 217) ">CBP41</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(272, 217) ">BU</text>
+      </g>
+      <g id="CLS32A">
+        <line fill="none" stroke="black" stroke-width="6.000025" x1="157.3" y1="732.199" x2="669.477" y2="732.199"></line>
+        <line fill="none" stroke="brown" stroke-width="5.000025" x1="157.3" y1="732.199" x2="669.477" y2="732.199"></line>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(373, 727) ">CLS32</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(423, 727) ">BN</text>
+      </g>
+      <g id="CCA15A">
+        <line fill="none" stroke="black" stroke-width="6.000025" x1="157.603" y1="565.578" x2="669.477" y2="565.578"></line>
+        <line fill="none" stroke="yellow" stroke-width="5.000025" x1="157.603" y1="565.578" x2="669.477" y2="565.578"></line>
+        <line fill="none" stroke="gray" stroke-width="1.000025" x1="157.603" y1="565.578" x2="669.477" y2="565.578"></line>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(373, 561) ">CCA15</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(423, 561) ">YE-GY</text>
+      </g>
+      <a id="dialog_C310A" name="C310A" faceview="ed2cfc310a">
+        <g id="CONN_C310A_22">
+          <line fill="none" stroke="black" x1="157.586" y1="348.672" x2="150.583" y2="348.672"></line>
+          <line fill="none" stroke="black" x1="137.584" y1="348.672" x2="144.577" y2="348.672"></line>
+          <rect x="144.577" y="347.674" fill="none" stroke="black" width="2.998" height="1.998"></rect>
+          <line fill="none" stroke="black" x1="150.583" y1="348.672" x2="148.584" y2="348.672"></line>
+          <polyline fill="none" stroke="black" points="148.584,350.676 147.575,350.676 144.577,354.672 145.577,354.672 
+    148.584,350.676    "></polyline>
+          <rect x="147.575" y="346.674" fill="none" stroke="black" width="1.01" height="4.002"></rect>
+          <rect x="148.584" y="347.674" fill="none" stroke="black" width="1.998" height="1.998"></rect>
+          <polyline fill="none" stroke="black" points="148.584,346.674 147.575,346.674 144.577,342.673 145.577,342.673 
+    148.584,346.674    "></polyline>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(152, 364) " onclick="setAttribute('fill', 'purple')">22</text>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(152, 342) " onclick="setAttribute('fill', 'purple')">C310A</text>
+        </g>
+      </a>
+      <a id="dialog_C2280B" name="C2280B" faceview="ed2cfc2280b">
+        <g id="CONN_C2280B_32">
+          <line fill="none" stroke="black" x1="157.336" y1="732.332" x2="150.333" y2="732.332"></line>
+          <line fill="none" stroke="black" x1="137.334" y1="732.332" x2="144.327" y2="732.332"></line>
+          <rect x="144.327" y="731.334" fill="none" stroke="black" width="2.998" height="1.998"></rect>
+          <line fill="none" stroke="black" x1="150.333" y1="732.332" x2="148.334" y2="732.332"></line>
+          <polyline fill="none" stroke="black" points="148.334,734.336 147.325,734.336 144.327,738.332 145.327,738.332 
+    148.334,734.336    "></polyline>
+          <rect x="147.325" y="730.334" fill="none" stroke="black" width="1.01" height="4.002"></rect>
+          <rect x="148.334" y="731.334" fill="none" stroke="black" width="1.998" height="1.998"></rect>
+          <polyline fill="none" stroke="black" points="148.334,730.334 147.325,730.334 144.327,726.333 145.327,726.333 
+    148.334,730.334    "></polyline>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(152, 748) " onclick="setAttribute('fill', 'purple')">32</text>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(152, 726) " onclick="setAttribute('fill', 'purple')">C2280B</text>
+        </g>
+      </a>
+      <a id="dialog_C2355" name="C2355" faceview="ed2cfc2355">
+        <g id="CONN_C2355_6">
+          <line fill="none" stroke="black" x1="669.477" y1="447.424" x2="676.469" y2="447.424"></line>
+          <line fill="none" stroke="black" x1="689.467" y1="447.424" x2="682.475" y2="447.424"></line>
+          <rect x="679.467" y="446.414" fill="none" stroke="black" width="3.008" height="1.998"></rect>
+          <line fill="none" stroke="black" x1="676.469" y1="447.424" x2="678.467" y2="447.424"></line>
+          <polyline fill="none" stroke="black" points="678.467,445.426 679.467,445.426 682.475,441.42 681.465,441.42 678.467,445.426 
+       "></polyline>
+          <rect x="678.467" y="445.426" fill="none" stroke="black" width="1" height="3.996"></rect>
+          <rect x="676.469" y="446.414" fill="none" stroke="black" width="1.998" height="1.998"></rect>
+          <polyline fill="none" stroke="black" points="678.467,449.422 679.467,449.422 682.475,453.418 681.465,453.418 
+    678.467,449.422    "></polyline>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(667, 464) " onclick="setAttribute('fill', 'purple')">6</text>
+        </g>
+      </a>
+      <a id="dialog_C2355" name="C2355" faceview="ed2cfc2355">
+        <g id="CONN_C2355_1">
+          <line fill="none" stroke="black" x1="927.452" y1="565.735" x2="920.448" y2="565.735"></line>
+          <line fill="none" stroke="black" x1="907.45" y1="565.735" x2="914.454" y2="565.735"></line>
+          <rect x="914.454" y="564.737" fill="none" stroke="black" width="2.986" height="2.008"></rect>
+          <line fill="none" stroke="black" x1="920.448" y1="565.735" x2="918.45" y2="565.735"></line>
+          <polyline fill="none" stroke="black" points="918.45,567.733 917.44,567.733 914.454,571.741 915.442,571.741 918.45,567.733 
+       "></polyline>
+          <rect x="917.44" y="563.737" fill="none" stroke="black" width="1.01" height="3.996"></rect>
+          <rect x="918.45" y="564.737" fill="none" stroke="black" width="1.998" height="2.008"></rect>
+          <polyline fill="none" stroke="black" points="918.45,563.737 917.44,563.737 914.454,559.741 915.442,559.741 918.45,563.737 
+       "></polyline>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(921, 559) " onclick="setAttribute('fill', 'purple')">C2355</text>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(922, 581) " onclick="setAttribute('fill', 'purple')">1</text>
+        </g>
+      </a>
+      <a id="dialog_C2355" name="C2355" faceview="ed2cfc2355">
+        <g id="CONN_C2355_5">
+          <line fill="none" stroke="black" x1="669.477" y1="732.13" x2="676.469" y2="732.13"></line>
+          <line fill="none" stroke="black" x1="689.467" y1="732.13" x2="682.475" y2="732.13"></line>
+          <rect x="679.467" y="731.131" fill="none" stroke="black" width="3.008" height="1.998"></rect>
+          <line fill="none" stroke="black" x1="676.469" y1="732.13" x2="678.467" y2="732.13"></line>
+          <polyline fill="none" stroke="black" points="678.467,730.132 679.467,730.132 682.475,726.136 681.465,726.136 
+    678.467,730.132    "></polyline>
+          <rect x="678.467" y="730.132" fill="none" stroke="black" width="1" height="3.996"></rect>
+          <rect x="676.469" y="731.131" fill="none" stroke="black" width="1.998" height="1.998"></rect>
+          <polyline fill="none" stroke="black" points="678.467,734.128 679.467,734.128 682.475,738.124 681.465,738.124 
+    678.467,734.128    "></polyline>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(667, 748) " onclick="setAttribute('fill', 'purple')">5</text>
+        </g>
+      </a>
+      <a id="dialog_C2355" name="C2355" faceview="ed2cfc2355">
+        <g id="CONN_C2355_4">
+          <line fill="none" stroke="black" x1="669.477" y1="565.578" x2="676.469" y2="565.578"></line>
+          <line fill="none" stroke="black" x1="689.467" y1="565.578" x2="682.475" y2="565.578"></line>
+          <rect x="679.467" y="564.579" fill="none" stroke="black" width="3.008" height="1.998"></rect>
+          <line fill="none" stroke="black" x1="676.469" y1="565.578" x2="678.467" y2="565.578"></line>
+          <polyline fill="none" stroke="black" points="678.467,563.58 679.467,563.58 682.475,559.584 681.465,559.584 678.467,563.58 
+       "></polyline>
+          <rect x="678.467" y="563.58" fill="none" stroke="black" width="1" height="3.996"></rect>
+          <rect x="676.469" y="564.579" fill="none" stroke="black" width="1.998" height="1.998"></rect>
+          <polyline fill="none" stroke="black" points="678.467,567.576 679.467,567.576 682.475,571.572 681.465,571.572 
+    678.467,567.576    "></polyline>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(667, 582) " onclick="setAttribute('fill', 'purple')">4</text>
+        </g>
+      </a>
+      <a id="dialog_C2355" name="C2355" faceview="ed2cfc2355">
+        <g id="CONN_C2355_3">
+          <line fill="none" stroke="black" x1="668.977" y1="221.677" x2="675.969" y2="221.677"></line>
+          <line fill="none" stroke="black" x1="688.967" y1="221.677" x2="681.975" y2="221.677"></line>
+          <rect x="678.967" y="220.678" fill="none" stroke="black" width="3.008" height="1.998"></rect>
+          <line fill="none" stroke="black" x1="675.969" y1="221.677" x2="677.967" y2="221.677"></line>
+          <polyline fill="none" stroke="black" points="677.967,219.679 678.967,219.679 681.975,215.672 680.965,215.672 
+    677.967,219.679    "></polyline>
+          <rect x="677.967" y="219.679" fill="none" stroke="black" width="1" height="4.007"></rect>
+          <rect x="675.969" y="220.678" fill="none" stroke="black" width="1.998" height="1.998"></rect>
+          <polyline fill="none" stroke="black" points="677.967,223.686 678.967,223.686 681.975,227.682 680.965,227.682 
+    677.967,223.686    "></polyline>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(641, 214) " onclick="setAttribute('fill', 'purple')">C2355</text>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(667, 237) " onclick="setAttribute('fill', 'purple')">3</text>
+        </g>
+      </a>
+      <a id="dialog_C2355" name="C2355" faceview="ed2cfc2355">
+        <g id="CONN_C2355_2">
+          <line fill="none" stroke="black" x1="668.977" y1="348.538" x2="675.969" y2="348.538"></line>
+          <line fill="none" stroke="black" x1="688.967" y1="348.538" x2="681.975" y2="348.538"></line>
+          <rect x="678.967" y="347.539" fill="none" stroke="black" width="3.008" height="1.998"></rect>
+          <line fill="none" stroke="black" x1="675.969" y1="348.538" x2="677.967" y2="348.538"></line>
+          <polyline fill="none" stroke="black" points="677.967,346.54 678.967,346.54 681.975,342.533 680.965,342.533 677.967,346.54 
+       "></polyline>
+          <rect x="677.967" y="346.54" fill="none" stroke="black" width="1" height="4.007"></rect>
+          <rect x="675.969" y="347.539" fill="none" stroke="black" width="1.998" height="1.998"></rect>
+          <polyline fill="none" stroke="black" points="677.967,350.546 678.967,350.546 681.975,354.542 680.965,354.542 
+    677.967,350.546    "></polyline>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(667, 364) " onclick="setAttribute('fill', 'purple')">2</text>
+        </g>
+      </a>
+      <a id="dialog_C220" name="C220" faceview="ed2cfc220">
+        <g id="CONN_C220_18">
+          <line fill="none" stroke="black" x1="157.603" y1="565.578" x2="150.599" y2="565.578"></line>
+          <line fill="none" stroke="black" x1="137.601" y1="565.578" x2="144.599" y2="565.578"></line>
+          <rect x="144.599" y="564.579" fill="none" stroke="black" width="3.002" height="1.998"></rect>
+          <line fill="none" stroke="black" x1="150.599" y1="565.578" x2="148.601" y2="565.578"></line>
+          <polyline fill="none" stroke="black" points="148.601,567.576 147.602,567.576 144.599,571.572 145.598,571.572 
+    148.601,567.576    "></polyline>
+          <rect x="147.602" y="563.58" fill="none" stroke="black" width="0.999" height="3.996"></rect>
+          <rect x="148.601" y="564.579" fill="none" stroke="black" width="1.998" height="1.998"></rect>
+          <polyline fill="none" stroke="black" points="148.601,563.58 147.602,563.58 144.599,559.584 145.598,559.584 148.601,563.58 
+       "></polyline>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(152, 581) " onclick="setAttribute('fill', 'purple')">18</text>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(152, 559) " onclick="setAttribute('fill', 'purple')">C220</text>
+        </g>
+      </a>
+      <a id="dialog_C2280B" name="C2280B" faceview="ed2cfc2280b">
+        <g id="CONN_C2280B_3">
+          <line fill="none" stroke="black" x1="70.526" y1="135.502" x2="70.526" y2="128.498"></line>
+          <line fill="none" stroke="black" x1="70.526" y1="115.5" x2="70.526" y2="122.492"></line>
+          <rect x="69.526" y="122.492" fill="none" stroke="black" width="1.998" height="2.998"></rect>
+          <line fill="none" stroke="black" x1="70.526" y1="128.498" x2="70.526" y2="126.5"></line>
+          <polyline fill="none" stroke="black" points="68.522,126.5 68.522,125.49 64.526,122.492 64.526,123.492 68.522,126.5    "></polyline>
+          <rect x="68.522" y="125.49" fill="none" stroke="black" width="4.002" height="1.01"></rect>
+          <rect x="69.526" y="126.5" fill="none" stroke="black" width="1.998" height="1.998"></rect>
+          <polyline fill="none" stroke="black" points="72.524,126.5 72.524,125.49 76.525,122.492 76.525,123.492 72.524,126.5    "></polyline>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(54, 140) " onclick="setAttribute('fill', 'purple')">3</text>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(77, 140) " onclick="setAttribute('fill', 'purple')">C2280B</text>
+        </g>
+      </a>
+      <a id="dialog_C2280D" name="C2280D" faceview="ed2cfc2280d">
+        <g id="CONN_C2280D_19">
+          <line fill="none" stroke="black" x1="152.985" y1="135.502" x2="152.985" y2="128.498"></line>
+          <line fill="none" stroke="black" x1="152.985" y1="115.5" x2="152.985" y2="122.492"></line>
+          <rect x="151.985" y="122.492" fill="none" stroke="black" width="1.998" height="2.998"></rect>
+          <line fill="none" stroke="black" x1="152.985" y1="128.498" x2="152.985" y2="126.5"></line>
+          <polyline fill="none" stroke="black" points="150.981,126.5 150.981,125.49 146.985,122.492 146.985,123.492 150.981,126.5    
+    "></polyline>
+          <rect x="150.981" y="125.49" fill="none" stroke="black" width="4.002" height="1.01"></rect>
+          <rect x="151.985" y="126.5" fill="none" stroke="black" width="1.998" height="1.998"></rect>
+          <polyline fill="none" stroke="black" points="154.983,126.5 154.983,125.49 158.983,122.492 158.983,123.492 154.983,126.5    
+    "></polyline>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(133, 140) " onclick="setAttribute('fill', 'purple')">19</text>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(159, 140) " onclick="setAttribute('fill', 'purple')">C2280D</text>
+        </g>
+      </a>
+      <g id="COMP_IPC~DATA~INSTRUMENT PANEL CLUSTER (IPC)">
+        <rect x="5.741" y="487.076" fill="rgb(243,243,243)" stroke="blue" width="131.859" height="113.59"></rect>
+        <rect x="15.737" y="497.077" fill="rgb(243,243,243)" stroke="black" stroke-dasharray="5 5" width="111.863" height="93.577"></rect>
+        <line fill="none" stroke="black" x1="137.601" y1="565.578" x2="127.6" y2="565.578"></line>
+        <g>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(23, 581) ">ON / OFF</text>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(23, 569) ">CONTROL</text>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(23, 557) ">TRACTION</text>
+        </g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(145, 510) ">PANEL</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(145, 522) ">CLUSTER (IPC)</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(145, 498) ">INSTRUMENT</text>
+      </g>
+      <g id="COMP_HPTS~INDEX~HAZARD / PAD / TRACTION SWITCH">
+        <rect x="689.467" y="82.605" fill="rgb(243,243,243)" stroke="blue" width="217.983" height="693.895"></rect>
+        <rect x="699.469" y="91.607" fill="rgb(243,243,243)" stroke="black" width="197.97" height="674.903"></rect>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(918, 116) ">SWITCH</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(918, 104) ">TRACTION</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(918, 92) ">HAZARD / PAD / </text>
+        <line fill="none" stroke="black" x1="689.467" y1="447.424" x2="699.469" y2="447.424"></line>
+        <line fill="none" stroke="black" x1="699.469" y1="447.424" x2="752.719" y2="447.424"></line>
+        <line fill="none" stroke="black" x1="867.198" y1="447.424" x2="795.719" y2="447.424"></line>
+        <line fill="none" stroke="black" x1="867.198" y1="385" x2="867.198" y2="732.102"></line>
+        <path fill="none" stroke="black" d="M790.725,438.422c4.963,0,9.002,4.029,9.002,9.002c0,4.963-4.039,9.002-9.002,9.002
+    c-4.984,0-9.002-4.039-9.002-9.002C781.723,442.451,785.74,438.422,790.725,438.422z"></path>
+        <polyline stroke="black" points="795.719,447.424 785.719,442.418 785.719,452.42 795.719,447.424    "></polyline>
+        <path stroke="black" d="M728.721,444.416c1.654,0,2.996,1.344,2.996,3.008c0,1.654-1.342,2.998-2.996,2.998
+    s-3.008-1.344-3.008-2.998C725.713,445.76,727.066,444.416,728.721,444.416z"></path>
+        <line fill="none" stroke="black" x1="728.721" y1="447.424" x2="728.721" y2="385"></line>
+        <path stroke="black" d="M867.198,444.416c1.654,0,2.996,1.344,2.996,3.008c0,1.654-1.342,2.998-2.996,2.998
+    s-3.008-1.344-3.008-2.998C864.19,445.76,865.544,444.416,867.198,444.416z"></path>
+        <line fill="none" stroke="black" x1="728.721" y1="385" x2="752.719" y2="385"></line>
+        <line fill="none" stroke="black" x1="867.198" y1="385" x2="795.719" y2="385"></line>
+        <path fill="none" stroke="black" d="M790.725,375.998c4.963,0,9.002,4.028,9.002,9.002s-4.039,8.991-9.002,8.991
+    c-4.984,0-9.002-4.018-9.002-8.991S785.74,375.998,790.725,375.998z"></path>
+        <line fill="none" stroke="black" x1="795.719" y1="389.995" x2="795.719" y2="380.005"></line>
+        <polyline stroke="black" points="795.719,385 785.719,380.005 785.719,389.995 795.719,385    "></polyline>
+        <line fill="none" stroke="black" x1="752.719" y1="380.005" x2="752.719" y2="389.995"></line>
+        <line fill="none" stroke="black" x1="752.719" y1="389.995" x2="772.721" y2="389.995"></line>
+        <line fill="none" stroke="black" x1="752.719" y1="380.005" x2="772.721" y2="380.005"></line>
+        <line fill="none" stroke="black" x1="771.711" y1="385" x2="772.721" y2="385"></line>
+        <line fill="none" stroke="black" x1="753.717" y1="385" x2="752.719" y2="385"></line>
+        <line fill="none" stroke="black" x1="772.721" y1="380.005" x2="772.721" y2="389.995"></line>
+        <polyline fill="none" stroke="black" points="753.717,385 755.727,389.995 759.723,380.005 762.719,389.995 766.727,380.005 
+    769.713,389.995 771.711,385    "></polyline>
+        <line fill="none" stroke="black" x1="794.721" y1="393.991" x2="797.717" y2="396.999"></line>
+        <polyline fill="none" stroke="black" points="799.727,398.997 798.717,396 796.719,397.998 799.727,398.997 794.721,393.991 
+       "></polyline>
+        <line fill="none" stroke="black" x1="798.717" y1="391.005" x2="801.725" y2="393.991"></line>
+        <polyline fill="none" stroke="black" points="803.723,396 802.713,393.003 800.715,395.001 803.723,396 799.727,391.993    "></polyline>
+        <polyline fill="none" stroke="black" points="785.719,385 785.719,385 772.721,385    "></polyline>
+        <line fill="none" stroke="black" x1="752.719" y1="442.418" x2="752.719" y2="452.42"></line>
+        <line fill="none" stroke="black" x1="752.719" y1="452.42" x2="772.721" y2="452.42"></line>
+        <line fill="none" stroke="black" x1="752.719" y1="442.418" x2="772.721" y2="442.418"></line>
+        <line fill="none" stroke="black" x1="771.711" y1="447.424" x2="772.721" y2="447.424"></line>
+        <line fill="none" stroke="black" x1="753.717" y1="447.424" x2="752.719" y2="447.424"></line>
+        <line fill="none" stroke="black" x1="772.721" y1="442.418" x2="772.721" y2="452.42"></line>
+        <polyline fill="none" stroke="black" points="753.717,447.424 755.727,452.42 759.723,442.418 762.719,452.42 766.727,442.418 
+    769.713,452.42 771.711,447.424    "></polyline>
+        <line fill="none" stroke="black" x1="794.721" y1="456.426" x2="797.717" y2="459.412"></line>
+        <polyline fill="none" stroke="black" points="799.727,461.422 798.717,458.424 796.719,460.422 799.727,461.422 
+    794.721,456.426    "></polyline>
+        <line fill="none" stroke="black" x1="798.717" y1="453.418" x2="801.725" y2="456.426"></line>
+        <polyline fill="none" stroke="black" points="803.723,458.424 802.713,455.416 800.715,457.414 803.723,458.424 
+    799.727,454.418    "></polyline>
+        <line fill="none" stroke="black" x1="795.719" y1="452.42" x2="795.719" y2="442.418"></line>
+        <polyline fill="none" stroke="black" points="785.719,447.424 785.719,447.424 772.721,447.424    "></polyline>
+        <g>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(738, 555) ">TCS</text>
+        </g>
+        <g>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(757, 206) ">AMBER</text>
+        </g>
+        <g>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(731, 113) ">PASS</text>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(731, 125) ">AIRBAG</text>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(731, 137) ">DEACTIVATION</text>
+        </g>
+        <polyline fill="none" stroke="black" points="689.67,348.52 867.354,348.52 867.354,155.104 773.706,155.104    "></polyline>
+        <line fill="none" stroke="black" x1="721.088" y1="221.455" x2="753.17" y2="221.455"></line>
+        <polyline fill="none" stroke="black" points="753.315,155.104 721.588,155.104 721.588,286.978    "></polyline>
+        <line fill="none" stroke="black" x1="721.088" y1="287.177" x2="753.17" y2="287.177"></line>
+        <line fill="none" stroke="black" x1="753.17" y1="221.455" x2="689.67" y2="221.455"></line>
+        <polyline stroke="black" points="796.17,221.455 786.17,216.46 786.17,226.45 796.17,221.455    "></polyline>
+        <path fill="none" stroke="black" d="M791.176,212.453c4.963,0,9.002,4.028,9.002,9.002s-4.039,9.002-9.002,9.002
+    c-4.984,0-9.002-4.028-9.002-9.002S786.191,212.453,791.176,212.453z"></path>
+        <polyline fill="none" stroke="black" points="786.17,221.455 786.17,221.455 773.172,221.455    "></polyline>
+        <line fill="none" stroke="black" x1="796.17" y1="226.45" x2="796.17" y2="216.46"></line>
+        <polyline fill="none" stroke="black" points="804.174,232.455 803.164,229.458 801.166,231.456 804.174,232.455 
+    800.178,228.448    "></polyline>
+        <line fill="none" stroke="black" x1="799.168" y1="227.46" x2="802.176" y2="230.457"></line>
+        <polyline fill="none" stroke="black" points="800.178,235.452 799.168,232.455 797.17,234.453 800.178,235.452 
+    795.172,230.457    "></polyline>
+        <line fill="none" stroke="black" x1="795.172" y1="230.457" x2="798.168" y2="233.454"></line>
+        <polyline fill="none" stroke="black" points="754.168,221.455 756.178,226.45 760.174,216.46 763.17,226.45 767.178,216.46 
+    770.164,226.45 772.162,221.455    "></polyline>
+        <line fill="none" stroke="black" x1="773.172" y1="216.46" x2="773.172" y2="226.45"></line>
+        <line fill="none" stroke="black" x1="754.168" y1="221.455" x2="753.17" y2="221.455"></line>
+        <line fill="none" stroke="black" x1="772.162" y1="221.455" x2="773.172" y2="221.455"></line>
+        <line fill="none" stroke="black" x1="753.17" y1="216.46" x2="773.172" y2="216.46"></line>
+        <line fill="none" stroke="black" x1="753.17" y1="226.45" x2="773.172" y2="226.45"></line>
+        <g>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(738, 721) ">HAZARD</text>
+        </g>
+        <path stroke="black" d="M867.198,284.741c1.654,0,2.996,1.332,2.996,2.997c0,1.654-1.342,2.997-2.996,2.997
+    s-3.008-1.343-3.008-2.997C864.19,286.073,865.544,284.741,867.198,284.741z"></path>
+        <path stroke="black" d="M867.354,218.156c1.654,0,2.996,1.332,2.996,2.997c0,1.654-1.342,2.997-2.996,2.997
+    s-3.008-1.343-3.008-2.997C864.347,219.488,865.7,218.156,867.354,218.156z"></path>
+        <path stroke="black" d="M721.825,218.006c1.654,0,2.996,1.332,2.996,2.997c0,1.654-1.342,2.997-2.996,2.997
+    s-3.008-1.343-3.008-2.997C718.817,219.338,720.171,218.006,721.825,218.006z"></path>
+        <line fill="none" stroke="black" x1="867.354" y1="287.722" x2="796.17" y2="287.721"></line>
+        <line fill="none" stroke="black" x1="867.354" y1="221.557" x2="796.17" y2="221.556"></line>
+        <polyline stroke="black" points="796.17,287.721 786.17,282.726 786.17,292.716 796.17,287.721    "></polyline>
+        <path fill="none" stroke="black" d="M791.176,278.719c4.963,0,9.002,4.028,9.002,9.002s-4.039,9.002-9.002,9.002
+    c-4.984,0-9.002-4.028-9.002-9.002S786.191,278.719,791.176,278.719z"></path>
+        <polyline fill="none" stroke="black" points="786.17,287.721 786.17,287.721 773.172,287.721    "></polyline>
+        <line fill="none" stroke="black" x1="796.17" y1="292.716" x2="796.17" y2="282.726"></line>
+        <polyline fill="none" stroke="black" points="804.174,298.721 803.164,295.724 801.166,297.722 804.174,298.721 
+    800.178,294.714    "></polyline>
+        <line fill="none" stroke="black" x1="799.168" y1="293.726" x2="802.176" y2="296.723"></line>
+        <polyline fill="none" stroke="black" points="800.178,301.718 799.168,298.721 797.17,300.719 800.178,301.718 
+    795.172,296.723    "></polyline>
+        <line fill="none" stroke="black" x1="795.172" y1="296.723" x2="798.168" y2="299.72"></line>
+        <polyline fill="none" stroke="black" points="754.168,287.721 756.178,292.716 760.174,282.726 763.17,292.716 
+    767.178,282.726 770.164,292.716 772.162,287.721    "></polyline>
+        <line fill="none" stroke="black" x1="773.172" y1="282.726" x2="773.172" y2="292.716"></line>
+        <line fill="none" stroke="black" x1="754.168" y1="287.721" x2="753.17" y2="287.721"></line>
+        <line fill="none" stroke="black" x1="772.162" y1="287.721" x2="773.172" y2="287.721"></line>
+        <line fill="none" stroke="black" x1="753.17" y1="282.726" x2="773.172" y2="282.726"></line>
+        <line fill="none" stroke="black" x1="753.17" y1="292.716" x2="773.172" y2="292.716"></line>
+        <line fill="none" stroke="black" x1="753.17" y1="282.726" x2="753.17" y2="292.716"></line>
+        <g>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(757, 273) ">AMBER</text>
+        </g>
+        <g>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(757, 370) ">BLUE</text>
+        </g>
+        <g>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(757, 434) ">RED</text>
+        </g>
+        <line fill="none" stroke="black" x1="753.17" y1="216.46" x2="753.17" y2="226.45"></line>
+        <polyline fill="none" stroke="black" points="754.168,155.441 756.178,160.437 760.174,150.446 763.17,160.437 
+    767.178,150.446 770.164,160.437 772.162,155.441    "></polyline>
+        <line fill="none" stroke="black" x1="773.172" y1="150.446" x2="773.172" y2="160.437"></line>
+        <line fill="none" stroke="black" x1="754.168" y1="155.441" x2="753.17" y2="155.441"></line>
+        <line fill="none" stroke="black" x1="772.162" y1="155.441" x2="773.172" y2="155.441"></line>
+        <line fill="none" stroke="black" x1="753.17" y1="150.446" x2="773.172" y2="150.446"></line>
+        <line fill="none" stroke="black" x1="753.17" y1="160.437" x2="773.172" y2="160.437"></line>
+        <line fill="none" stroke="black" x1="753.17" y1="150.446" x2="753.17" y2="160.437"></line>
+        <line fill="none" stroke="black" x1="758.665" y1="732.102" x2="867.198" y2="732.102"></line>
+        <line fill="none" stroke="black" x1="736.8" y1="732.07" x2="689.467" y2="732.07"></line>
+        <line fill="none" stroke="black" x1="738.804" y1="740.073" x2="758.8" y2="732.07"></line>
+        <polyline fill="none" stroke="black" points="738.804,740.073 742.8,737.076 743.804,739.074 738.804,740.073    "></polyline>
+        <path fill="none" stroke="black" d="M758.8,731.071c0.554,0,1,0.445,1,0.999c0,0.559-0.446,0.999-1,0.999
+    c-0.553,0-0.998-0.44-0.998-0.999C757.802,731.517,758.247,731.071,758.8,731.071z"></path>
+        <path stroke="black" d="M738.804,740.073c1.102,0,1.998,0.892,1.998,1.998s-0.896,1.998-1.998,1.998
+    c-1.106,0-2.004-0.892-2.004-1.998S737.697,740.073,738.804,740.073z"></path>
+        <path stroke="black" d="M738.804,730.072c1.102,0,1.998,0.892,1.998,1.998s-0.896,1.998-1.998,1.998
+    c-1.106,0-2.004-0.892-2.004-1.998S737.697,730.072,738.804,730.072z"></path>
+        <line fill="none" stroke="black" x1="759.332" y1="565.678" x2="908.053" y2="565.578"></line>
+        <line fill="none" stroke="black" x1="737.467" y1="565.646" x2="690.134" y2="565.646"></line>
+        <line fill="none" stroke="black" x1="739.471" y1="573.649" x2="759.467" y2="565.646"></line>
+        <polyline fill="none" stroke="black" points="739.471,573.649 743.467,570.652 744.471,572.65 739.471,573.649    "></polyline>
+        <path fill="none" stroke="black" d="M759.467,564.647c0.554,0,1,0.445,1,0.999c0,0.559-0.446,0.999-1,0.999
+    c-0.553,0-0.998-0.44-0.998-0.999C758.469,565.093,758.914,564.647,759.467,564.647z"></path>
+        <path stroke="black" d="M739.471,573.649c1.102,0,1.998,0.892,1.998,1.998s-0.896,1.998-1.998,1.998
+    c-1.106,0-2.004-0.892-2.004-1.998S738.364,573.649,739.471,573.649z"></path>
+        <path stroke="black" d="M739.471,563.648c1.102,0,1.998,0.892,1.998,1.998s-0.896,1.998-1.998,1.998
+    c-1.106,0-2.004-0.892-2.004-1.998S738.364,563.648,739.471,563.648z"></path>
+        <path stroke="black" d="M867.198,562.57c1.654,0,2.996,1.354,2.996,3.008s-1.342,2.997-2.996,2.997s-3.008-1.343-3.008-2.997
+    S865.544,562.57,867.198,562.57z"></path>
+      </g>
+      <g id="COMP_BCM2~DATA~BODY CONTROL MODULE (BCM)">
+        <rect x="6.173" y="648.362" fill="rgb(243,243,243)" stroke="blue" width="130.817" height="128.102"></rect>
+        <rect x="16.173" y="658.362" fill="rgb(243,243,243)" stroke="black" stroke-dasharray="5 5" width="110.816" height="108.102"></rect>
+        <rect x="21.606" y="695.964" fill="rgb(243,243,243)" stroke="black" stroke-dasharray="5 5" width="86.75" height="55.5"></rect>
+        <line fill="none" stroke="black" x1="108.715" y1="732.307" x2="136.991" y2="732.307"></line>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(144, 658) ">BODY</text>
+        <g>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(58, 736) ">HAZARD</text>
+        </g>
+        <g>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(39, 713) ">MICRO</text>
+        </g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(144, 670) ">CONTROL</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(144, 682) ">MODULE (BCM)</text>
+      </g>
+      <g id="COMP_RCM2~DATA~RESTRAINTS CONTROL MODULE (RCM)">
+        <rect x="6.173" y="269.703" fill="rgb(243,243,243)" stroke="blue" width="131.067" height="123.102"></rect>
+        <rect x="16.173" y="279.703" fill="rgb(243,243,243)" stroke="black" stroke-dasharray="5 5" width="111.066" height="103.102"></rect>
+        <line fill="none" stroke="black" x1="127.465" y1="348.647" x2="137.241" y2="348.647"></line>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(144, 280) ">RESTRAINTS</text>
+        <g>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(25, 354) ">INDICATOR</text>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(25, 342) ">PAD</text>
+        </g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(144, 292) ">CONTROL</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(144, 304) ">MODULE (RCM)</text>
+      </g>
+      <g id="COMP_BCM~DATA~BODY CONTROL MODULE (BCM)">
+        <rect x="27.167" y="22.31" fill="rgb(243,243,243)" stroke="blue" width="143.455" height="93.19"></rect>
+        <rect x="37.167" y="32.31" fill="rgb(243,243,243)" stroke="black" stroke-dasharray="5 5" width="123.454" height="73.189"></rect>
+        <line fill="none" stroke="black" x1="70.526" y1="115.5" x2="70.526" y2="105.499"></line>
+        <line fill="none" stroke="black" x1="70.45" y1="22.31" x2="70.45" y2="63.96"></line>
+        <g>
+          <text font-size="12" fill="black" x="0" y="0" transform="translate(83, 77) ">7.5A</text>
+        </g>
+        <line fill="none" stroke="black" x1="70.526" y1="105.499" x2="70.526" y2="84.777"></line>
+        <path fill="none" stroke="black" d="M70.45,73.96c2.76-0.682,4.447-3.475,3.766-6.235c-0.463-1.858-1.912-3.309-3.766-3.765"></path>
+        <path fill="none" stroke="black" d="M70.45,73.96c-2.762,0.678-4.447,3.471-3.771,6.23c0.463,1.859,1.912,3.309,3.771,3.771"></path>
+        <path fill="none" stroke="black" d="M70.45,82.958c0.547,0,0.998,0.451,0.998,1.005c0,0.547-0.451,0.998-0.998,0.998
+    c-0.553,0-1.004-0.451-1.004-0.998C69.446,83.409,69.897,82.958,70.45,82.958z"></path>
+        <path fill="none" stroke="black" d="M70.45,62.96c0.547,0,0.998,0.446,0.998,1c0,0.553-0.451,0.998-0.998,0.998
+    c-0.553,0-1.004-0.445-1.004-0.998C69.446,63.407,69.897,62.96,70.45,62.96z"></path>
+        <polyline fill="none" stroke="black" points="152.985,115.5 152.985,97.501 70.564,97.501    "></polyline>
+        <path stroke="black" d="M70.526,95.591c-1.107,0-1.998,0.893-1.998,1.998c0,1.107,0.891,1.998,1.998,1.998
+    c1.105,0,1.998-0.891,1.998-1.998C72.524,96.483,71.632,95.591,70.526,95.591z"></path>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(178, 34) ">BODY</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(178, 46) ">CONTROL</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(178, 58) ">MODULE (BCM)</text>
+      </g>
+      <g id="FUSE_F41_COMP_BCM~DATA~BODY CONTROL MODULE (BCM)">
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(83, 64) ">F41</text>
+      </g>
+      <a id="dialog_G202" name="G202">
+        <g id="GROUND_G202~DATA~G202">
+          <line fill="none" stroke="black" x1="1041.898" y1="830.896" x2="1041.898" y2="840.896"></line>
+          <line fill="none" stroke="black" x1="1034.895" y1="840.896" x2="1048.897" y2="840.896"></line>
+          <line fill="none" stroke="black" x1="1045.895" y1="843.895" x2="1037.897" y2="843.895"></line>
+          <line fill="none" stroke="black" x1="1042.898" y1="846.902" x2="1040.895" y2="846.902"></line>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(1063, 836) " onclick="setAttribute('fill', 'purple')">G202</text>
+        </g>
+      </a>
+      <a id="dialog_S243" name="S243">
+        <g id="SPLICE_S243">
+          <line fill="none" stroke="black" x1="414.497" y1="221.677" x2="415.497" y2="221.677"></line>
+          <path stroke="white" stroke-width="2" d="M414.497,215.673c3.314,0,6,2.686,6,6.004c0,3.309-2.686,5.994-6,5.994
+    c-3.313,0-5.998-2.686-5.998-5.994C408.499,218.358,411.185,215.673,414.497,215.673z" fill="black"></path>
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(399, 210) " onclick="setAttribute('fill', 'purple')">S243</text>
+        </g>
+      </a>
+      <a id="dialog_151-16" xlink:href="/wiring/page?vin=&amp;vehicleId=5063&amp;book=ED2&amp;market=&amp;language=&amp;languageCode=ENUSA&amp;bookType=svg&amp;cell=151&amp;page=16&amp;country=&amp;title=">
+        <g id="PAGEREF_151-16">
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(918, 128) " onclick="setAttribute('fill', 'purple')">151-16</text>
+        </g>
+      </a>
+      <a id="dialog_46-3" xlink:href="/wiring/page?vin=&amp;vehicleId=5063&amp;book=ED2&amp;market=&amp;language=&amp;languageCode=ENUSA&amp;bookType=svg&amp;cell=46&amp;page=3&amp;country=&amp;title=">
+        <g id="PAGEREF_46-3">
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(144, 316) " onclick="setAttribute('fill', 'purple')">46-3</text>
+        </g>
+      </a>
+      <a id="dialog_71-2" xlink:href="/wiring/page?vin=&amp;vehicleId=5063&amp;book=ED2&amp;market=&amp;language=&amp;languageCode=ENUSA&amp;bookType=svg&amp;cell=71&amp;page=2&amp;country=&amp;title=">
+        <g id="PAGEREF_71-2">
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(327, 462) " onclick="setAttribute('fill', 'purple')">71-2</text>
+        </g>
+      </a>
+      <a id="dialog_60-1" xlink:href="/wiring/page?vin=&amp;vehicleId=5063&amp;book=ED2&amp;market=&amp;language=&amp;languageCode=ENUSA&amp;bookType=svg&amp;cell=60&amp;page=1&amp;country=&amp;title=">
+        <g id="PAGEREF_60-1">
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(145, 534) " onclick="setAttribute('fill', 'purple')">60-1</text>
+        </g>
+      </a>
+      <a id="dialog_13-38" xlink:href="/wiring/page?vin=&amp;vehicleId=5063&amp;book=ED2&amp;market=&amp;language=&amp;languageCode=ENUSA&amp;bookType=svg&amp;cell=13&amp;page=38&amp;country=&amp;title=">
+        <g id="PAGEREF_13-38">
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(144, 706) " onclick="setAttribute('fill', 'purple')">13-38</text>
+        </g>
+      </a>
+      <a id="dialog_11-3" xlink:href="/wiring/page?vin=&amp;vehicleId=5063&amp;book=ED2&amp;market=&amp;language=&amp;languageCode=ENUSA&amp;bookType=svg&amp;cell=11&amp;page=3&amp;country=&amp;title=">
+        <g id="PAGEREF_11-3">
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(144, 694) " onclick="setAttribute('fill', 'purple')">11-3</text>
+        </g>
+      </a>
+      <a id="dialog_10-12" xlink:href="/wiring/page?vin=&amp;vehicleId=5063&amp;book=ED2&amp;market=&amp;language=&amp;languageCode=ENUSA&amp;bookType=svg&amp;cell=10&amp;page=12&amp;country=&amp;title=">
+        <g id="PAGEREF_10-12">
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(1063, 848) " onclick="setAttribute('fill', 'purple')">10-12</text>
+        </g>
+      </a>
+      <a id="dialog_13-37" xlink:href="/wiring/page?vin=&amp;vehicleId=5063&amp;book=ED2&amp;market=&amp;language=&amp;languageCode=ENUSA&amp;bookType=svg&amp;cell=13&amp;page=37&amp;country=&amp;title=">
+        <g id="PAGEREF_13-37">
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(83, 90) " onclick="setAttribute('fill', 'purple')">13-37</text>
+        </g>
+      </a>
+      <a id="dialog_11-3" xlink:href="/wiring/page?vin=&amp;vehicleId=5063&amp;book=ED2&amp;market=&amp;language=&amp;languageCode=ENUSA&amp;bookType=svg&amp;cell=11&amp;page=3&amp;country=&amp;title=">
+        <g id="PAGEREF_11-3">
+          <text font-size="12" fill="blue" x="0" y="0" transform="translate(178, 70) " onclick="setAttribute('fill', 'purple')">11-3</text>
+        </g>
+      </a>
+      <line fill="none" stroke="black" stroke-dasharray="5 5" x1="685.461" y1="731.88" x2="685.461" y2="222.167"></line>
+      <line fill="none" stroke="black" x1="506.128" y1="447.494" x2="496.127" y2="447.494"></line>
+      <polyline fill="rgb(243,243,243)" stroke="black" points="496.127,447.494 486.126,437.482 456.129,437.482 456.129,457.484 
+   486.126,457.484 496.127,447.494   "></polyline>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(327, 450) ">ILLUMINATION</text>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(327, 438) ">CLUSTER AND PANEL</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(37, 17) ">Hot in Start or Run</text>
+      </g>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(132, 158) ">Not used</text>
+      </g>
+      <rect x="389.381" y="193.61" fill="none" stroke="black" stroke-dasharray="5 5" width="53.448" height="40.488"></rect>
+      <g>
+        <text font-size="12" fill="black" x="0" y="0" transform="translate(389, 188) ">SVT Raptor</text>
+      </g>
+    </g>
+  </g>
+</svg></body></html>

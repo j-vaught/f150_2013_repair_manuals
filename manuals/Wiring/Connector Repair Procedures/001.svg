@@ -1,0 +1,67 @@
+<html><head></head><body><svg viewBox="0 0 1100 850" height="100%" width="100%" xmlns:xlink="http://www.w3.org/1999/xlink" id="svgDoc" xmlns="http://www.w3.org/2000/svg">
+  <title>ECAD ED2005001</title>
+  <desc>
+    <cellnumber>5</cellnumber>
+    <pagenumber>1</pagenumber>
+    <engineeringname>ENG_CDSID</engineeringname>
+    <modelyear>2013</modelyear>
+    <modelname>F150</modelname>
+    <qualifierlist>
+      <qualifier></qualifier>
+      <qualifier></qualifier>
+      <qualifier></qualifier>
+    </qualifierlist>
+    <authorcellname>DES_CDSID</authorcellname>
+    <author>CDSID</author>
+    <note></note>
+    <datetime></datetime>
+  </desc>
+  <g font-stretch="semi-condensed" style="fill:none" transform="translate(0, 0) scale(1.0)">
+    <g style="visibility:visible" id="Sheet_1">
+      <g>
+        <text font-size="18" fill="black" x="0" y="0" transform="translate(13, 69) ">The following illustrations are known examples of wiring harness, splices and connectors that will create intermittent electrical concerns.</text>
+        <text font-size="18" fill="black" x="0" y="0" transform="translate(13, 87) ">The concerns are hidden and can only be discovered by a physical evaluation as shown in each illustration.</text>
+      </g>
+      <g>
+        <text font-size="20" fill="black" font-weight="bold" transform="translate(13, 42) ">Troubleshooting wiring harness and connector hidden concerns</text>
+      </g>
+      <g>
+        <text font-size="18" fill="black" x="0" y="0" transform="translate(13, 194) ">Several components, such as PCM and ABS modules, may utilize gold plated terminals in their </text>
+        <text font-size="18" fill="black" x="0" y="0" transform="translate(13, 212) ">connections to the wiring harness.  Replace all gold plated terminals with either a gold plated terminal or a “universal” service kit </text>
+        <text font-size="18" fill="black" x="0" y="0" transform="translate(13, 230) ">with a plating of silver or tin with grease already applied.</text>
+      </g>
+      <g>
+        <text font-size="20" fill="black" font-weight="bold" transform="translate(13, 167) ">Non Safety Restraint System Repairs</text>
+      </g>
+      <g>
+        <text font-size="18" fill="black" x="0" y="0" transform="translate(13, 405) ">Restraint terminals are not to be repaired/replaced with individual pins/terminals.</text>
+      </g>
+      <g>
+        <text font-size="18" fill="black" x="0" y="0" transform="translate(13, 480) ">of the restraint harness should be used.  Available Wiring Pigtail Kits can be identified in the wiring connector face view.</text>
+        <text font-size="18" fill="black" x="0" y="0" transform="translate(13, 444) ">Ford no longer requires replacement of the affected harness if a restraint connector or terminal requires service.   </text>
+        <text font-size="18" fill="black" x="0" y="0" transform="translate(13, 462) ">Wiring Pigtail Kits designed specifically for the deployable components (for example,  Airbags or Seatbelt Pretensioners) </text>
+      </g>
+      <g>
+        <text font-size="20" fill="black" font-weight="bold" transform="translate(13, 326) ">IMPORTANT NOTICE REGARDING SAFETY RESTRAINT SYSTEMS:</text>
+      </g>
+      <g>
+        <text font-size="20" fill="black" font-weight="bold" transform="translate(13, 378) ">Restraint system terminals must not be removed or repaired</text>
+      </g>
+      <g>
+        <path fill="none" stroke="black" d="M9.562,385.993"></path>
+      </g>
+      <g>
+        <text font-size="18" fill="black" x="0" y="0" transform="translate(177, 655) ">Do not repair or service restraint component connector terminals.  If restraint connector terminals need repair, </text>
+        <text font-size="18" fill="black" x="0" y="0" transform="translate(13, 673) ">replace with the service connector pigtails.  Failure to follow this instruction may result in incorrect operation of the vehicle safety </text>
+        <text font-size="18" fill="black" x="0" y="0" transform="translate(13, 691) ">restraint, which increases the risk of serious personal injury or death in a crash. </text>
+      </g>
+      <text font-size="20" fill="black" font-weight="bold" transform="translate(65, 657) ">WARNING: </text>
+      <polygon fill="#FFFF00" stroke="#020202" stroke-width="2" points="29.918,621.079 7.518,654.329 50.918,654.329   "></polygon>
+      <path fill="#050505" d="M32.571,634.729c0,5.412-1.253,9.8-2.8,9.8s-2.8-4.388-2.8-9.8c0-5.413,1.254-6.3,2.8-6.3
+   S32.571,629.316,32.571,634.729z"></path>
+      <path fill="#050505" d="M32.728,648.029c0,0.967-0.784,1.75-1.75,1.75h-2.128c-0.966,0-1.75-0.783-1.75-1.75l0,0
+   c0-0.966,0.784-1.75,1.75-1.75h2.128C31.944,646.279,32.728,647.063,32.728,648.029L32.728,648.029z"></path>
+      <line fill="none" stroke="#020202" stroke-width="2" x1="8.536" y1="653.329" x2="49.256" y2="653.329"></line>
+    </g>
+  </g>
+</svg></body></html>
