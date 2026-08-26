@@ -1,0 +1,4484 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="303-06" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="303-06 Starting System" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1859851" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>303-06 Starting System</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      09/06/2017</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Starting System" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Starting System
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('303-06','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2574A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Flex Probe Kit
+          <br>NUD105-R025D or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-IV multimeter
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan tool
+          <br>
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+        This vehicle is equipped with Passive Anti-Theft System (PATS)
+       that disables the engine from cranking and starting if an unprogrammed <abbr title="Passive Anti-Theft System">PATS</abbr>  key is used or an invalid <abbr title="Powertrain Control Module">PCM</abbr>  ID is received. <abbr title="Passive Anti-Theft System">PATS</abbr>  is controlled by the Body Control Module (BCM)
+      . If there is a <abbr title="Passive Anti-Theft System">PATS</abbr>  concern that causes the engine to disabled, the Instrument Panel Cluster (IPC)
+       displays "STARTING SYSTEM FAULT" in the message center. Refer to <a data-linkid="ID0EYD" data-sectnum="419-01B" class="section-link">Section 
+          419-01B</a><span id="spanID0EYD"></span> to diagnose a <abbr title="Passive Anti-Theft System">PATS</abbr>  concern. 
+
+      </i></p>
+      <p xmlns:str="http://xsltsl.org/string">The starter system controls the cranking of the engine. The starter motor is enabled by the starter relay when the relay is activated by the <abbr title="Powertrain Control Module">PCM</abbr> . The starting system is electronically controlled by the <abbr title="Powertrain Control Module">PCM</abbr> . The <abbr title="Powertrain Control Module">PCM</abbr>  requires the following inputs: 
+</p>
+      <ul type="disc" xmlns:str="http://xsltsl.org/string">
+        <li>
+          Ignition switch request to start the engine 
+
+        </li>
+        <li>
+          Run/start relay voltage 
+
+        </li>
+        <li>
+          
+            <abbr title="Passive Anti-Theft System">PATS</abbr>  enable status from the <abbr title="Body Control Module">BCM</abbr> 
+        </li>
+        <li>
+          Correct transmission PARK or NEUTRAL input from the Transmission Range (TR)
+       sensor 
+
+        </li>
+      </ul>
+      <p xmlns:str="http://xsltsl.org/string">Under normal operation when the ignition is turned to the START position, the <abbr title="Body Control Module">BCM</abbr>  generates a key verification message. It sends this message to the <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver. The transceiver reads the key and sends a key verification message back to the <abbr title="Body Control Module">BCM</abbr> . If the message received does not match the key verified in the <abbr title="Body Control Module">BCM</abbr>  memory, the engine is disabled and does not crank and start. Once the <abbr title="Body Control Module">BCM</abbr>  determines the correct programmed key is in the ignition, the <abbr title="Body Control Module">BCM</abbr>  sends the <abbr title="Powertrain Control Module">PCM</abbr>  a valid <abbr title="Passive Anti-Theft System">PATS</abbr>  message. When the <abbr title="Powertrain Control Module">PCM</abbr>  receives the message, it generates a response and sends it back to the <abbr title="Body Control Module">BCM</abbr> . If the response from the <abbr title="Powertrain Control Module">PCM</abbr>  does not match the response in the <abbr title="Body Control Module">BCM</abbr>  memory, <abbr title="Passive Anti-Theft System">PATS</abbr>  is not enabled and the engine does not crank. If both the key verification and <abbr title="Powertrain Control Module">PCM</abbr>  ID pass, <abbr title="Passive Anti-Theft System">PATS</abbr>  is enabled. The <abbr title="Powertrain Control Module">PCM</abbr>  recognizes the correct electronically coded passive key and provides voltage and ground to the starter relay coil. The starter relay coil is energized causing the relay contacts to close providing voltage to the starter solenoid, allowing the starter motor to crank and start the engine. The <abbr title="Powertrain Control Module">PCM</abbr>  disengages the starter once an engine rpm threshold is reached, a set crank time is exceeded or the ignition is turned OFF. The <abbr title="Body Control Module">BCM</abbr>  also enables the Run/start relay which sends voltage to the <abbr title="Powertrain Control Module">PCM</abbr> . If the <abbr title="Powertrain Control Module">PCM</abbr>  does not receive this voltage the engine will not crank. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The <abbr title="Transmission Range">TR</abbr>  sensor prevents operation of the starter motor unless the transmission is in NEUTRAL or PARK. 
+</p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Remote Start 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The remote start system (if equipped) enables the engine to be started from up to 100 meters (328 feet) away, by pressing a sequence of buttons on the Integrated Keyhead Transmitter (IKT)
+      . The factory remote start system does not operate if the ignition is in the RUN/START position or the hood is not closed. An additional external antenna is connected to the Tire Pressure Monitor Module (TPM)
+       to extend the <abbr title="Remote Keyless Entry">RKE</abbr>  range. The remote start system can be enabled or disabled by the customer. When enabled, the customer can set the engine run time for 5, 10 or 15 minutes. For information on setting the engine run time, refer to the Owner's Literature or <a data-linkid="ID0EEDAC" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EEDAC"></span>. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The remote start system is activated by pressing the lock button on the <abbr title="Integrated Keyhead Transmitter">IKT</abbr> , to make sure the doors are locked, followed by 2 presses of the remote start button. The 3 button presses must occur within 3 seconds. The system acknowledges the start request by flashing the exterior lights twice. Once started, the engine runs for 10 minutes (default run time is 10 minutes; the time can be programmed by the customer to 5, 10 or 15 minutes) and the parking lights remain illuminated until the cycle is complete. The remote start duration can also be extended by initiating remote start while the first timer is still running or by initiating a completely independent start cycle when the first has completed. During the remote start cycle the power windows are inhibited and the radio will not turn on automatically but may be switched on manually from inside the vehicle. If the remote start system fails to start the horn chirps twice. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">To transition from remote start mode to drive mode, use a programmed <abbr title="Integrated Keyhead Transmitter">IKT</abbr>  to switch the ignition to the RUN position. If a programmed <abbr title="Integrated Keyhead Transmitter">IKT</abbr>  is not used, the engine shuts off. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">To deactivate the remote start system, press the remote start button once. When deactivating the remote start system the parking lights turn off to give a visual indication that the engine and climate control features have turned off. It may be necessary to be closer to the vehicle to deactivate the remote start feature than it was to initiate it due to ground deflections and added noise from the engine running. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The remote start system conditions the cabin temperature during remote start based on the outside temperature. For information on cabin temperature conditioning during remote start, refer to <a data-linkid="ID0EGEAC" data-sectnum="412-00" class="section-link">Section 
+          412-00</a><span id="spanID0EGEAC"></span>. 
+</p>
+      
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b><img src="/content/images/workshop/warning.jpg">WARNING: 
+        Always disconnect the battery ground cable at the battery before disconnecting the starter motor battery terminal lead. If a tool is shorted at the starter motor battery terminal, the tool can quickly heat enough to cause a skin burn. Failure to follow this instruction may result in serious personal injury.
+      </b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+        Make sure the anti-theft system is functioning correctly before carrying out a logical starting system diagnosis. Address anti-theft system concerns before continuing. Refer to <a data-linkid="ID0E4EAC" data-sectnum="419-01B" class="section-link">Section 
+          419-01B</a><span id="spanID0E4EAC"></span>. 
+
+      </i></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern by operating the starting system. 
+
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Check the battery for loose, damaged or corroded connections. 
+
+      </li>
+</ol>
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Check the battery condition and state of charge. <a data-linkid="ID0ESFAC" data-sectnum="414-01" class="section-link">Section 
+          414-01</a><span id="spanID0ESFAC"></span>. 
+
+      </li>
+</ol>
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Perform Battery Drain Test and check for abnormal ignition-off current drain(s). Refer to <a data-linkid="ID0E4FAC" data-sectnum="414-01" class="section-link">Section 
+          414-01</a><span id="spanID0E4FAC"></span> General Procedures. 
+
+      </li>
+</ol>
+      <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Remove the accessory drive belt. Refer to <a data-linkid="ID0EIGAC" data-sectnum="303-05" class="section-link">Section 
+          303-05</a><span id="spanID0EIGAC"></span>. Verify the crankshaft and each of the components driven by the accessory drive belt rotate and are not seized or damaged. 
+
+      </li>
+</ol>
+      <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If any aftermarket accessories have been added to the vehicle, make sure they are properly wired. 
+
+      </li>
+</ol>
+      <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Inspect to determine if any of the following mechanical or electrical concerns apply. 
+
+      </li>
+</ol>
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string">
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Visual Inspection Chart
+        </b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          <thead valign="bottom">
+            <tr>
+              <th rowspan="1" align="center" valign="top">
+                
+                  Mechanical
+                 
+              </th>
+              <th rowspan="1" align="center" valign="top">
+                
+                  Electrical
+                 
+              </th>
+            </tr>
+          </thead>
+          <tbody valign="top">
+            <tr>
+              <td rowspan="1" valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Starter motor 
+
+                  </li>
+                  <li>
+                    Starter motor bolts 
+
+                  </li>
+                </ul>
+              </td>
+              <td rowspan="1" valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Battery 
+
+                  </li>
+                  <li>
+                    Battery cables 
+
+                  </li>
+                  <li>
+                    
+                      Battery Junction Box (BJB)
+       Starter relay 
+
+                  </li>
+                  <li>
+                    
+                      Battery Junction Box (BJB)
+       Run/start relay 
+
+                  </li>
+                  <li>
+                    
+                      Battery Junction Box (BJB)
+       fuse 13 (30A) 
+
+                  </li>
+                  <li>
+                    
+                      Body Control Module (BCM)
+       fuse 28 (15A) 
+
+                  </li>
+                  <li>
+                    Loose or corroded connections 
+
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If an obvious cause for an observed or reported concern is found, correct the cause before proceeding to the next step. 
+
+      </li>
+</ol>
+      <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Make sure to use the latest scan tool software release. 
+
+        </i></p>
+        If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC)
+      . 
+
+      </li>
+</ol>
+      <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          The <abbr title="Light Emitting Diode">LED</abbr>  prove out confirms power and ground from the <abbr title="Data Link Connector">DLC</abbr>  are provided to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </i></p>
+        If the scan tool does not communicate with the <abbr title="Vehicle Communication Module">VCM</abbr> : 
+
+        <ul type="disc">
+      <li>
+          check the <abbr title="Vehicle Communication Module">VCM</abbr>  connection to the vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          check the scan tool connection to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0ENOAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0ENOAC"></span>, No Power To The Scan Tool, to diagnose no power to the scan tool. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="11. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the scan tool does not communicate with the vehicle: 
+
+        <ul type="disc">
+      <li>
+          verify the ignition key is in the ON position. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          verify the scan tool operation with a known good vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0EKPAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EKPAC"></span> to diagnose no communication with the scan tool. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="12. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the network test. 
+
+        <ul type="disc">
+      <li>
+          If the scan tool responds with no communication for one or more modules, refer to <a data-linkid="ID0E2PAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E2PAC"></span>. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          If the network test passes, proceed with module self-test diagnostics. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="13. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the self-test diagnostics for the <abbr title="Body Control Module">BCM</abbr> , <abbr title="Powertrain Control Module">PCM</abbr>  and Tire Pressure Monitor Module (TPM)
+       (<abbr title="Tire Pressure Monitor Module">TPM</abbr>  is standard equipment, also used for optional remote start feature). 
+
+      </li>
+</ol>
+      <ol start="14. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the DTCs retrieved are related to the concern, go to DTC Charts. 
+
+      </li>
+</ol>
+      <ol start="15. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If no DTCs related to the concern are retrieved, GO to <a data-ajax="false" href="#SC1">Symptom Chart</a>. 
+
+      </li>
+</ol>
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>DTC Charts 
+</b></p>
+      <a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            PCM DTC Chart 
+</b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          <thead valign="bottom">
+            <tr>
+              <th rowspan="1" align="center" valign="top">
+                DTC 
+
+              </th>
+              <th rowspan="1" align="center" valign="top">
+                Description 
+
+              </th>
+              <th rowspan="1" align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody valign="top">
+            <tr>
+              <td rowspan="1" valign="top">
+                P0512 
+
+              </td>
+              <td rowspan="1" valign="top">
+                Starter Request Circuit — Circuit has Power With the Ignition in the OFF Position 
+
+              </td>
+              <td rowspan="1" valign="top">
+                CARRY OUT the Ignition Switch Component Test. 
+Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','149')" xmlns:str="http://xsltsl.org/string">149</a>  for component testing. If necessary, INSTALL a new ignition switch. If the ignition switch passed the component test, REPAIR circuit CDC35 (BU/WH) for a short to voltage. 
+
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" valign="top">
+                P0705 
+
+              </td>
+              <td rowspan="1" valign="top">
+                Transmission Range Sensor A Circuit (PRNDL Input): No Sub Type Information 
+
+              </td>
+              <td rowspan="1" valign="top">
+                REFER to <a data-linkid="ID0EMFAE" data-sectnum="307-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          307-01</a><span id="spanID0EMFAE" xmlns:str="http://xsltsl.org/string"></span> to diagnose the Transmission Range (TR)
+       sensor concern. 
+
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" valign="top">
+                P0706 
+
+              </td>
+              <td rowspan="1" valign="top">
+                Transmission Range Sensor "A" Circuit Range/Performance: No Sub Type Information 
+
+              </td>
+              <td rowspan="1" valign="top">
+                REFER to <a data-linkid="ID0ERGAE" data-sectnum="307-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          307-01</a><span id="spanID0ERGAE" xmlns:str="http://xsltsl.org/string"></span> to diagnose the <abbr title="Transmission Range" xmlns:str="http://xsltsl.org/string">TR</abbr>  sensor concern. 
+
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" valign="top">
+                P0707 
+
+              </td>
+              <td rowspan="1" valign="top">
+                Transmission Range Sensor "A" Circuit Low: No Sub Type Information 
+
+              </td>
+              <td rowspan="1" valign="top">
+                REFER to <a data-linkid="ID0EWHAE" data-sectnum="307-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          307-01</a><span id="spanID0EWHAE" xmlns:str="http://xsltsl.org/string"></span> to diagnose the <abbr title="Transmission Range" xmlns:str="http://xsltsl.org/string">TR</abbr>  sensor concern. 
+
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" valign="top">
+                P0708 
+
+              </td>
+              <td rowspan="1" valign="top">
+                Transmission Range Sensor "A" Circuit High: No Sub Type Information 
+
+              </td>
+              <td rowspan="1" valign="top">
+                REFER to <a data-linkid="ID0E2IAE" data-sectnum="307-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          307-01</a><span id="spanID0E2IAE" xmlns:str="http://xsltsl.org/string"></span> to diagnose the <abbr title="Transmission Range" xmlns:str="http://xsltsl.org/string">TR</abbr>  sensor concern. 
+
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" valign="top">
+                P0709 
+
+              </td>
+              <td rowspan="1" valign="top">
+                Transmission Range Sensor "A" Circuit Intermittent: No Sub Type Information 
+
+              </td>
+              <td rowspan="1" valign="top">
+                REFER to <a data-linkid="ID0EAKAE" data-sectnum="307-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          307-01</a><span id="spanID0EAKAE" xmlns:str="http://xsltsl.org/string"></span> to diagnose the <abbr title="Transmission Range" xmlns:str="http://xsltsl.org/string">TR</abbr>  sensor concern. 
+
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" valign="top">
+                P161A 
+
+              </td>
+              <td rowspan="1" valign="top">
+                Incorrect Response From Immobilizer Control Module 
+
+              </td>
+              <td rowspan="1" valign="top">
+                REFER to <a data-linkid="ID0EFLAE" data-sectnum="419-01B" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-01B</a><span id="spanID0EFLAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" valign="top">
+                P1702 
+
+              </td>
+              <td rowspan="1" valign="top">
+                Transmission Range Sensor Circuit Intermittent: No Sub Type Information 
+
+              </td>
+              <td rowspan="1" valign="top">
+                REFER to <a data-linkid="ID0EEMAE" data-sectnum="307-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          307-01</a><span id="spanID0EEMAE" xmlns:str="http://xsltsl.org/string"></span> to diagnose the <abbr title="Transmission Range" xmlns:str="http://xsltsl.org/string">TR</abbr>  sensor concern. 
+
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" valign="top">
+                P1705 
+
+              </td>
+              <td rowspan="1" valign="top">
+                Transmission Range Circuit Not Indicating Park/Neutral During Self Test: No Sub Type Information 
+
+              </td>
+              <td rowspan="1" valign="top">
+                REFER to <a data-linkid="ID0EJNAE" data-sectnum="307-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          307-01</a><span id="spanID0EJNAE" xmlns:str="http://xsltsl.org/string"></span> to diagnose the <abbr title="Transmission Range" xmlns:str="http://xsltsl.org/string">TR</abbr>  sensor concern. 
+
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" valign="top">
+                P1921 
+
+              </td>
+              <td rowspan="1" valign="top">
+                Transmission Range Signal: No Sub Type Information 
+
+              </td>
+              <td rowspan="1" valign="top">
+                REFER to <a data-linkid="ID0EOOAE" data-sectnum="307-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          307-01</a><span id="spanID0EOOAE" xmlns:str="http://xsltsl.org/string"></span> to diagnose the <abbr title="Transmission Range" xmlns:str="http://xsltsl.org/string">TR</abbr>  sensor concern. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P2532 
+
+              </td>
+              <td valign="top">
+                Ignition Switch Run Position Circuit High 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-G" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test G</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P2535 
+
+              </td>
+              <td valign="top">
+                Ignition Switch Run/Start Position Circuit High 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-G" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test G</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" valign="top">
+                All other PCM DTCs 
+
+              </td>
+              <td rowspan="1" valign="top">
+                — 
+
+              </td>
+              <td rowspan="1" valign="top">
+                REFER to <a data-linkid="ID0E6QAE" data-sectnum="303-14" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          303-14</a><span id="spanID0E6QAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Body Control Module (BCM)
+       DTC Chart 
+</b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          <thead valign="bottom">
+            <tr>
+              <th rowspan="1" align="center" valign="top">
+                DTC 
+
+              </th>
+              <th rowspan="1" align="center" valign="top">
+                Description 
+
+              </th>
+              <th rowspan="1" align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody valign="top">
+            <tr>
+              <td rowspan="1" valign="top">
+                B1305:01 
+
+              </td>
+              <td rowspan="1" valign="top">
+                Hood Switch: General Electrical Failure 
+
+              </td>
+              <td rowspan="1" valign="top">
+                REFER to <a data-linkid="ID0EDUAE" data-sectnum="419-01A" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-01A</a><span id="spanID0EDUAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" valign="top">
+                C113A:11 
+
+              </td>
+              <td rowspan="1" valign="top">
+                Wake up Control: Circuit Short to Ground 
+
+              </td>
+              <td rowspan="1" valign="top">
+                
+                  <a data-ajax="false" href="#PS2-C" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test C</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" valign="top">
+                C113A:15 
+
+              </td>
+              <td rowspan="1" valign="top">
+                Wake up Control: Circuit Short to Battery or Open 
+
+              </td>
+              <td rowspan="1" valign="top">
+                
+                  <a data-ajax="false" href="#PS2-C" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test C</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" valign="top">
+                U1000:00 
+
+              </td>
+              <td rowspan="1" valign="top">
+                Solid State Driver Protection Activated - Driver Disabled: No Sub Type Information 
+
+              </td>
+              <td rowspan="1" valign="top">
+                The Body Control Module (BCM)
+       has temporarily disabled an output because an excessive current draw exists (such as a short to ground). The <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  cannot enable the output until the cause of the short is corrected. ADDRESS all other DTCs first. After the cause of the concern is corrected, CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" valign="top">
+                All other DTCs 
+
+              </td>
+              <td rowspan="1" valign="top">
+                — 
+
+              </td>
+              <td rowspan="1" valign="top">
+                REFER to <a data-linkid="ID0E6XAE" data-sectnum="419-10" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-10</a><span id="spanID0E6XAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_3" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Tire Pressure Monitor (TPM)
+       Module DTC Chart 
+</b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          <thead valign="bottom">
+            <tr>
+              <th rowspan="1" align="center" valign="top">
+                DTC 
+
+              </th>
+              <th rowspan="1" align="center" valign="top">
+                Description 
+
+              </th>
+              <th rowspan="1" align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody valign="top">
+            <tr>
+              <td rowspan="1" valign="top">
+                B1D55:01 
+
+              </td>
+              <td rowspan="1" valign="top">
+                Antenna #2: General Electrical Failure 
+
+              </td>
+              <td rowspan="1" valign="top">
+                
+                  <a data-ajax="false" href="#PS2-D" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test D</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" valign="top">
+                All other DTCs 
+
+              </td>
+              <td rowspan="1" valign="top">
+                — 
+
+              </td>
+              <td rowspan="1" valign="top">
+                REFER to <a data-linkid="ID0EA3AE" data-sectnum="204-04" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          204-04</a><span id="spanID0EA3AE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart 
+</b></p>
+      <a name="SC1" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The engine does not crank 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Battery 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Battery cables 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Fuses 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Starter motor 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Powertrain Control Module">PCM</abbr> 
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Starter relay 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Run/start relay 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Ignition switch 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Transmission Range (TR)
+       sensor 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Passive Anti-Theft System (PATS)
+      
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Body Control Module (BCM)
+      
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-A">GO to Pinpoint Test A</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Unusual starter noise 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Starter motor 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Starter motor mounting 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Starter motor engagement 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Flexplate ring gear 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-B">GO to Pinpoint Test B</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The engine cranks slowly 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Battery 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Battery cables 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Starter motor 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>CARRY OUT the Starter Motor — Feed Circuit and Starter Motor — Ground Circuit Tests. REFER to Component Tests in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The engine cranks but does not start. 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Fuses 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Powertrain Control Module">PCM</abbr> 
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Fuel pump 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Fuel pump relay 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                Powertrain Control/Emissions Diagnosis (PC/ED) manual
+              </li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The starter spins but the engine does not crank 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Damaged flexplate 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Starter motor 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REFER to <a data-linkid="ID0EDFAG" data-for="303-06_s5p702504q0" data-procuid="n1278040" class="expand-link">Starter Motor Drive Gear and Flywheel Ring Gear Inspection</a><span id="spanID0EDFAG"></span> in this section to continue diagnosis. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The starter does not disengage from the flexplate 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Starter motor 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REFER to <a data-linkid="ID0EAGAG" data-for="303-06_s5p702504q0" data-procuid="n1278040" class="expand-link">Starter Motor Drive Gear and Flywheel Ring Gear Inspection</a><span id="spanID0EAGAG"></span> in this section to continue diagnosis. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminal or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Starter relay 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REMOVE the starter relay, if the engine stops cranking INSTALL a new relay. If the engine continues to crank, REPAIR circuit CDC25 (BN/GN) for a short to voltage. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The remote start system operates with reduced range 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>External antenna 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Tire Pressure Monitor Module (TPM)
+      
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-D">GO to Pinpoint Test D</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The remote start is inoperative 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Remote start feature not enabled 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Integrated Keyhead Transmitter (IKT)
+      
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Hood switch 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Powertrain Control Module">PCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-E">GO to Pinpoint Test E</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>
+              One-Touch Integrated Start (OTIS)
+       is inoperative 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="One-Touch Integrated Start">OTIS</abbr>  not enabled 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Using a scan tool, ENABLE <abbr title="One-Touch Integrated Start">OTIS</abbr> . 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_5" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-A" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test A: The Engine Does Not Crank 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','020')">20</a> , Starting System for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the ignition switch is turned to the START position, the Body Control Module (BCM)
+       and <abbr title="Powertrain Control Module">PCM</abbr>  receive a request to start the engine. When the <abbr title="Powertrain Control Module">PCM</abbr>  receives the correct coded key ID messages from the <abbr title="Body Control Module">BCM</abbr> , voltage from the Run/start relay, and the correct input from the Transmission Range (TR)
+       sensor that the gear selector is in PARK or NEUTRAL, voltage and ground is supplied to the starter relay coil. When the starter relay is energized the relay contacts close. Voltage is then supplied from Battery Junction Box (BJB)
+       fuse 13 (30A) to the starter relay contacts which supplies voltage to the starter solenoid. The starter solenoid is grounded at the starter motor. Energizing the starter solenoid engages the starter drive into the ring gear and closes the starter solenoid contacts allowing voltage directly from the battery to the starter motor to crank the engine. The <abbr title="Powertrain Control Module">PCM</abbr>  disengages the starter once an RPM threshold is reached, a set crank time is exceeded or the ignition switch is turned to the OFF position. 
+</p>
+        
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Battery 
+
+          </li>
+          <li>
+            Battery cables 
+
+          </li>
+          <li>
+            Fuses 
+
+          </li>
+          <li>
+            Ignition switch 
+
+          </li>
+          <li>
+            
+              <abbr title="Powertrain Control Module">PCM</abbr> 
+            
+          </li>
+          <li>
+            Starter motor 
+
+          </li>
+          <li>
+            Starter relay 
+
+          </li>
+          <li>
+            
+              <abbr title="Transmission Range">TR</abbr>  sensor 
+
+          </li>
+          <li>
+            
+              Passive Anti-Theft System (PATS)
+      
+            
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+        </ul>
+        <a name="A" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST A : THE ENGINE DOES NOT CRANK 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="A1" data-ajax="false"></a><b>A1 
+                PERFORM INSPECTION AND VERIFICATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                Make sure battery voltage is greater than 12.2 volts prior to and during this pinpoint test. 
+
+              </i></p>
+              <p class="singlespace"><b>NOTE: </b><i>
+                If it is necessary to leave the battery charger connected during testing, do not leave it on its highest setting. The highest and boost settings can occasionally exceed 16 volts, resulting in false test results and setting DTCs. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Perform the Inspection and Verification procedure in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Was an obvious cause for an observed or reported concern found? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                Correct the cause as necessary. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A2">A2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A2" data-ajax="false"></a><b>A2 
+                CHECK FOR ANY MESSAGES IN THE MESSAGE CENTER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check the message center with the ignition key in the RUN position. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is STARTING SYSTEM FAULT displayed in the message center? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0E1TAG" data-sectnum="419-01B" class="section-link">Section 
+          419-01B</a><span id="spanID0E1TAG"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A3">A3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A3" data-ajax="false"></a><b>A3 
+                VERIFY BCM  AND PCM  PASS THE NETWORK TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Using a diagnostic scan tool, perform the Network Test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Did the <abbr title="Body Control Module">BCM</abbr>  and <abbr title="Powertrain Control Module">PCM</abbr>  pass the Network Test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A4">A4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EYWAG" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EYWAG"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A4" data-ajax="false"></a><b>A4 
+                RETRIEVE BCM  AND PCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  — Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Powertrain Control Module">PCM</abbr>  — Self-Test 
+.
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Were DTCs retrieved during the self-test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to the DTC Charts in this section. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A5">A5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A5" data-ajax="false"></a><b>A5 
+                CHECK THE PCM  TRANSMISSION RANGE TR  SENSOR PID </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — <abbr title="Powertrain Control Module">PCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                While observing the <abbr title="Transmission Range">TR</abbr> <abbr title="Parameter Identification">PID</abbr> , place the gear selector in PARK and then NEUTRAL. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the <abbr title="Parameter Identification">PID</abbr>  match the selector lever position? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A6">A6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EA4AG" data-sectnum="307-01" class="section-link">Section 
+          307-01</a><span id="spanID0EA4AG"></span>, to diagnose the <abbr title="Transmission Range">TR</abbr>  sensor concern. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A6" data-ajax="false"></a><b>A6 
+                CHECK THE BCM  IGN_SW_STATE PID </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — <abbr title="Body Control Module">BCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                While holding the key in the START position, monitor the <abbr title="Body Control Module">BCM</abbr>  IGN_SW_STATE <abbr title="Parameter Identification">PID</abbr> . 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the <abbr title="Parameter Identification">PID</abbr>  change from OFF to START? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A7">A7</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                DIAGNOSE No power in Start. REFER to <a data-linkid="ID0EJABG" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EJABG"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A7" data-ajax="false"></a><b>A7 
+                CHECK THE STARTER MOTOR RELAY 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Swap the starter relay with a known good relay and attempt to crank the engine. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the engine crank? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new starter relay. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A8">A8</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A8" data-ajax="false"></a><b>A8 
+                CHECK THE VOLTAGE TO THE STARTER RELAY 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Battery Junction Box">BJB</abbr>  Starter Relay 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between starter relay socket 3, circuit SBB13 (GY/RD) and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121935&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 11 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A9">A9</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                VERIFY <abbr title="Battery Junction Box">BJB</abbr>  fuse 13 (30A) is OK. If OK, REPAIR circuit SBB13 (GY/RD) for an open. If not OK, REFER to the Wiring Diagrams manual to identify the possible causes of the circuit short. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A9" data-ajax="false"></a><b>A9 
+                CHECK THE STARTER MOTOR 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                With the transmission in PARK, connect one end of a fused jumper wire to starter relay socket 3, circuit SBB13 (GY/RD) and momentarily connect the other end of the fused jumper wire to starter relay socket 5, circuit CDC25 (BN/GN). 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121425&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Did the starter motor engage and the engine crank? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A15">A15</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A10">A10</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A10" data-ajax="false"></a><b>A10 
+                CHECK THE BATTERY GROUND CABLE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the positive battery post and the battery ground cable connection at the engine. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=AJ0280A&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 11 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A11">A11</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL new battery cables. REFER to <a data-linkid="ID0EPHBG" data-sectnum="414-01" class="section-link">Section 
+          414-01</a><span id="spanID0EPHBG"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A11" data-ajax="false"></a><b>A11 
+                CHECK THE STARTER MOTOR GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the positive battery post and the starter motor case. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0042835&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 11 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A12">A12</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                CLEAN the starter motor mounting flange and make sure the starter motor is correctly mounted. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A12" data-ajax="false"></a><b>A12 
+                CHECK THE VOLTAGE TO THE STARTER MOTOR 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the starter solenoid <a href="javascript:connectorlinkwithpin('ED2','C197A','1')">C197A</a> Pin 1, circuit SDC02 (RD) and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0042836&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 11 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A13">A13</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL new battery cables. REFER to <a data-linkid="ID0E1KBG" data-sectnum="414-01" class="section-link">Section 
+          414-01</a><span id="spanID0E1KBG"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A13" data-ajax="false"></a><b>A13 
+                CHECK THE STARTER MOTOR 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Connect one end of a remote starter switch to starter solenoid <a href="javascript:connectorlinkwithpin('ED2','C197A','1')">C197A</a> Pin 1, circuit SDC02 (RD) and the other end of the remote starter switch to starter solenoid <a href="javascript:connectorlinkwithpin('ED2','C197B','1')">C197B</a> Pin 1, circuit CDC25 (BN/GN). 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0084970&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Engage the remote starter switch momentarily. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Did the starter engage and the engine crank? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                Remove the remote starter switch and GO to <a data-ajax="false" href="#A14">A14</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new starter motor. REFER to <a data-linkid="ID0E5MBG" data-for="303-06_s3p213q706079" data-procuid="n1276848" class="expand-link">Starter Motor — 3.5L GTDI, 3.7L</a><span id="spanID0E5MBG"></span> or <a data-linkid="ID0ECNBG" data-for="303-06_s3p213q706139" data-procuid="n1278761" class="expand-link">Starter Motor — 5.0L (4V), 6.2L (2V)</a><span id="spanID0ECNBG"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A14" data-ajax="false"></a><b>A14 
+                CHECK FOR START INPUT AT THE STARTER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Battery Junction Box">BJB</abbr>  Starter Relay 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Starter Solenoid <a href="javascript:connectorlinkwithpin('ED2','C197B','')">C197B</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the starter solenoid <a href="javascript:connectorlinkwithpin('ED2','C197B','1')">C197B</a> Pin 1, circuit CDC25 (BN/GN) and ground, while holding the key in the START position. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=AJ0285A&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 11 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                CLEAN the starter solenoid "S" terminal and <a href="javascript:connectorlinkwithpin('ED2','C197B','')">C197B</a>. CHECK the wiring and the starter motor for a loose or intermittent connection. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CDC25 (BN/GN) for an open. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A15" data-ajax="false"></a><b>A15 
+                CHECK THE PCM  START CIRCUITS FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Powertrain Control Module">PCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a> (3.5L) <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a> (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a> (5.0L and 6.2L) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a> (3.5L), harness side and ground, using the following chart: 
+
+                <br><br><a name="table_4"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    <thead valign="bottom">
+                      <tr>
+                        <th rowspan="1" align="center" valign="top">
+                          PCM Connector-Pin 
+
+                        </th>
+                        <th rowspan="1" align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody valign="top">
+                      <tr>
+                        <td rowspan="1" valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C1551B','43')">C1551B</a> Pin 43 (3.5L) 
+
+                        </td>
+                        <td rowspan="1" valign="top">
+                          CDC12 (YE) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td rowspan="1" valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C1551B','62')">C1551B</a> Pin 62 (3.5L) 
+
+                        </td>
+                        <td rowspan="1" valign="top">
+                          CDC54 (WH/GN) 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121943&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a> (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a> (5.0L and 6.2L), harness side and ground, using the following chart: 
+
+                <br><br><a name="table_5"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    <thead valign="bottom">
+                      <tr>
+                        <th rowspan="1" align="center" valign="top">
+                          PCM Connector-Pin 
+
+                        </th>
+                        <th rowspan="1" align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody valign="top">
+                      <tr>
+                        <td rowspan="1" valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C175B','7')">C175B</a> Pin 7 (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','7')">C1381B</a> Pin 7 (5.0L and 6.2L) 
+
+                        </td>
+                        <td rowspan="1" valign="top">
+                          CDC12 (YE) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td rowspan="1" valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C175B','37')">C175B</a> Pin 37 (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','37')">C1381B</a> Pin 37 (5.0L and 6.2L) 
+
+                        </td>
+                        <td rowspan="1" valign="top">
+                          CDC54 (WH/GN) 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0116359&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A16">A16</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A16" data-ajax="false"></a><b>A16 
+                CHECK THE PCM  START CIRCUITS FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a> (3.5L), harness side and the starter relay using the following chart: 
+
+                <br><br><a name="table_6"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    <thead valign="bottom">
+                      <tr>
+                        <th rowspan="1" align="center" valign="top">
+                          PCM Connector-Pin 
+
+                        </th>
+                        <th rowspan="1" align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                        <th rowspan="1" align="center" valign="top">
+                          Starter Relay Socket 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody valign="top">
+                      <tr>
+                        <td rowspan="1" valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C1551B','43')">C1551B</a> Pin 43 (3.5L) 
+
+                        </td>
+                        <td rowspan="1" valign="top">
+                          CDC12 (YE) 
+
+                        </td>
+                        <td rowspan="1" valign="top">
+                          2 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td rowspan="1" valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C1551B','62')">C1551B</a> Pin 62 (3.5L) 
+
+                        </td>
+                        <td rowspan="1" valign="top">
+                          CDC54 (WH/GN) 
+
+                        </td>
+                        <td rowspan="1" valign="top">
+                          1 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121942&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a> (5.0L and 6.2L) or <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a> (3.7L), harness side and the starter relay using the following chart: 
+
+                <br><br><a name="table_7"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    <thead valign="bottom">
+                      <tr>
+                        <th rowspan="1" align="center" valign="top">
+                          PCM Connector-Pin 
+
+                        </th>
+                        <th rowspan="1" align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                        <th rowspan="1" align="center" valign="top">
+                          Starter Relay Socket 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody valign="top">
+                      <tr>
+                        <td rowspan="1" valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C175B','7')">C175B</a> Pin 7 (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','7')">C1381B</a> Pin 7 (5.0L and 6.2L) 
+
+                        </td>
+                        <td rowspan="1" valign="top">
+                          CDC12 (YE) 
+
+                        </td>
+                        <td rowspan="1" valign="top">
+                          2 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td rowspan="1" valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C175B','37')">C175B</a> Pin 37 (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','37')">C1381B</a> Pin 37 (5.0L and 6.2L) 
+
+                        </td>
+                        <td rowspan="1" valign="top">
+                          CDC54 (WH/GN) 
+
+                        </td>
+                        <td rowspan="1" valign="top">
+                          1 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121418&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Powertrain Control Module">PCM</abbr> . REFER to <a data-linkid="ID0E2DAI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0E2DAI"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-B" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test B: Unusual Starter Noise 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Correct starter operation relies on correct mounting of the starter to the engine, alignment of the starter ring gear to the flexplate and correct functioning of the starter assembly (internal gears, bearings). 
+</p>
+        
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Starter motor 
+
+          </li>
+          <li>
+            Starter motor mounting 
+
+          </li>
+          <li>
+            Starter motor engagement 
+
+          </li>
+          <li>
+            Flexplate ring gear 
+
+          </li>
+        </ul>
+        <a name="B" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST B : UNUSUAL STARTER NOISE 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="B1" data-ajax="false"></a><b>B1 
+                CHECK THE STARTER MOUNTING 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Inspect the starter motor mounting bolts for looseness. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the starter motor mounted correctly? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B2">B2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL the starter motor correctly. REFER to <a data-linkid="ID0EDHAI" data-for="303-06_s3p213q706079" data-procuid="n1276848" class="expand-link">Starter Motor — 3.5L GTDI, 3.7L</a><span id="spanID0EDHAI"></span> or <a data-linkid="ID0EHHAI" data-for="303-06_s3p213q706139" data-procuid="n1278761" class="expand-link">Starter Motor — 5.0L (4V), 6.2L (2V)</a><span id="spanID0EHHAI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B2" data-ajax="false"></a><b>B2 
+                CHECK FOR STARTER NOISE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Connect a remote starter switch between the starter solenoid <a href="javascript:connectorlinkwithpin('ED2','C197A','1')">C197A</a> Pin 1 and <a href="javascript:connectorlinkwithpin('ED2','C197B','1')">C197B</a> Pin 1. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=AJ0286A&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Engage the starter and verify the noise is due to starter operation. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the noise due to the starter engagement? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                 REFER to <a data-linkid="ID0EFJAI" data-for="303-06_s5p702504q0" data-procuid="n1278040" class="expand-link">Starter Motor Drive Gear and Flywheel Ring Gear Inspection</a><span id="spanID0EFJAI"></span> in this section to continue diagnosis. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0ESJAI" data-sectnum="303-00" class="section-link">Section 
+          303-00</a><span id="spanID0ESJAI"></span>, Symptom Chart — Engine <abbr title="Noise, Vibration and Harshness">NVH</abbr>  to continue diagnosis. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-C" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test C: DTC C113A:11 or C113A:15 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','112')">112</a> , Passive Anti-Theft System for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The wake up control circuit is used to wake up the <abbr title="Powertrain Control Module">PCM</abbr>  prior to engine cranking. The <abbr title="Powertrain Control Module">PCM</abbr>  needs to wake up prior to a crank request so that it has time to go through its own initialization. The wake up control circuit also powers the Passive Anti-Theft System (PATS)
+       transceiver. The wake up control circuit is controlled by the Body Control Module (BCM)
+       and receives voltage from fuse 18 (10A). The <abbr title="Body Control Module">BCM</abbr>  uses a Field-Effect Transistor (FET)
+       to control the wake up control circuit. A <abbr title="Diagnostic Trouble Code">DTC</abbr>  sets and the wake up control circuit is disabled via the <abbr title="Field-Effect Transistor">FET</abbr>  if a fault is detected. Once the condition that caused the <abbr title="Diagnostic Trouble Code">DTC</abbr>  to set is repaired, the <abbr title="Body Control Module">BCM</abbr>  must pass a self-test in order for the <abbr title="Diagnostic Trouble Code">DTC</abbr>  to clear and the system to resume normal operation. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr>  activates the wake up control circuit when: 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            the driver door is opened. 
+
+          </li>
+          <li>
+            a remote start request is received (if equipped with factory remote start). 
+
+          </li>
+          <li>
+            the brake pedal is pressed. 
+
+          </li>
+          <li>
+            a key is inserted into the ignition. 
+
+          </li>
+          <li>
+            the ignition is in the RUN or START position. 
+
+          </li>
+        </ul>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            
+              <abbr title="Diagnostic Trouble Code">DTC</abbr>  C113A:11 (Wake up Control: Circuit Short To Ground) — sets when the <abbr title="Body Control Module">BCM</abbr>  detects a short to ground on the wake up control circuit. 
+
+          </li>
+          <li>
+            
+              <abbr title="Diagnostic Trouble Code">DTC</abbr>  C113A:15 (Wake up Control: Circuit Short To Battery or Open) — sets when the <abbr title="Body Control Module">BCM</abbr>  detects a short to voltage or an open on the wake up control circuit. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            
+              <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver 
+
+          </li>
+          <li>
+            
+              <abbr title="Powertrain Control Module">PCM</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="C" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST C : DTC C113A:11 OR C113A:15 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C1" data-ajax="false"></a><b>C1 
+                RETRIEVE THE BCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  — Self-Test 
+.
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is <abbr title="Diagnostic Trouble Code">DTC</abbr>  C113A:15 on demand during the self-test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C2">C2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C5">C5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C2" data-ajax="false"></a><b>C2 
+                CHECK THE WAKE UP CONTROL CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280F','')">C2280F</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Passive Anti-Theft System">PATS</abbr>  Transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','')">C252</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Powertrain Control Module">PCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a> (3.5L) <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a> (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a> (5.0L and 6.2L) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C1551B','28')">C1551B</a> Pin 28 (3.5L), circuit CE436 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121945&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C175B','35')">C175B</a> Pin 35 (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','35')">C1381B</a> Pin 35 (5.0L and 6.2L), circuit CE436 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0113842&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C3">C3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C3" data-ajax="false"></a><b>C3 
+                CHECK THE WAKE UP CONTROL CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C1551B','28')">C1551B</a> Pin 28 (3.5L), circuit CE436 (VT/OG), harness side and <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280F','5')">C2280F</a> Pin 5, circuit CE436 (VT/OG), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121947&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C175B','35')">C175B</a> Pin 35 (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','35')">C1381B</a> Pin 35 (5.0L and 6.2L), circuit CE436 (VT/OG), harness side and <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280F','5')">C2280F</a> Pin 5, circuit CE436 (VT/OG), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0114560&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C4">C4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CE436 (VT/OG) for an open. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C4" data-ajax="false"></a><b>C4 
+                CHECK THE WAKE UP SUPPLY FOR CORRECT OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280F','')">C2280F</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C1551B','28')">C1551B</a> Pin 28 (3.5L), circuit CE436 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121945&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C175B','35')">C175B</a> Pin 35 (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','35')">C1381B</a> Pin 35 (5.0L and 6.2L), circuit CE436 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0113842&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 11 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Powertrain Control Module">PCM</abbr> . REFER to <a data-linkid="ID0ES6AI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0ES6AI"></span>. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                VERIFY <abbr title="Body Control Module">BCM</abbr>  fuse 18 (10A) is OK. If OK, 
+INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . If not OK, REFER to the Wiring Diagrams manual to identify the possible causes of the circuit short. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C5" data-ajax="false"></a><b>C5 
+                CHECK THE WAKE UP CONTROL CIRCUIT DTC  FOR A FAULT STATUS CHANGE (SHORT TO GROUND INDICATED) 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Clear <abbr title="Body Control Module">BCM</abbr>  Continuous DTCs 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Passive Anti-Theft System">PATS</abbr>  Transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','')">C252</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Powertrain Control Module">PCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a> (3.5L) <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a> (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a> (5.0L and 6.2L) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  — Self-Test 
+.
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Was <abbr title="Diagnostic Trouble Code">DTC</abbr>  C113A:11 retrieved on demand during self-test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C6">C6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C7">C7</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C6" data-ajax="false"></a><b>C6 
+                CHECK THE WAKE UP CONTROL CIRCUIT FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280F','')">C2280F</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C1551B','28')">C1551B</a> Pin 28 (3.5L), circuit CE436 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121946&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C175B','35')">C175B</a> Pin 35 (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','35')">C1381B</a> Pin 35 (5.0L and 6.2L), circuit CE436 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0114533&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C7" data-ajax="false"></a><b>C7 
+                CHECK THE PCM  FOR CORRECT OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Clear <abbr title="Body Control Module">BCM</abbr>  Continuous DTCs 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Powertrain Control Module">PCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a> (3.5L) <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a> (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a> (5.0L and 6.2L) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  — Self-Test 
+.
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Was <abbr title="Diagnostic Trouble Code">DTC</abbr>  C113A:11 retrieved on-demand during self-test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Powertrain Control Module">PCM</abbr> . REFER to <a data-linkid="ID0EUMBI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EUMBI"></span>. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                 INSTALL a new <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver. REFER to <a data-linkid="ID0EINBI" data-sectnum="419-01B" class="section-link">Section 
+          419-01B</a><span id="spanID0EINBI"></span>. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_5" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-D" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test D: Poor Remote Start Range 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Vehicles with remote start have an additional external antenna connected to the Tire Pressure Monitor Module (TPM)
+       to extend the <abbr title="Remote Keyless Entry">RKE</abbr>  range. The Tire Pressure Monitor Module (TPM)
+       receives a signal from the Integrated Keyhead Transmitter (IKT)
+       to enable activation of the remote start function from a distance of up to 100 meters (328 feet). 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            
+              <abbr title="Diagnostic Trouble Code">DTC</abbr>  B1D55:01 (Antenna #2: General Electrical Failure) — this <abbr title="Diagnostic Trouble Code">DTC</abbr>  is set if the vehicle is equipped with remote start but the system feedback circuit does not detect an external antenna. 
+
+          </li>
+        </ul>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            
+              Integrated Keyhead Transmitter (IKT)
+      
+            
+          </li>
+          <li>
+            External antenna 
+
+          </li>
+          <li>
+            External antenna lead 
+
+          </li>
+          <li>
+            
+              <abbr title="Tire Pressure Monitor Module">TPM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="D" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST D : POOR REMOTE START RANGE 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTE: </b><i>
+            Aftermarket or dealer-installed systems can adversely affect the <abbr title="Remote Keyless Entry">RKE</abbr>  system operation. These systems must be disconnected before diagnosing any <abbr title="Remote Keyless Entry">RKE</abbr>  concerns. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D1" data-ajax="false"></a><b>D1 
+                CHECK FOR THE CORRECT RKE  TRANSMITTERS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                  Make sure the <abbr title="Remote Keyless Entry">RKE</abbr>  transmitters are those provided with the OEM system and not from an aftermarket system, or a dealer-installed system that may have been installed on the vehicle. 
+
+                </i><p class="singlespace"></p>
+                Check that the correct <abbr title="Integrated Keyhead Transmitters">IKTs</abbr>  are used with the vehicle. Compare the <abbr title="Integrated Keyhead Transmitters">IKTs</abbr>  with the one shown in <a data-linkid="ID0E3SBI" data-sectnum="501-14" class="section-link">Section 
+          501-14</a><span id="spanID0E3SBI"></span> in the Description and Operation. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the correct <abbr title="Remote Keyless Entry">RKE</abbr>  transmitters present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D2">D2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system cannot be tested without the correct <abbr title="Remote Keyless Entry">RKE</abbr>  transmitters. INFORM the customer that the correct <abbr title="Remote Keyless Entry">RKE</abbr>  transmitters must be present to proceed with diagnosis of the system. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D2" data-ajax="false"></a><b>D2 
+                CHECK ALL RKE  TRANSMITTERS FOR POOR RANGE PERFORMANCE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                  The 100 m (328 ft) measurement of range is not the standard but is a guideline that clearly indicates a vehicle is experiencing normal range performance. 
+
+                </i><p class="singlespace"></p>
+                Check all <abbr title="Remote Keyless Entry">RKE</abbr>  transmitters for poor range performance (less than 100 m [328 ft]). 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do all <abbr title="Remote Keyless Entry">RKE</abbr>  transmitters experience poor range? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D4">D4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D3">D3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D3" data-ajax="false"></a><b>D3 
+                CHECK THE IKT  BATTERY 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Using a thin coin, open the weak <abbr title="Integrated Keyhead Transmitter">IKT</abbr> . 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Do not clean off any grease from the battery terminals on the back surface of the circuit board. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Verify the correct battery is used (CR2032). 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Remove the <abbr title="Integrated Keyhead Transmitter">IKT</abbr>  battery and measure the voltage. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 2.5 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPLACE the inoperative <abbr title="Integrated Keyhead Transmitter">IKT</abbr>  and PROGRAM the new <abbr title="Integrated Keyhead Transmitter">IKT</abbr>  individually or PROGRAM all the <abbr title="Integrated Keyhead Transmitters">IKTs</abbr> . REFER to <a data-linkid="ID0EQZBI" data-sectnum="419-01B" class="section-link">Section 
+          419-01B</a><span id="spanID0EQZBI"></span> for the programming procedures. If all the <abbr title="Integrated Keyhead Transmitters">IKTs</abbr>  are to be programmed, INFORM the customer that any <abbr title="Integrated Keyhead Transmitters">IKTs</abbr>  not present need to be programmed. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new battery (make sure the battery is seated correctly). DO NOT reprogram the <abbr title="Integrated Keyhead Transmitter">IKT</abbr>  (weak or dead batteries do not erase <abbr title="Transmitter Identification Codes">TICs</abbr>  from memory). TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D4" data-ajax="false"></a><b>D4 
+                CHECK THE LOCATION OF THE VEHICLE AND THE APPROACH ANGLES AROUND THE VEHICLE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Make sure the poor performance is consistent in nature and is not from one approaching angle. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                The <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter range performance may be degraded in certain locations. For example, if the vehicle is within 0.5 mile (0.8 km) of high-power devices or radio/TV towers, the operating distance of the <abbr title="Remote Keyless Entry">RKE</abbr>  transmitters may be reduced. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the poor range performance consistent around the vehicle? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D5">D5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The range may have been affected by environmental interference. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D5" data-ajax="false"></a><b>D5 
+                CHECK THE EXTERNAL ANTENNA CONNECTION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the connections at the external antenna and <abbr title="Tire Pressure Monitor Module">TPM</abbr> . 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the connections loose or disconnected? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR as necessary. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D6">D6</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D6" data-ajax="false"></a><b>D6 
+                CHECK THE EXTERNAL ANTENNA 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                INSTALL a new external antenna. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                ATTEMPT to start the vehicle using the <abbr title="Integrated Keyhead Transmitter">IKT</abbr>  from a distance of 100 meters (328 feet) from the vehicle. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the vehicle start from this distance? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                System is operating correctly at this time. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D7">D7</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D7" data-ajax="false"></a><b>D7 
+                CHECK THE EXTERNAL ANTENNA CABLE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                INSTALL a new external antenna cable. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                ATTEMPT to start the vehicle using the <abbr title="Integrated Keyhead Transmitter">IKT</abbr>  from a distance of 100 meters (328 feet) from the vehicle 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the vehicle start from this distance? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                System is operating correctly at this time. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Tire Pressure Monitor Module">TPM</abbr> . REFER to <a data-linkid="ID0EXBCI" data-sectnum="204-04" class="section-link">Section 
+          204-04</a><span id="spanID0EXBCI"></span>. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_6" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-E" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint test E: The Remote Start Is Inoperative 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The factory equipped remote start system enables the engine to be started from up to 100 meters (328 feet) away by pressing the Integrated Keyhead Transmitter (IKT)
+       lock button followed by 2 presses of the remote start button. The 3 button presses must occur within 3 seconds. The <abbr title="Integrated Keyhead Transmitter">IKT</abbr>  signal is received through an external antenna attached to the Tire Pressure Monitor Module (TPM)
+       module and communicated over the Medium Speed Controller Area Network (MS-CAN)
+       to initiate the vehicle start. 
+</p>
+        
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Remote start feature disabled 
+
+          </li>
+          <li>
+            
+              <abbr title="Integrated Keyhead Transmitter">IKT</abbr> 
+            
+          </li>
+          <li>
+            Hood switch 
+
+          </li>
+          <li>
+            
+              <abbr title="Powertrain Control Module">PCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="E" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST E : THE REMOTE START IS INOPERATIVE 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="E1" data-ajax="false"></a><b>E1 
+                CHECK THE OPERATION OF THE IKT </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Press all buttons on the <abbr title="Integrated Keyhead Transmitter">IKT</abbr>  and check for the correct operation. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the remote start the only function that is inoperative? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E2">E2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0ESGCI" data-sectnum="501-14" class="section-link">Section 
+          501-14</a><span id="spanID0ESGCI"></span> to DIAGNOSE and REPAIR the Remote Keyless Entry (RKE)
+       system. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E2" data-ajax="false"></a><b>E2 
+                CHECK THE VEHICLE STARTING 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Attempt to start the vehicle. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Did the vehicle start? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E3">E3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                This is not a remote start issue. To diagnose the no crank condition <a data-ajax="false" href="#A">GO to Pinpoint Test A</a>
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E3" data-ajax="false"></a><b>E3 
+                CHECK FOR ILLUMINATED ENGINE WARNING LAMPS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                With the engine running check the instrument cluster for illuminated warning lamps. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any engine warning lamps illuminated? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                CARRY OUT a self test of the <abbr title="Powertrain Control Module">PCM</abbr> . DIAGNOSE and REPAIR any present DTCs. REFER to <a data-linkid="ID0ESJCI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0ESJCI"></span> or Powertrain Control/Emissions Diagnosis (PC/ED) manual. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E4">E4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E4" data-ajax="false"></a><b>E4 
+                RETRIEVE BCM  AND TPM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  — Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Tire Pressure Monitor">TPM</abbr>  — Self-Test 
+.
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any DTCs present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For <abbr title="Body Control Module">BCM</abbr>  DTCs C113A:11 or C113A:15, <a data-ajax="false" href="#PS2-C">GO to Pinpoint Test C</a>. 
+
+                <br>For <abbr title="Body Control Module">BCM</abbr> <abbr title="Diagnostic Trouble Code">DTC</abbr>  B1305:01, REFER to <a data-linkid="ID0EMNCI" data-sectnum="419-01A" class="section-link">Section 
+          419-01A</a><span id="spanID0EMNCI"></span>. 
+
+                <br>For <abbr title="Tire Pressure Monitor Module">TPM</abbr>  DTCs U0140:87 or U0422:68, REFER to <a data-linkid="ID0E1NCI" data-sectnum="204-04" class="section-link">Section 
+          204-04</a><span id="spanID0E1NCI"></span>. 
+
+                <br>For all other DTCs, REFER to <a data-linkid="ID0ECOCI" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0ECOCI"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E5">E5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E5" data-ajax="false"></a><b>E5 
+                 CONFIRM THE REMOTE START FUNCTION IS ENABLED 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check the message center and confirm the remote start function is enabled. Refer to the Owner's Literature or <a data-linkid="ID0ELPCI" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0ELPCI"></span>. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the remote start function enabled? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E6">E6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                ENABLE the remote start function. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E6" data-ajax="false"></a><b>E6 
+                CHECK THE BCM  LAST RECEIVED RKE  TRANSMITTER BUTTON PRESS (LST_RKE_XMTR) TRANSMITTER PID </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — <abbr title="Body Control Module">BCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Press the remote start button on the <abbr title="Integrated Keyhead Transmitter">IKT</abbr>  and note the <abbr title="Parameter Identification">PID</abbr>  status. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the selected <abbr title="Parameter Identification">PID</abbr>  indicate the remote start button was the last button pressed? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E7">E7</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL and PROGRAM a new <abbr title="Integrated Keyhead Transmitter">IKT</abbr> . REFER to <a data-linkid="ID0EWTCI" data-sectnum="419-01B" class="section-link">Section 
+          419-01B</a><span id="spanID0EWTCI"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E7" data-ajax="false"></a><b>E7 
+                CHECK THE PCM  WAKE UP CIRCUIT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Powertrain Control Module">PCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a> (3.5L) <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a> (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a> (5.0L and 6.2L) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C1551B','28')">C1551B</a> Pin 28 (3.5L), circuit CE436 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121945&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C175B','35')">C175B</a> Pin 35 (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','35')">C1381B</a> Pin 35 (5.0L and 6.2L), circuit CE436 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0113842&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 11 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E8">E8</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                VERIFY <abbr title="Body Control Module">BCM</abbr>  fuse 18 (10A) is OK. If OK, REPAIR circuit CE436 (VT/OG) for an open. If not OK, REFER to the Wiring Diagrams manual to identify the possible causes of the circuit short. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E8" data-ajax="false"></a><b>E8 
+                CHECK THE REMOTE START PRECONDITIONS FOR CORRECT OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                The Body Control Module (BCM)
+       acknowledges the remote start request and that all preconditions have been met by providing 2 short flashes of the turn indicators and a system complete chirp. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Make sure that the following preconditions for remote start have been met: 
+
+                <ul style="list-style-type: square">
+            <li>
+                   Hood is closed with no <abbr title="Diagnostic Trouble Code">DTC</abbr>  present. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Ignition must be off 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Vehicle must be in PARK. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Remote start feature is configured ON. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Number of remote start events does not exceed allowed time (2 events in a 1 hour duration). 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Attempt to carry out a remote start. 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the remote start system still inoperative? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Powertrain Control Module">PCM</abbr> . REFER to <a data-linkid="ID0E31CI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0E31CI"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                CARRY OUT the required precondition as necessary. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_7" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-G" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test G: DTC P2532, P2535 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','020')">20</a> , Starting System for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the ignition key is turned to the RUN or START position, the ignition switch supplies voltage to the <abbr title="Powertrain Control Module">PCM</abbr>  and <abbr title="Body Control Module">BCM</abbr> . The <abbr title="Body Control Module">BCM</abbr>  then grounds the <abbr title="Battery Junction Box">BJB</abbr>  RUN/START relay control circuit to activate the RUN/START relay. When the relay contacts close voltage is supplied to the <abbr title="Powertrain Control Module">PCM</abbr>  through Battery Junction Box (BJB)
+       fuse 53 (5A). 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            
+              <abbr title="Diagnostic Trouble Code">DTC</abbr>  P2532 (Ignition Switch Run Position Circuit High) –– sets when the <abbr title="Powertrain Control Module">PCM</abbr>  detects a voltage from the ACC/RUN bus when the ignition key is not in the START or RUN position. 
+
+          </li>
+          <li>
+            
+              <abbr title="Diagnostic Trouble Code">DTC</abbr>  P2535 (Ignition Switch Run/Start Position Circuit High) –– sets when the <abbr title="Powertrain Control Module">PCM</abbr>  detects a voltage from the RUN/START bus when the ignition key is not in the START or RUN position. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">This pinpoint test is intended to diagnose the following: 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Starter relay 
+
+          </li>
+          <li>
+            
+              <abbr title="Battery Junction Box">BJB</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Powertrain Control Module">PCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="G" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST G : DTC P2532, P2535 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="G1" data-ajax="false"></a><b>G1 
+                CHECK THE PCM  FOR DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check the <abbr title="Powertrain Control Module">PCM</abbr>  for DTCs. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any DTCs present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  <b>For <abbr title="Diagnostic Trouble Code">DTC</abbr>  P2532</b>,GO to <a data-ajax="false" href="#G2">G2</a>. 
+
+                <br>
+                  <b>For <abbr title="Diagnostic Trouble Code">DTC</abbr>  P2535</b>,GO to <a data-ajax="false" href="#G3">G3</a>. 
+
+                <br>For all other <abbr title="Powertrain Control Module">PCM</abbr>  DTCs, REFER to <a data-linkid="ID0E2CDI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0E2CDI"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                 The system is operating correctly at this time. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="G2" data-ajax="false"></a><b>G2 
+                CHECK THE RUN START CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Powertrain Control Module">PCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a> (3.5L) <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a> (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a> (5.0L and 6.2L) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                <b>NOTE: </b><i>
+                  Voltage should be present <b>ONLY</b> when the ignition switch is in the RUN or START position. 
+
+                </i><p class="singlespace"></p>
+                
+                  <b>For 3.5L equipped vehicles</b>, measure the voltage between the <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C1551B','48')">C1551B</a> Pin 48, circuit CBB53 (GY/BN), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0146611&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                
+                  <b>For 3.7L equipped vehicles</b>, measure the voltage between <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C175B','42')">C175B</a> Pin 42, circuit CBB53 (GY/BN), harness side and ground 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0114532&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                
+                  <b>For 5.0L and 6.2L equipped vehicles</b>, measure the voltage between <abbr title="Powertrain Control Module">PCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C1381B','42')">C1381B</a> Pin 42, circuit CBB53 (GY/BN), harness side and ground 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0114532&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                CHECK for causes of the intermittent fault. ATTEMPT to recreate the hard fault by flexing the wire harness and cycling the ignition key frequently. ACTIVATE other systems in the same wire harness. REPAIR any concern found. REPEAT the self-test. TEST the system for normal operation. If the <abbr title="Diagnostic Trouble Code">DTC</abbr>  returns. INSTALL a new <abbr title="Powertrain Control Module">PCM</abbr> . REFER to <a data-linkid="ID0ECIDI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0ECIDI"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="G3" data-ajax="false"></a><b>G3 
+                CHECK THE START MOTOR REQUEST CIRCUIT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Start the engine. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Battery Junction Box">BJB</abbr>  Starter Relay 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between <abbr title="Battery Junction Box">BJB</abbr>  starter relay socket pin 2, circuit CDC26 (GY/OG) and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0146535&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#G4">G4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Powertrain Control Module">PCM</abbr> . REFER to <a data-linkid="ID0E4KDI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0E4KDI"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="G4" data-ajax="false"></a><b>G4 
+                CHECK THE START MOTOR REQUEST CIRCUIT FOR A SHORT VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Powertrain Control Module">PCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a> (3.5L) <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a> (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a> (5.0L and 6.2L) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between <abbr title="Battery Junction Box">BJB</abbr>  starter relay socket pin 1, circuit CDC12 (YE) and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0146536&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Powertrain Control Module">PCM</abbr> . REFER to <a data-linkid="ID0EDODI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EDODI"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+    <a name="procsub1_6" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Component Tests 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b><img src="/content/images/workshop/warning.jpg">WARNING: 
+        Always disconnect the battery ground cable at the battery before disconnecting the starter motor battery terminal lead. If a tool is shorted at the starter motor battery terminal, the tool can quickly heat enough to cause a skin burn. Failure to follow this instruction may result in serious personal injury.
+      </b></p>
+      <p xmlns:str="http://xsltsl.org/string">Always make the Fluke 77-IV multimeter connections at the component terminal rather than at the wiring end connector. Making a connection at the wiring end connector could result in false readings because the meter will not pick up a high resistance between the wiring connector and the component. 
+</p>
+      <a name="procsub2_8" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Starter Motor — Feed Circuit Test 
+</b></p>
+        <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Make sure the battery is fully charged. <a data-linkid="ID0EEPDI" data-sectnum="414-01" class="section-link">Section 
+          414-01</a><span id="spanID0EEPDI"></span>. 
+
+        </li>
+</ol>
+        <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Perform a battery drain test. <a data-linkid="ID0EPPDI" data-sectnum="414-01" class="section-link">Section 
+          414-01</a><span id="spanID0EPPDI"></span>. 
+
+        </li>
+</ol>
+        <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Connect a remote starter switch between starter solenoid “S” terminal and the battery positive terminal. 
+
+        </li>
+</ol>
+        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0103545&amp;w=580&amp;t=JPG" border="1" width="580" xmlns:str="http://xsltsl.org/string">
+        <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Connect the multimeter positive lead to the battery positive post. Connect the negative lead to the starter solenoid "M" terminal. 
+
+        </li>
+</ol>
+        <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Place the gear select lever in Park or Neutral. 
+
+        </li>
+</ol>
+        <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Engage the remote starter switch. Read and record the voltage. The voltage reading should be 0.5 volt or less. 
+
+        </li>
+</ol>
+        <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If the voltage reading is 0.5 volt or less, go to the Starter Motor - Ground Circuit Test in this section. 
+
+        </li>
+</ol>
+        <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          A voltage reading greater than 0.5 volt is an indication of excessive resistance in the starter connections, the positive battery cable or in the starter solenoid. Remove the cables from solenoid "B", "S", and "M" terminals. Clean the cable connections and reinstall the cables to the correct terminals. Repeat Steps 3 through 7. 
+
+        </li>
+</ol>
+        <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If the voltage reading is still greater than 0.5 volt when checked at the "M" terminal, move the multimeter negative lead to the starter solenoid “B” terminal. 
+
+        </li>
+</ol>
+        <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          With the gear select lever in Park or Neutral, engage the remote starter switch. Read and record the voltage. 
+
+        </li>
+</ol>
+        <ol start="11. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If the voltage reading at the "B" terminal is lower than 0.5 volt, the concern is in the connections at the starter solenoid or in the solenoid contacts. Install a new starter motor. Refer to <a data-linkid="ID0EGRDI" data-for="303-06_s3p213q706079" data-procuid="n1276848" class="expand-link">Starter Motor — 3.5L GTDI, 3.7L</a><span id="spanID0EGRDI"></span> or Refer to <a data-linkid="ID0EKRDI" data-for="303-06_s3p213q706139" data-procuid="n1278761" class="expand-link">Starter Motor — 5.0L (4V), 6.2L (2V)</a><span id="spanID0EKRDI"></span>
+        </li>
+</ol>
+        <ol start="12. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If the voltage reading taken at the solenoid "B" terminal is still greater than 0.5 volt after cleaning the cables and connections at the solenoid, the concern is either in the positive battery cable connections or in the positive battery cable itself. 
+
+        </li>
+</ol>
+        <ol start="13. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Clean the positive battery cable connections and retest. If this does not solve the problem, install a new positive battery cable. <a data-linkid="ID0EYRDI" data-sectnum="414-01" class="section-link">Section 
+          414-01</a><span id="spanID0EYRDI"></span>. 
+
+        </li>
+</ol>
+      
+      <a name="procsub2_9" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Starter Motor - Ground Circuit Test 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"> A slow cranking condition can be caused by resistance in the ground or return portion of the cranking circuit. This procedure checks the voltage drop in the ground circuit. 
+</p>
+        <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Connect a remote starter switch between starter solenoid "S" terminal and the battery positive terminal. 
+
+        </li>
+</ol>
+        <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Connect the multimeter positive lead to the starter motor housing (the connection must be clean and free of rust or grease). Connect the negative lead to the negative battery terminal. 
+
+        </li>
+</ol>
+        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0098687&amp;w=580&amp;t=JPG" border="1" width="580" xmlns:str="http://xsltsl.org/string">
+        <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Place the gear select lever in Park or Neutral. 
+
+        </li>
+</ol>
+        <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Engage the remote starter switch and crank the engine. Read and record the voltage reading. The reading should be 0.5 volt or less. 
+
+        </li>
+</ol>
+        <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If the voltage drop is greater than 0.5 volt, clean the negative cable connections at the battery, the body ground connections and the starter ground connection. Retest. 
+
+        </li>
+</ol>
+        <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If the voltage drop is greater than 0.5 volt, install a new negative battery cable. <a data-linkid="ID0EHTDI" data-sectnum="414-01" class="section-link">Section 
+          414-01</a><span id="spanID0EHTDI"></span>. 
+
+        </li>
+</ol>
+        <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If the voltage reading is less than 0.5 volt and the engine still cranks slowly, install a new starter motor. Refer to Refer to <a data-linkid="ID0ESTDI" data-for="303-06_s3p213q706079" data-procuid="n1276848" class="expand-link">Starter Motor — 3.5L GTDI, 3.7L</a><span id="spanID0ESTDI"></span> or Refer to <a data-linkid="ID0EWTDI" data-for="303-06_s3p213q706139" data-procuid="n1278761" class="expand-link">Starter Motor — 5.0L (4V), 6.2L (2V)</a><span id="spanID0EWTDI"></span>. 
+
+        </li>
+</ol>
+      
+    
+  
+
+

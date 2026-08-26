@@ -1,0 +1,3089 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="303-03" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="303-03 Engine Cooling" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1496899" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>303-03 Engine Cooling</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      01/24/2014</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Engine Cooling" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Engine Cooling
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('303-03','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3106A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          3-Way HD Antifreeze Coolant Test Kit
+          <br><a data-for="328-00001" class="tools-link">328-00001</a> or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST1720A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Coolant/Battery Refractometer 
+          <br><a data-for="300-ROB75240" class="tools-link">300-ROB75240</a> or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3280A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          D-Gas Adapter
+          <br><a data-for="014-R1068" class="tools-link">014-R1068</a> or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3281A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Radiator Tester
+          <br>STN12270 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3254A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          UView® Combustion Leak Tester
+          <br>UVU560000-R or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware or equivalent scan tool
+          <br>
+        </td>
+      </tr>
+    </table>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" width="50%" cellspacing="0" cellpadding="3" xmlns:str="http://xsltsl.org/string">
+  <caption>Material</caption>
+  <tr valign="top">
+    <th>Item</th>
+    <th>Specification</th>
+  </tr>
+      <tr valign="top">
+        <td>
+          Motorcraft® Orange Antifreeze/Coolant Concentrated
+          <br>VC-3-B (US); CVC-3-B2 (Canada)
+        </td>
+        <td align="center">WSS-M97B44-D</td>
+      </tr>
+      <tr valign="top">
+        <td>
+          Motorcraft® Orange Antifreeze/Coolant Prediluted
+          <br>VC-3DIL-B (US); CVC-3DIL-B (Canada)
+        </td>
+        <td align="center">WSS-M97B44-D2</td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">Engine coolant flows primarily from the engine to the radiator circuit and back to the coolant pump. Coolant is sent from the coolant pump through the engine block and cylinder heads. A separate circuit from the engine also feeds the heater core with coolant. The coolant pump is operated by engine rotation through a pulley which is driven by the accessory drive belt to circulate the coolant. The coolant thermostat is a control valve actuated by coolant temperature. When the thermostat is closed, coolant flow bypasses the radiator circuit and returns to the coolant pump. When the thermostat is opened, coolant flows through the radiator circuit to transfer engine-generated heat to the outside air. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The degas bottle (3.5L GTDI, 3.7L and 5.0L engines) removes air from the cooling system. It also allows for coolant expansion and system pressurization, replenishes coolant to the cooling system and serves as the location for service fill. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The coolant expansion tank (6.2L engines) holds surplus coolant, allows for coolant expansion and replenishes coolant to the cooling system. It is equipped with a non-pressurized cap which allows coolant to be added to the tank to keep it filled to prescribed levels. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The cooling fan draws air through the radiator to help cool the system coolant as it passes through the radiator. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The thermostat monitor is a function of the PCM and is designed to verify correct thermostat operation. The monitor executes once per drive cycle and has a monitor run duration of 300-800 seconds. If a malfunction occurs, DTC P0125 or P0128 is set and the Malfunction Indicator Lamp (MIL)
+       is illuminated. 
+</p>
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b><img src="/content/images/workshop/warning.jpg">WARNING: 
+        Always allow the engine to cool before opening the cooling system. Do not unscrew the coolant pressure relief cap when the engine is operating or the cooling system is hot. The cooling system is under pressure; steam and hot liquid can come out forcefully when the cap is loosened slightly. Failure to follow these instructions may result in serious personal injury.
+      </b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTICE: 
+        The engine cooling system is filled with Motorcraft® Orange Antifreeze/Coolant. Do not mix coolant types. Mixing coolant types degrades the corrosion protection of Motorcraft® Orange Antifreeze/Coolant. Failure to follow these instructions may damage the engine or cooling system. 
+
+      </b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTICE: 
+        Always fill the cooling system with the manufacturer's specified coolant. Chemically flush the cooling system if a non-specified coolant has been used. Refer to <a data-linkid="ID0E4F" data-for="303-03_s5p8658q0" data-procuid="n1272153" class="expand-link">Cooling System Flushing</a><span id="spanID0E4F"></span> in this section. Failure to follow these instructions may damage the engine or cooling system. 
+
+      </b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+        During normal vehicle operation, Motorcraft Orange Antifreeze/Coolant may change color from orange to pink or light red. As long as the engine coolant is clear and uncontaminated, this color change does not indicate the engine coolant has degraded nor does it require the engine coolant to be drained, the system to be flushed, or the engine coolant to be replaced. 
+
+      </i></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern. 
+
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually check the engine coolant level at the degas bottle when the system is cold. 
+
+      </li>
+</ol>
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Make sure the pressure relief cap is installed correctly. 
+
+      </li>
+</ol>
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Record any cooling system DTCs retrieved. Refer to the PCM DTC Chart in this section for DTC descriptions. 
+
+      </li>
+</ol>
+      <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Take note of any coolant odor or steam coming from cooling system components. 
+
+        </i></p>
+        If the system coolant is filled correctly and no DTCs associated with fail-safe cooling are retrieved, verify the customer's concern by operating the engine to duplicate the condition. 
+
+      </li>
+</ol>
+      <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          For the coolant flow diagram, refer to <a data-linkid="ID0EMH" data-for="303-03_s1p17q0" data-procuid="n1496898" class="expand-link">Engine Cooling</a><span id="spanID0EMH"></span> in the Description and Operation portion of this section. 
+
+        </i></p>
+        Visually inspect for obvious signs of any mechanical or electrical damage. 
+
+      </li>
+</ol>
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string">
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Visual Inspection Chart
+        </b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                
+                  Mechanical
+                 
+              </th>
+              <th align="center" valign="top">
+                
+                  Electrical
+                 
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Leaks or weeps at: 
+
+                    <ul style="list-style-type: square">
+              <li>
+                      Hoses 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Tubes 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Clamp joints 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Gaskets 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      O-rings 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Thermostat housing 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Radiator 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Pressure relief cap 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Coolant pump 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Heater core (wet floor or coolant odor in vehicle) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Coolant crossover manifold assembly (if equipped) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Oil filter adapter (if equipped) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Oil cooler (if equipped) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Coolant expansion tank (if equipped) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Degas bottle (if equipped) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Cylinder block core plugs 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Cylinder head core plugs 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Block heater (if equipped) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Turbochargers (if equipped) 
+
+                    </li>
+            </ul>
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Inoperative or damaged: 
+
+                    <ul style="list-style-type: square">
+              <li>
+                      Electric cooling fan 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Wiring, connectors, relays or modules 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      
+                        Cylinder Head Temperature (CHT)
+       sensor 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      
+                        Vehicle Speed Sensor (VSS)
+      
+                      
+                    </li>
+            </ul>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Cracked or damaged: 
+
+                    <ul style="list-style-type: square">
+              <li>
+                      Hoses 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Tubes 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Hose clamps 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Thermostat housing 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Radiator 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Pressure relief cap 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Cooling fan 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Coolant pump 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Coolant expansion tank (if equipped) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Degas bottle (if equipped) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Oil filter adapter (if equipped) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Oil cooler (if equipped) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Coolant crossover manifold assembly (if equipped) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Cylinder block core plugs 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Cylinder head core plugs 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Block heater (if equipped) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      Tirbochargers (if equipped) 
+
+                    </li>
+            </ul>
+                  </li>
+                  <li>
+                    Restricted airflow through the A/C condenser/radiator 
+
+                  </li>
+                  <li>
+                    Drive belt loose, worn or installed incorrectly 
+
+                  </li>
+                  <li>
+                    Broken or weak drive belt tensioner 
+
+                  </li>
+                  <li>
+                    Excessive white or light gray exhaust smoke (may have burnt coolant odor) 
+
+                  </li>
+                  <li>
+                    Coolant in engine oil 
+
+                  </li>
+                  <li>
+                    Engine oil in coolant 
+
+                  </li>
+                  <li>
+                    Coolant in automatic transmission fluid 
+
+                  </li>
+                  <li>
+                    Automatic transmission fluid in coolant 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                  
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the inspection reveals an obvious concern that can be readily identified, repair it as necessary. Test the system for normal operation. 
+
+      </li>
+</ol>
+      <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Inspect the coolant condition. 
+
+        <ol start="1. ">
+      <li>
+          Inspect the coolant color. 
+
+          <ul style="list-style-type: square">
+          <li>
+            Discoloration may indicate that incorrect coolant may have been added to the system. Use of incorrect (green or yellow in color) coolant degrades the corrosion protection of Motorcraft® Orange Antifreeze/Coolant. Addition of Motorcraft® Specialty Green Engine Coolant may cause the color to appear to be a murky green-brown color. The addition of Motorcraft® Gold Antifreeze/Coolant, however, may not change the color or appearance of the orange colored coolant. Detection of contamination with Motorcraft® Gold Antifreeze/Coolant is determined by the presence of nitrite. If contamination with Motorcraft® Gold Antifreeze/Coolant is suspected, test the coolant with the 3-Way HD Antifreeze Coolant Test Kit. Follow the nitrite testing directions in the kit to determine if nitrite is present in the system. If nitrite is present, flush the system and refill with the correct mixture of distilled water and Motorcraft® Orange Antifreeze/Coolant. Refer to <a data-linkid="ID0EJLAC" data-for="303-03_s5p8658q0" data-procuid="n1272153" class="expand-link">Cooling System Flushing</a><span id="spanID0EJLAC"></span> in this section. 
+
+          </li>
+        </ul>
+          <ul style="list-style-type: square">
+          <li>
+            A darker orange with the presence of debris could indicate a commercially available stop leak may have been used and could result in loss of coolant flow to critical parts of the engine. If sediment is present in the coolant sample, flush the system and refill with the correct mixture of distilled water and Motorcraft® Orange Antifreeze/Coolant. Refer to <a data-linkid="ID0ETLAC" data-for="303-03_s5p8658q0" data-procuid="n1272153" class="expand-link">Cooling System Flushing</a><span id="spanID0ETLAC"></span> in this section. 
+
+          </li>
+        </ul>
+          <ul style="list-style-type: square">
+          <li>
+            A light or reddish brown color indicates that rust may be present in the cooling system. Flush the system and refill with the correct mixture of distilled water and Motorcraft® Orange Antifreeze/Coolant. Refer to <a data-linkid="ID0E4LAC" data-for="303-03_s5p8658q0" data-procuid="n1272153" class="expand-link">Cooling System Flushing</a><span id="spanID0E4LAC"></span> in this section. 
+
+          </li>
+        </ul>
+          <ul style="list-style-type: square">
+          <li>
+            An iridescent sheen on top of the coolant could indicate a trace of oil is entering the system. For engine diagnosis, refer to <a data-linkid="ID0EHMAC" data-sectnum="303-00" class="section-link">Section 
+          303-00</a><span id="spanID0EHMAC"></span>. Flush the cooling system and refill with the correct mixture of distilled water and Motorcraft® Orange Antifreeze/Coolant. Refer to <a data-linkid="ID0EMMAC" data-for="303-03_s5p8658q0" data-procuid="n1272153" class="expand-link">Cooling System Flushing</a><span id="spanID0EMMAC"></span> in this section. 
+
+          </li>
+        </ul>
+          <ul style="list-style-type: square">
+          <li>
+            A milky brown color may indicate that engine oil is entering the cooling system. Pressure test the cooling system. Refer to the Component Tests in this section. If engine oil is suspected, the cause of the leak may be internal to the engine. For engine diagnosis, refer to <a data-linkid="ID0EWMAC" data-sectnum="303-00" class="section-link">Section 
+          303-00</a><span id="spanID0EWMAC"></span>. Flush the cooling system and refill with the correct mixture of distilled water and Motorcraft® Orange Antifreeze/Coolant. Refer to <a data-linkid="ID0E2MAC" data-for="303-03_s5p8658q0" data-procuid="n1272153" class="expand-link">Cooling System Flushing</a><span id="spanID0E2MAC"></span> in this section. 
+
+          </li>
+        </ul>
+        </li>
+    </ol>
+        <ol start="2. ">
+      <li>
+          If the engine coolant appearance is acceptable, test the engine coolant freezing point range with the Coolant/Battery Refractometer. Maintain the coolant concentration within 48% to 50%, which equates to a freeze point between -31˚C and -37˚C (-30˚F and -34˚F). If the vehicle is driven in cold climates less than -37°C (-34°F), it may be necessary to increase the coolant concentration to get adequate freeze protection. Recommended coolant concentration is 48/52 to 50/50 (freeze protection -31°C [-30°F] to -34°C [-34°F]) engine coolant to distilled water. 
+
+          <ul style="list-style-type: square">
+          <li>
+            Maximum coolant concentration is 60/40 for cold weather areas. 
+
+          </li>
+        </ul>
+          <ul style="list-style-type: square">
+          <li>
+            Minimum coolant concentration is 40/60 for warm weather areas. 
+
+          </li>
+        </ul>
+        </li>
+    </ol>
+        <ol start="3. ">
+      <li>
+          Adjust coolant range and level if necessary: 
+
+          <ul style="list-style-type: square">
+          <li>
+            If coolant is low, add specified coolant mixture only. 
+
+          </li>
+        </ul>
+          <ul style="list-style-type: square">
+          <li>
+            If the engine coolant tests too weak, remove some of the engine coolant and add undiluted engine coolant until the readings are within acceptable levels. 
+
+          </li>
+        </ul>
+          <ul style="list-style-type: square">
+          <li>
+            If the engine coolant tests strong, remove some of the engine coolant and add distilled water until the readings are within acceptable levels. 
+
+          </li>
+        </ul>
+        </li>
+    </ol>
+      </li>
+</ol>
+      <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If an obvious cause for an observed or reported concern is found, correct the cause and test the system for normal operation before proceeding to the next step. 
+
+      </li>
+</ol>
+      <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Make sure to use the latest scan tool software release. 
+
+        </i></p>
+        If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC)
+      . 
+
+      </li>
+</ol>
+      <ol start="11. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          The Vehicle Communication Module (VCM)
+       LED prove-out confirms power and ground from the <abbr title="Data Link Connector">DLC</abbr>  are provided to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </i></p>
+        If the scan tool does not communicate with the <abbr title="Vehicle Communication Module">VCM</abbr> : 
+
+        <ul type="disc">
+      <li>
+          check the <abbr title="Vehicle Communication Module">VCM</abbr>  connection to the vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          check the scan tool connection to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0E6AAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E6AAE"></span>, No Power To The Scan Tool, to diagnose no power to the scan tool. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="12. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the scan tool does not communicate with the vehicle: 
+
+        <ul type="disc">
+      <li>
+          verify the ignition key is in the ON position. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          verify the scan tool operation with a known good vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0E3BAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E3BAE"></span> The PCM Does Not Respond To The Scan Tool, to diagnose no response from the PCM. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="13. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the network test. 
+
+        <ul type="disc">
+      <li>
+          If the scan tool responds with no communication for one or more modules, refer to <a data-linkid="ID0ENCAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0ENCAE"></span>. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          If the network test passes, retrieve and record Continuous Memory Diagnostic Trouble Codes (CMDTCs)
+      . 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="14. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Clear the <abbr title="Continuous Memory Diagnostic Trouble Codes">CMDTCs</abbr>  and carry out the self-test diagnostics for the PCM. 
+
+      </li>
+</ol>
+      <ol start="15. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the DTCs recovered are related to the concern, go to the PCM DTC Chart. For all other PCM DTCs, refer to <a data-linkid="ID0ESDAE" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0ESDAE"></span>. 
+
+      </li>
+</ol>
+      <ol start="16. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If no DTCs related to the concern are retrieved, GO to <a data-ajax="false" href="#SC1">Symptom Chart</a>. 
+
+      </li>
+</ol>
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>PCM DTC Chart 
+</b></p>
+      <a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            PCM DTC Chart 
+</b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                DTC 
+
+              </th>
+              <th align="center" valign="top">
+                Description 
+
+              </th>
+              <th align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                P0217 
+
+              </td>
+              <td valign="top">
+                Engine Coolant Over Temperature Condition 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P1285 
+
+              </td>
+              <td valign="top">
+                Cylinder Head Over Temperature Condition 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P1299 
+
+              </td>
+              <td valign="top">
+                Cylinder Head Over Temperature Protection Active 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0125 
+
+              </td>
+              <td valign="top">
+                Insufficient Coolant Temperature For Closed Loop Fuel Control 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#C" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test C</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0128 
+
+              </td>
+              <td valign="top">
+                Coolant Thermostat (Coolant Temperature Below Thermostat Regulating Temperature) 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#C" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test C</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0480 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p>P0481 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p>P0482 
+
+              </td>
+              <td valign="top">
+                Fan 1, 2 or 3 Control Circuit, Respectively 
+
+              </td>
+              <td valign="top">
+                REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                All Other PCM DTCs 
+
+              </td>
+              <td valign="top">
+                — 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0ENLAE" data-sectnum="303-14" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          303-14</a><span id="spanID0ENLAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart 
+</b></p>
+      <a name="SC1" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Loss of coolant 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Coolant hoses or tubes 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Hose clamps 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Coolant pump O-ring seal 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Thermostat O-ring seal 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Thermostat housing 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Radiator 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Transmission fluid cooler (in radiator) (may leak internally or externally) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Coolant expansion tank 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Degas bottle 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Pressure relief cap 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Coolant pump leaking from weep hole 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Cylinder block coolant pump hole cover 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Heater core 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Coolant crossover manifold assembly 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Engine gaskets (may leak internally or externally) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Oil filter adapter (may leak internally or externally) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Oil cooler (may leak internally or externally) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Cylinder block core plugs 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Cylinder head core plugs 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Block heater (if equipped) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Turbochargers (if equipped) 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#A">GO to Pinpoint Test A</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The engine overheats 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Low coolant level 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>External engine coolant leak 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Airlock in system 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Pressure relief cap installation 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Restricted airflow through the A/C condenser/radiator 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Internal engine coolant leak 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Coolant condition/concentration 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Accessory drive components 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Non-OEM engine enhancement components 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Electric cooling fan 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Radiator 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Thermostat 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Temperature gauge 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Cylinder Head Temperature (CHT)
+       sensor 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Coolant pump 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Coolant flow restriction 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#B">GO to Pinpoint Test B</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The engine does not reach normal operating temperature 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Low coolant level 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Thermostat 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Electric cooling fan always on 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Engine Coolant Temperature">ECT</abbr>  gauge 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Cylinder Head Temperature">CHT</abbr>  sensor 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#C">GO to Pinpoint Test C</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The block heater does not operate correctly 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Block heater power cable 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>CHECK continuity in all 3 power cable circuits. If any circuit measures more than 5 ohms, INSTALL a new power cable. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Block heater 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>CHECK the resistance of the block heater. If the resistance does not measure between 30 and 40 ohms, INSTALL a new block heater. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The electric cooling fan is inoperative in one or more speeds or does not operate correctly 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Relays 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Fuses 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Cooling fan motor 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The electric cooling fan stays on all the time 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Relays 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Noisy electric cooling fan 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Foreign material contamination 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Fan motor 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REMOVE the foreign material from the cooling fan and shroud. TEST the system for normal operation. If still noisy, INSTALL a new cooling fan assembly. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Fan blade detached from fan motor 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL a new cooling fan assembly. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_5" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test A: Loss of Coolant 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The engine cooling system is a closed system providing for coolant expansion and contraction as well as changes in pressure as coolant warms and cools with engine operation. Various gaskets, seals, hoses and clamps contain coolant within the cooling system and keep other fluids and contaminants from entering the cooling system. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">Coolant loss can be attributed to either external or internal leaks anywhere within the cooling system. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">For engine specific information, refer to <a data-linkid="ID0EV2AE" data-for="303-03_s1p17q0" data-procuid="n1496898" class="expand-link">Engine Cooling</a><span id="spanID0EV2AE"></span> in the Description and Operation portion of this section. 
+</p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Coolant hoses or tubes 
+
+          </li>
+          <li>
+            Hose clamps 
+
+          </li>
+          <li>
+            Thermostat O-ring seal 
+
+          </li>
+          <li>
+            Coolant pump gasket or O-ring seal 
+
+          </li>
+          <li>
+            Thermostat housing 
+
+          </li>
+          <li>
+            Radiator 
+
+          </li>
+          <li>
+            Transmission fluid cooler (in radiator) 
+
+          </li>
+          <li>
+            Pressure relief cap 
+
+          </li>
+          <li>
+            Coolant pump leaking from weep hole 
+
+          </li>
+          <li>
+            Cylinder block coolant pump hole cover 
+
+          </li>
+          <li>
+            Heater core 
+
+          </li>
+          <li>
+            Coolant crossover manifold assembly 
+
+          </li>
+          <li>
+            Engine gaskets (may leak internally or externally) 
+
+          </li>
+          <li>
+            Oil filter adapter (may leak internally or externally) 
+
+          </li>
+          <li>
+            Oil cooler (may leak internally or externally) 
+
+          </li>
+          <li>
+            Coolant expansion tank 
+
+          </li>
+          <li>
+            Degas bottle 
+
+          </li>
+          <li>
+            Cylinder block core plugs 
+
+          </li>
+          <li>
+            Cylinder head core plugs 
+
+          </li>
+          <li>
+            Block heater (if equipped) 
+
+          </li>
+          <li>
+            Turbochargers (if equipped) 
+
+          </li>
+        </ul>
+        <a name="A" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST A : LOSS OF COOLANT 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b><img src="/content/images/workshop/warning.jpg">WARNING: 
+            Always allow the engine to cool before opening the cooling system. Do not unscrew the coolant pressure relief cap when the engine is operating or the cooling system is hot. The cooling system is under pressure; steam and hot liquid can come out forcefully when the cap is loosened slightly. Failure to follow these instructions may result in serious personal injury.
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A1" data-ajax="false"></a><b>A1 
+                CARRY OUT INSPECTION AND VERIFICATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Carry out the inspection and verification procedure in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Were any concerns found? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR as needed. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A2">A2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A2" data-ajax="false"></a><b>A2 
+                CHECK THE ENGINE COOLANT LEVEL 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                Allow the engine to cool before checking the engine coolant level. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Visually inspect the engine coolant level at the coolant expansion tank. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the engine coolant level within specifications? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A3">A3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                ADJUST the engine coolant level as necessary. GO to <a data-ajax="false" href="#A3">A3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A3" data-ajax="false"></a><b>A3 
+                PRESSURE TEST THE ENGINE COOLING SYSTEM 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Pressure test the engine cooling system. For 3.5L GTDI, 3.7L or 5.0L engines, refer to Component Tests, Cooling System Pressure Test - Degas Bottle Systems in this section. For 6.2L engines, refer to Component Tests, Cooling System Pressure Test - Coolant Expansion Tank Systems in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the engine cooling system leak externally? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR or INSTALL new components. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A4">A4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A4" data-ajax="false"></a><b>A4 
+                CHECK THE ENGINE COOLANT FOR AN INTERNAL LEAK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Inspect the engine coolant in the degas bottle or the coolant expansion tank and the radiator for signs of engine oil or transmission fluid. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is engine oil or transmission fluid evident in the coolant? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                If engine oil is evident, GO to <a data-linkid="ID0ECFAG" data-sectnum="303-00" class="section-link">Section 
+          303-00</a><span id="spanID0ECFAG"></span> for engine diagnosis. If transmission fluid is evident, INSTALL a new radiator. REPAIR the transmission as necessary. Refer to the appropriate section in Group 307 for the procedure. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A5">A5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A5" data-ajax="false"></a><b>A5 
+                CHECK THE ENGINE OIL AND TRANSMISSION FLUID FOR COOLANT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Remove the oil level indicators from the engine and the transmission. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is coolant evident in the oil or transmission fluid? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                If coolant is in the engine oil, GO to <a data-linkid="ID0EXGAG" data-sectnum="303-00" class="section-link">Section 
+          303-00</a><span id="spanID0EXGAG"></span>. If coolant is in the transmission fluid, INSTALL a new radiator. REPAIR the transmission as necessary. Refer to the appropriate section in Group 307 for the procedure.
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A6">A6</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A6" data-ajax="false"></a><b>A6 
+                CHECK THE COOLING SYSTEM FOR COMBUSTION GASES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                  Use UView® Combustion Leak Tester part number UVU560000-R or equivalent. 
+
+                </i><p class="singlespace"></p>
+                Using a cooling system combustion gas leak tester, following the instructions supplied with the tester, check the coolant for combustion gases. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are combustion gases present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                GO to <a data-linkid="ID0EQIAG" data-sectnum="303-00" class="section-link">Section 
+          303-00</a><span id="spanID0EQIAG"></span> for engine diagnosis. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The cooling system is operational. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test B: The Engine Overheats 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The engine cooling system maintains the engine temperature during operation. Correct coolant flow through the engine, radiator and remainder of cooling system passages and components is essential to maintaining a correct engine temperature. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">Engine coolant flows primarily from the engine to the radiator circuit and back to the coolant pump. Coolant is sent from the coolant pump through the engine block and cylinder heads. A separate circuit from the engine also feeds the heater core with coolant. The coolant pump, operated by engine rotation through a pulley driven by the accessory drive belt, circulates the coolant. The coolant thermostat is a control valve actuated by coolant temperature. When the thermostat is closed, coolant flow bypasses the radiator circuit and returns to the coolant pump. When the thermostat is opened, coolant flows through the radiator circuit to transfer engine-generated heat to the outside air. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">Engine overheating generally occurs when there is a disruption in the ability to control either coolant flow at the proper rate, the inability to transfer heat from the engine through the coolant (including low coolant) or an inability to transfer engine generated heat to the outside air through the radiator. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">For engine specific information, refer to <a data-linkid="ID0EVJAG" data-for="303-03_s1p17q0" data-procuid="n1496898" class="expand-link">Engine Cooling</a><span id="spanID0EVJAG"></span> in the Description and Operation portion of this section. 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC P0217 (Engine Coolant Over Temperature Condition) — Indicates an engine overheat condition was detected by the Cylinder Head Temperature (CHT)
+       sensor. 
+
+          </li>
+          <li>
+            DTC P1285 (Cylinder Head Over Temperature Condition) — Indicates an engine overheat condition was sensed by the <abbr title="Cylinder Head Temperature">CHT</abbr>  sensor. 
+
+          </li>
+          <li>
+            DTC P1299 (Cylinder Head Over Temperature Protection Active) — Indicates an engine overheat condition was detected by the <abbr title="Cylinder Head Temperature">CHT</abbr>  sensor. A failure mode effects management strategy called fail-safe cooling was activated to cool the engine. 
+
+          </li>
+        </ul>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Low coolant level 
+
+          </li>
+          <li>
+            External engine coolant leak 
+
+          </li>
+          <li>
+            Airlock in system 
+
+          </li>
+          <li>
+            Pressure relief cap installation 
+
+          </li>
+          <li>
+            Restricted airflow through the A/C condenser/radiator 
+
+          </li>
+          <li>
+            Internal engine coolant leak 
+
+          </li>
+          <li>
+            Coolant condition/concentration 
+
+          </li>
+          <li>
+            Accessory drive components 
+
+          </li>
+          <li>
+            Non-OEM engine enhancement components 
+
+          </li>
+          <li>
+            Electric cooling fan 
+
+          </li>
+          <li>
+            Temperature gauge 
+
+          </li>
+          <li>
+            
+              <abbr title="Cylinder Head Temperature">CHT</abbr>  sensor 
+
+          </li>
+          <li>
+            Coolant pump 
+
+          </li>
+          <li>
+            Coolant flow restriction 
+
+          </li>
+          <li>
+            Radiator 
+
+          </li>
+          <li>
+            Thermostat 
+
+          </li>
+        </ul>
+        <a name="B" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST B : THE ENGINE OVERHEATS 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b><img src="/content/images/workshop/warning.jpg">WARNING: 
+            Always allow the engine to cool before opening the cooling system. Do not unscrew the coolant pressure relief cap when the engine is operating or the cooling system is hot. The cooling system is under pressure; steam and hot liquid can come out forcefully when the cap is loosened slightly. Failure to follow these instructions may result in serious personal injury.
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B1" data-ajax="false"></a><b>B1 
+                CARRY OUT INSPECTION AND VERIFICATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Carry out the inspection and verification procedure in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Were any concerns found? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR as needed. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B2">B2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B2" data-ajax="false"></a><b>B2 
+                CHECK FOR DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for DTC P0217, P1285 or P1299. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC P0217, P1285 or P1299 present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B3">B3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                Actual engine overheating has not been verified. CHECK the engine coolant temperature gauge operation. REFER to <a data-linkid="ID0E5QAG" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0E5QAG"></span>. If any other PCM DTCs are retrieved, REFER to <a data-linkid="ID0EDRAG" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EDRAG"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B3" data-ajax="false"></a><b>B3 
+                CHECK FOR AN AIRFLOW OBSTRUCTION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the radiator or A/C condenser for an obstruction such as leaves or cardboard. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is an obstruction present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REMOVE the obstruction. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B4">B4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B4" data-ajax="false"></a><b>B4 
+                CHECK THE ENGINE COOLANT LEVEL 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                Allow the engine to cool before checking the coolant level. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Visually check the engine coolant level in the coolant expansion tank. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the engine coolant level within specification? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B5">B5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                ADJUST the engine coolant level as necessary. GO to <a data-ajax="false" href="#B5">B5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B5" data-ajax="false"></a><b>B5 
+                PRESSURE TEST THE ENGINE COOLING SYSTEM 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Pressure test the engine cooling system. For 3.5L GTDI, 3.7L or 5.0L engines, refer to Component Tests, Cooling System Pressure Test - Degas Bottle System in this section. For 6.2L engines, refer to Component Tests, Cooling System Pressure Test - Coolant Expansion Tank System in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the engine cooling system leak externally? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR or INSTALL new components. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                For 6.2L engines, GO to <a data-ajax="false" href="#B6">B6</a>. For 3.5L GTDI, 3.7L or 5.0L engines, GO to <a data-ajax="false" href="#B7">B7</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B6" data-ajax="false"></a><b>B6 
+                CHECK THE PRESSURE RELIEF CAP 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Carry out the Pressure Relief Cap Pressure Test. Refer to Component Test, Pressure Relief Cap Pressure Test in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the pressure relief cap OK? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B7">B7</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new pressure relief cap. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B7" data-ajax="false"></a><b>B7 
+                CHECK THE ENGINE COOLANT FOR AN INTERNAL LEAK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Inspect the engine coolant in the degas bottle or the coolant expansion tank and the radiator for signs of engine oil or transmission fluid. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is engine oil or transmission fluid evident in the coolant? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                If engine oil is evident, GO to <a data-linkid="ID0EGYAG" data-sectnum="303-00" class="section-link">Section 
+          303-00</a><span id="spanID0EGYAG"></span> for engine diagnosis. If transmission fluid is evident, INSTALL a new radiator. REPAIR the transmission as necessary. Refer to the appropriate section in Group 307 for the procedure. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B8">B8</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B8" data-ajax="false"></a><b>B8 
+                CHECK THE ENGINE OIL AND TRANSMISSION FLUID FOR COOLANT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Remove the oil level indicators from the engine and the transmission. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is coolant evident in the oil or transmission fluid? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                If coolant is in the engine oil, GO to <a data-linkid="ID0E2ZAG" data-sectnum="303-00" class="section-link">Section 
+          303-00</a><span id="spanID0E2ZAG"></span>. If coolant is in the transmission fluid, INSTALL a new radiator. REPAIR the transmission as necessary. Refer to the appropriate section in Group 307 for the procedure.
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B9">B9</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B9" data-ajax="false"></a><b>B9 
+                CHECK THE COOLING SYSTEM FOR COMBUSTION GASES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                  Use UView® Combustion Leak Tester part number UVU560000-R or equivalent. 
+
+                </i><p class="singlespace"></p>
+                Using a cooling system combustion gas leak tester, following the instructions supplied with the tester, check the coolant for combustion gases. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are combustion gases present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                GO to <a data-linkid="ID0EU2AG" data-sectnum="303-00" class="section-link">Section 
+          303-00</a><span id="spanID0EU2AG"></span> for engine diagnosis. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B10">B10</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B10" data-ajax="false"></a><b>B10 
+                CHECK COOLANT CONDITION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the coolant for dirt, rust or contamination and check the coolant concentration. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the coolant condition OK? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B11">B11</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                FLUSH the engine cooling system. REFER to <a data-linkid="ID0ER4AG" data-for="303-03_s5p8658q0" data-procuid="n1272153" class="expand-link">Cooling System Flushing</a><span id="spanID0ER4AG"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B11" data-ajax="false"></a><b>B11 
+                CHECK THE ELECTRIC COOLING FAN OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Start the engine. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Place the climate control function selector in the MAX A/C position and the blower motor switch in the HI position. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Did the electric cooling fan operate? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B12">B12</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                DIAGNOSE the electric cooling fan operation. REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B12" data-ajax="false"></a><b>B12 
+                CHECK THE COOLANT PUMP OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Start the engine. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Allow the engine to run for 10 minutes. Place the climate control function selector in the MAX HEAT position. Feel the heater outlet hose. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the heater outlet hose hot? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B13">B13</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new coolant pump. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B13" data-ajax="false"></a><b>B13 
+                CHECK THE THERMOSTAT OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Start the engine. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Allow the engine to run for 10 minutes (6.2L engines) or 30 minutes (3.5L GTDI, 3.7L or 5.0L engines). Feel the upper radiator hose. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the upper radiator hose hot? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                CHECK the engine coolant temperature gauge operation. REFER to <a data-linkid="ID0E5BBG" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0E5BBG"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B14">B14</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B14" data-ajax="false"></a><b>B14 
+                VISUALLY INSPECT THE THERMOSTAT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Carry out the Thermostat Visual Inspection in the Component Tests portion of this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the thermostat damaged? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new thermostat. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new thermostat. TEST the system for normal operation. If the engine still overheats, INSTALL a new radiator. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test C: The Engine Does Not Reach Normal Operating Temperature 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The engine cooling system maintains engine temperature during operation. Correct coolant flow through the engine, radiator and remainder of cooling system passages and components is essential to maintaining a correct engine temperature. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">Engine coolant flows primarily from the engine to the radiator circuit and back to the coolant pump. Coolant is sent from the coolant pump through the engine block and cylinder heads. A separate circuit from the engine also feeds the heater core with coolant. The coolant pump, operated by engine rotation through a pulley driven by the accessory drive belt, circulates the coolant. The coolant thermostat is a control valve actuated by coolant temperature. When the thermostat is closed, coolant flow bypasses the radiator circuit and returns to the coolant pump. When the thermostat is opened, coolant flows through the radiator circuit to transfer engine generated heat to the outside air. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">Concerns of engine inability to reach normal operating temperature typically occur when the rate of coolant flow through some coolant circuits (radiator, heater core) is more than expected given the conditions, or when the cooling fans operate all of the time. Heat is not allowed to build in the engine because a heat exchanger is removing too much heat, including the radiator, heater core and oil cooler. In addition, perceived concerns that the engine does not reach normal operating temperature can be related to a low coolant level or trapped air which does not allow for hot coolant to be available at the heater core, an inoperative climate control system, or for concerns perceived or related to an incorrect engine temperature gauge indication. 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC P0125 (Insufficient Coolant Temperature For Closed Loop Fuel Control) — Indicates the Cylinder Head Temperature (CHT)
+       sensor has not achieved the required temperature level to enter closed loop operating conditions within a specified amount of time after starting the engine. 
+
+          </li>
+          <li>
+            DTC P0128 (Coolant Thermostat [Coolant Temperature Below Thermostat Regulating Temperature]) — Indicates the thermostat monitor has not achieved the required engine operating temperature within a specified amount of time after starting the engine. 
+
+          </li>
+        </ul>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Low coolant level 
+
+          </li>
+          <li>
+            Thermostat 
+
+          </li>
+          <li>
+            Temperature gauge 
+
+          </li>
+          <li>
+            Electric cooling fan always on 
+
+          </li>
+          <li>
+            
+              Cylinder Head Temperature (CHT)
+       sensor 
+
+          </li>
+        </ul>
+        <a name="C" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST C : THE ENGINE DOES NOT REACH NORMAL OPERATING TEMPERATURE 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b><img src="/content/images/workshop/warning.jpg">WARNING: 
+            Always allow the engine to cool before opening the cooling system. Do not unscrew the coolant pressure relief cap when the engine is operating or the cooling system is hot. The cooling system is under pressure; steam and hot liquid can come out forcefully when the cap is loosened slightly. Failure to follow these instructions may result in serious personal injury.
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C1" data-ajax="false"></a><b>C1 
+                CARRY OUT INSPECTION AND VERIFICATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Carry out the inspection and verification procedure in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Were any concerns found? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR as needed. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C2">C2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C2" data-ajax="false"></a><b>C2 
+                CHECK FOR DTC P0125 OR P0128 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for DTC P0125 or P0128. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC P0125 or P0128 present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C3">C3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The cooling system is operational. If an inoperative engine coolant temperature gauge is suspected, CHECK the engine coolant temperature gauge operation. REFER to <a data-linkid="ID0EGJBG" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EGJBG"></span>. If an inoperative climate control system is suspected, CHECK the climate control system operation. REFER to <a data-linkid="ID0ELJBG" data-sectnum="412-00" class="section-link">Section 
+          412-00</a><span id="spanID0ELJBG"></span>. If any other PCM DTCs are retrieved, REFER to <a data-linkid="ID0EQJBG" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EQJBG"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C3" data-ajax="false"></a><b>C3 
+                CHECK THE ELECTRIC COOLING FAN OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Allow the engine to cool. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Make sure the A/C switch is OFF. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Start the engine. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check the electric cooling fan. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the electric cooling fan on all the time? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                DIAGNOSE the electric cooling fan operation. REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C4">C4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C4" data-ajax="false"></a><b>C4 
+                CHECK THE COOLANT LEVEL 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                  Allow the engine to cool before checking the coolant level. 
+
+                </i><p class="singlespace"></p>
+                Visually check the engine coolant level in the coolant expansion tank. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the engine coolant level within specification? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new thermostat. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  <a data-ajax="false" href="#A">GO to Pinpoint Test A</a> to diagnose a coolant leak. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+    <a name="procsub1_6" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Component Tests 
+</b></p>
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Cooling System Pressure Test - Degas Bottle Systems 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b><img src="/content/images/workshop/warning.jpg">WARNING: 
+          Always allow the engine to cool before opening the cooling system. Do not unscrew the coolant pressure relief cap when the engine is operating or the cooling system is hot. The cooling system is under pressure; steam and hot liquid can come out forcefully when the cap is loosened slightly. Failure to follow these instructions may result in serious personal injury.
+        </b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          Vehicles equipped with a degas bottle system have the pressure relief cap on the degas bottle and no radiator cap. The pressure relief cap is tested as part of the cooling system pressure test. 
+
+        </i></p>
+        <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Turn the engine off. 
+
+        </li>
+</ol>
+        <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Check the engine coolant level. Adjust the coolant level as necessary. 
+
+        </li>
+</ol>
+        <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Attach the D-Gas Adapter to the degas bottle nipple and overflow hose. Install the Radiator Tester to the quick connect fitting of the D-Gas Adapter. 
+
+        </li>
+</ol>
+        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0130254&amp;w=250&amp;t=JPG" border="1" width="250" xmlns:str="http://xsltsl.org/string">
+        <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          <p><b>NOTICE: 
+            Do not pressurize the cooling system beyond the maximum pressure listed in the specifications table in this section or cooling system components may be damaged. 
+
+          </b></p>
+          <p><b>NOTE: </b><i>
+            If the plunger of the pressure tester is pressed too fast, an erroneous pressure reading results. 
+
+          </i></p>
+          Slowly press the plunger of the pressure test pump until the pressure gauge reading stops increasing and note the highest pressure reading obtained. If the pressure reading exceeds the maximum cap pressure listed in the specifications table, install a new pressure relief cap. 
+
+        </li>
+</ol>
+        <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If the system does not hold pressure, remove the pressure relief cap and wash in clean water to dislodge all of the foreign material from the gasket. Check the sealing surface in the filler neck of the degas bottle for nicks or cuts. Install the pressure relief cap. 
+
+        </li>
+</ol>
+        <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Pressurize the engine cooling system as described in Step 4. Observe the gauge reading for approximately 2 minutes. Pressure should not drop during this time. If the pressure drops, inspect for leaks and repair as necessary. 
+
+        </li>
+</ol>
+        <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If no leaks are found and the pressure drops, the pressure relief cap may be leaking. Install a new pressure relief cap and retest the system. 
+
+        </li>
+</ol>
+        <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If no leaks are found after a new pressure relief cap is installed, and the pressure drops, the leak may be internal to the engine. Inspect the coolant for engine oil and the engine oil for coolant. Refer to <a data-linkid="ID0EUPBG" data-sectnum="303-00" class="section-link">Section 
+          303-00</a><span id="spanID0EUPBG"></span> to diagnose the engine. 
+
+        </li>
+</ol>
+        <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Release the system pressure by loosening the pressure relief cap. Check the coolant level and adjust as necessary. 
+
+        </li>
+</ol>
+      
+      <a name="procsub2_5" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Coolant System Pressure Test - Coolant Expansion Tank Systems 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b><img src="/content/images/workshop/warning.jpg">WARNING: 
+          Always allow the engine to cool before opening the cooling system. Do not unscrew the coolant pressure relief cap when the engine is operating or the cooling system is hot. The cooling system is under pressure; steam and hot liquid can come out forcefully when the cap is loosened slightly. Failure to follow these instructions may result in serious personal injury.
+        </b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          Vehicles equipped with a coolant expansion tank have the pressure relief cap on the radiator. The pressure relief cap is tested separately. 
+
+        </i></p>
+        <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Turn the engine off. 
+
+        </li>
+</ol>
+        <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Remove the pressure relief cap. Fill the radiator with coolant if needed. 
+
+        </li>
+</ol>
+        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0130255&amp;w=250&amp;t=JPG" border="1" width="250" xmlns:str="http://xsltsl.org/string">
+        <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Fit the Radiator Tester to the radiator fill neck. 
+
+        </li>
+</ol>
+        <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          <p><b>NOTICE: 
+            Do not pressurize the cooling system beyond the maximum pressure listed in the specifications table in this section, or cooling system components can be damaged. 
+
+          </b></p>
+          <p><b>NOTE: </b><i>
+            If the plunger of the pressure tester is pressed too fast, an erroneous pressure reading results. 
+
+          </i></p>
+          Slowly press the plunger of the pressure test pump to the maximum allowed pressure and hold for 2 minutes. If the pressure drops within this time, inspect for leaks and repair as necessary. 
+
+        </li>
+</ol>
+        <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If no leaks are found and the pressure drops, the leak may be internal to the radiator transmission cooler. Inspect the coolant for transmission fluid and the transmission fluid for coolant. Repair as necessary. 
+
+        </li>
+</ol>
+        <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If there is no contamination of the coolant or transmission fluid, the leak may be internal to the engine. Inspect the coolant for engine oil and the engine oil for coolant. Refer to <a data-linkid="ID0E3RBG" data-sectnum="303-00" class="section-link">Section 
+          303-00</a><span id="spanID0E3RBG"></span> to diagnose the engine. 
+
+        </li>
+</ol>
+      
+      <a name="procsub2_6" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pressure Relief Cap Pressure Test 
+</b></p>
+        <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Inspect the pressure relief cap and seals for damage or deterioration. Install a new pressure relief cap if necessary. 
+
+        </li>
+</ol>
+        <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Using the correct adapter, fit the pressure relief cap to the Radiator Tester. 
+
+        </li>
+</ol>
+        <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          <p><b>NOTE: </b><i>
+            If the plunger of the pressure tester is pressed to fast, an incorrect pressure reading results. 
+
+          </i></p>
+          Slowly press the plunger of the pressure test pump until the pressure gauge stops increasing and note the highest pressure reading. Release the pressure and repeat the test. Install a new pressure relief cap if the pressure is not within the pressure listed in the Specifications table in this section. 
+
+        </li>
+</ol>
+      
+      <a name="procsub2_7" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Thermostat 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">A new thermostat should be installed only after the following tests and checks have been carried out: 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Pinpoint Test B or C 
+
+          </li>
+          <li>
+            Thermostat Visual Inspection 
+
+          </li>
+        </ul>
+      
+      <a name="procsub2_8" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Thermostat Visual Inspection 
+</b></p>
+        <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Remove the thermostat. 
+
+        </li>
+</ol>
+        <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Examine the thermostat for signs of damage including: 
+
+          <ul type="disc">
+      <li>
+            Valve not fully seated (light visible through the valve) 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            Foreign material lodged in the main valve 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            Bent or broken frame or flange 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            Bent or broken spring 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            Bent or broken valve or valve stem 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            Wax leaking from wax reservoir or a bulge in the reservoir 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            Any other damage or distortion 
+
+          </li>
+    </ul>
+        </li>
+</ol>
+        <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          <p><b>NOTE: </b><i>
+            If no damage is found during the inspection, do not attempt to open the thermostat using hot water or other heat sources. This method is not an accurate means to test the function of the thermostat and may damage the thermostat. 
+
+          </i></p>
+          If damage is found during the inspection, remove any foreign material or broken pieces and install a new thermostat. 
+
+        </li>
+</ol>
+      
+      <a name="procsub2_9" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Radiator Leak Test, Removed From Vehicle 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTICE: 
+          Never leak test an aluminum radiator in the same water that copper/brass radiators are tested in. Flux and caustic cleaners may be present in the cleaning tank and they will damage aluminum radiators. 
+
+        </b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          Always install plugs in the transmission fluid cooler fittings before leak testing or cleaning any radiator. 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          Clean the radiator before leak testing to avoid contamination of tank. 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string">Leak test the radiator in clean water with air pressurized to the maximum pressure listed in the Specifications. 
+</p>
+      
+    
+  
+
+
