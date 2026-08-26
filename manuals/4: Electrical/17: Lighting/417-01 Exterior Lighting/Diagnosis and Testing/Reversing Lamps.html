@@ -1,0 +1,1140 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="417-01" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="417-01 Exterior Lighting" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n2252426" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>417-01 Exterior Lighting</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      10/13/2016</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Reversing Lamps" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Reversing Lamps
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('417-01','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-1V Digital Multimeter
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=st2834a&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          
+            Vehicle Communication Module (VCM)
+       and Integrated Diagnostic System (IDS)
+       software with appropriate hardware, or equivalent scan tool
+          <br>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2574A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Flex Probe Kit
+          <br>NUD105-R025D or equivalent 
+
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">When the transmission is in reverse, the PCM sends a message to the Body Control Module (BCM)
+       over the High Speed Controller Area Network (HS-CAN)
+      , indicating the transmission is in reverse. The <abbr title="Body Control Module">BCM</abbr>  provides voltage to the reversing lamps when it receives the message that the transmission is in reverse and the ignition is in RUN. 
+</p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          Field-Effect Transistor (FET)
+       Protection 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">A Field-Effect Transistor (FET)
+       is a type of transistor that, when used with module software, monitors and controls current flow on module outputs. The <abbr title="Field-Effect Transistor">FET</abbr>  protection strategy prevents module damage in the event of excessive current flow. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr>  utilizes a <abbr title="Field-Effect Transistor">FET</abbr>  protective circuit strategy for many of its outputs (such as a headlamp output circuit). Output loads (current level) are monitored for excessive current (typically short circuits) and are shut down when a fault event is detected. A short circuit DTC is stored at the fault event and a cumulative counter is started. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When the demand for the output is no longer present, the module resets the <abbr title="Field-Effect Transistor">FET</abbr>  protection, allowing the circuit to function. If the circuit is still shorted the next time the driver requests a circuit to activate that has been shut down by a previous short (<abbr title="Field-Effect Transistor">FET</abbr>  protection), the <abbr title="Field-Effect Transistor">FET</abbr>  protection shuts off the circuit again and the cumulative counter advances. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When the excessive circuit load occurs often enough, the module shuts down the output until a repair procedure is carried out. Each <abbr title="Field-Effect Transistor">FET</abbr>  protected circuit has 3 predefined levels of short circuit tolerance based on the harmful effect of each circuit fault on the <abbr title="Field-Effect Transistor">FET</abbr>  and the ability of the <abbr title="Field-Effect Transistor">FET</abbr>  to withstand it. A module lifetime level of fault events is established based upon the durability of the <abbr title="Field-Effect Transistor">FET</abbr> . If the total tolerance level is determined to be 600 fault events, the 3 predefined levels would be 200, 400 and 600 fault events. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When a tolerance level is reached, the short circuit DTC that was stored on the first failure cannot be cleared by the clear the continuous DTCs command. The module does not allow this code to be cleared or the circuit restored to normal operation until a successful self-test proves that the fault has been repaired. After the self-test has successfully completed (no on-demand DTCs present), DTC U1000:00 and the associated DTC (the DTC related to the shorted circuit) automatically clears and the circuit function returns. The module never resets the fault event counter to zero and continues to advance the fault event counter as short circuit fault events occur. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">If the number of short circuit fault events reach the third level, then DTCs U1000:00 and U3000:49 set along with the associated short circuit DTC. DTC U3000:49 cannot be cleared and the module must be replaced after the repair. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr> <abbr title="Field-Effect Transistor">FET</abbr>  protected output circuits for the reverse lamp system is the reverse lamps output circuit. 
+</p>
+      
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern. 
+
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect for obvious signs of electrical damage. 
+
+      </li>
+</ol>
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string">
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Visual Inspection Chart
+        </b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+  </colgroup>
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                
+                  Electrical
+                 
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Bulb 
+
+                  </li>
+                  <li>
+                    Wiring, terminals or connectors 
+
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step. 
+
+      </li>
+</ol>
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Make sure to use the latest scan tool software release. 
+
+        </i></p>
+        If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC)
+      . 
+
+      </li>
+</ol>
+      <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          The Vehicle Communication Module (VCM)
+       LED prove-out confirms power and ground from the <abbr title="Data Link Connector">DLC</abbr>  are provided to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </i></p>
+        If the scan tool does not communicate with the <abbr title="Vehicle Communication Module">VCM</abbr> : 
+
+        <ul type="disc">
+      <li>
+          check the <abbr title="Vehicle Communication Module">VCM</abbr>  connection to the vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          check the scan tool connection to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0EYDAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EYDAC"></span>, No Power To The Scan Tool, to diagnose no power to the scan tool. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the scan tool does not communicate with the vehicle: 
+
+        <ul type="disc">
+      <li>
+          verify the ignition is on. 
+
+          <ul style="list-style-type: square">
+          <li>
+            The air bag warning indicator prove-out confirms ignition on (other indicators may not prove ignition on). If the ignition does not turn on, refer to <a data-linkid="ID0ENEAC" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0ENEAC"></span> to diagnose no power in run. 
+
+          </li>
+        </ul>
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          verify the scan tool operation with a known good vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0EAFAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EAFAC"></span>, The PCM Does Not Respond To The Scan Tool, to diagnose no response from the PCM. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the network test. 
+
+        <ul type="disc">
+      <li>
+          If the scan tool responds with no communication for one or more modules, refer to <a data-linkid="ID0ERFAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0ERFAC"></span>. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          If the network test passes, retrieve and record the continuous memory DTCs. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Clear the continuous DTCs and carry out the self-test diagnostics for the <abbr title="Body Control Module">BCM</abbr>  and the PCM. 
+
+      </li>
+</ol>
+      <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the DTCs retrieved are related to the concern, refer to <a data-linkid="ID0EPGAC" data-for="417-01_s4p265q0" data-procuid="n2252423" class="expand-link">Diagnostic Trouble Code (DTC) Chart</a><span id="spanID0EPGAC"></span> in this section. For all other DTCs, refer to the Diagnostic Trouble Code (DTC) Chart in <a data-linkid="ID0ETGAC" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0ETGAC"></span>. 
+
+      </li>
+</ol>
+      <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If no DTCs related to the concern are retrieved, GO to <a data-ajax="false" href="#REVERSINGLAMPS">Symptom Chart</a>. 
+
+      </li>
+</ol>
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart 
+</b></p>
+      <a name="REVERSINGLAMPS" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Both reversing lamps are inoperative 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Transmission gear input 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Body Control Module (BCM)
+      
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>VERIFY the bulbs are OK. If OK, <a data-ajax="false" href="#PS2-U">GO to Pinpoint Test U</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>An individual reversing lamp is inoperative 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Bulb socket 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>VERIFY the bulb is OK. If OK, <a data-ajax="false" href="#PS2-V">GO to Pinpoint Test V</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The reversing lamps are on continuously 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Auto-dimming interior mirror 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Transmission gear input 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Body Control Module">BCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-W">GO to Pinpoint Test W</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-U" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test U: Both Reversing Lamps Are Inoperative 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','093')">93</a> , Reversing Lamps for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The PCM monitors the transmission gear status. When the transmission is in reverse, the PCM sends a message to the Body Control Module (BCM)
+       over the High Speed Controller Area Network (HS-CAN)
+      , indicating the transmission is in reverse. When the <abbr title="Body Control Module">BCM</abbr>  receives the message indicating the transmission is in reverse and the ignition is in RUN, the <abbr title="Body Control Module">BCM</abbr>  provides voltage to the reversing lamps. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The reversing lamps share the fused power supply with the high mounted stoplamp and the ground circuit with the rear stoplamps. 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC B1277:11 (Reverse Lamp: Circuit Short To Ground) — This DTC sets when the <abbr title="Body Control Module">BCM</abbr>  detects a short to ground from the reversing lamp output circuit. 
+
+          </li>
+          <li>
+            DTC B1277:15 (Reverse Lamp: Circuit Short To Battery or Open) — This DTC sets when the <abbr title="Body Control Module">BCM</abbr>  detects an open from the reversing lamp output circuit. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Transmission gear input 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="U" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST U : BOTH REVERSING LAMPS ARE INOPERATIVE 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="U1" data-ajax="false"></a><b>U1 
+                CHECK THE STOPLAMP OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Apply the brake pedal while observing all the stoplamps. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the stoplamps illuminate? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#U2">U2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  <a data-searchnum="417-01_s4p2126q0:PS2-I" data-callfrom="procsub1" data-procuid="n2252424" class="publication-content">GO to Pinpoint Test I</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="U2" data-ajax="false"></a><b>U2 
+                CHECK THE BCM  OUTPUT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  DataLogger 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Select the <abbr title="Body Control Module">BCM</abbr>  reverse lamps active command (RVRS_LMPS). Command the reverse lamps on then off. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the reversing lamps illuminate when commanded on? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0E6CAE" data-sectnum="307-01" class="section-link">Section 
+          307-01</a><span id="spanID0E6CAE"></span> to diagnose a Transmission Range (TR)
+       concern. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#U3">U3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="U3" data-ajax="false"></a><b>U3 
+                BYPASS THE BCM </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                If the jumper wire fails, refer to the Wiring Diagrams manual to identify the possible causes of the circuit short. After the repair: 
+
+                <p class="singlespace"></p>If no DTCs are present, test the system for normal operation. If DTC U1000:00 is present, clear the DTCs <b>and</b> repeat the self-test <b>(required to enable the reversing lamp output driver if DTC U1000:00 is present).</b> Test the system for normal operation. 
+
+                <p class="singlespace"></p>If DTC U3000:49 is present, 
+INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . Test the system for normal operation. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280D','')">C2280D</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Connect a fused jumper wire between the <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280D','13')">C2280D</a> Pin 13, circuit CLS28 (BU/WH), harness side and battery positive. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0119586&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the reversing lamps illuminate? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REMOVE the jumper wire. GO to <a data-ajax="false" href="#U4">U4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REMOVE the jumper wire. REPAIR circuit CLS28 (BU/WH) for an open. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="U4" data-ajax="false"></a><b>U4 
+                CHECK FOR CORRECT BCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect the <abbr title="Body Control Module">BCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect the <abbr title="Body Control Module">BCM</abbr>  connectors and make sure they seat correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-V" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test V: An Individual Reversing Lamp Is Inoperative 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','093')">93</a> , Reversing Lamps for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the transmission is in reverse, the PCM sends a message to the Body Control Module (BCM)
+       over the High Speed Controller Area Network (HS-CAN)
+      , indicating the transmission is in reverse. When the <abbr title="Body Control Module">BCM</abbr>  receives the message indicating the transmission is in reverse, the <abbr title="Body Control Module">BCM</abbr>  provides voltage to the reversing lamps. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Bulb socket 
+
+          </li>
+        </ul>
+        <a name="V" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST V : AN INDIVIDUAL REVERSING LAMP IS INOPERATIVE 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="V1" data-ajax="false"></a><b>V1 
+                CHECK FOR VOLTAGE TO THE REVERSING LAMP 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Apply the parking brake. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Inoperative Reversing Lamp 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Select REVERSE. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the LH reversing lamp <a href="javascript:connectorlinkwithpin('ED2','C487','1')">C487</a> Pin 1, circuit CLS28 (BU/WH), harness side and ground; or between the RH reversing lamp <a href="javascript:connectorlinkwithpin('ED2','C488','1')">C488</a> Pin 1, circuit CLS28 (BU/WH), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=A0057554&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#V2">V2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CLS28 (BU/WH) for an open. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="V2" data-ajax="false"></a><b>V2 
+                CHECK THE REVERSING LAMP GROUND CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the LH reversing lamp <a href="javascript:connectorlinkwithpin('ED2','C487','1')">C487</a> Pin 1, circuit CLS28 (BU/WH), harness side and the LH reversing lamp <a href="javascript:connectorlinkwithpin('ED2','C487','2')">C487</a> Pin 2, circuit GD117 (BK), harness side; or between the RH reversing lamp <a href="javascript:connectorlinkwithpin('ED2','C488','1')">C488</a> Pin 1, circuit CLS28 (BU/WH), harness side and the RH reversing lamp <a href="javascript:connectorlinkwithpin('ED2','C488','2')">C488</a> Pin 2, circuit GD117 (BK), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0088182&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new bulb socket. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit GD117 (BK) for an open. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-W" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test W: The Reversing Lamps Are On Continuously 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','093')">93</a> , Reversing Lamps for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The PCM monitors the transmission gear status. When the transmission is in reverse, the PCM sends a message to the Body Control Module (BCM)
+       over the High Speed Controller Area Network (HS-CAN)
+      , indicating the transmission is in reverse. When the <abbr title="Body Control Module">BCM</abbr>  receives the message indicating the transmission is in reverse and the ignition is in RUN, the <abbr title="Body Control Module">BCM</abbr>  provides voltage to the reversing lamps and the auto-dimming interior mirror. 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC B1277:15 (Reverse Lamp: Circuit Short To Battery or Open) — This DTC sets when the <abbr title="Body Control Module">BCM</abbr>  detects a short to voltage from the reversing lamp output circuit. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Auto-dimming interior mirror 
+
+          </li>
+          <li>
+            Transmission gear input 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="W" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST W : THE REVERSING LAMPS ARE ON CONTINUOUSLY 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="W1" data-ajax="false"></a><b>W1 
+                CHECK THE BCM  CONTROL OF THE REVERSING LAMPS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  DataLogger 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Select the <abbr title="Body Control Module">BCM</abbr>  reverse lamps active command (RVRS_LMPS). Command the reverse lamps off. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the reversing lamps turn off? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0ENWAE" data-sectnum="307-01" class="section-link">Section 
+          307-01</a><span id="spanID0ENWAE"></span> to diagnose a Transmission Range (TR)
+       concern. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#W2">W2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="W2" data-ajax="false"></a><b>W2 
+                CHECK THE BCM  OUTPUT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280D','')">C2280D</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the reversing lamps continue to illuminate? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR circuit CLS28 (BU/WH) for a short to voltage. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#W3">W3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="W3" data-ajax="false"></a><b>W3 
+                CHECK FOR CORRECT BCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect all the <abbr title="Body Control Module">BCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all the <abbr title="Body Control Module">BCM</abbr>  connectors and make sure they seat correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+  
+
+

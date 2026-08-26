@@ -1,0 +1,2110 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="417-01" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="417-01 Exterior Lighting" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1344847" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>417-01 Exterior Lighting</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      10/13/2016</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Turn Signal and Hazard Lamps" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Turn Signal and Hazard Lamps
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('417-01','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-1V Digital Multimeter
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=st2834a&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          
+            Vehicle Communication Module (VCM)
+       and Integrated Diagnostic System (IDS)
+       software with appropriate hardware, or equivalent scan tool
+          <br>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2574A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Flex Probe Kit
+          <br>NUD105-R025D or equivalent 
+
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Turn Signals 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The Steering Column Control Module (SCCM)
+       monitors the multifunction switch position. When the multifunction switch is in the LH or RH TURN position, the <abbr title="Steering Column Control Module">SCCM</abbr>  sends a message over the High Speed Controller Area Network (HS-CAN)
+       to the Body Control Module (BCM)
+       indicating a request for the LH or RH turn signal. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The multifunction switch is a momentary contact switch, with 2 detents for the LH turn position and 2 detents for the RH turn position. When placed in the first detent, the corresponding turn signals flash 3 times and turn off. When the multifunction switch is moved to the second detent, the turn signal flashes until the steering wheel is turned in the opposite direction (based on input from the steering wheel rotation sensor), the multifunction switch is moved to the second detent a second time or the vehicle travels farther than 3.2 km (2 miles). The <abbr title="Body Control Module">BCM</abbr>  monitors the steering wheel rotation sensor, the multifunction switch input and the distance traveled to determine when to cancel the turn signals. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          On vehicles equipped with the 6.2L engine the steering wheel rotation sensor is located on the end of the steering column near the intermediate shaft. For all other applications, the steering wheel rotation sensor is part of the <abbr title="Electronic Power Assist Steering">EPAS</abbr>  . 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string">When the <abbr title="Body Control Module">BCM</abbr>  receives a request for a turn signal, the <abbr title="Body Control Module">BCM</abbr>  supplies on/off voltage to the appropriate turn lamps. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The timed on/off cycle for turn lamps is determined by the <abbr title="Body Control Module">BCM</abbr>  and is set to flash approximately 80 times per minute if both the front and rear turn signal lamps operate correctly. If an individual turn signal lamp is inoperative, the <abbr title="Body Control Module">BCM</abbr>  fast flashes the remaining turn lamps approximately 160 times per minute to indicate a bulb outage to the driver. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">There is no bulb outage indication for the auxiliary turn signal lamps located in the exterior mirrors. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The rear turn signal lamps share functionality with the rear stoplamps. 
+</p>
+      
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Hazard Lamps 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr>  sends a voltage signal to the hazard flasher lamp switch (part of the Passenger Air Bag Deactivation (PAD)
+       indicator). When the hazard flasher switch (a momentary contact switch) is pressed, the voltage signal is routed to ground, indicating a request to activate or deactivate the hazard lamp function. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When the <abbr title="Body Control Module">BCM</abbr>  receives a request for the hazard lamps, the <abbr title="Body Control Module">BCM</abbr>  supplies on/off voltage to all of the turn lamps. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The timed on/off cycle for the hazard lamps is approximately 80 times per minute regardless of bulb outage. 
+</p>
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          Field-Effect Transistor (FET)
+       Protection 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">A Field-Effect Transistor (FET)
+       is a type of transistor that, when used with module software, monitors and controls current flow on module outputs. The <abbr title="Field-Effect Transistor">FET</abbr>  protection strategy prevents module damage in the event of excessive current flow. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr>  utilizes a <abbr title="Field-Effect Transistor">FET</abbr>  protective circuit strategy for many of its outputs (such as a headlamp output circuit). Output loads (current level) are monitored for excessive current (typically short circuits) and are shut down when a fault event is detected. A short circuit DTC is stored at the fault event and a cumulative counter is started. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When the demand for the output is no longer present, the module resets the <abbr title="Field-Effect Transistor">FET</abbr>  protection, allowing the circuit to function. If the circuit is still shorted the next time the driver requests a circuit to activate that has been shut down by a previous short (<abbr title="Field-Effect Transistor">FET</abbr>  protection), the <abbr title="Field-Effect Transistor">FET</abbr>  protection shuts off the circuit again and the cumulative counter advances. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When the excessive circuit load occurs often enough, the module shuts down the output until a repair procedure is carried out. Each <abbr title="Field-Effect Transistor">FET</abbr>  protected circuit has 3 predefined levels of short circuit tolerance based on the harmful effect of each circuit fault on the <abbr title="Field-Effect Transistor">FET</abbr>  and the ability of the <abbr title="Field-Effect Transistor">FET</abbr>  to withstand it. A module lifetime level of fault events is established based upon the durability of the <abbr title="Field-Effect Transistor">FET</abbr> . If the total tolerance level is determined to be 600 fault events, the 3 predefined levels would be 200, 400 and 600 fault events. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When a tolerance level is reached, the short circuit DTC that was stored on the first failure cannot be cleared by the clear the continuous DTCs command. The module does not allow this code to be cleared or the circuit restored to normal operation until a successful self-test proves that the fault has been repaired. After the self-test has successfully completed (no on-demand DTCs present), DTC U1000:00 and the associated DTC (the DTC related to the shorted circuit) automatically clears and the circuit function returns. The module never resets the fault event counter to zero and continues to advance the fault event counter as short circuit fault events occur. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">If the number of short circuit fault events reach the third level, then DTCs U1000:00 and U3000:49 set along with the associated short circuit DTC. DTC U3000:49 cannot be cleared and the module must be replaced after the repair. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr> <abbr title="Field-Effect Transistor">FET</abbr>  protected output circuits for the turn lamps system are the front turn and mirror turn lamp output circuits. 
+</p>
+      
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern. 
+
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect for obvious signs of mechanical or electrical damage. 
+
+      </li>
+</ol>
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string">
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Visual Inspection Chart
+        </b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                
+                  Mechanical
+                 
+              </th>
+              <th align="center" valign="top">
+                
+                  Electrical
+                 
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Multifunction switch 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Body Control Module (BCM)
+       fuse(s) 
+
+                    <ul style="list-style-type: square">
+              <li>
+                      13 (15A) (RH lamps) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      14 (15A) (LH lamps) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      47 (15A) (mirror turn lamps) 
+
+                    </li>
+            </ul>
+                  </li>
+                  <li>
+                    Bulb 
+
+                  </li>
+                  <li>
+                    Bulb socket 
+
+                  </li>
+                  <li>
+                    Wiring, terminals or connectors 
+
+                  </li>
+                  <li>
+                    
+                      Passenger Air Bag Deactivation (PAD)
+       indicator 
+
+                  </li>
+                  <li>
+                    Auxiliary turn signal lamp 
+
+                  </li>
+                  <li>
+                    Exterior mirror 
+
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step. 
+
+      </li>
+</ol>
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Make sure to use the latest scan tool software release. 
+
+        </i></p>
+        If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC)
+      . 
+
+      </li>
+</ol>
+      <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          The Vehicle Communication Module (VCM)
+       LED prove-out confirms power and ground from the <abbr title="Data Link Connector">DLC</abbr>  are provided to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </i></p>
+        If the scan tool does not communicate with the <abbr title="Vehicle Communication Module">VCM</abbr> : 
+
+        <ul type="disc">
+      <li>
+          check the <abbr title="Vehicle Communication Module">VCM</abbr>  connection to the vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          check the scan tool connection to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0EPJAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EPJAC"></span>, No Power To The Scan Tool, to diagnose no power to the scan tool. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the scan tool does not communicate with the vehicle: 
+
+        <ul type="disc">
+      <li>
+          verify the ignition is on. 
+
+          <ul style="list-style-type: square">
+          <li>
+            The air bag warning indicator prove-out confirms ignition on (other indicators may not prove ignition on). If the ignition does not turn on, refer to <a data-linkid="ID0EEKAC" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EEKAC"></span> to diagnose no power in run. 
+
+          </li>
+        </ul>
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          verify the scan tool operation with a known good vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0EXKAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EXKAC"></span>, The PCM Does Not Respond To The Scan Tool, to diagnose no response from the PCM. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the network test. 
+
+        <ul type="disc">
+      <li>
+          If the scan tool responds with no communication for one or more modules, refer to <a data-linkid="ID0EILAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EILAC"></span>. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          If the network test passes, retrieve and record the continuous memory DTCs. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Clear the continuous DTCs and carry out the self-test diagnostics for the <abbr title="Body Control Module">BCM</abbr>  and the Steering Column Control Module (SCCM)
+      . 
+
+      </li>
+</ol>
+      <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the DTCs retrieved are related to the concern, refer to <a data-linkid="ID0EMMAC" data-for="417-01_s4p265q0" data-procuid="n2252423" class="expand-link">Diagnostic Trouble Code (DTC) Chart</a><span id="spanID0EMMAC"></span> in this section. For all other DTCs, refer to the Diagnostic Trouble Code (DTC) Chart in <a data-linkid="ID0EQMAC" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0EQMAC"></span>. 
+
+      </li>
+</ol>
+      <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If no DTCs related to the concern are retrieved, GO to <a data-ajax="false" href="#TURNLAMPS">Symptom Chart</a>. 
+
+      </li>
+</ol>
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart 
+</b></p>
+      <a name="TURNLAMPS" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li><b>NOTE: </b><i>
+              LED lamps draw low current compared to an incandescent bulb. The Body Control Module (BCM)
+       interprets this as a bulb out and fast flashes (bulb outage mode) the turn lamps. 
+
+            </i></li>
+      </ul>
+            <ul class="nospace">
+        <li>The turn signal lamps flash fast and no bulbs are inoperative 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Bulb 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL the correct bulb. TEST the system for normal operation. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The turn signal function is inoperative 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Multifunction switch 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Steering Column Control Module (SCCM)
+      
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>VERIFY the bulbs are OK. If OK, <a data-ajax="false" href="#PS2-L">GO to Pinpoint Test L</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The turn signal function is always on 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Multifunction switch 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Steering Column Control Module">SCCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL a new multifunction switch. REFER to <a data-linkid="ID0E1AAE" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0E1AAE"></span>. TEST the system for normal operation. If the concern still exists, INSTALL a new <abbr title="Steering Column Control Module">SCCM</abbr> . REFER to <a data-linkid="ID0EFBAE" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EFBAE"></span>. TEST the system for normal operation. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>One turn signal lamp is inoperative/always on 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Fuse 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Bulb socket 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Exterior mirror turn lamp 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Exterior mirror 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Body Control Module">BCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>VERIFY the bulb is OK. If OK, <a data-ajax="false" href="#PS2-M">GO to Pinpoint Test M</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The hazard lamp function is inoperative/always on 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Multifunction switch 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Passenger Air Bag Deactivation (PAD)
+       indicator 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Body Control Module">BCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-N">GO to Pinpoint Test N</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-L" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test L: The Turn Signal Function Is Inoperative 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','090')">90</a> , Turn Signal/Stop/Hazard Lamps for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The Steering Column Control Module (SCCM)
+       monitors multifunction switch input. The <abbr title="Steering Column Control Module">SCCM</abbr>  sends a message to the Body Control Module (BCM)
+       over the High Speed Controller Area Network (HS-CAN)
+      , indicating the multifunction switch is in the OFF, LH or RH TURN position. When the <abbr title="Body Control Module">BCM</abbr>  receives a message indicating a LH or RH turn request, the <abbr title="Body Control Module">BCM</abbr>  provides on/off voltage to the appropriate turn lamps. 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC B1D36:09 (Turn Indicator Switch: Component Failure) — This DTC sets when the <abbr title="Body Control Module">BCM</abbr>  detects an input concern from the multifunction switch. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Multifunction switch 
+
+          </li>
+          <li>
+            
+              <abbr title="Steering Column Control Module">SCCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="L" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST L : THE TURN SIGNAL FUNCTION IS INOPERATIVE 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="L1" data-ajax="false"></a><b>L1 
+                CHECK THE COMMUNICATION NETWORK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Network Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Carry out the network test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the <abbr title="Steering Column Control Module">SCCM</abbr>  module pass the network test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new multifunction switch. REFER to <a data-linkid="ID0EDKAE" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EDKAE"></span>. TEST the system for normal operation. 
+
+              <br>
+                If the concern still exists, INSTALL a new <abbr title="Steering Column Control Module">SCCM</abbr> . REFER to <a data-linkid="ID0EUKAE" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EUKAE"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0ECLAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0ECLAE"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_5" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-M" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test M: One Turn Signal Lamp Is Inoperative/Always On 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','090')">90</a> , Turn Signal/Stop/Hazard Lamps for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The Steering Column Control Module (SCCM)
+       monitors multifunction switch input. The <abbr title="Steering Column Control Module">SCCM</abbr>  sends a message to the Body Control Module (BCM)
+       over the High Speed Controller Area Network (HS-CAN)
+      , indicating the multifunction switch is in the OFF, LH or RH TURN position. When the <abbr title="Body Control Module">BCM</abbr>  receives a message indicating a LH or RH turn request, the <abbr title="Body Control Module">BCM</abbr>  provides on/off voltage to the appropriate turn lamps. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The front turn lamps share the same fuses as the rear stoplamps. The rear turn lamps are controlled utilizing the rear stoplamp circuitry. 
+</p>
+        <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+          <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+            
+            
+            <thead>
+              <tr>
+                <th align="center" valign="top">
+                  DTC Description 
+
+                </th>
+                <th align="center" valign="top">
+                  Fault Trigger Conditions 
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B123A:11 — Left Front Turn Indicator: Circuit Short To Ground 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  detects a short to ground from the LH front turn lamp voltage supply circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B123A:15 — Left Front Turn Indicator: Circuit Short To Battery or Open 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  detects an open or short to voltage from the LH front turn lamp voltage supply circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B123B:11 — Right Front Turn Indicator: Circuit Short To Ground 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  detects a short to ground from the RH front turn lamp voltage supply circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B123B:15 — Right Front Turn Indicator: Circuit Short To Battery or Open 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  detects an open or short to voltage from the RH front turn lamp voltage supply circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1C98:11 — Left Corner Lamp Circuit: Circuit Short To Ground 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  detects a short to ground from the LH mirror turn lamp voltage supply circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1C99:11 — Right Corner Lamp Circuit: Circuit Short To Ground 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  detects a short to ground from the RH mirror turn lamp voltage supply circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      U1000:00 — Solid State Driver Protection Active - Driver Disabled: No Sub Type Information 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  has temporarily shut down the output driver. <b xmlns:str="http://xsltsl.org/string">The module has temporarily disabled a turn lamp output because an excessive current draw exists (such as a short to ground). The <abbr title="Body Control Module">BCM</abbr>  cannot enable the turn lamp output until the cause of the short is corrected, the DTCs have been cleared and a successful self-test is run.</b>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      U3000:49 — Control Module: Internal Electronic Failure 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  has permanently shut down the output driver. <b xmlns:str="http://xsltsl.org/string">The module has permanently disabled a turn lamp output because an excessive current draw fault (such as a short to ground) has exceeded the limits that the <abbr title="Body Control Module">BCM</abbr>  can withstand. CORRECT the cause of the excessive current draw before installing a new <abbr title="Body Control Module">BCM</abbr> .</b>
+                </td>
+              </tr>
+            </tbody>
+          </table><br>
+        <br xmlns:str="http://xsltsl.org/string">
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Fuse 
+
+          </li>
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Bulb socket 
+
+          </li>
+          <li>
+            Exterior mirror turn lamp 
+
+          </li>
+          <li>
+            Exterior mirror 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="M" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST M : ONE TURN SIGNAL LAMP IS INOPERATIVE/ALWAYS ON 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="M1" data-ajax="false"></a><b>M1 
+                CHECK THE STOPLAMPS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Apply and release the brake pedal while observing the stoplamps. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the stoplamps operate correctly? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#M2">M2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  <a data-searchnum="417-01_s4p2126q0:PS2-J" data-callfrom="procsub1" data-procuid="n2252424" class="publication-content">GO to Pinpoint Test J</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="M2" data-ajax="false"></a><b>M2 
+                DETERMINE IF A TURN LAMP IS ALWAYS ON 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Observe the front turn lamps and the signal mirror lamps if equipped. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any turn lamp always on? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#M3">M3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#M4">M4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="M3" data-ajax="false"></a><b>M3 
+                CHECK THE TURN LAMP OUTPUT CIRCUITS FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280F','')">C2280F</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the turn lamp in question continue to illuminate? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For a LH turn lamp, REPAIR circuit CLS21 (BU/GN) for a short to voltage between the lamp and the <abbr title="Body Control Module">BCM</abbr> . TEST the system for normal operation. 
+
+              <br>
+                For a RH turn lamp, REPAIR circuit CLS25 (YE/VT) for a short to voltage between the lamp and the <abbr title="Body Control Module">BCM</abbr> . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#M10">M10</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="M4" data-ajax="false"></a><b>M4 
+                CHECK FOR VOLTAGE TO THE INOPERATIVE TURN LAMP 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                If both exterior mirror turn lamps are inoperative, verify the <abbr title="Body Control Module">BCM</abbr>  fuse 47 (15A) is OK. If not OK, refer to the Wiring Diagrams manual to identify the possible causes of the circuit short. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Inoperative Turn Lamp 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Activate the hazard flasher lamp function. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                For a front turn lamp, measure the voltage between the LH front turn lamp <a href="javascript:connectorlinkwithpin('ED2','C1023','3')">C1023</a> Pin 3, circuit CLS21 (BU/GN), harness side and ground; or between the RH front turn lamp <a href="javascript:connectorlinkwithpin('ED2','C1043','3')">C1043</a> Pin 3, circuit CLS25 (YE/VT), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0066286&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                For an exterior mirror turn lamp, measure the voltage between the LH exterior mirror <a href="javascript:connectorlinkwithpin('ED2','C521','10')">C521</a> Pin 10, circuit CLS21 (BU/GN), harness side and ground; or between the RH exterior mirror <a href="javascript:connectorlinkwithpin('ED2','C615','10')">C615</a> Pin 10, circuit CLS25 (YE/VT), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=A0074017&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the voltage alternate between 0 and greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#M5">M5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#M7">M7</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="M5" data-ajax="false"></a><b>M5 
+                CHECK THE TURN LAMP GROUND CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                For a front turn lamp, measure the voltage between the LH front turn lamp <a href="javascript:connectorlinkwithpin('ED2','C1023','3')">C1023</a> Pin 3, circuit CLS21 (BU/GN), harness side and the LH front turn lamp <a href="javascript:connectorlinkwithpin('ED2','C1023','1')">C1023</a> Pin 1, circuit GD123 (BK/GY), harness side; or between the RH front turn lamp <a href="javascript:connectorlinkwithpin('ED2','C1043','3')">C1043</a> Pin 3, circuit CLS25 (YE/VT), harness side and the RH front turn lamp <a href="javascript:connectorlinkwithpin('ED2','C1043','1')">C1043</a> Pin 1, circuit GD120 (BK/GN), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0088174&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                For an exterior mirror turn lamp, measure the voltage between the LH exterior mirror <a href="javascript:connectorlinkwithpin('ED2','C521','10')">C521</a> Pin 10, circuit CLS21 (BU/GN), harness side and the LH exterior mirror <a href="javascript:connectorlinkwithpin('ED2','C521','8')">C521</a> Pin 8, circuit GD134 (BK/VT), harness side; or between the RH exterior mirror <a href="javascript:connectorlinkwithpin('ED2','C615','10')">C615</a> Pin 10, circuit CLS25 (YE/VT), harness side and the RH exterior mirror <a href="javascript:connectorlinkwithpin('ED2','C615','8')">C615</a> Pin 8, circuit GD139 (BK/YE), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0090592&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the voltage alternate between 0 and greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For a front turn lamp, INSTALL a new bulb socket. TEST the system for normal operation. 
+
+              <br>
+                For exterior mirror turn lamp, GO to <a data-ajax="false" href="#M6">M6</a>. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the ground circuit in question for an open. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="M6" data-ajax="false"></a><b>M6 
+                CHECK THE CIRCUITS TO THE LED ASSEMBLY FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Turn the hazard function off. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Suspect LED Turn Lamp 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the suspect exterior mirror pin 10, component side and the LED turn lamp connector pin 1 (GN/WH), harness side; and between the suspect exterior mirror pin 8, component side and the LED turn lamp connector pin 2 (BK), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0090618&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new exterior mirror turn lamp. REFER to <a data-linkid="ID0EHGAG" data-for="417-01_s3p10216q706941" data-procuid="n1488260" class="expand-link">Side Lamp Assembly — Outside Rear View Mirror, Aero</a><span id="spanID0EHGAG"></span> or <a data-linkid="ID0ELGAG" data-for="417-01_s3p10216q706942" data-procuid="n1488566" class="expand-link">Side Lamp Assembly — Outside Rear View Mirror, Trailer Tow</a><span id="spanID0ELGAG"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new exterior mirror. REFER to <a data-linkid="ID0EYGAG" data-sectnum="501-09" class="section-link">Section 
+          501-09</a><span id="spanID0EYGAG"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="M7" data-ajax="false"></a><b>M7 
+                REPEAT THE ON-DEMAND SELF-TEST AND CHECK FOR VOLTAGE TO THE INOPERATIVE TURN LAMP 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Deactivate the hazard flasher lamp function. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs <b>and</b> repeat the self-test <b>(required to enable the turn lamp output driver if DTC U1000:00 is present).</b>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Activate the hazard flasher lamp function. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                For a front lamp, measure the voltage between the LH front turn lamp <a href="javascript:connectorlinkwithpin('ED2','C1023','3')">C1023</a> Pin 3, circuit CLS21 (BU/GN), harness side and ground; or between the RH front turn lamp <a href="javascript:connectorlinkwithpin('ED2','C1043','3')">C1043</a> Pin 3, circuit CLS25 (YE/VT), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0066286&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                For an exterior mirror turn lamp, measure the voltage between the LH exterior mirror <a href="javascript:connectorlinkwithpin('ED2','C521','10')">C521</a> Pin 10, circuit CLS21 (BU/GN), harness side and ground; or between the RH exterior mirror <a href="javascript:connectorlinkwithpin('ED2','C615','10')">C615</a> Pin 10, circuit CLS25 (YE/VT), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=A0074017&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the voltage alternate between 0 and greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For a front turn lamp, INSTALL a new bulb socket. TEST the system for normal operation. 
+
+              <br>
+                For an exterior mirror turn lamp, INSTALL a new exterior mirror in question. REFER to <a data-linkid="ID0ELKAG" data-sectnum="501-09" class="section-link">Section 
+          501-09</a><span id="spanID0ELKAG"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#M8">M8</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="M8" data-ajax="false"></a><b>M8 
+                CHECK THE TURN LAMP OUTPUT CIRCUIT FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Turn the hazard lamp function off. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280F','')">C2280F</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                For a front turn lamp, measure the resistance between the LH front turn lamp <a href="javascript:connectorlinkwithpin('ED2','C1023','3')">C1023</a> Pin 3, circuit CLS21 (BU/GN), harness side and ground; or between the RH front turn lamp <a href="javascript:connectorlinkwithpin('ED2','C1043','3')">C1043</a> Pin 3, circuit CLS25 (YE/VT), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0077657&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                For an exterior mirror turn lamp, measure the resistance between the LH exterior mirror <a href="javascript:connectorlinkwithpin('ED2','C521','10')">C521</a> Pin 10, circuit CLS21 (BU/GN), harness side and ground; or between the RH exterior mirror <a href="javascript:connectorlinkwithpin('ED2','C615','10')">C615</a> Pin 10, circuit CLS25 (YE/VT), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0129209&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#M9">M9</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit in question for a short to ground. After the repair: 
+
+              <br>
+                If no DTCs are present, TEST the system for normal operation. 
+
+              <br>
+                If DTC U1000:00 is present, CLEAR the DTCs and REPEAT the self-test <b>(required to enable the turn lamp output driver if DTC U1000:00 is present).</b> TEST the system for normal operation. 
+
+              <br>
+                If DTC U3000:49 is present, 
+INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="M9" data-ajax="false"></a><b>M9 
+                CHECK THE BCM  TURN LAMP OUTPUT CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                For a front turn lamp, measure the resistance between the inoperative front turn lamp, harness side and the <abbr title="Body Control Module">BCM</abbr> , harness side as follows: 
+
+                <br><br><a name="table_2"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          Inoperative Turn Lamp Connector-Pin 
+
+                        </th>
+                        <th align="center" valign="top">
+                          
+                            <abbr title="Body Control Module">BCM</abbr>  Connector-Pin 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          LH front <a href="javascript:connectorlinkwithpin('ED2','C1023','3')">C1023</a> Pin 3
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2280F','8')">C2280F</a> Pin 8
+                           
+                        </td>
+                        <td valign="top">
+                          CLS21 (BU/GN) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          RH front <a href="javascript:connectorlinkwithpin('ED2','C1043','3')">C1043</a> Pin 3
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2280F','7')">C2280F</a> Pin 7
+                           
+                        </td>
+                        <td valign="top">
+                          CLS25 (YE/VT) 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0117364&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                For an exterior mirror turn lamp, measure the resistance between the exterior mirror in question, harness side and the <abbr title="Body Control Module">BCM</abbr> , harness side as follows: 
+
+                <br><br><a name="table_3"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          Exterior Mirror Connector-Pin 
+
+                        </th>
+                        <th align="center" valign="top">
+                          
+                            <abbr title="Body Control Module">BCM</abbr>  Connector-Pin 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          LH exterior mirror <a href="javascript:connectorlinkwithpin('ED2','C521','10')">C521</a> Pin 10
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2280F','9')">C2280F</a> Pin 9
+                           
+                        </td>
+                        <td valign="top">
+                          CLS21 (BU/GN) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          RH exterior mirror <a href="javascript:connectorlinkwithpin('ED2','C615','10')">C615</a> Pin 10
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2280F','10')">C2280F</a> Pin 10
+                           
+                        </td>
+                        <td valign="top">
+                          CLS25 (YE/VT) 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0129210&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#M10">M10</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit in question for an open. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="M10" data-ajax="false"></a><b>M10 
+                CHECK FOR CORRECT BCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect all the <abbr title="Body Control Module">BCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all the <abbr title="Body Control Module">BCM</abbr>  connectors and make sure they seat correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_6" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-N" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test N: The Hazard Lamp Function Is Inoperative/Always On 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','090')">90</a> , Turn Signal/Stop/Hazard Lamps for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The Body Control Module (BCM)
+       sends a voltage signal to the hazard flasher lamp switch (part of the Passenger Air Bag Deactivation (PAD)
+       indicator) for the hazard lamp function input. When the hazard flasher lamp switch is pressed, the voltage signal is routed to ground, indicating a request for the hazard lamp function. When the <abbr title="Body Control Module">BCM</abbr>  detects a request for the hazard lamps, the <abbr title="Body Control Module">BCM</abbr>  provides on/off voltage to all the turn lamps. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The hazard flasher lamp switch is a momentary contact switch. 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC B1D35:11 (Hazard Switch: Circuit Short to Ground) — This DTC sets when the <abbr title="Body Control Module">BCM</abbr>  detects a short to ground from the hazard lamp function input circuit. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Multifunction switch 
+
+          </li>
+          <li>
+            
+              <abbr title="Passenger Air Bag Deactivation">PAD</abbr>  indicator 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="N" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST N : THE HAZARD LAMP FUNCTION IS INOPERATIVE/ALWAYS ON 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="N1" data-ajax="false"></a><b>N1 
+                CHECK THE RECORDED DTCS FROM THE BCM  SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the recorded DTCs from the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC B1D35:11 present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#N2">N2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#N4">N4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="N2" data-ajax="false"></a><b>N2 
+                ISOLATE THE PAD  INDICATOR AS THE CAUSE OF DTC B1D35:11 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Passenger Air Bag Deactivation">PAD</abbr>  Indicator <a href="javascript:connectorlinkwithpin('ED2','C2355','')">C2355</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Repeat the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC B1D35:11 still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#N3">N3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Passenger Air Bag Deactivation">PAD</abbr>  indicator. REFER to <a data-linkid="ID0EVEBG" data-sectnum="501-20B" class="section-link">Section 
+          501-20B</a><span id="spanID0EVEBG"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="N3" data-ajax="false"></a><b>N3 
+                CHECK THE HAZARD LAMP REQUEST INPUT CIRCUIT FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280B','')">C2280B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Passenger Air Bag Deactivation">PAD</abbr>  indicator <a href="javascript:connectorlinkwithpin('ED2','C2355','5')">C2355</a> Pin 5, circuit CLS32 (BN), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0117365&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#N6">N6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CLS32 (BN) for a short to ground. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="N4" data-ajax="false"></a><b>N4 
+                CHECK FOR A VOLTAGE SIGNAL TO THE PAD  INDICATOR 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Passenger Air Bag Deactivation">PAD</abbr>  Indicator <a href="javascript:connectorlinkwithpin('ED2','C2355','')">C2355</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Passenger Air Bag Deactivation">PAD</abbr>  indicator <a href="javascript:connectorlinkwithpin('ED2','C2355','5')">C2355</a> Pin 5, circuit CLS32 (BN), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0117366&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Passenger Air Bag Deactivation">PAD</abbr>  indicator. REFER to <a data-linkid="ID0EDKBG" data-sectnum="501-20B" class="section-link">Section 
+          501-20B</a><span id="spanID0EDKBG"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#N5">N5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="N5" data-ajax="false"></a><b>N5 
+                CHECK THE HAZARD FLASHER LAMP REQUEST INPUT CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280B','')">C2280B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280B','32')">C2280B</a> Pin 32, circuit CLS32 (BN), harness side and the <abbr title="Passenger Air Bag Deactivation">PAD</abbr>  indicator <a href="javascript:connectorlinkwithpin('ED2','C2355','5')">C2355</a> Pin 5, circuit CLS32 (BN), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0117367&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#N6">N6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CLS32 (BN) for an open. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="N6" data-ajax="false"></a><b>N6 
+                CHECK FOR CORRECT BCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect all the <abbr title="Body Control Module">BCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all the <abbr title="Body Control Module">BCM</abbr>  connectors and make sure they seat correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+  
+
+

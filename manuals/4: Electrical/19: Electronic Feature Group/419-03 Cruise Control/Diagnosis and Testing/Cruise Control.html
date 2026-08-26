@@ -1,0 +1,3249 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="419-03" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="419-03 Cruise Control" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1252311" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>419-03 Cruise Control</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      01/23/2014</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Cruise Control" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Cruise Control
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('419-03','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093a&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-IV Digital Multimeter
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834a&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          
+            Vehicle Communication Module (VCM)
+       and Integrated Diagnostic System (IDS)
+       software with appropriate hardware, or equivalent scan tool
+          <br>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2574A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Flex Probe Kit
+          <br>NUD105-R025D or equivalent 
+
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">The cruise control system is controlled by the PCM. The cruise control system is designed to maintain a selected vehicle speed between 40 km/h (25 mph) and the maximum limited vehicle speed. The cruise control system is controlled by the cruise control switches (ON/OFF, SET+, SET-, and CNCL/RSM) that are integrated into the LH steering wheel switch, and by the brake pedal. The cruise control switches are hardwired to the Steering Column Control Module (SCCM)
+      . The <abbr title="Steering Column Control Module">SCCM</abbr>  sends High Speed Controller Area Network (HS-CAN)
+       messages to the PCM to control the cruise control system. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The clockspring provides the electrical interface between the steering column wiring and the cruise control switches in the steering wheel. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The cruise control functions include: 
+</p>
+      <ul type="disc" xmlns:str="http://xsltsl.org/string">
+        <li>
+          turning on the cruise control system. 
+
+        </li>
+        <li>
+          setting and maintaining the desired vehicle speed. 
+
+        </li>
+        <li>
+          accelerating the vehicle speed. 
+
+        </li>
+        <li>
+          coasting down to a lower speed. 
+
+        </li>
+        <li>
+          resuming the prior vehicle speed. 
+
+        </li>
+        <li>
+          turning off the cruise control system. 
+
+        </li>
+      </ul>
+      <p xmlns:str="http://xsltsl.org/string">Pressing and releasing the ON/OFF switch turns the cruise control system on. The cruise control indicator located in the Instrument Panel Cluster (IPC)
+       illuminates amber to indicate the cruise control system is in standby mode. Pressing and releasing the SET+ or SET- switch while the vehicle is traveling at the desired speed activates the cruise control system. The cruise control indicator illuminates green to indicate the cruise control system is active. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">Tapping the SET+ or the SET- switch while in the set mode, increases or decreases the maintained vehicle speed by 1.6 km/h (1 mph) per tap. If the respective switch is pressed and held, the vehicle speed continues to accelerate or decelerate until the switch is released. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">Pressing and releasing the ON/OFF switch, or turning the ignition switch to the OFF position, turns the cruise control system off. Applying the brake pedal or pressing the CNCL/RSM switch while the cruise control system is active, puts the cruise control system into the standby mode. Pressing the CNCL/RSM switch when the cruise control system is in the standby mode causes the vehicle to accelerate to the last set speed. Resume does not function if the ON/OFF switch is pressed, the ignition switch is in the OFF position, or if the current vehicle speed is below the minimum operational speed. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The cruise control deactivator switch is an additional safety feature. Normally, when the brake pedal is applied, an electrical signal from the stoplamp circuit to the PCM deactivates the system. Under increased brake pedal effort, the cruise control deactivator switch opens and removes the ground signal (3.7L, 5.0L, 6.2L engine) or reference voltage (3.5L engine) from the PCM input circuit, and the PCM commands the throttle body closed. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The inputs to the PCM are: 
+</p>
+      <ul type="disc" xmlns:str="http://xsltsl.org/string">
+        <li>
+          
+            Output Shaft Speed (OSS)
+       sensor 
+
+        </li>
+        <li>
+          Digital Transmission Range (TR)
+       sensor 
+
+        </li>
+        <li>
+          Cruise control switch(es) (networked from <abbr title="Steering Column Control Module">SCCM</abbr> ) 
+
+        </li>
+        <li>
+          Cruise control deactivator switch (integral to the stoplamp switch) 
+
+        </li>
+        <li>
+          Stoplamp switch 
+
+        </li>
+        <li>
+          
+            Accelerator Pedal Position (APP)
+       sensor 
+
+        </li>
+        <li>
+          Vehicle speed (networked from ABS module) 
+
+        </li>
+      </ul>
+      <p xmlns:str="http://xsltsl.org/string">The outputs of the PCM are: 
+</p>
+      <ul type="disc" xmlns:str="http://xsltsl.org/string">
+        <li>
+          Cruise control indicator lamp request to the <abbr title="Instrument Panel Cluster">IPC</abbr> 
+        </li>
+        <li>
+          Throttle body 
+
+        </li>
+      </ul>
+      <p xmlns:str="http://xsltsl.org/string">The vehicle speed is controlled by the PCM through the Electronic Throttle Control (ETC)
+       subsystem. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">In the event of an ON/OFF switch command or a deactivation request from the deactivator switch, the cruise control system carries out a deactivation and immediately returns the throttle to the idle position. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The cruise control system provides self-diagnostics. Cruise control is disabled anytime an error is detected in the system. No <abbr title="Instrument Panel Cluster">IPC</abbr>  indicator or message center messages are displayed when faults occur. Fault codes are logged by the PCM or <abbr title="Steering Column Control Module">SCCM</abbr> . 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">An <abbr title="Electronic Throttle Control">ETC</abbr>  system fault also disables the cruise control system. In this case, an <abbr title="Electronic Throttle Control">ETC</abbr>  system powertrain malfunction (wrench) warning indicator is displayed. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">Additionally, the following conditions cause the cruise control system to deactivate: 
+</p>
+      <ul type="disc" xmlns:str="http://xsltsl.org/string">
+        <li>
+          Transmission gear selector in a position other than D or OD 
+
+        </li>
+        <li>
+          Cruise control set speed is overridden with the accelerator pedal for a period longer than 5 minutes 
+
+        </li>
+        <li>
+          Vehicle speed loss from set speed of greater than 16 km/h (10 mph) occurs 
+
+        </li>
+        <li>
+          Vehicle speed falls below the minimum allowable limit of 40 km/h (25 mph) 
+
+        </li>
+        <li>
+          Cruise control switch pressed or stuck longer than 2 minutes 
+
+        </li>
+        <li>
+          ABS fault 
+
+        </li>
+      </ul>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Cruise Control Deactivation Event PIDs 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The PCM has PIDs available, through the powertrain DataLogger, that show what caused the cruise control deactivation during the current key cycle. The PCM has 24 cruise control deactivation event PIDs, identified as CRUISEOFF_00 through 24. All deactivation events that occur during active cruise operation are listed in the event PID. Switching the ignition off will erase all recorded deactivation events. These PIDs display what caused the cruise control deactivation to trigger and can be a very useful tool when trying to identify the cause of a deactivation or non-activation trigger. The event PIDs displays the deactivation or non-activation trigger based on when the cruise control is turned on and the fault condition exist. If the cruise control system is turned on or off prior to or in advance to the triggering condition, the events PIDs may display inaccurate deactivation conditions. The event PIDs should be read when the conditions of deactivation or non-activation exist. 
+</p>
+      
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern. 
+
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect for obvious signs of mechanical or electrical damage. 
+
+      </li>
+</ol>
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string">
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Visual Inspection Chart
+        </b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                
+                  Mechanical
+                 
+              </th>
+              <th align="center" valign="top">
+                
+                  Electrical
+                 
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Throttle body 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Battery Junction Box (BJB)
+       fuse 46 (10A) 
+
+                  </li>
+                  <li>
+                    Wiring, terminals or connectors 
+
+                  </li>
+                  <li>
+                    Cruise control switch(es) (part of the LH steering wheel switch) 
+
+                  </li>
+                  <li>
+                    Stoplamp switch 
+
+                  </li>
+                  <li>
+                    PCM 
+
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step. 
+
+      </li>
+</ol>
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Make sure to use the latest scan tool software release. 
+
+        </i></p>
+        If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC)
+      . 
+
+      </li>
+</ol>
+      <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          The Vehicle Communication Module (VCM)
+       LED prove-out confirms power and ground from the <abbr title="Data Link Connector">DLC</abbr>  are provided to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </i></p>
+        If the scan tool does not communicate with the <abbr title="Vehicle Communication Module">VCM</abbr> : 
+
+        <ul type="disc">
+      <li>
+          check the <abbr title="Vehicle Communication Module">VCM</abbr>  connection to the vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          check the scan tool connection to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0EJJAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EJJAC"></span>, No Power To The Scan Tool, to diagnose no power to the scan tool. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the scan tool does not communicate with the vehicle: 
+
+        <ul type="disc">
+      <li>
+          verify the ignition key is in the ON position. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          verify the scan tool operation with a known good vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0EGKAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EGKAC"></span>, The PCM Does Not Respond To The Scan Tool, to diagnose no response from the PCM. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the network test. 
+
+        <ul type="disc">
+      <li>
+          If the scan tool responds with no communication for one or more modules, refer to <a data-linkid="ID0EXKAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EXKAC"></span>. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          If the network test passes, retrieve and record the continuous memory DTCs. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Clear the continuous DTCs and carry out the self-test diagnostics for the PCM and <abbr title="Steering Column Control Module">SCCM</abbr> . 
+
+      </li>
+</ol>
+      <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the DTCs retrieved are related to the concern, go to DTC Charts. For all other DTCs, refer to the Diagnostic Trouble Code (DTC) Chart in <a data-linkid="ID0EVLAC" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0EVLAC"></span>. 
+
+      </li>
+</ol>
+      <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If no DTCs related to the concern are retrieved, GO to <a data-ajax="false" href="#SC1">Symptom Chart</a>. 
+
+      </li>
+</ol>
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>DTC Charts 
+</b></p>
+      <a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            PCM DTC Chart 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          This module utilizes a 5-character DTC followed by a 2-character failure-type code. The failure-type code provides information about specific fault conditions such as opens, or shorts to ground. Continuous memory DTCs have an additional 2-character DTC status code suffix to assist in determining DTC history. 
+
+        </i></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                DTCs 
+
+              </th>
+              <th align="center" valign="top">
+                Description 
+
+              </th>
+              <th align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                P0504:00 
+
+              </td>
+              <td valign="top">
+                Brake Switch A / B Correlation: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0572:00 
+
+              </td>
+              <td valign="top">
+                Brake Switch A Circuit Low: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0573:00 
+
+              </td>
+              <td valign="top">
+                Brake Switch A Circuit High: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0579:00 
+
+              </td>
+              <td valign="top">
+                Cruise Control Multifunction Input "A" Circuit Range/Performance 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-C" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test C</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P1703:00 
+
+              </td>
+              <td valign="top">
+                Brake Switch Out Of Self-Test Range: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                 P193D:00 
+
+              </td>
+              <td valign="top">
+                Cruise Control Multi-Function Input Signal: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-D" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test D</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                All other DTCs 
+
+              </td>
+              <td valign="top">
+                — 
+
+              </td>
+              <td valign="top">
+                REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          <abbr title="Steering Column Control Module">SCCM</abbr>  DTC Chart 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          This module utilizes a 5-character DTC followed by a 2-character failure-type code. The failure-type code provides information about specific fault conditions such as opens, or shorts to ground. Continuous memory DTCs have an additional 2-character DTC status code suffix to assist in determining DTC history. 
+
+        </i></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                DTCs 
+
+              </th>
+              <th align="center" valign="top">
+                Description 
+
+              </th>
+              <th align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                B137F:09 
+
+              </td>
+              <td valign="top">
+                Steering Wheel Left Switch Pack: Component Failure 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-C" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test C</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B137F:11 
+
+              </td>
+              <td valign="top">
+                Steering Wheel Left Switch Pack: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-C" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test C</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B137F:17 
+
+              </td>
+              <td valign="top">
+                Steering Wheel Left Switch Pack: Circuit Voltage Above Threshold 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-C" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test C</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                All other DTCs 
+
+              </td>
+              <td valign="top">
+                — 
+
+              </td>
+              <td valign="top">
+                REFER to the Diagnostic Trouble Code (DTC) Charts in <a data-linkid="ID0E3HAE" data-sectnum="211-05" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          211-05</a><span id="spanID0E3HAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart 
+</b></p>
+      <a name="SC1" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The cruise control is inoperative 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Cruise control switches (part of the LH steering wheel switch) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Stoplamp switch 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Cruise control deactivator switch (integral to the stoplamp switch) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Digital Transmission Range (TR)
+       sensor 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>PCM 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Steering Column Control Module (SCCM)
+      
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>ABS fault 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-A">GO to Pinpoint Test A</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The cruise control indicator lamp is never/always on 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                Instrument Panel Cluster (IPC)
+      
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>PCM 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REFER to <a data-linkid="ID0E2LAE" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0E2LAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The cruise control switches do not operate correctly 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Clockspring 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Cruise control switches (part of the LH steering wheel switch) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Steering Column Control Module">SCCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-C">GO to Pinpoint Test C</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The cruise control cannot set speed above 130 km/h (80 mph) 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>A MyKey® restricted key is in use and MyKey® speed limiter is turned on 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>VERIFY if a MyKey® restricted key is in use. REFER to <a data-linkid="ID0ELOAE" data-sectnum="419-01B" class="section-link">Section 
+          419-01B</a><span id="spanID0ELOAE"></span>. With an administrator key, VERIFY if MyKey® speed limiter is turned on. REFER to the Owner's Literature. If necessary, VERIFY cruise control normal operation with an administrator key. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_5" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-A" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test A: The Cruise Control Is Inoperative 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The cruise control switches, which are integral to the LH steering wheel switch, use the Steering Column Control Module (SCCM)
+       run/start voltage and the <abbr title="Steering Column Control Module">SCCM</abbr>  ground. The cruise control functionality is controlled through the cruise control switches, which are hardwired to the <abbr title="Steering Column Control Module">SCCM</abbr>  through signal and return circuits. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">There are 4 cruise control switches with each switch operating a specific function that uses different resistance values. The <abbr title="Steering Column Control Module">SCCM</abbr>  sends out a reference voltage to the cruise control switches and monitors the voltage drop when a cruise control switch is pressed. The voltage drop varies depending upon the resistance of each switch, providing a specific indication to the <abbr title="Steering Column Control Module">SCCM</abbr>  of which switch is pressed. The <abbr title="Steering Column Control Module">SCCM</abbr>  sends a network message to the PCM over the High Speed Controller Area Network (HS-CAN)
+      , activating and controlling the cruise control system. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The stoplamp switch is a single plunger 2-stage switch with 2 inputs to the PCM. When the brake pedal is applied, the first stage, which is a normally open stoplamp switch, closes and sends a voltage signal to the PCM deactivating the cruise control, if engaged. The second stage is the normally closed cruise control deactivator switch (integral to the stoplamp switch), which opens and removes the ground signal to the PCM when the brake pedal is firmly applied. This is a redundant signal to the PCM. There is less than one millimeter in plunger travel between the first and second stage. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The PCM has cruise control deactivation event PIDs available, through the powertrain datalogger, that show what caused the cruise control deactivation during the current key cycle. Refer to Cruise Control Deactivation Event PIDs in this section. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Cruise control switches (part of the LH steering wheel switch) 
+
+          </li>
+          <li>
+            Stoplamp switch 
+
+          </li>
+          <li>
+            Cruise control deactivator switch (integral to the stoplamp switch) 
+
+          </li>
+          <li>
+            Digital Transmission Range (TR)
+       sensor 
+
+          </li>
+          <li>
+            PCM 
+
+          </li>
+          <li>
+            
+              <abbr title="Steering Column Control Module">SCCM</abbr> 
+            
+          </li>
+          <li>
+            ABS fault 
+
+          </li>
+        </ul>
+        <a name="A" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST A : THE CRUISE CONTROL IS INOPERATIVE 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="A1" data-ajax="false"></a><b>A1 
+                CHECK FOR PROGRAMMABLE PARAMETERS IN THE PCM
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Review the programmable parameters in the PCM.
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is cruise control enabled?
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A2">A2</a>.
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                ENABLE the cruise control parameter in the PCM. CHECK the system for normal operation. If the concern is still present, GO to <a data-ajax="false" href="#A2">A2</a>.
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A2" data-ajax="false"></a><b>A2 
+                CHECK FOR DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Review the recorded DTCs from the PCM and <abbr title="Steering Column Control Module">SCCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any DTCs recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to DTC Charts in this section. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A3">A3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A3" data-ajax="false"></a><b>A3 
+                CHECK FOR ABS MODULE DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Review the recorded DTCs from the ABS module self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any DTCs recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EXWAE" data-sectnum="206-09" class="section-link">Section 
+          206-09</a><span id="spanID0EXWAE"></span>. REPAIR all ABS module DTCs and RETEST the system. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A4">A4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A4" data-ajax="false"></a><b>A4 
+                CHECK THE STOPLAMP SWITCH (BOO1 AND BOO2) PIDS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  PCM DataLogger 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Monitor the PCM PIDs BOO1 (stoplamp switch) and BOO2 (cruise control deactivator switch) while applying and releasing the brake pedal as follows: 
+
+                <br><br><a name="table_3"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          Brake Pedal Position 
+
+                        </th>
+                        <th align="center" valign="top">
+                          BOO1 PID 
+
+                        </th>
+                        <th align="center" valign="top">
+                          BOO2 PID 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          Released 
+
+                        </td>
+                        <td valign="top">
+                          Off 
+
+                        </td>
+                        <td valign="top">
+                          Off 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          Applied lightly 
+
+                        </td>
+                        <td valign="top">
+                          On 
+
+                        </td>
+                        <td valign="top">
+                          Off 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          Applied firmly 
+
+                        </td>
+                        <td valign="top">
+                          On 
+
+                        </td>
+                        <td valign="top">
+                          On 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the PID values agree with the brake pedal position? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A5">A5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  <a data-ajax="false" href="#PS2-B">GO to Pinpoint Test B</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A5" data-ajax="false"></a><b>A5 
+                MONITOR THE PRNDL DISPLAY 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Monitor the PRNDL display in the Instrument Panel Cluster (IPC)
+      . 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Select DRIVE. 
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the PRNDL display agree with the <abbr title="Transmission Range">TR</abbr>  selector lever position? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A6">A6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0E55AE" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0E55AE"></span>, to continue diagnosis of the PRNDL display. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A6" data-ajax="false"></a><b>A6 
+                CHECK THE CRUISE CONTROL SWITCH 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr>  DataLogger 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Press each cruise control switch button while monitoring the cruise control switch PID (SCCS). 
+
+                <br><br><a name="table_4"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          Cruise Control Switch 
+
+                        </th>
+                        <th align="center" valign="top">
+                          SCCS PID Value 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          — 
+
+                        </td>
+                        <td valign="top">
+                          NONE Pressed 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          CNCL/RSM 
+
+                        </td>
+                        <td valign="top">
+                          RESUME/COAST 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          ON/OFF 
+
+                        </td>
+                        <td valign="top">
+                          Cruise Off or Cruise On 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          SET + 
+
+                        </td>
+                        <td valign="top">
+                          SET + 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          SET - 
+
+                        </td>
+                        <td valign="top">
+                          SET - 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the PID value agree with the switch position? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A7">A7</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If only one switch does not display the correct PID value, INSTALL a new cruise control switch. REFER to <a data-linkid="ID0E1EAG" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0E1EAG"></span>. TEST the system for normal operation. 
+
+                <br>Otherwise, <a data-ajax="false" href="#PS2-C">GO to Pinpoint Test C</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A7" data-ajax="false"></a><b>A7 
+                CHECK FOR CORRECT PCM OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect all the PCM connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all the PCM connectors and make sure they seat correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new PCM. REFER to <a data-linkid="ID0EDHAG" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EDHAG"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-B" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test B: DTC P0504:00, P0572:00, P0573:00 Or P1703:00 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','031')">31</a> , Cruise Control for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The stoplamp switch is a single plunger 2-stage switch with 2 inputs to the PCM. When the brake pedal is applied, the first stage, which is a normally open stoplamp switch, closes and sends a voltage signal to the PCM deactivating the cruise control, if engaged. The second stage is the normally closed cruise control deactivator switch (integral to the stoplamp switch), which opens and removes the ground signal (3.7L, 5.0L and 6.2L engine) or reference voltage (3.5L engine) to the PCM when the brake pedal is firmly applied. This is a redundant signal to the PCM. There is less than one millimeter in plunger travel between the first and second stage. 
+</p>
+        
+        <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_5" xmlns:str="http://xsltsl.org/string"></a>
+          <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col>
+    <col>
+  </colgroup>
+            
+            
+            <thead>
+              <tr>
+                <th valign="top">
+                  DTC Description 
+
+                </th>
+                <th valign="top">
+                  Fault Trigger Conditions 
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td align="left" valign="top">
+                  P0504:00 — Brake Switch A / B Correlation: No Sub Type Information 
+
+                </td>
+                <td align="left" valign="top">
+                  A DTC that sets when the PCM does not sense the correct sequence of the brake pedal input signal from both the cruise control deactivator and stoplamp switches when the brake pedal is pressed and released. 
+
+                </td>
+              </tr>
+              <tr>
+                <td align="left" valign="top">
+                  P0572:00 — Brake Switch A Circuit Low: No Sub Type Information 
+
+                </td>
+                <td align="left" valign="top">
+                  A DTC that sets when the PCM detects an open in the stoplamp switch signal. The PCM monitors the vehicle speed, the engine speed, the engine torque and the stoplamp BOO input during start and stop driving cycles. If the BOO input to the PCM is always off during start and stop driving cycles this DTC sets in continuous memory. 
+
+                </td>
+              </tr>
+              <tr>
+                <td align="left" valign="top">
+                  P0573:00 — Brake Switch A Circuit High: No Sub Type Information 
+
+                </td>
+                <td align="left" valign="top">
+                  A DTC that sets when the PCM detects an short to voltage on the stoplamp switch signal. The PCM monitors the vehicle speed, the engine speed, the engine torque and the stoplamp BOO input during start and stop driving cycles. If the BOO input to the PCM is always on during start and stop driving cycles this DTC sets in continuous memory. 
+
+                </td>
+              </tr>
+              <tr>
+                <td align="left" valign="top">
+                  P1703:00 — Brake Switch Out Of Self -Test Range: No Sub Type Information 
+
+                </td>
+                <td align="left" valign="top">
+                  A DTC that sets in the PCM during the self-test, when the brake switch input signal is high or does not cycle high and low. 
+
+                </td>
+              </tr>
+            </tbody>
+          </table><br>
+        <br xmlns:str="http://xsltsl.org/string">
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Stoplamp switch 
+
+          </li>
+          <li>
+            Cruise control deactivator switch (integral to the stoplamp switch) 
+
+          </li>
+          <li>
+            PCM 
+
+          </li>
+          <li>
+            ABS module 
+
+          </li>
+        </ul>
+        <a name="B" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST B : DTC P0504:00, P0572:00, P0573:00 OR P1703:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B1" data-ajax="false"></a><b>B1 
+                CHECK THE OPERATION OF THE STOPLAMPS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the stoplamps. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the stoplamps and high mounted stoplamp operate correctly? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B2">B2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EDOAG" data-sectnum="417-01" class="section-link">Section 
+          417-01</a><span id="spanID0EDOAG"></span>, to continue diagnosis of the stoplamps. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B2" data-ajax="false"></a><b>B2 
+                CHECK THE STOPLAMP SWITCH (BOO1) AND CRUISE CONTROL DEACTIVATOR SWITCH (BOO2) PIDS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  PCM DataLogger 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Monitor the PCM PIDs BOO1 (stoplamp input) and BOO2 (cruise control deactivator switch) while applying and releasing the brake pedal as follows: 
+
+                <br><br><a name="table_6"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          Brake Pedal Position 
+
+                        </th>
+                        <th align="center" valign="top">
+                          BOO1 PID 
+
+                        </th>
+                        <th align="center" valign="top">
+                          BOO2 PID 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          Released 
+
+                        </td>
+                        <td valign="top">
+                          Off 
+
+                        </td>
+                        <td valign="top">
+                          Off 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          Applied lightly 
+
+                        </td>
+                        <td valign="top">
+                          On 
+
+                        </td>
+                        <td valign="top">
+                          Off 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          Applied firmly 
+
+                        </td>
+                        <td valign="top">
+                          On 
+
+                        </td>
+                        <td valign="top">
+                          On 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the PID values agree with the brake pedal position? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B7">B7</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                For an incorrect BOO1 PID value, GO to <a data-ajax="false" href="#B3">B3</a>. 
+
+                <br>For an incorrect BOO2 PID value (3.5L engine), GO to <a data-ajax="false" href="#B8">B8</a>. 
+
+                <br>For an incorrect BOO2 PID value (3.7L, 5.0L and 6.2L engines), GO to <a data-ajax="false" href="#B4">B4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B3" data-ajax="false"></a><b>B3 
+                CHECK THE STOPLAMP SWITCH CIRCUIT FOR VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a> (3.5L), <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a> (3.7L) or PCM <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a> (5.0L/6.2L) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                For 3.5L engine, while applying the brake pedal, measure the voltage between the PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','66')">C1551B</a> Pin 66, circuit CCB08 (VT/WH), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0124179&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                For 3.7L, 5.0L and 6.2L engines, while applying the brake pedal, measure the voltage between the PCM <a href="javascript:connectorlinkwithpin('ED2','C175B','13')">C175B</a> Pin 13 (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','13')">C1381B</a> Pin 13 (5.0L/6.2L), circuit CCB08 (VT/WH), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0088131&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts with the brake pedal applied? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B12">B12</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit for an open. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B4" data-ajax="false"></a><b>B4 
+                CHECK THE CRUISE CONTROL DEACTIVATOR SWITCH FOR CORRECT OPERATION (3.7L, 5.0L AND 6.2L) 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a> (3.7L) or PCM <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a> (5.0L/6.2L) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                While firmly applying and releasing the brake pedal, measure the resistance between the PCM <a href="javascript:connectorlinkwithpin('ED2','C175B','46')">C175B</a> Pin 46 (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','46')">C1381B</a> Pin 46 (5.0L/6.2L), circuit CES09 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112631&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms with the brake pedal released, and greater than 10,000 ohms with the brake pedal firmly applied? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B12">B12</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B5">B5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B5" data-ajax="false"></a><b>B5 
+                CHECK THE CRUISE CONTROL DEACTIVATOR SWITCH GROUND CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Stoplamp Switch <a href="javascript:connectorlinkwithpin('ED2','C278','')">C278</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the stoplamp switch <a href="javascript:connectorlinkwithpin('ED2','C278','2')">C278</a> Pin 2, circuit GD120 (BK/GN), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112633&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B6">B6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit for an open. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B6" data-ajax="false"></a><b>B6 
+                CHECK THE CRUISE CONTROL DEACTIVATOR SWITCH SIGNAL CIRCUIT FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the stoplamp switch <a href="javascript:connectorlinkwithpin('ED2','C278','3')">C278</a> Pin 3, circuit CES09 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0119952&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B7">B7</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit for an open. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B7" data-ajax="false"></a><b>B7 
+                CHECK THE CRUISE CONTROL DEACTIVATOR SWITCH SIGNAL CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Connect a fused jumper wire between the stoplamp switch <a href="javascript:connectorlinkwithpin('ED2','C278','3')">C278</a> Pin 3, circuit CES09 (VT/OG), harness side and the stoplamp switch <a href="javascript:connectorlinkwithpin('ED2','C278','2')">C278</a> Pin 2, circuit GD120 (BK/GN), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112634&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the PCM <a href="javascript:connectorlinkwithpin('ED2','C175B','46')">C175B</a> Pin 46 (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','46')">C1381B</a> Pin 46 (5.0L/6.2L), circuit CES09 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112631&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new stoplamp switch. REFER to <a data-linkid="ID0ET6AG" data-sectnum="417-01" class="section-link">Section 
+          417-01</a><span id="spanID0ET6AG"></span>. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CES09 (VT/OG) for an open. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B8" data-ajax="false"></a><b>B8 
+                CHECK THE CRUISE CONTROL DEACTIVATOR SWITCH FOR CORRECT OPERATION (3.5L) 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                While firmly applying and releasing the brake pedal, measure the resistance between the PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','93')">C1551B</a> Pin 93, circuit CES09 (VT/OG), harness side and the PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','7')">C1551B</a> Pin 7, circuit RE407 (YE/VT), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123615&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms with the brake pedal released, and greater than 10,000 ohms with the brake pedal firmly applied? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B9">B9</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B10">B10</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B9" data-ajax="false"></a><b>B9 
+                CHECK THE CRUISE CONTROL DEACTIVATOR SWITCH CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  Stoplamp Switch <a href="javascript:connectorlinkwithpin('ED2','C278','')">C278</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','93')">C1551B</a> Pin 93, circuit CES09 (VT/OG), harness side and ground; and the PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','7')">C1551B</a> Pin 7, circuit RE407 (YE/VT), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123616&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR the circuit in question. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B12">B12</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B10" data-ajax="false"></a><b>B10 
+                CHECK THE CRUISE CONTROL DEACTIVATOR SWITCH SIGNAL CIRCUIT FOR AN OPEN OR SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','93')">C1551B</a> Pin 93, circuit CES09 (VT/OG), harness side and the stoplamp switch <a href="javascript:connectorlinkwithpin('ED2','C278','3')">C278</a> Pin 3, circuit CES09 (VT/OG) harness side; and the PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','93')">C1551B</a> Pin 93, circuit CES09 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123617&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms between the PCM and the stoplamp switch and greater than 10,000 ohms between the PCM and ground? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B11">B11</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B11" data-ajax="false"></a><b>B11 
+                CHECK THE CRUISE CONTROL DEACTIVATOR SWITCH SIGNAL RETURN CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','7')">C1551B</a> Pin 7, circuit RE407 (YE/VT), harness side and the stoplamp switch <a href="javascript:connectorlinkwithpin('ED2','C278','2')">C278</a> Pin 2, circuit RE407 (YE/VT) harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123618&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new stoplamp switch. REFER to <a data-linkid="ID0EOIBG" data-sectnum="417-01" class="section-link">Section 
+          417-01</a><span id="spanID0EOIBG"></span>. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B12" data-ajax="false"></a><b>B12 
+                CHECK FOR CORRECT PCM OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Connect:  All Disconnected Connectors 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect all the PCM connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all the PCM connectors and make sure they seat correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new PCM. REFER to <a data-linkid="ID0EELBG" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EELBG"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-C" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test C: The Cruise Control Switches Do Not Operate Correctly 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','031')">31</a> , Cruise Control for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The cruise control switches, which are integral to the LH steering wheel controls, use the Steering Column Control Module (SCCM)
+       run/start voltage and the <abbr title="Steering Column Control Module">SCCM</abbr>  ground. The cruise control functionality is controlled through the cruise control switches and is hardwired to the <abbr title="Steering Column Control Module">SCCM</abbr>  through a signal and return circuit. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">There are 4 cruise control switches with each switch operating a specific function that uses different resistance values. The <abbr title="Steering Column Control Module">SCCM</abbr>  sends out a reference voltage to the cruise control switches and monitors the voltage drop when a cruise control switch is pressed. The voltage drop varies depending upon the resistance of each switch, providing a specific indication to the <abbr title="Steering Column Control Module">SCCM</abbr>  of which switch is pressed. The <abbr title="Steering Column Control Module">SCCM</abbr>  sends a network message to the PCM over the High Speed Controller Area Network (HS-CAN)
+       relaying the switch status and requesting cruise control operation. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The PCM has cruise control deactivation event PIDs available, through the powertrain datalogger, that show what caused the cruise control deactivation during the current key cycle. Refer to Cruise Control Deactivation Event PIDs in this section. 
+</p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Powertrain Control Module (PCM) 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            P0579:00 (Cruise Control Multifunction Input "A" Circuit Range/Performance) — sets when the cruise control switch circuits are open, shorted to voltage or ground. 
+
+          </li>
+        </ul>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>
+            <abbr title="Steering Column Control Module">SCCM</abbr> 
+          </b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            B137F:09 (Steering Wheel Left Switch Pack: Component Failure) — a continuous and on-demand DTC that sets when one or more of the cruise control switches are stuck. 
+
+          </li>
+          <li>
+            B137F:11 (Steering Wheel Left Switch Pack: Circuit Short To Ground) — a continuous and on-demand DTC that sets when the cruise control switch circuits are shorted to ground. 
+
+          </li>
+          <li>
+            B137F:17 (Steering Wheel Left Switch Pack: Circuit Voltage Above Threshold) — a continuous and on-demand DTC that sets when the cruise control switch circuits are shorted to voltage. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Clockspring 
+
+          </li>
+          <li>
+            Cruise control switches (part of the LH steering wheel switch) 
+
+          </li>
+          <li>
+            
+              <abbr title="Steering Column Control Module">SCCM</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Powertrain Control Module">PCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="C" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST C : THE CRUISE CONTROL SWITCHES DO NOT OPERATE CORRECTLY 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C1" data-ajax="false"></a><b>C1 
+                CHECK THE CRUISE CONTROL SWITCH 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr>  DataLogger 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Press each cruise control switch button while monitoring the cruise control switch PID (SCCS). 
+
+                <br><br><a name="table_7"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          Cruise Control Switch 
+
+                        </th>
+                        <th align="center" valign="top">
+                          SCCS PID Value 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          — 
+
+                        </td>
+                        <td valign="top">
+                          NONE Pressed 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          CNCL/RSM 
+
+                        </td>
+                        <td valign="top">
+                          RESUME/COAST 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          ON/OFF 
+
+                        </td>
+                        <td valign="top">
+                          Cruise Off or Cruise On 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          SET + 
+
+                        </td>
+                        <td valign="top">
+                          SET + 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          SET - 
+
+                        </td>
+                        <td valign="top">
+                          SET - 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the PID value agree with the switch position? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C5">C5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If only one switch does not display the correct PID value, INSTALL a new LH steering wheel switch. REFER to <a data-linkid="ID0EKWBG" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EKWBG"></span>. TEST the system for normal operation. 
+
+                <br>Otherwise, GO to <a data-ajax="false" href="#C2">C2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C2" data-ajax="false"></a><b>C2 
+                CHECK FOR VOLTAGE TO THE CRUISE CONTROL SWITCHES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  LH Steering Wheel Controls <a href="javascript:connectorlinkwithpin('ED2','C2998','')">C2998</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the LH steering wheel switch <a href="javascript:connectorlinkwithpin('ED2','C2998','5')">C2998</a> Pin 5, harness side and the LH steering wheel switch <a href="javascript:connectorlinkwithpin('ED2','C2998','3')">C2998</a> Pin 3, harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0120425&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage approximately 5 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new LH steering wheel controls. REFER to <a data-linkid="ID0E3YBG" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0E3YBG"></span>. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C3">C3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C3" data-ajax="false"></a><b>C3 
+                CHECK FOR VOLTAGE TO THE CLOCKSPRING 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Remove the driver air bag module. Refer to <a data-linkid="ID0ED1BG" data-sectnum="501-20B" class="section-link">Section 
+          501-20B</a><span id="spanID0ED1BG"></span>. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Clockspring <a href="javascript:connectorlinkwithpin('ED2','C218B','')">C218B</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the clockspring connector C218B pin 7, component side and the clockspring C218B pin 15, component side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0120426&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage approximately 5 volts present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR the steering wheel harness or INSTALL a new steering wheel. REFER to <a data-linkid="ID0EW2BG" data-sectnum="211-04" class="section-link">Section 
+          211-04</a><span id="spanID0EW2BG"></span>. INSTALL the driver air bag module. REFER to <a data-linkid="ID0E22BG" data-sectnum="501-20B" class="section-link">Section 
+          501-20B</a><span id="spanID0E22BG"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C4">C4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C4" data-ajax="false"></a><b>C4 
+                CHECK FOR VOLTAGE AT THE SCCM </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Remove the clockspring. Refer to <a data-linkid="ID0EI4BG" data-sectnum="501-20B" class="section-link">Section 
+          501-20B</a><span id="spanID0EI4BG"></span>. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414D','8')">C2414D</a> Pin 8 , component side and the <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414D','7')">C2414D</a> Pin 7, component side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112637&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage approximately 5 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new clockspring. REFER to <a data-linkid="ID0EA6BG" data-sectnum="501-20B" class="section-link">Section 
+          501-20B</a><span id="spanID0EA6BG"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C5">C5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C5" data-ajax="false"></a><b>C5 
+                CHECK FOR CORRECT SCCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect all the <abbr title="Steering Column Control Module">SCCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all the <abbr title="Steering Column Control Module">SCCM</abbr>  connectors and make sure they seat correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  All Disconnected Connectors 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Install the driver air bag module. Refer to <a data-linkid="ID0EACAI" data-sectnum="501-20B" class="section-link">Section 
+          501-20B</a><span id="spanID0EACAI"></span>. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Steering Column Control Module">SCCM</abbr> . REFER to <a data-linkid="ID0EBDAI" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EBDAI"></span>. INSTALL the driver air bag module. REFER to <a data-linkid="ID0EGDAI" data-sectnum="501-20B" class="section-link">Section 
+          501-20B</a><span id="spanID0EGDAI"></span>. CLEAR the DTCs. TEST the system for normal operation. 
+
+                <br> If DTC P0579 is still present, GO to <a data-ajax="false" href="#C6">C6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C6" data-ajax="false"></a><b>C6 
+                CHECK FOR CORRECT PCM OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Connect:  All Disconnected Connectors 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect all the PCM connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all the PCM connectors and make sure they seat correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new PCM. REFER to <a data-linkid="ID0ECGAI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0ECGAI"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_5" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-D" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test D: DTC P193D:00 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC P193D:00 (Cruise Control Multi-Function Input Signal: No Sub Type Information) — sets when the PCM is not receiving the High Speed Controller Area Network (HS-CAN)
+       signal from the Steering Column Control Module (SCCM)
+       for the cruise control switches. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            PCM 
+
+          </li>
+          <li>
+            
+              <abbr title="Steering Column Control Module">SCCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="D" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST D : DTC P193D:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="D1" data-ajax="false"></a><b>D1 
+                CHECK THE CRUISE CONTROL SWITCH PID IN THE PCM 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Powertrain DataLogger — Cruise Control 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Press each cruise control switch while monitoring the cruise control switch PID (SCCS). 
+
+                <br><br><a name="table_8"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          Cruise Control Switch 
+
+                        </th>
+                        <th align="center" valign="top">
+                          SCCS PID Value 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          — 
+
+                        </td>
+                        <td valign="top">
+                          NONE Pressed 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          CNCL/RSM 
+
+                        </td>
+                        <td valign="top">
+                          RESUME/COAST 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          ON/OFF 
+
+                        </td>
+                        <td valign="top">
+                          Cruise Off or Cruise On 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          SET + 
+
+                        </td>
+                        <td valign="top">
+                          SET + 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          SET - 
+
+                        </td>
+                        <td valign="top">
+                          SET - 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the PID value agree with the switch position? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D2">D2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  <a data-ajax="false" href="#PS2-C">GO to Pinpoint Test C</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D2" data-ajax="false"></a><b>D2 
+                CHECK THE COMMUNICATION NETWORK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Network Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Carry out the network test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the <abbr title="Steering Column Control Module">SCCM</abbr>  pass the network test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D3">D3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EGQAI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EGQAI"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D3" data-ajax="false"></a><b>D3 
+                RECHECK THE PCM DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during the Programmable Module Installation (PMI)
+       or the <abbr title="Programmable Module Installation">PMI</abbr>  may not have been carried out. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. Repeat the PCM self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC P193D still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D4">D4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D4" data-ajax="false"></a><b>D4 
+                CHECK FOR CORRECT PCM OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Connect:  All Disconnected Connectors 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect all the PCM connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all the PCM connectors and make sure they seat correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new PCM. REFER to <a data-linkid="ID0ERUAI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0ERUAI"></span>. 
+
+                <br>TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+  
+
+

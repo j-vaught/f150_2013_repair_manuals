@@ -1,0 +1,4100 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="419-10" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="419-10 Multifunction Electronic Modules" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1501556" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>419-10 Multifunction Electronic Modules</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      10/13/2016</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Body Control Module (BCM)" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Body Control Module (BCM)
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('419-10','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-IV Digital Multimeter
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          
+            Vehicle Communication Module (VCM)
+       and Integrated Diagnostic System (IDS)
+       software with appropriate hardware, or equivalent scan tool
+          <br>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2574A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Flex Probe Kit
+          <br>NUD105-R025D or equivalent 
+
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">The Body Control Module (BCM)
+       controls various systems by monitoring inputs from switches, sensors and messages sent from other modules. The <abbr title="Body Control Module">BCM</abbr>  activates outputs based on the inputs received. For example, the Steering Column Control Module (SCCM)
+       monitors the headlamp switch and transmits the headlamp switch position to the <abbr title="Body Control Module">BCM</abbr>  over the network. Based on this input, the <abbr title="Body Control Module">BCM</abbr>  may provide voltage to the exterior lamps. 
+</p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          Field-Effect Transistor (FET)
+       Protection 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">A Field-Effect Transistor (FET)
+       is a type of transistor that, when used with module software, monitors and controls current flow on module outputs. The <abbr title="Field-Effect Transistor">FET</abbr>  protection strategy prevents module damage in the event of excessive current flow. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr>  utilizes an <abbr title="Field-Effect Transistor">FET</abbr>  protective circuit strategy for many of its outputs (for example, a headlamp output circuit). Output loads (current level) are monitored for excessive current (typically short circuits) and are shut down (turns off the voltage or ground provided by the module) when a fault event is detected. A short circuit DTC is stored at the fault event and a cumulative counter is started. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When the demand for the output is no longer present, the module resets the <abbr title="Field-Effect Transistor">FET</abbr>  protection to allow the circuit to function. The next time the driver requests a circuit to activate that has been shut down by a previous short (<abbr title="Field-Effect Transistor">FET</abbr>  protection) and the circuit is still shorted, the <abbr title="Field-Effect Transistor">FET</abbr>  protection shuts off the circuit again and the cumulative counter advances. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When the excessive circuit load occurs often enough, the module shuts down the output until a repair procedure is carried out. Each <abbr title="Field-Effect Transistor">FET</abbr>  protected circuit has 3 predefined levels of short circuit tolerance based on the harmful effect of each circuit fault on the <abbr title="Field-Effect Transistor">FET</abbr>  and the ability of the <abbr title="Field-Effect Transistor">FET</abbr>  to withstand it. A module lifetime level of fault events is established based upon the durability of the <abbr title="Field-Effect Transistor">FET</abbr> . If the total tolerance level is determined to be 600 fault events, the 3 predefined levels would be 200, 400 and 600 fault events. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When each tolerance level is reached, DTC U1000:00 should set along with the short circuit DTC that was stored on the first failure. These DTCs cannot be cleared until the vehicle is repaired. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">After the repair, it is necessary for the module successfully complete a self-test (the module no longer detects the fault), to clear the DTCs using the Clear DTC operation on the scan tool, and then cycling the ignition for the circuit function to return. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The module never resets the fault event counter to zero and continues to advance the fault event counter as short circuit fault events occur. If the number of short circuit fault events reach the third level, then DTCs U1000:00 and U3000:49 set along with the associated short circuit DTC. DTC U3000:49 cannot be cleared and the module must be replaced after the initial fault is repaired. 
+</p>
+      
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Gateway Function 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr>  acts as a gateway module by receiving information in one format and transmitting it to other modules using another format. For example, the <abbr title="Body Control Module">BCM</abbr>  receives the vehicle speed data from the PCM over the High Speed Controller Area Network (HS-CAN)
+      , converts the data into a Medium Speed Controller Area Network (MS-CAN)
+       message and sends (gateways) the message to other network modules such as the HVAC module and the Audio Front Control Module (ACM)
+      . This enables network communication between modules that do not communicate using the same network (<abbr title="High Speed Controller Area Network">HS-CAN</abbr>  or <abbr title="Medium Speed Controller Area Network">MS-CAN</abbr> ). 
+</p>
+      
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern. 
+
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect for obvious signs of electrical damage. 
+
+      </li>
+</ol>
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string">
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Visual Inspection Chart
+        </b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+  </colgroup>
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                
+                  Electrical
+                 
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Body Control Module (BCM)
+      
+                    
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step. 
+
+      </li>
+</ol>
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Make sure to use the latest scan tool software release. 
+
+        </i></p>
+        If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC)
+      . 
+
+      </li>
+</ol>
+      <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          The Vehicle Communication Module (VCM)
+       prove-out confirms power and ground from the <abbr title="Data Link Connector">DLC</abbr>  are provided to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </i></p>
+        If the scan tool does not communicate with the <abbr title="Vehicle Communication Module">VCM</abbr> : 
+
+        <ul type="disc">
+      <li>
+          check the <abbr title="Vehicle Communication Module">VCM</abbr>  connection to the vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          check the scan tool connection to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0ENFAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0ENFAC"></span>, No Power To The Scan Tool, to diagnose no power to the scan tool. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the scan tool does not communicate with the vehicle: 
+
+        <ul type="disc">
+      <li>
+          verify the ignition is ON. 
+
+          <ul style="list-style-type: square">
+          <li>
+            The air bag warning indicator prove-out confirms ignition ON (other indicators may not prove ignition ON). If the ignition does not turn on, refer to <a data-linkid="ID0ECGAC" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0ECGAC"></span> to diagnose no power in RUN. 
+
+          </li>
+        </ul>
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          verify the scan tool operation with a known good vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0EVGAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EVGAC"></span>, The PCM Does Not Respond To The Scan Tool, to diagnose no response from the PCM. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the network test. 
+
+        <ul type="disc">
+      <li>
+          If the scan tool responds with no communication with one or more modules, refer to <a data-linkid="ID0EGHAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EGHAC"></span>. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          If the network test passes, retrieve and record the continuous memory DTCs. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Clear the continuous DTCs and carry out the self-test diagnostics for the <abbr title="Body Control Module">BCM</abbr> . 
+
+      </li>
+</ol>
+      <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the DTCs retrieved are related to the concern, go to DTC Charts. For all other DTCs, refer to the Diagnostic Trouble Code (DTC) Chart in <a data-linkid="ID0EEIAC" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0EEIAC"></span>. 
+
+      </li>
+</ol>
+      <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If no DTCs related to the concern are retrieved, GO to <a data-ajax="false" href="#BCM">Symptom Chart</a>. 
+
+      </li>
+</ol>
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>DTC Charts 
+</b></p>
+      <a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Body Control Module (BCM)
+       DTC Chart 
+</b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                DTC 
+
+              </th>
+              <th align="center" valign="top">
+                Description 
+
+              </th>
+              <th align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                B1048:01 
+
+              </td>
+              <td valign="top">
+                Brake Fluid Level Switch: General Electrical Failure 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EHLAC" data-sectnum="413-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          413-01</a><span id="spanID0EHLAC" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10AB:00 
+
+              </td>
+              <td valign="top">
+                Remote Keyless Entry Synchronization: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EDMAC" data-sectnum="501-14" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          501-14</a><span id="spanID0EDMAC" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10D5:13 
+
+              </td>
+              <td valign="top">
+                PATS Antenna: Circuit Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E6MAC" data-sectnum="419-01B" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-01B</a><span id="spanID0E6MAC" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10D7:05 
+
+              </td>
+              <td valign="top">
+                PATS Key: System Programming Failure 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E2NAC" data-sectnum="419-01B" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-01B</a><span id="spanID0E2NAC" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10D7:51 
+
+              </td>
+              <td valign="top">
+                PATS Key: Not Programmed 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EXOAC" data-sectnum="419-01B" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-01B</a><span id="spanID0EXOAC" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10D7:55 
+
+              </td>
+              <td valign="top">
+                PATS Key: Not Configured 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0ETPAC" data-sectnum="419-01B" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-01B</a><span id="spanID0ETPAC" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10D7:87 
+
+              </td>
+              <td valign="top">
+                PATS Key: Missing Message 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EQAAE" data-sectnum="419-01B" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-01B</a><span id="spanID0EQAAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10D7:8F 
+
+              </td>
+              <td valign="top">
+                PATS Key: Erratic 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EMBAE" data-sectnum="419-01B" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-01B</a><span id="spanID0EMBAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10D8:00 
+
+              </td>
+              <td valign="top">
+                PATS Key Less Than Minimum Programmed: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EICAE" data-sectnum="419-01B" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-01B</a><span id="spanID0EICAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10D9:87 
+
+              </td>
+              <td valign="top">
+                PATS Transponder: Missing Message 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EEDAE" data-sectnum="419-01B" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-01B</a><span id="spanID0EEDAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10DA:51 
+
+              </td>
+              <td valign="top">
+                PATS Target Identifier: Not Programmed 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EAEAE" data-sectnum="419-01B" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-01B</a><span id="spanID0EAEAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10F1:14 
+
+              </td>
+              <td valign="top">
+                Key In switch: Circuit Short To Ground or Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E3EAE" data-sectnum="413-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          413-01</a><span id="spanID0E3EAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1115:11 
+
+              </td>
+              <td valign="top">
+                High Mounted Stop Lamp control: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EYFAE" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EYFAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1142:29 
+
+              </td>
+              <td valign="top">
+                Ignition Status 1: Signal Invalid 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EUGAE" data-sectnum="211-05" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          211-05</a><span id="spanID0EUGAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1175:01 
+
+              </td>
+              <td valign="top">
+                Drivers Door Ajar Switch: General Electrical Failure 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EQHAE" data-sectnum="417-02" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-02</a><span id="spanID0EQHAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1176:01 
+
+              </td>
+              <td valign="top">
+                Passenger Door Ajar Switch: General Electrical Failure 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EMIAE" data-sectnum="417-02" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-02</a><span id="spanID0EMIAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1182:00 
+
+              </td>
+              <td valign="top">
+                Tire Pressure Monitoring System: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EIJAE" data-sectnum="204-04" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          204-04</a><span id="spanID0EIJAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1182:55 
+
+              </td>
+              <td valign="top">
+                Tire Pressure Monitoring System: Not Configured 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EEKAE" data-sectnum="204-04" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          204-04</a><span id="spanID0EEKAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B11C0:01 
+
+              </td>
+              <td valign="top">
+                Driver Side Rear Door Ajar Switch: General Electrical Failure 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EALAE" data-sectnum="417-02" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-02</a><span id="spanID0EALAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B11C1:01 
+
+              </td>
+              <td valign="top">
+                Passenger Side Rear Door Ajar Switch: General Electrical Failure 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E3LAE" data-sectnum="417-02" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-02</a><span id="spanID0E3LAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1218:00 
+
+              </td>
+              <td valign="top">
+                Transmitter Identification Code: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EYMAE" data-sectnum="501-14" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          501-14</a><span id="spanID0EYMAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B121A:11: 
+
+              </td>
+              <td valign="top">
+                Keypad Illumination Output: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EUNAE" data-sectnum="501-14" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          501-14</a><span id="spanID0EUNAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B121B:01 
+
+              </td>
+              <td valign="top">
+                Keypad Input Switch: General Electrical Failure 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EQOAE" data-sectnum="501-14" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          501-14</a><span id="spanID0EQOAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B123A:11 
+
+              </td>
+              <td valign="top">
+                Left Front Turn Indicator: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EMPAE" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EMPAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B123A:15 
+
+              </td>
+              <td valign="top">
+                Left Front Turn Indicator: Circuit Short To Battery or Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EIQAE" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EIQAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B123B:11 
+
+              </td>
+              <td valign="top">
+                Right Front Turn Indicator: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EERAE" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EERAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B123B:15 
+
+              </td>
+              <td valign="top">
+                Right Front Turn Indicator: Circuit Short To Battery or Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EASAE" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EASAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B124D:02 
+
+              </td>
+              <td valign="top">
+                Tire Pressure Sensor: General Signal Failure 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E3SAE" data-sectnum="204-04" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          204-04</a><span id="spanID0E3SAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B124D:4A 
+
+              </td>
+              <td valign="top">
+                Tire Pressure Sensor: Incorrect Component Installed 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EYTAE" data-sectnum="204-04" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          204-04</a><span id="spanID0EYTAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1250:00 
+
+              </td>
+              <td valign="top">
+                Tire Pressure Monitoring System (TPMS) Sensor Pressure Range: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EUUAE" data-sectnum="204-04" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          204-04</a><span id="spanID0EUUAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1251:00 
+
+              </td>
+              <td valign="top">
+                Tire Pressure Sensor Low Battery: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EQVAE" data-sectnum="204-04" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          204-04</a><span id="spanID0EQVAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1254:51 
+
+              </td>
+              <td valign="top">
+                Right Rear (Outside on Duel Wheel) Tire Pressure Sensor and Transmitter Assembly: Not Programmed 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EMWAE" data-sectnum="204-04" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          204-04</a><span id="spanID0EMWAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1255:51 
+
+              </td>
+              <td valign="top">
+                Left Rear (Outside On Duel Wheel) Tire Pressure Sensor and Transmitter Assembly: Not Programmed 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EIXAE" data-sectnum="204-04" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          204-04</a><span id="spanID0EIXAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B126A:01 
+
+              </td>
+              <td valign="top">
+                Drivers Door Interior Lock Switch: General Electrical Failure 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EEYAE" data-sectnum="501-14" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          501-14</a><span id="spanID0EEYAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1277:11 
+
+              </td>
+              <td valign="top">
+                Reverse Lamp: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EAZAE" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EAZAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1277:15 
+
+              </td>
+              <td valign="top">
+                Reverse Lamp: Circuit Short To Battery or Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E3ZAE" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0E3ZAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B12C2:11 
+
+              </td>
+              <td valign="top">
+                Puddle Lamp: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EY1AE" data-sectnum="417-02" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-02</a><span id="spanID0EY1AE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1305:01 
+
+              </td>
+              <td valign="top">
+                Hood Switch: General Electrical Failure 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EU2AE" data-sectnum="419-01A" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-01A</a><span id="spanID0EU2AE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B130C:12 
+
+              </td>
+              <td valign="top">
+                Load Shed Control: Circuit Short To Battery 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EQ3AE" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EQ3AE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B130C:14 
+
+              </td>
+              <td valign="top">
+                Load Shed Control: Circuit Short To Ground or Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EM4AE" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EM4AE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B130D:00 
+
+              </td>
+              <td valign="top">
+                Memory Full for Integrated Key Programming: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EI5AE" data-sectnum="501-14" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          501-14</a><span id="spanID0EI5AE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1310:12 
+
+              </td>
+              <td valign="top">
+                Run/Start Control: Circuit Short To Battery 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EE6AE" data-sectnum="211-05" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          211-05</a><span id="spanID0EE6AE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1310:14 
+
+              </td>
+              <td valign="top">
+                Run/Start Control: Circuit Short To Ground or Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EBAAG" data-sectnum="211-05" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          211-05</a><span id="spanID0EBAAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1313:11 
+
+              </td>
+              <td valign="top">
+                Interior Lighting Output: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E4AAG" data-sectnum="417-02" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-02</a><span id="spanID0E4AAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1313:15 
+
+              </td>
+              <td valign="top">
+                Interior Lighting Output: Circuit Short To Battery or Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EVBAG" data-sectnum="417-02" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-02</a><span id="spanID0EVBAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1315:11 
+
+              </td>
+              <td valign="top">
+                Backlighting (Non Reflective Controls) Illumination Output: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0ERCAG" data-sectnum="413-00" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          413-00</a><span id="spanID0ERCAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1319:11 
+
+              </td>
+              <td valign="top">
+                Shift Interlock (BSI) Output Circuit: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0ENDAG" data-sectnum="307-05" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          307-05</a><span id="spanID0ENDAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1319:15 
+
+              </td>
+              <td valign="top">
+                Shift Interlock (BSI) Output Circuit: Circuit Short To Battery or Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EJEAG" data-sectnum="307-05" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          307-05</a><span id="spanID0EJEAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B131A:12 
+
+              </td>
+              <td valign="top">
+                Delayed Accessory Power: Circuit Short To Battery 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EFFAG" data-sectnum="501-11" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          501-11</a><span id="spanID0EFFAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B131A:14 
+
+              </td>
+              <td valign="top">
+                Delayed Accessory Power: Circuit Short To Ground or Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EBGAG" data-sectnum="501-11" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          501-11</a><span id="spanID0EBGAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B132B:11 
+
+              </td>
+              <td valign="top">
+                Left Stop/Turn Lamp: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E4GAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0E4GAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B132B:15 
+
+              </td>
+              <td valign="top">
+                Left Stop/Turn Lamp: Circuit Short To Battery or Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EZHAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EZHAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B132C:11 
+
+              </td>
+              <td valign="top">
+                Right Stop/Turn Lamp: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EVIAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EVIAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B132C:15 
+
+              </td>
+              <td valign="top">
+                Right Stop/Turn Lamp: Circuit Short To Battery or Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0ERJAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0ERJAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1331:02 
+
+              </td>
+              <td valign="top">
+                Compass/Mirror Module: General Signal Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    If the vehicle is equipped with an auto-dimming interior mirror, REFER to <a data-linkid="ID0ENKAG" data-sectnum="413-13" class="section-link">Section 
+          413-13</a><span id="spanID0ENKAG"></span>. 
+
+                  </li>
+                  <li>
+                    If the vehicle is not equipped with an auto-dimming interior mirror, REFER to <a data-linkid="ID0EYKAG" data-sectnum="415-00B" class="section-link">Section 
+          415-00B</a><span id="spanID0EYKAG"></span>. 
+
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1331:08 
+
+              </td>
+              <td valign="top">
+                Compass/Mirror Module: Bus Signal/Message Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    If the vehicle is equipped with an auto-dimming interior mirror, REFER to <a data-linkid="ID0EWLAG" data-sectnum="413-13" class="section-link">Section 
+          413-13</a><span id="spanID0EWLAG"></span>. 
+
+                  </li>
+                  <li>
+                    If the vehicle is not equipped with an auto-dimming interior mirror, REFER to <a data-linkid="ID0EBMAG" data-sectnum="415-00B" class="section-link">Section 
+          415-00B</a><span id="spanID0EBMAG"></span>. 
+
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1331:49 
+
+              </td>
+              <td valign="top">
+                Compass/Mirror Module: Internal Electronic Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    If the vehicle is equipped with an auto-dimming interior mirror, REFER to <a data-linkid="ID0E6MAG" data-sectnum="413-13" class="section-link">Section 
+          413-13</a><span id="spanID0E6MAG"></span>. 
+
+                  </li>
+                  <li>
+                    If the vehicle is not equipped with an auto-dimming interior mirror, REFER to <a data-linkid="ID0EKNAG" data-sectnum="415-00B" class="section-link">Section 
+          415-00B</a><span id="spanID0EKNAG"></span>. 
+
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1A85:11 
+
+              </td>
+              <td valign="top">
+                Ambient Light Sensor: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EIOAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EIOAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1A85:13 
+
+              </td>
+              <td valign="top">
+                Ambient Light Sensor: Circuit Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EEPAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EEPAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1C98:11 
+
+              </td>
+              <td valign="top">
+                Left Corner Lamp Circuit: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EAQAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EAQAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1C99:11 
+
+              </td>
+              <td valign="top">
+                Right Corner Lamp Circuit: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E3QAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0E3QAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1D00:11 
+
+              </td>
+              <td valign="top">
+                Left Low Beam: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EYRAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EYRAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1D01:11 
+
+              </td>
+              <td valign="top">
+                Right Low Beam: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EUSAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EUSAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1D02:11 
+
+              </td>
+              <td valign="top">
+                Left High Beam Circuit: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EQTAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EQTAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1D02:15 
+
+              </td>
+              <td valign="top">
+                Left High Beam Circuit: Circuit Short To Battery or Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EMUAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EMUAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1D03:11 
+
+              </td>
+              <td valign="top">
+                Right High Beam Circuit: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EIVAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EIVAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1D03:15 
+
+              </td>
+              <td valign="top">
+                Right High Beam Circuit: Circuit Short To Battery or Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EEWAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EEWAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1D35:11 
+
+              </td>
+              <td valign="top">
+                Hazard Switch: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EAXAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0EAXAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                C0040:12 
+
+              </td>
+              <td valign="top">
+                Brake Pedal Switch "A": Circuit Short To Battery 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E3XAG" data-sectnum="417-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          417-01</a><span id="spanID0E3XAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                C113A:11 
+
+              </td>
+              <td valign="top">
+                Wakeup Control: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EYYAG" data-sectnum="419-01B" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-01B</a><span id="spanID0EYYAG" xmlns:str="http://xsltsl.org/string"></span> (Passive Anti-Theft System (PATS)
+      ). 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                C113A:15 
+
+              </td>
+              <td valign="top">
+                Wakeup Control: Circuit Short To Battery or Open 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E1ZAG" data-sectnum="419-01B" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-01B</a><span id="spanID0E1ZAG" xmlns:str="http://xsltsl.org/string"></span> (<abbr title="Passive Anti-Theft System" xmlns:str="http://xsltsl.org/string">PATS</abbr> ). 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                C1A56:51 
+
+              </td>
+              <td valign="top">
+                Left Front Tire Pressure Sensor and Transmitter Assembly: Not Programmed 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E31AG" data-sectnum="204-04" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          204-04</a><span id="spanID0E31AG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                C1A58:51 
+
+              </td>
+              <td valign="top">
+                Right Front Tire Pressure Sensor and Transmitter Assembly: Not Programmed 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EY2AG" data-sectnum="204-04" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          204-04</a><span id="spanID0EY2AG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                C1D00:11 
+
+              </td>
+              <td valign="top">
+                Park Brake Apply Switch: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EU3AG" data-sectnum="413-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          413-01</a><span id="spanID0EU3AG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0230:12 
+
+              </td>
+              <td valign="top">
+                Fuel Pump Primary Circuit: Circuit Short To Battery 
+
+              </td>
+              <td valign="top">
+                DIAGNOSE PCM DTC P025A. REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0230:14 
+
+              </td>
+              <td valign="top">
+                Fuel Pump Primary Circuit: Circuit Short To Ground or Open 
+
+              </td>
+              <td valign="top">
+                DIAGNOSE PCM DTC P025A. REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0100:00 
+
+              </td>
+              <td valign="top">
+                Lost Communication With ECM/PCM "A": No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-A" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test A</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0121:00 
+
+              </td>
+              <td valign="top">
+                Lost Communication With Anti-Lock Brake System (ABS) Control Module: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0131:00 
+
+              </td>
+              <td valign="top">
+                Lost Communication With Power Steering Control Module: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-C" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test C</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0182:00 
+
+              </td>
+              <td valign="top">
+                Lost Communication With Lighting Control Module - Front: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-D" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test D</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0212:00 
+
+              </td>
+              <td valign="top">
+                Lost Communication With Steering Column Control Module: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-E" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test E</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U1000:00 
+
+              </td>
+              <td valign="top">
+                Solid State Driver Protection Activated - Driver Disabled: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-F" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test F</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U1007:31 
+
+              </td>
+              <td valign="top">
+                Lost Communication With Battery Monitoring Sensor "A": No Signal 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E5DBG" data-sectnum="414-00" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          414-00</a><span id="spanID0E5DBG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2005:85 
+
+              </td>
+              <td valign="top">
+                Vehicle Speed: Signal Above Allowable Range 
+
+              </td>
+              <td valign="top">
+                A speed signal is detected during the self-test. DIAGNOSE any symptoms or other module DTCs that are present. CLEAR the DTCs. MAKE SURE the vehicle is not moving and REPEAT the Body Control Module (BCM)
+       self-test. If no other symptoms or DTCs are present, 
+INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';" xmlns:str="http://xsltsl.org/string">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2100:00 
+
+              </td>
+              <td valign="top">
+                Initial Configuration Not Complete: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                CARRY OUT Programmable Module Installation (PMI)
+       on the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> . REFER to <a data-linkid="ID0EGGBG" data-sectnum="418-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          418-01</a><span id="spanID0EGGBG" xmlns:str="http://xsltsl.org/string"></span>. CLEAR the DTCs. REPEAT the self-test. If DTC U2100:00 is retrieved again,
+INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';" xmlns:str="http://xsltsl.org/string">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2200:55 
+
+              </td>
+              <td valign="top">
+                Control Module Configuration Memory Corrupt: Not Configured 
+
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr>  on the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> . REFER to <a data-linkid="ID0ERHBG" data-sectnum="418-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          418-01</a><span id="spanID0ERHBG" xmlns:str="http://xsltsl.org/string"></span>. CLEAR the DTCs. REPEAT the self-test. If DTC U2200:55 is retrieved again, 
+INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';" xmlns:str="http://xsltsl.org/string">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:49 
+
+              </td>
+              <td valign="top">
+                Control Module: Internal Electronic Failure 
+
+              </td>
+              <td valign="top">
+                ADDRESS all other DTCs first. CLEAR the DTCs. REPEAT the self-test. If DTC U3000:49 is retrieved again, 
+INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';" xmlns:str="http://xsltsl.org/string">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3003:16 
+
+              </td>
+              <td valign="top">
+                Battery Voltage: Circuit Voltage Below Threshold 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-G" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test G</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3003:17 
+
+              </td>
+              <td valign="top">
+                Battery Voltage: Circuit Voltage Above Threshold 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-H" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test H</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U300A:01 
+
+              </td>
+              <td valign="top">
+                Ignition Switch: General Electrical Failure 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E5KBG" data-sectnum="211-05" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          211-05</a><span id="spanID0E5KBG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart 
+</b></p>
+      <a name="BCM" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>No communication with the Body Control Module (BCM)
+      </li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Body Control Module">BCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REFER to <a data-linkid="ID0E2MBG" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E2MBG"></span>, The <abbr title="Body Control Module">BCM</abbr>  Does Not Respond To The Scan Tool. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_5" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-A" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test A: DTC U0100:00 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U0100:00 (Lost Communication With ECM/PCM "A": No Sub Type Information) — sets in the Body Control Module (BCM)
+       if data messages received (vehicle speed) from the PCM are missing for more than 1 second. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Communication network concern 
+
+          </li>
+          <li>
+            PCM 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="A" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST A : DTC U0100:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="A1" data-ajax="false"></a><b>A1 
+                VERIFY THE SCAN TOOL CAN COMMUNICATE WITH THE PCM 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Connect the scan tool. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check that a vehicle session can be established using the scan tool. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Can a vehicle session be established? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A2">A2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EYQBG" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EYQBG"></span>, The PCM Does Not Respond To The Scan Tool. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A2" data-ajax="false"></a><b>A2 
+                CHECK THE BCM  CONTINUOUS MEMORY DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. Repeat the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0100:00 retrieved again? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A3">A3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A3" data-ajax="false"></a><b>A3 
+                RETRIEVE THE RECORDED DTCS FROM THE BCM  SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for recorded <abbr title="Body Control Module">BCM</abbr>  DTCs from the self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U3003:16 or DTC U3003:17 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For DTC U3003:16, <a data-ajax="false" href="#PS2-G">GO to Pinpoint Test G</a>. 
+
+              <br>
+                For DTC U3003:17, <a data-ajax="false" href="#PS2-H">GO to Pinpoint Test H</a>. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A4">A4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A4" data-ajax="false"></a><b>A4 
+                CHECK FOR DTC U0100, U0100:00 OR U0100:87 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve the continuous memory DTCs from all modules. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0100, U0100:00 or U0100:87 set in any other module? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new PCM. REFER to <a data-linkid="ID0EFXBG" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EFXBG"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-B" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test B: DTC U0121:00 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U0121:00 (Lost Communication With Anti-Lock Brake System (ABS) Control Module: No Sub Type Information) — sets in the Body Control Module (BCM)
+       if data messages received from the ABS module are missing. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Communication network concern 
+
+          </li>
+          <li>
+            ABS module 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="B" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST B : DTC U0121:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="B1" data-ajax="false"></a><b>B1 
+                VERIFY THE CUSTOMER CONCERN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Verify that there is an observable symptom present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is an observable symptom present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B2">B2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B2" data-ajax="false"></a><b>B2 
+                CHECK THE COMMUNICATION NETWORK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Network Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Carry out the network test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the ABS module pass the network test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B3">B3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0E63BG" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E63BG"></span>, The ABS Module Does Not Respond To The Scan Tool. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B3" data-ajax="false"></a><b>B3 
+                RETRIEVE THE RECORDED DTCS FROM THE BCM  AND SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for recorded <abbr title="Body Control Module">BCM</abbr>  DTCs from the self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U3003:16 or DTC U3003:17 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For DTC U3003:16, <a data-ajax="false" href="#PS2-G">GO to Pinpoint Test G</a>. 
+
+              <br>
+                For DTC U3003:17, <a data-ajax="false" href="#PS2-H">GO to Pinpoint Test H</a>. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B4">B4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B4" data-ajax="false"></a><b>B4 
+                RECHECK THE BCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during Programmable Module Installation (PMI)
+       or the <abbr title="Programmable Module Installation">PMI</abbr>  may not have been carried out. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. Repeat the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0121:00 still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B5">B5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B5" data-ajax="false"></a><b>B5 
+                CHECK FOR DTC U0121, U0121:00 OR U0121:87 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait 10 seconds. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve the continuous memory DTCs from all modules. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0121, U0121:00 or U0121:87 set in any other module? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new ABS module. REFER to <a data-linkid="ID0EXDAI" data-sectnum="206-09" class="section-link">Section 
+          206-09</a><span id="spanID0EXDAI"></span>. CLEAR the DTCs. REPEAT the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_5" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-C" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test C: DTC U0131:00 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U0131:00 (Lost Communication With Power Steering Control Module: No Sub Type Information) — sets in the Body Control Module (BCM)
+       if data messages received from the Power Steering Control Module (PSCM)
+       are missing. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Communication network concern 
+
+          </li>
+          <li>
+            
+              <abbr title="Power Steering Control Module">PSCM</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="C" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST C : DTC U0131:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="C1" data-ajax="false"></a><b>C1 
+                VERIFY THE CUSTOMER CONCERN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Verify that there is an observable symptom present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is an observable symptom present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C2">C2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C2" data-ajax="false"></a><b>C2 
+                CHECK THE COMMUNICATION NETWORK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Network Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Carry out the network test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the <abbr title="Power Steering Control Module">PSCM</abbr>  pass the network test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C3">C3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0ELKAI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0ELKAI"></span>, The <abbr title="Power Steering Control Module">PSCM</abbr>  Does Not Respond To The Scan Tool. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C3" data-ajax="false"></a><b>C3 
+                RETRIEVE THE RECORDED DTCS FROM THE BCM  SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for recorded <abbr title="Body Control Module">BCM</abbr>  DTCs from the self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U3003:16 or DTC U3003:17 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For DTC U3003:16, <a data-ajax="false" href="#PS2-G">GO to Pinpoint Test G</a>. 
+
+              <br>
+                For DTC U3003:17, <a data-ajax="false" href="#PS2-H">GO to Pinpoint Test H</a>. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C4">C4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C4" data-ajax="false"></a><b>C4 
+                RECHECK THE BCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during Programmable Module Installation (PMI)
+       or the <abbr title="Programmable Module Installation">PMI</abbr>  may not have been carried out. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. Repeat the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0131:00 still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C5">C5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C5" data-ajax="false"></a><b>C5 
+                CHECK FOR DTC U0131, U0131:00 OR U0131:87 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait 10 seconds. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve the continuous memory DTCs from all modules. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0131, U0131:00 or U0131:87 set in any other module? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new Electronic Power Assist Steering (EPAS)
+       steering gear. REFER to <a data-linkid="ID0EORAI" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EORAI"></span>. CLEAR the DTCs. REPEAT the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_6" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-D" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test D: DTC U0182:00 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U0182:00 (Lost Communication With Lighting Control Module - Front: No Sub Type Information) — sets in the Body Control Module (BCM)
+       if headlamp switch data messages received from the Steering Column Control Module (SCCM)
+       are missing. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Communication network concern 
+
+          </li>
+          <li>
+            
+              <abbr title="Steering Column Control Module">SCCM</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="D" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST D : DTC U0182:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="D1" data-ajax="false"></a><b>D1 
+                VERIFY THE CUSTOMER CONCERN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Verify that there is an observable symptom present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is an observable symptom present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D2">D2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D2" data-ajax="false"></a><b>D2 
+                CHECK THE COMMUNICATION NETWORK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Network Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Carry out the network test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the <abbr title="Steering Column Control Module">SCCM</abbr>  pass the network test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D3">D3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0ECYAI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0ECYAI"></span>, The <abbr title="Steering Column Control Module">SCCM</abbr>  Does Not Respond To The Scan Tool. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D3" data-ajax="false"></a><b>D3 
+                RETRIEVE THE RECORDED DTCS FROM THE BCM  SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for recorded <abbr title="Body Control Module">BCM</abbr>  DTCs from the self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U3003:16 or DTC U3003:17 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For DTC U3003:16, <a data-ajax="false" href="#PS2-G">GO to Pinpoint Test G</a>. 
+
+              <br>
+                For DTC U3003:17, <a data-ajax="false" href="#PS2-H">GO to Pinpoint Test H</a>. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D4">D4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D4" data-ajax="false"></a><b>D4 
+                RECHECK THE BCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during Programmable Module Installation (PMI)
+       or the <abbr title="Programmable Module Installation">PMI</abbr>  may not have been carried out. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. Repeat the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0182:00 still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D5">D5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D5" data-ajax="false"></a><b>D5 
+                CHECK FOR DTC U0182, U0182:00 OR U0182:87 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait 10 seconds. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve the continuous memory DTCs from all modules. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0182, U0182:00 or U0182:87 set in any other module? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Steering Column Control Module">SCCM</abbr> . REFER to <a data-linkid="ID0EF6AI" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EF6AI"></span>. CLEAR the DTCs. REPEAT the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_7" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-E" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test E: DTC U0212:00 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U0212:00 (Lost Communication With Steering Column Control Module: No Sub Type Information) — sets in the Body Control Module (BCM)
+       if turn signal switch data messages received from the Steering Column Control Module (SCCM)
+       are missing. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Communication network concern 
+
+          </li>
+          <li>
+            
+              <abbr title="Steering Column Control Module">SCCM</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="E" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST E : DTC U0212:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="E1" data-ajax="false"></a><b>E1 
+                VERIFY THE CUSTOMER CONCERN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Verify that there is an observable symptom present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is an observable symptom present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E2">E2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E2" data-ajax="false"></a><b>E2 
+                CHECK THE COMMUNICATION NETWORK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Network Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Carry out the network test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the <abbr title="Steering Column Control Module">SCCM</abbr>  pass the network test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E3">E3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EZFBI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EZFBI"></span>, The <abbr title="Steering Column Control Module">SCCM</abbr>  Does Not Respond To The Scan Tool. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E3" data-ajax="false"></a><b>E3 
+                RETRIEVE THE RECORDED DTCS FROM THE BCM  SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for recorded <abbr title="Body Control Module">BCM</abbr>  DTCs from the self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U3003:16 or DTC U3003:17 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For DTC U3003:16, <a data-ajax="false" href="#PS2-G">GO to Pinpoint Test G</a>. 
+
+              <br>
+                For DTC U3003:17, <a data-ajax="false" href="#PS2-H">GO to Pinpoint Test H</a>. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E4">E4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E4" data-ajax="false"></a><b>E4 
+                RECHECK THE BCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during Programmable Module Installation (PMI)
+       or the <abbr title="Programmable Module Installation">PMI</abbr>  may not have been carried out. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. Repeat the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0212:00 still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E5">E5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E5" data-ajax="false"></a><b>E5 
+                CHECK FOR DTC U0212, U0212:00 OR U0212:87 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait 10 seconds. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve the continuous memory DTCs from all modules. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0212, U0212:00 OR U0212:87 set in any other module? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Steering Column Control Module">SCCM</abbr> . REFER to <a data-linkid="ID0E3MBI" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0E3MBI"></span>. CLEAR the DTCs. REPEAT the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_8" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-F" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test F: DTC U1000:00 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The Body Control Module (BCM)
+       controls the output of several vehicle systems using solid state drivers. A DTC sets when an overload occurs on any of these drivers. The module tracks the number of repetitive faults on each of these circuits and compares this number of overloads to 3 progressive thresholds established for each circuit. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">At the each threshold, DTC U1000:00 sets along with the DTC associated with the affected circuit. 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC U1000:00 (Solid State Driver Protection Activated - Driver Disabled: No Sub Type Information) — sets when the <abbr title="Body Control Module">BCM</abbr>  has disabled a circuit due to a repetitive circuit overload and a progressive threshold is met. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Output circuit short 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="F" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST F : DTC U1000:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="F1" data-ajax="false"></a><b>F1 
+                REVIEW THE DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTICE: 
+                
+                  <b>First follow the necessary diagnostics to resolve DTC U1000:00 and any other present DTCs (ignoring U3000:49). DTC U1000:00 is only present when there is another DTC due to software or circuitry issues that must be resolved before another self-test is run. DTC U3000:49 is only present once the final threshold has been met. Failure to correct the fault condition first may cause damage to the new <abbr title="Body Control Module">BCM</abbr> , resulting in a repeat repair.</b>
+                
+              </b></p>
+              <ul class="nospace">
+        <li>
+                Review the DTCs from the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any other DTCs present, besides U1000:00 or U3000:49? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                CORRECT the DTCs. REFER to the Body Control Module (BCM)
+       DTC chart in this section. After the repair, GO to <a data-ajax="false" href="#F2">F2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#F2">F2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="F2" data-ajax="false"></a><b>F2 
+                REPEAT THE BCM  SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs and repeat the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U3000:49 present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The circuit short has been repaired. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_9" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-G" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test G: DTC U3003:16 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','013')">13</a> , Power Distribution/SJB for schematic and connector information.<br>
+        </p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U3003:16 (Battery Voltage: Circuit Voltage Below Threshold) — sets in the Body Control Module (BCM)
+       when the <abbr title="Body Control Module">BCM</abbr>  detects that battery voltage has dropped below 9 volts on the voltage supply circuit. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            High circuit resistance 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="G" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST G : DTC U3003:16 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td><b>NOTE: </b><i>
+            Failure to disconnect the battery when instructed results in false resistance readings. Refer to <a data-linkid="ID0EIXBI" data-sectnum="414-01" class="section-link">Section 
+          414-01</a><span id="spanID0EIXBI"></span>. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="G1" data-ajax="false"></a><b>G1 
+                RECHECK THE BCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. Repeat the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U3003:16 still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#G2">G2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set due to a previous low battery voltage condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="G2" data-ajax="false"></a><b>G2 
+                CHECK FOR CHARGING SYSTEM DTCS IN THE PCM 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  PCM Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Carry out the PCM Key ON Engine OFF (KOEO)
+       self-test. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve the continuous memory DTCs from the PCM. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC P0620, P0622, P0625, P0626 or P065B set in the PCM? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0ET2BI" data-sectnum="414-00" class="section-link">Section 
+          414-00</a><span id="spanID0ET2BI"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#G3">G3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="G3" data-ajax="false"></a><b>G3 
+                CHECK THE BATTERY CONDITION AND STATE OF CHARGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the battery condition and verify the battery is fully charged. Refer to <a data-linkid="ID0EU3BI" data-sectnum="414-01" class="section-link">Section 
+          414-01</a><span id="spanID0EU3BI"></span>. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the battery OK and fully charged? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#G4">G4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EW4BI" data-sectnum="414-00" class="section-link">Section 
+          414-00</a><span id="spanID0EW4BI"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="G4" data-ajax="false"></a><b>G4 
+                CHECK THE BCM  VOLTAGE PID 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Measure and record the voltage at the battery. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  DataLogger 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Monitor the <abbr title="Body Control Module">BCM</abbr>  voltage PID (V_BATT). 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage within 0.2 volt of the recorded battery voltage? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#G7">G7</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#G5">G5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="G5" data-ajax="false"></a><b>G5 
+                CHECK THE BCM  VOLTAGE SUPPLY 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280G','')">C2280G</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280G','1')">C2280G</a> Pin 1, circuit SDC04 (RD), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0111784&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage within 0.2 volt of the recorded battery voltage? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#G6">G6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit SDC04 (RD) for high resistance. CLEAR the DTC. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="G6" data-ajax="false"></a><b>G6 
+                CHECK THE BCM  GROUND CIRCUIT FOR HIGH RESISTANCE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Negative Battery Cable 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280D','')">C2280D</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280D','25')">C2280D</a> Pin 25, circuit GD139 (BK/YE), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0111785&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#G7">G7</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit GD139 (BK/YE) for high resistance. CLEAR the DTC. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="G7" data-ajax="false"></a><b>G7 
+                CHECK FOR CORRECT BCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect the <abbr title="Body Control Module">BCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect the <abbr title="Body Control Module">BCM</abbr>  connectors and make sure they seat correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_10" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-H" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test H: DTC U3003:17 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','013')">13</a> , Power Distribution/SJB for schematic and connector information.<br>
+        </p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U3003:17 (Battery Voltage: Circuit Voltage Above Threshold) — sets in the Body Control Module (BCM)
+       when the <abbr title="Body Control Module">BCM</abbr>  detects that battery voltage is more than 16 volts on the voltage supply circuit. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Charging system concern 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="H" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST H : DTC U3003:17 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTE: </b><i>
+            DTC U3003:17 may be stored in the module memory due to previous battery charging or vehicle jump starting events. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="H1" data-ajax="false"></a><b>H1 
+                CHECK FOR DTC B1317, B1676, P0563 (PCM) OR U3003:17 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve the continuous memory DTCs from all modules. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC B1317, B1676, P0563 (PCM) or U3003:17 set in more than one module? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0ERNCI" data-sectnum="414-00" class="section-link">Section 
+          414-00</a><span id="spanID0ERNCI"></span> to diagnose an overcharging condition. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#H2">H2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="H2" data-ajax="false"></a><b>H2 
+                CHECK THE BATTERY VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Turn off all interior/exterior lights and accessories. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Start and run the engine at approximately 2,000 rpm for 3 minutes while monitoring the battery voltage. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the battery voltage rise to 15.5 volts or higher? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EHPCI" data-sectnum="414-00" class="section-link">Section 
+          414-00</a><span id="spanID0EHPCI"></span> to diagnose an overcharging condition. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#H3">H3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="H3" data-ajax="false"></a><b>H3 
+                RECHECK FOR DTC U3003:17 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Turn the engine off. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Clear the continuous memory DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Carry out the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U3003:17 present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set previously during battery charging or while jump starting the vehicle. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+  
+
+

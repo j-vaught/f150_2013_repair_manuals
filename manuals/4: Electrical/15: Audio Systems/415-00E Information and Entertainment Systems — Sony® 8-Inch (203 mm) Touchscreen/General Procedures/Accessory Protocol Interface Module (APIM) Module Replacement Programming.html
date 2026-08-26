@@ -1,0 +1,319 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="415-00E" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="415-00E Information and Entertainment Systems — Sony® 8-Inch (203 mm) Touchscreen" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="General Procedures" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1493526" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>415-00E Information and Entertainment Systems — Sony® 8-Inch (203 mm) Touchscreen</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>General Procedures</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      04/19/2016</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Accessory Protocol Interface Module (APIM) Module Replacement Programming" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Accessory Protocol Interface Module (APIM) Module Replacement Programming
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('415-00','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          
+            Vehicle Communication Module (VCM)
+       and Integrated Diagnostic System (IDS)
+       software with appropriate hardware, or equivalent diagnostic scan tool
+          <br>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=st3256A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          SYNC® Re-Flash Kit
+          <br>CCMSYNC-KIT or equivalent 
+
+          <br><br>[Tools are also available individually
+          <br>CCMUSB2-AM-AM-10 (cable) and CCMUSB-AF-BF5 (adapter)] 
+
+        </td>
+      </tr>
+    </table>
+    <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+      Use this procedure to program and provision the module when a new Accessory Protocol Interface Module (APIM)
+       is being installed. For additional information about choosing the correct programming procedure, refer to Description and Operation in this section. 
+
+    </i></p>
+    <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+      A <abbr title="Universal Serial Bus">USB</abbr>  flash drive with a minimum storage size of 1 gigabyte (GB) may be required for this procedure (obtain locally). 
+
+    </i></p>
+    <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+      Some programming files are large (greater than 2 GB). It is important that the diagnostic scan tool has enough available hard drive space to accommodate the programming file download. If a "Disk Space Error" is received, create additional free space on the hard drive. 
+
+    </i></p>
+    <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+      <ul type="disc">
+        <li>
+          Install the new Accessory Protocol Interface Module (APIM)
+       before performing this procedure. Refer to <a data-linkid="ID0EMD" data-for="415-00E_s3p704941q0" data-procuid="n1493545" class="expand-link">Accessory Protocol Interface Module (APIM)</a><span id="spanID0EMD"></span>
+        </li>
+        <li>
+          To prevent timeout errors and to minimize programming time, a hardwired Internet connection is strongly recommended when programming. 
+
+        </li>
+        <li>
+          During programming, the <abbr title="Front Display Interface Module">FDIM</abbr>  may go blank momentarily. 
+
+        </li>
+        <li>
+          Make sure the diagnostic scan tool is plugged into a power supply due to the length of programming time. 
+
+        </li>
+        <li>
+          Close the <abbr title="Integrated Diagnostic System">IDS</abbr>  program before attempting to perform this procedure. 
+
+        </li>
+      </ul>
+    </i></p>
+    
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Connect a battery charger set on low. 
+
+        <ul type="disc">
+      <li>
+          When connecting the charger, the negative battery charger lead must be connected to a clean chassis ground, not the negative battery post. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+    
+    
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Place the ignition in the ON/RUN position. For additional information for vehicles with <abbr title="Intelligent Access">IA</abbr> , refer to Push Button Start System Ignition Modes in <a data-linkid="ID0EPF" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EPF"></span>. 
+
+      </li>
+</ol>
+    
+    
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Connect the diagnostic scan tool and <abbr title="Vehicle Communication Module">VCM</abbr>  to the vehicle. 
+
+      </li>
+</ol>
+    
+    
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Open INTERNET EXPLORER on the diagnostic scan tool and go to the technician service publications website. On the <abbr title="On-Line Automotive Service Information System">OASIS</abbr>  tab, select "Read VIN &amp; DTCs," and select "Go." 
+
+      </li>
+</ol>
+    
+    
+      <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          This procedure clears all <abbr title="Continuous Memory Diagnostic Trouble Codes">CMDTCs</abbr> . The <abbr title="Diagnostic Trouble Codes">DTCs</abbr>  must be recorded now if other diagnoses are to be performed after this procedure. 
+
+        </i></p>
+        Select "Toolbox" from the technician service publications website to retrieve and record all <abbr title="Continuous Memory Diagnostic Trouble Codes">CMDTCs</abbr> . 
+
+      </li>
+</ol>
+    
+    
+      <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          If unable to complete programming because the operation stops or errors are received, the INTERNET EXPLORER browser settings may need to be configured. Refer to "Software Programming v1.1" on the technician service publications website under the Service Tips tab. 
+
+        </i></p>
+        From the <abbr title="On-Line Automotive Service Information System">OASIS</abbr>  tab, select the "SYNC" button. The Last Recorded State — Software is displayed. 
+
+      </li>
+</ol>
+    
+    
+      <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Scroll to the bottom of the screen, select "Module Replacement," and select the "Read SYNC" button to compare the current <abbr title="Accessory Protocol Interface Module">APIM</abbr> <abbr title="Vehicle Interface Processor">VIP</abbr> , <abbr title="Consumer Interface Processor">CIP</abbr> , and Application software levels to the last reported state in the Ford online database. 
+
+        <ul type="disc">
+      <li>
+          After the comparison is performed, the diagnostic scan tool automatically selects software for programming. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          Applications may require selection for installation. Applications with a green check mark next to them indicates the <abbr title="Accessory Protocol Interface Module">APIM</abbr>  already has the latest level installed (no re-installation required). 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          Depending on the software level required, the diagnostic scan tool automatically selects either the Service Pack or Full Flash programming method. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          Although there may be an option available to override the Service Pack installation and perform a Full Flash/Force <abbr title="Consumer Interface Processor">CIP</abbr> , choosing this option requires additional programming time and is not recommended unless directed by a <abbr title="Technical Service Bulletin">TSB</abbr> . 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+    
+    
+      <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Only Applications on a flash drive may be loaded to the <abbr title="Accessory Protocol Interface Module">APIM</abbr>  through the media hub. 
+
+        </i></p>
+        <p><b>NOTE: </b><i>
+          If not performing a Full Flash/Force <abbr title="Consumer Interface Processor">CIP</abbr> , go to Step 10. 
+
+        </i></p>
+        Remove the media hub. REFER to <a data-linkid="ID0EPDAC" data-for="415-00E_s3p707008q0" data-procuid="n1493541" class="expand-link">Media Hub</a><span id="spanID0EPDAC"></span>. 
+
+      </li>
+</ol>
+    
+    
+      <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Do not disconnect the diagnostic scan tool or cable from the <abbr title="Accessory Protocol Interface Module">APIM</abbr>  during programming unless directed by the diagnostic scan tool on-screen prompts. 
+
+        </i></p>
+        Connect the SYNC® Re-Flash Kit cable and adapter to the diagnostic scan tool <abbr title="Universal Serial Bus">USB</abbr>  port and the vehicle <abbr title="Universal Serial Bus">USB</abbr>  cable. 
+
+      </li>
+</ol>
+    
+    
+      <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Diagnostic scan tools that have never been used to program SYNC® may encounter a Hardware Wizard pop-up requesting a "WMA SBOOT" driver installation. If this request is encountered, install the driver and select the diagnostic scan tool "retry" button to continue programming. 
+
+        </i></p>
+        <p><b>NOTE: </b><i>
+          This step may take 20 minutes or longer. 
+
+        </i></p>
+        Select the "Program SYNC" button to begin the <abbr title="Accessory Protocol Interface Module">APIM</abbr>  programming process. 
+
+        <ul type="disc">
+      <li>
+          When prompted by the diagnostic scan tool, disconnect the battery charger, start the engine, and select "OK." Once "OK" is selected, do not interrupt this step. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          The updates are downloaded to the diagnostic scan tool or <abbr title="Universal Serial Bus">USB</abbr>  flash drive. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+    
+    
+      <ol start="11. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          If the diagnostic scan tool does not have an available <abbr title="Universal Serial Bus">USB</abbr>  port, the Re-Flash Kit can be disconnected at this time to make room for the <abbr title="Universal Serial Bus">USB</abbr>  flash drive. Do <b>not</b> disconnect the <abbr title="Vehicle Communication Module">VCM</abbr>  from the diagnostic scan tool. 
+
+        </i></p>
+        <p><b>NOTE: </b><i>
+          This step may take 20 minutes or longer. 
+
+        </i></p>
+        Connect the <abbr title="Universal Serial Bus">USB</abbr>  flash drive to the diagnostic scan tool and follow the on-screen instructions for downloading service packs and Applications onto the <abbr title="Universal Serial Bus">USB</abbr>  flash drive. 
+
+      </li>
+</ol>
+    
+    
+      <ol start="12. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Install the media hub if it was removed. Refer to <a data-linkid="ID0E6HAC" data-for="415-00E_s3p707008q0" data-procuid="n1493541" class="expand-link">Media Hub</a><span id="spanID0E6HAC"></span>. 
+
+          <p class="singlespace"></p>This step may take 20 minutes or longer. 
+
+        </i></p>
+        When prompted by the diagnostic scan tool, remove the <abbr title="Universal Serial Bus">USB</abbr>  flash drive and connect it to the media hub to install the Applications into the <abbr title="Accessory Protocol Interface Module">APIM</abbr> . 
+
+        <ul type="disc">
+      <li>
+          The update should start automatically. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          It is normal for the <abbr title="Accessory Protocol Interface Module">APIM</abbr>  to reset during this step and the <abbr title="Front Display Interface Module">FDIM</abbr>  to go blank. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+    
+    
+      <ol start="13. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Re-installing the <abbr title="Universal Serial Bus">USB</abbr>  flash drive into the diagnostic scan tool initiates the remaining automated configuration steps. Failure to do so results in the loss of feature functionality such as navigation and SYNC® traffic, directions, and information services. 
+
+        </i></p>
+        Once diagnostic scan tool programming and <abbr title="Universal Serial Bus">USB</abbr>  flash drive programming are complete, re-install the flash drive into the diagnostic scan tool and select "OK" to report software installation to the Ford online database. 
+
+      </li>
+</ol>
+    
+    
+      <ol start="14. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Calibrate the touchscreen by following the diagnostic scan tool prompts or by referring to <a data-linkid="ID0ESKAC" data-for="415-00E_s5p707909q0" data-procuid="n1493694" class="expand-link">Touchscreen Calibration</a><span id="spanID0ESKAC"></span>. 
+
+      </li>
+</ol>
+    
+    
+      <ol start="15. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Clear all <abbr title="Continuous Memory Diagnostic Trouble Codes">CMDTCs</abbr> . 
+
+      </li>
+</ol>
+    
+  
+
+

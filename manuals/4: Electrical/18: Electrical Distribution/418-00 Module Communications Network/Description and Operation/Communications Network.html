@@ -1,0 +1,958 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="418-00" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="418-00 Module Communications Network" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Description and Operation" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1471008" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>418-00 Module Communications Network</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Description and Operation</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      09/28/2017</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Communications Network" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Communications Network
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('418-00','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <p xmlns:str="http://xsltsl.org/string">Multiplexing is a method of sending 2 or more signals simultaneously over a single circuit. Multiplexing allows 2 or more electronic modules (nodes) to communicate simultaneously over a twisted wire pair [data (+) and data (-)] network. The information or messages that can be communicated on these wires consists of commands, status or data. The advantage of using multiplexing is to reduce the weight of the vehicle by reducing the number of redundant components and electrical wiring. 
+</p>
+    <p xmlns:str="http://xsltsl.org/string">The vehicle has 3 module communication networks which are connected to the Data Link Connector (DLC)
+      , located under the driver side instrument panel: 
+</p>
+    <ul type="disc" xmlns:str="http://xsltsl.org/string">
+      <li>
+        
+          High Speed Controller Area Network (HS-CAN)
+      
+        
+      </li>
+      <li>
+        
+          Medium Speed Controller Area Network (MS-CAN)
+      
+        
+      </li>
+      <li>
+        
+          Infotainment Controller Area Network (I-CAN)
+       (4.2-inch and 8-inch touchscreen only) 
+
+      </li>
+    </ul>
+    <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+      Vehicles with the optional 4.2-inch screen and 8-inch touchscreen audio units have an Infotainment Controller Area Network (I-CAN)
+       that is connected to the Data Link Connector (DLC)
+      , but modules do not communicate directly with the diagnostic scan tool. The Instrument Panel Cluster (IPC)
+       operates as the gateway for modules on the <abbr title="Infotainment Controller Area Network">I-CAN</abbr>  to communicate with the diagnostic scan tool over the <abbr title="High Speed Controller Area Network">HS-CAN</abbr> . 
+
+    </i></p>
+    <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+      The <abbr title="Tire Pressure Monitor">TPM</abbr>  module is also known as the Radio Transceiver Module (RTM). 
+
+    </i></p>
+    <a name="figure_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Network Topology - Vehicles with AM/FM/Single CD 
+</b></p>
+      <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0150474&amp;w=580&amp;t=JPG" border="1" width="580" xmlns:str="http://xsltsl.org/string">
+    
+    <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+      <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="center">
+    <col align="center">
+  </colgroup>
+        
+        
+        
+        <thead>
+          <tr>
+            <th align="center" valign="top">
+              Module Name 
+
+            </th>
+            <th align="center" valign="top">
+              Network Type 
+
+            </th>
+            <th align="center" valign="top">
+              Termination Module 
+
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td valign="top">
+              ABS module 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              
+                Accessory Protocol Interface Module (APIM)
+       (if equipped) 
+
+            </td>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+               
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Audio Front Control Module (ACM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              
+                Body Control Module (BCM)
+       (gateway module) 
+
+            </td>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              Yes 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+               
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              Yes 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Driver Seat Module (DSM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Dual Climate Controlled Seat Module (DCSM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Front Controls Interface Module (FCIM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Front Display Interface Module (FDIM)
+      
+               
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Global Positioning System Module (GPSM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              HVAC module 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              Yes 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Instrument Panel Cluster (IPC)
+      
+               
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Occupant Classification System Module (OCSM)
+      
+               
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Parking Aid Module (PAM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Power Steering Control Module (PSCM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              PCM 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              Yes 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Power Running Board (PRB)
+       module (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Restraints Control Module (RCM)
+      
+               
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Steering Column Control Module (SCCM)
+      
+               
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Tire Pressure Monitor (TPM)
+       module (Radio Transceiver Module [RTM]) (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Trailer Brake Control (TBC)
+       module (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Transfer Case Control Module (TCCM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+        </tbody>
+      </table><br>
+    <br xmlns:str="http://xsltsl.org/string">
+    <a name="figure_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Network Topology - Vehicles with 4.2-Inch Screen and 8-Inch Touchscreen 
+</b></p>
+      <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0177836&amp;w=580&amp;t=JPG" border="1" width="580" xmlns:str="http://xsltsl.org/string">
+    
+    <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_2" xmlns:str="http://xsltsl.org/string"></a>
+      <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="center">
+    <col align="center">
+  </colgroup>
+        
+        
+        
+        <thead>
+          <tr>
+            <th align="center" valign="top">
+              Module Name 
+
+            </th>
+            <th align="center" valign="top">
+              Network Type 
+
+            </th>
+            <th align="center" valign="top">
+              Termination Module 
+
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td valign="top">
+              ABS module 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              
+                Accessory Protocol Interface Module (APIM)
+       (if equipped) 
+
+            </td>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" style="border-bottom:none;border-top:none">
+               
+            </td>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+               
+            </td>
+            <td valign="top">
+              
+                <abbr title="Infotainment Controller Area Network" xmlns:str="http://xsltsl.org/string">I-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Audio Front Control Module (ACM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Infotainment Controller Area Network" xmlns:str="http://xsltsl.org/string">I-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              Yes 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              Audio Digital Signal Processing (DSP)
+       module (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Infotainment Controller Area Network" xmlns:str="http://xsltsl.org/string">I-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              
+                Body Control Module (BCM)
+       (gateway module) 
+
+            </td>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              Yes 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+               
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              Yes 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Driver Seat Module (DSM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Dual Climate Controlled Seat Module (DCSM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Front Controls Interface Module (FCIM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Infotainment Controller Area Network" xmlns:str="http://xsltsl.org/string">I-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Front Control/Display Interface Module (FCDIM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Infotainment Controller Area Network" xmlns:str="http://xsltsl.org/string">I-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Global Positioning System Module (GPSM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              HVAC module 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              Yes 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              
+                Instrument Panel Cluster (IPC)
+      
+               
+            </td>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top" style="border-bottom:none;border-top:none">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+               
+            </td>
+            <td valign="top">
+              
+                <abbr title="Infotainment Controller Area Network" xmlns:str="http://xsltsl.org/string">I-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              Yes 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Occupant Classification System Module (OCSM)
+      
+               
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Parking Aid Module (PAM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Power Steering Control Module (PSCM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              PCM 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              Yes 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Power Running Board (PRB)
+       module (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Restraints Control Module (RCM)
+      
+               
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Steering Column Control Module (SCCM)
+      
+               
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Tire Pressure Monitor (TPM)
+       module (Radio Transceiver Module [RTM]) (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="Medium Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">MS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Trailer Brake Control (TBC)
+       module (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              
+                Transfer Case Control Module (TCCM)
+       (if equipped) 
+
+            </td>
+            <td valign="top">
+              
+                <abbr title="High Speed Controller Area Network" xmlns:str="http://xsltsl.org/string">HS-CAN</abbr> 
+               
+            </td>
+            <td valign="top">
+              No 
+
+            </td>
+          </tr>
+        </tbody>
+      </table><br>
+    <br xmlns:str="http://xsltsl.org/string">
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Network Termination And Gateway Function 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">The Controller Area Network (CAN)
+       uses network termination to improve communication reliability. Termination modules are located at both ends of the network. As network messages are broadcast in the form of voltage signals, the network voltage signals are stabilized by the termination resistors. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">Each termination module has an internal 120 ohm resistor that bridges across the positive and negative bus connection. With two 120 ohm resistors located in a parallel circuit configuration, the total network impedance, or total resistance, is 60 ohms. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">Network termination improves bus message reliability by stabilizing bus voltage and eliminating electrical interference. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr>  is the gateway module, translating messages on the <abbr title="High Speed Controller Area Network">HS-CAN</abbr>  to the <abbr title="Medium Speed Controller Area Network">MS-CAN</abbr>  and vice versa, allowing a message to be distributed throughout both networks. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">Vehicles equipped with the 4.2-inch screen or 8-inch touchscreen audio units use an <abbr title="Infotainment Controller Area Network">I-CAN</abbr>  network for these modules. The <abbr title="Instrument Panel Cluster">IPC</abbr>  is the gateway module, translating messages on the <abbr title="High Speed Controller Area Network">HS-CAN</abbr>  to the modules on the <abbr title="Infotainment Controller Area Network">I-CAN</abbr> , and vice versa. This allows messages to be distributed throughout both networks, if required. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr>  and <abbr title="Instrument Panel Cluster">IPC</abbr>  are the only modules on this vehicle that have this ability. 
+</p>
+    
+  
+
+

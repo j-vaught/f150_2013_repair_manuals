@@ -1,0 +1,1475 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="414-05" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="414-05 High Voltage Converter/Power Point Inverter" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n2252403" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>414-05 High Voltage Converter/Power Point Inverter</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      10/13/2016</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="High-Voltage Converter/Inverter" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>High-Voltage Converter/Inverter
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('414-05','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2574A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Flex Probe Kit
+          <br>NUD105-R025D or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-IV Digital Multimeter
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">The 110 volts AC created by the inverter measures differently than a conventional AC outlet (utility-generated) with some multi-meters. The power point automatically shuts off if the load exceeds 150 watts to prevent damage to the inverter or load. The inverter supplies 110 volts AC power only when the ignition is ON. If the ignition is ON, but the engine is not running, the DC/AC inverter automatically shuts off after 13 minutes. The inverter can be powered back on and the timer reset by cycling the ignition from RUN to OFF and back to RUN, but only for another 13 minutes. This feature is intended to prevent the 12-volt battery from being fully discharged. If the engine is running, the inverter operation is not time-limited. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The DC/AC inverter time-out is controlled by a Local Interconnect Network (LIN)
+       circuit. The <abbr title="Body Control Module">BCM</abbr>  transmits the engine running status over the network to the DC/AC inverter. Once the DC/AC inverter stops receiving information that indicates the engine is running, it begins counting the amount of time the engine has not been running. If, after 13 minutes, the DC/AC inverter still has not received information that indicates the engine is running, the DC/AC inverter times out and stops supplying voltage to the AC power point. The <abbr title="Local Interconnect Network">LIN</abbr>  is also used by the electrochromatic mirror, but the mirror is receiving compass information, not engine running status. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The AC power point is equipped with a green LED that indicates the system status. The green LED is illuminated continuously when the ignition is ON and the system is operating normally. When the inverter shuts off after 13 minutes, the LED flashes until the ignition is cycled. Additionally, the green LED flashes constantly if the ignition is ON and a fault is detected. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The DC/AC inverter has a self-protection feature for the following conditions: 
+</p>
+      <ul type="disc" xmlns:str="http://xsltsl.org/string">
+        <li>
+          Short circuits on the inverter output circuits — If the inverter detects a short on the output circuit(s), it shuts down. After 6 seconds, it restarts and checks for a short condition. If the condition still exists, the inverter shuts down again. The inverter restarts 5 times and, if on the 5th restart, the short still exists, the inverter disables AC output and flashes the green LED indicator. 
+
+        </li>
+        <li>
+          Low voltage input — the inverter does not operate when the input voltage is less than 11 volts. 
+
+        </li>
+        <li>
+          High voltage input — the inverter does not operate when the input voltage is greater than 16 volts. 
+
+        </li>
+        <li>
+          Overload 
+
+        </li>
+        <li>
+          High temperature — the inverter does not operate if it has overheated or if ambient temperatures exceed 75°C (167°F) 
+
+        </li>
+      </ul>
+      <p xmlns:str="http://xsltsl.org/string">If the self-protection feature is activated, the green LED indicator flashes and the DC/AC inverter does not provide power output to the AC power point. If the LED is flashing, the problem must be corrected before DC/AC inverter operation will resume. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">Refer to the Owner's Literature for a list of appropriate electrical loads/devices that can be used. 
+</p>
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern. 
+
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect for obvious signs of electrical damage. 
+
+      </li>
+</ol>
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string">
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Visual Inspection Chart
+        </b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+  </colgroup>
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                
+                  Electrical
+                 
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    AC power point 
+
+                  </li>
+                  <li>
+                    
+                      Battery Junction Box (BJB)
+       fuse 33 (40A) 
+
+                  </li>
+                  <li>
+                    
+                      Body Control Module (BCM)
+       fuse 38 (10A) 
+
+                  </li>
+                  <li>
+                    Wiring, terminals or connectors 
+
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step. 
+
+      </li>
+</ol>
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the cause is not visually evident, verify the symptom and GO to <a data-ajax="false" href="#SC1">Symptom Chart</a>. 
+
+      </li>
+</ol>
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart 
+</b></p>
+      <a name="SC1" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The DC/AC inverter does not operate correctly — no power at the AC power point 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Fuse(s) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>DC/AC inverter 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>AC power point 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-A">GO to Pinpoint Test A</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The DC/AC inverter does not operate correctly — the AC power point LED indicator flashes with the ignition in the ON position 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Overloaded DC/AC inverter 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Inverter timed-out with engine not running 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Overheated DC/AC inverter 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Fuse(s) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>DC/AC inverter 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>AC power point 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>DISCONNECT all electrical accessories from the AC power outlet and VERIFY that cabin temperature is below 75°C (167°F). TEST the system for normal operation. If the system is operating normally, RETURN the vehicle to the customer. If the AC power point LED indicator is still flashing, <a data-ajax="false" href="#PS2-A">GO to Pinpoint Test A</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The DC/AC inverter does not operate correctly — the AC power point LED indicator is never on 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Fuse(s) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>DC/AC inverter 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>AC power point 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-B">GO to Pinpoint Test B</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The DC/AC inverter does not operate correctly — the AC power point turns off after 13 minutes 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Inverter timing out with engine not running 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Body Control Module (BCM)
+      
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>DC/AC inverter 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>VERIFY the concern by monitoring the AC power point LED for 13 minutes with the engine running. If the AC power point LED begins to flash after 13 minutes with the engine running, <a data-ajax="false" href="#PS2-C">GO to Pinpoint Test C</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-A" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test A: The DC/AC Inverter Does Not Operate Correctly — No Power at the AC Power Point/The AC Power Point LED Indicator Flashes with the Ignition in the ON Position 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','013')">13</a> , Power Distribution for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The DC/AC inverter receives 12 volts DC from the Battery Junction Box (BJB)
+       and the Body Control Module (BCM)
+       and is wired to chassis ground. Power from the <abbr title="Battery Junction Box">BJB</abbr>  is available at all times, regardless of ignition status. Power from the <abbr title="Body Control Module">BCM</abbr>  is only available when the ignition is ON. The incoming DC power is internally converted to 60 Hz 110 volts AC power that is output to the AC power point. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          The electrical device powered by the AC power point must not exceed 150 watts. 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          If the green LED is flashing, the AC power point may be overloaded, overheated or shorted. Unplug the electrical device from the AC power point and cycle the ignition. Refer to the Owner's Literature to determine if the electrical device is appropriate for the AC power point. 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          The DC/AC inverter turns off after 13 minutes if the engine is not running. If the inverter times out, the green LED flashes. Cycle the ignition to resume normal operation. 
+
+        </i></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Overloaded DC/AC inverter 
+
+          </li>
+          <li>
+            Overheated DC/AC inverter 
+
+          </li>
+          <li>
+            Inverter timed-out with engine not running 
+
+          </li>
+          <li>
+            Fuse(s) 
+
+          </li>
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            DC/AC inverter 
+
+          </li>
+          <li>
+            AC power point 
+
+          </li>
+        </ul>
+        <a name="A" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST A : THE DC/AC INVERTER DOES NOT OPERATE CORRECTLY — NO POWER AT THE AC POWER POINT/THE AC POWER POINT LED INDICATOR FLASHES WITH THE KEY IN THE ON POSITION 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multi-meter probes. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A1" data-ajax="false"></a><b>A1 
+                CHECK THE POWER OUTLET LED STATUS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Start the engine. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check the green LED on the AC power outlet. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the green LED flashing? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A2">A2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If the green LED is NOT illuminated, VERIFY <abbr title="Battery Junction Box">BJB</abbr>  fuse 33 (40A) and <abbr title="Body Control Module">BCM</abbr>  fuse 38 (10A) are OK. If OK, <a data-ajax="false" href="#PS2-B">GO to Pinpoint Test B</a>. If not OK, REFER to the Wiring Diagrams manual to identify the possible cause of the circuit short. TEST the system for normal operation. 
+
+              <br>
+                If the green LED is illuminated continuously, the DC/AC inverter may have timed-out after 13 minutes of operation without the engine running. VERIFY correct system operation with a device rated at less than 150 watts. If there is still no power at the power outlet, GO to <a data-ajax="false" href="#A2">A2</a>. If the system is operating correctly, RETURN the vehicle to the customer. 
+
+              </td>
+          </tr>
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A2" data-ajax="false"></a><b>A2 
+                CHECK THE POWER SUPPLY CIRCUITS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  DC/AC Inverter <a href="javascript:connectorlinkwithpin('ED2','C2293A','')">C2293A</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between DC/AC inverter <a href="javascript:connectorlinkwithpin('ED2','C2293A','2')">C2293A</a> Pin 2, circuit CBP38 (GY/BU), harness side and ground and between DC/AC inverter <a href="javascript:connectorlinkwithpin('ED2','C2293A','4')">C2293A</a> Pin 4, circuit SBB33 (RD), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112203&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 11 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A3">A3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                For voltage less than 11 volts, VERIFY Battery Junction Box (BJB)
+       fuse 33 (40A) and <abbr title="Body Control Module">BCM</abbr>  fuse 38 (10A) are OK. If OK, REPAIR the open circuit or high resistance on the affected circuit(s). If not OK, REFER to the Wiring Diagrams manual to identify the possible cause of the circuit short. TEST the system for normal operation. 
+
+                <br>For voltage greater than 16 volts, REFER to System Voltage High in the Symptom Chart in <a data-linkid="ID0ENOAC" data-sectnum="414-00" class="section-link">Section 
+          414-00</a><span id="spanID0ENOAC"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A3" data-ajax="false"></a><b>A3 
+                CHECK THE GROUND CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between DC/AC inverter <a href="javascript:connectorlinkwithpin('ED2','C2293A','6')">C2293A</a> Pin 6, circuit GD138 (BK/WH), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112204&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A4">A4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit GD138 (BK/WH). TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A4" data-ajax="false"></a><b>A4 
+                CHECK THE AC POWER OUTPUT CIRCUITS FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  BJB Fuse 33 (40A) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  BCM Fuse 38 (10A) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  AC Power Point <a href="javascript:connectorlinkwithpin('ED2','C301','')">C301</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  DC/AC Inverter <a href="javascript:connectorlinkwithpin('ED2','C2293B','')">C2293B</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between AC power point <a href="javascript:connectorlinkwithpin('ED2','C301','3')">C301</a> Pin 3, circuit HYA01 (OG/GN), harness side and DC/AC inverter <a href="javascript:connectorlinkwithpin('ED2','C2293B','6')">C2293B</a> Pin 6, circuit HYA01 (OG/GN), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112205&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between AC power point <a href="javascript:connectorlinkwithpin('ED2','C301','1')">C301</a> Pin 1, circuit HYA02 (OG/WH), harness side and DC/AC inverter <a href="javascript:connectorlinkwithpin('ED2','C2293B','3')">C2293B</a> Pin 3, circuit HYA02 (OG/WH), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112206&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A5">A5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A5" data-ajax="false"></a><b>A5 
+                CHECK THE AC POWER OUTPUT CIRCUITS FOR A SHORT TOGETHER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between DC/AC inverter <a href="javascript:connectorlinkwithpin('ED2','C2293B','6')">C2293B</a> Pin 6, circuit HYA01 (OG/GN), harness side and DC/AC inverter <a href="javascript:connectorlinkwithpin('ED2','C2293B','3')">C2293B</a> Pin 3, circuit HYA02 (OG/WH), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112434&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A6">A6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuits. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A6" data-ajax="false"></a><b>A6 
+                CHECK THE AC POWER OUTPUT CIRCUITS FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between DC/AC inverter <a href="javascript:connectorlinkwithpin('ED2','C2293B','6')">C2293B</a> Pin 6, circuit HYA01 (OG/GN), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112204&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between DC/AC inverter <a href="javascript:connectorlinkwithpin('ED2','C2293B','3')">C2293B</a> Pin 3, circuit HYA02 (OG/WH), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112435&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A7">A7</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A7" data-ajax="false"></a><b>A7 
+                CHECK THE AC POWER POINT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between AC power point C301 pin 3, component side and AC power point face side pin 2. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112436&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between AC power point C301 pin 1, component side and AC power point face side pin 1. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112437&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new DC/AC inverter. REFER to <a data-linkid="ID0EIJAE" data-for="414-05_s3p701982q0" data-procuid="n1260728" class="expand-link">Direct Current/Alternating Current (DC/AC) Inverter</a><span id="spanID0EIJAE"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new AC power point. REFER to <a data-linkid="ID0EVJAE" data-for="414-05_s3p702427q0" data-procuid="n1260727" class="expand-link">Alternating Current (AC) Power Point</a><span id="spanID0EVJAE"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-B" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test B: The DC/AC Inverter Does Not Operate Correctly — The AC Power Point LED Indicator is Never On 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','013')">13</a> , Power Distribution for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The DC/AC inverter receives 12 volts DC from the Battery Junction Box (BJB)
+       and the Body Control Module (BCM)
+       and is wired to chassis ground. The incoming DC power is internally converted to 60 Hz 110 volts AC power that is output to the AC power point. If a fault in the system is detected, the LED flashes when the ignition is ON. The LED is continuously illuminated if the system is operating correctly when the ignition is ON. The DC/AC inverter supplies 12V DC and ground to the LED along two circuits. 
+</p>
+        
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Fuse(s) 
+
+          </li>
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            DC/AC inverter 
+
+          </li>
+          <li>
+            AC power point 
+
+          </li>
+        </ul>
+        <a name="B" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST B : THE DC/AC INVERTER DOES NOT OPERATE CORRECTLY — THE AC POWER POINT LED INDICATOR IS NEVER ON 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multi-meter probes. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B1" data-ajax="false"></a><b>B1 
+                CHECK THE POWER SUPPLY CIRCUITS FOR VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  DC/AC Inverter <a href="javascript:connectorlinkwithpin('ED2','C2293A','')">C2293A</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between DC/AC inverter <a href="javascript:connectorlinkwithpin('ED2','C2293A','2')">C2293A</a> Pin 2, circuit CBP38 (GY/BU), harness side and ground and between DC/AC inverter <a href="javascript:connectorlinkwithpin('ED2','C2293A','4')">C2293A</a> Pin 4, circuit SBB33 (RD), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112203&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the voltages greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B2">B2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                VERIFY Body Control Module (BCM)
+       fuse 38 (10A) and the Battery Junction Box (BJB)
+       fuse 33 (40A) are OK. If OK, REPAIR the open or high resistance on the affected circuit(s). If not OK, REFER to the Wiring Diagrams manual to locate the possible cause of the circuit short. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B2" data-ajax="false"></a><b>B2 
+                CHECK THE GROUND CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between DC/AC inverter <a href="javascript:connectorlinkwithpin('ED2','C2293A','6')">C2293A</a> Pin 6, circuit GD138 (BK/WH), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112204&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B3">B3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit GD138 (BK/WH). TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B3" data-ajax="false"></a><b>B3 
+                CHECK THE LED CONTROL CIRCUITS FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  BJB Fuse 33 (40A) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  BCM Fuse 38 (10A) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  DC/AC Inverter <a href="javascript:connectorlinkwithpin('ED2','C2293B','')">C2293B</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  AC Power Point <a href="javascript:connectorlinkwithpin('ED2','C301','')">C301</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between AC power point <a href="javascript:connectorlinkwithpin('ED2','C301','6')">C301</a> Pin 6, circuit LYA03 (YE/VT), harness side and DC/AC inverter <a href="javascript:connectorlinkwithpin('ED2','C2293B','1')">C2293B</a> Pin 1, circuit LYA03 (YE/VT), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112438&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between AC power point <a href="javascript:connectorlinkwithpin('ED2','C301','4')">C301</a> Pin 4, circuit RYA03 (BU/BN), harness side and DC/AC inverter <a href="javascript:connectorlinkwithpin('ED2','C2293B','4')">C2293B</a> Pin 4, circuit RYA03 (BU/BN), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112439&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B4">B4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B4" data-ajax="false"></a><b>B4 
+                CHECK THE AC POWER POINT LED 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Test the diode between AC power point C301 pin 4, component side and AC power point C301 pin 6, component side in both directions. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0113496&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms in one direction and between 10-20 ohms in the opposite direction? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new DC/AC inverter. REFER to <a data-linkid="ID0ESVAE" data-for="414-05_s3p701982q0" data-procuid="n1260728" class="expand-link">Direct Current/Alternating Current (DC/AC) Inverter</a><span id="spanID0ESVAE"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new AC power point. REFER to <a data-linkid="ID0E6VAE" data-for="414-05_s3p702427q0" data-procuid="n1260727" class="expand-link">Alternating Current (AC) Power Point</a><span id="spanID0E6VAE"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-C" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test C: The DC/AC Inverter Does Not Operate Correctly — The AC Power Point Turns Off After 13 Minutes 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','013')">13</a> , Power Distribution for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The DC/AC inverter receives a signal from the Body Control Module (BCM)
+       over the Local Interconnect Network (LIN)
+       whenever the engine is running. If the DC/AC inverter does not receive this message for 13 minutes, the inverter stops supplying 110V to the power outlet and the green LED indicator flashes. The system can be reset by cycling the ignition from ON to OFF and back to ON, however the system only operates for another 13 minutes unless the signal is received from the <abbr title="Body Control Module">BCM</abbr>  that the engine is running. 
+</p>
+        
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            DC/AC inverter 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="C" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST C : THE DC/AC INVERTER DOES NOT OPERATE CORRECTLY — THE AC POWER POINT TURNS OFF AFTER 13 MINUTES 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multi-meter probes. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C1" data-ajax="false"></a><b>C1 
+                CHECK FOR BCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Connect the scan tool. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — <abbr title="Body Control Module">BCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Record any <abbr title="Body Control Module">BCM</abbr>  DTCs retrieved. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are U0100:87 or U0401:00 present in the <abbr title="Body Control Module">BCM</abbr> ? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EC2AE" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0EC2AE"></span> to diagnose the <abbr title="Body Control Module">BCM</abbr> . 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C2">C2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C2" data-ajax="false"></a><b>C2 
+                VERIFY THE COMPASS FUNCTION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Verify the compass functions correctly. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the compass function correctly? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C3">C3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EF4AE" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EF4AE"></span> to diagnose the compass. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C3" data-ajax="false"></a><b>C3 
+                CHECK THE LIN  COMMUNICATION CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280B','')">C2280B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  DC/AC Inverter <a href="javascript:connectorlinkwithpin('ED2','C2293A','')">C2293A</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280B','52')">C2280B</a> Pin 52, circuit VDN01 (BU/WH), harness side and DC/AC inverter <a href="javascript:connectorlinkwithpin('ED2','C2293A','5')">C2293A</a> Pin 5, circuit VDN01 (BU/WH), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112441&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new DC/AC inverter. REFER to <a data-linkid="ID0EMAAG" data-for="414-05_s3p701982q0" data-procuid="n1260728" class="expand-link">Direct Current/Alternating Current (DC/AC) Inverter</a><span id="spanID0EMAAG"></span> in this section. TEST the system for normal operation. 
+
+                <br>If the AC power point still turns off after 13 minutes when the engine is running, GO to <a data-ajax="false" href="#C4">C4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit VDN01 (BU/WH). TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C4" data-ajax="false"></a><b>C4 
+                CHECK THE BCM  FOR CORRECT OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280B','')">C2280B</a> for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  spread terminals. 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280B','')">C2280B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  DC/AC Inverter <a href="javascript:connectorlinkwithpin('ED2','C2293A','')">C2293A</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Make sure the connectors seat correctly, then operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+  
+
+

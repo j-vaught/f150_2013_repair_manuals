@@ -1,0 +1,2995 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="413-13" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="413-13 Parking Aid" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1501553" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>413-13 Parking Aid</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      03/14/2018</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Parking Aid" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Parking Aid
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('413-13','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-IV Digital Multimeter
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          
+            Vehicle Communication Module (VCM)
+       and Integrated Diagnostic System (IDS)
+       software with appropriate hardware, or equivalent scan tool
+          <br>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2574A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Flex Probe Kit
+          <br>NUD105-R025D or equivalent 
+
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">The parking aid sensors detect objects approximately 152 cm (60 in) from the rear of the vehicle, 50 cm (20 in) from the rear side of the vehicle, and 30 cm (12 in) above the ground. The Parking Aid Module (PAM)
+       calculates the distance to an object within the 170 degree semicircular area around the rear of the vehicle. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">A variable-rate warning tone is generated from a speaker attached to the <abbr title="Parking Aid Module">PAM</abbr> . The speaker increases its warning tone rate as the vehicle gets closer to an obstacle. When an object is detected within 30 cm (12 in) of the sensors, the warning tone becomes continuous. When the <abbr title="Parking Aid Module">PAM</abbr>  sounds the parking aid tone, it sends a volume cutback enabled message to the Body Control Module (BCM)
+       over the High Speed Controller Area Network (HS-CAN)
+      . The <abbr title="Body Control Module">BCM</abbr>  sends a message to the Audio Front Control Module (ACM)
+       over the Medium Speed Controller Area Network (MS-CAN)
+      . When the <abbr title="Audio Front Control Module">ACM</abbr>  receives the message, it reduces the speaker output so the parking aid tone can be heard. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">For vehicles that have a base audio system that is not on the Medium Speed Controller Area Network (MS-CAN)
+      , the audio speaker output does not reduce when the parking aid tone sounds. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The parking aid system is enabled when the ignition switch is in the RUN position and the transmission in reverse. The parking aid system is disabled if a fault is detected in 1 of the 4 sensors, the parking aid speaker, or the <abbr title="Parking Aid Module">PAM</abbr> . This is indicated by a parking aid disabled warning message in the message center. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The parking aid system is enabled and disabled through the message center, located in the Instrument Panel Cluster (IPC)
+      . 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">If a MyKey® restricted key is in the ignition cylinder, the parking aid menu is not available in the message center and cannot be deactivated. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">If the vehicle is equipped with an integrated electronic Trailer Brake Control (TBC)
+       module and a trailer with electric trailer brakes is connected to the vehicle, the parking aid system is disabled. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The <abbr title="Parking Aid Module">PAM</abbr>  communicates on the <abbr title="High Speed Controller Area Network">HS-CAN</abbr>  and can be diagnosed with a scan tool. The <abbr title="Parking Aid Module">PAM</abbr>  communicates with the scan tool, the <abbr title="Body Control Module">BCM</abbr> , the PCM and the <abbr title="Instrument Panel Cluster">IPC</abbr> . 
+</p>
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern. 
+
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect for obvious signs of electrical damage. 
+
+        <br><br>
+          <p class="singlespace"><b>
+             
+            
+            Visual Inspection Chart
+          </b></p>
+          <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+      <colgroup>
+        <col align="left">
+      </colgroup>
+            
+            <thead>
+              <tr>
+                <th align="center" valign="top">
+                  
+                    Electrical
+                   
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td valign="top">
+                  <ul type="disc">
+                    <li>
+                      
+                        Body Control Module (BCM)
+       fuse 34 (10A) 
+
+                    </li>
+                    <li>
+                      Wiring, terminals or connectors 
+
+                    </li>
+                    <li>
+                      
+                        Parking Aid Module (PAM)
+      
+                      
+                    </li>
+                    <li>
+                      Parking aid sensors 
+
+                    </li>
+                    <li>
+                      Parking aid speaker (integral to the <abbr title="Parking Aid Module">PAM</abbr> ) 
+
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><br>
+        <br>
+      </li>
+</ol>
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step. 
+
+      </li>
+</ol>
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Make sure to use the latest scan tool software release. 
+
+        </i></p>
+        If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC)
+      . 
+
+      </li>
+</ol>
+      <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          The Vehicle Communication Module (VCM)
+       LED prove-out confirms power and ground from the <abbr title="Data Link Connector">DLC</abbr>  are provided to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </i></p>
+        If the scan tool does not communicate with the <abbr title="Vehicle Communication Module">VCM</abbr> : 
+
+        <ul type="disc">
+      <li>
+          check the <abbr title="Vehicle Communication Module">VCM</abbr>  connection to the vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          check the scan tool connection to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0EAFAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EAFAC"></span>, No Power To The Scan Tool, to diagnose no power to the scan tool. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the scan tool does not communicate with the vehicle: 
+
+        <ul type="disc">
+      <li>
+          verify the ignition key is in the ON position. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          verify the scan tool operation with a known good vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0E4FAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E4FAC"></span>, The PCM Does Not Respond To The Scan Tool, to diagnose no response from the PCM. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the network test. 
+
+        <ul type="disc">
+      <li>
+          If the scan tool responds with no communication for one or more modules, refer to <a data-linkid="ID0EOGAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EOGAC"></span>. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          If the network test passes, retrieve and record the continuous memory DTCs. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Clear the continuous DTCs and carry out the self-test diagnostics for the <abbr title="Parking Aid Module">PAM</abbr> . 
+
+      </li>
+</ol>
+      <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the DTCs retrieved are related to the concern, go to DTC Charts. For all other DTCs, refer to the Diagnostic Trouble Code (DTC) Chart in <a data-linkid="ID0EMHAC" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0EMHAC"></span>. 
+
+      </li>
+</ol>
+      <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If no DTCs related to the concern are retrieved, GO to <a data-ajax="false" href="#SC1">Symptom Chart</a>. 
+
+      </li>
+</ol>
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            PID Chart 
+</b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+  </colgroup>
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                PID 
+
+              </th>
+              <th align="center" valign="top">
+                Description 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                LRI_DIST 
+
+              </td>
+              <td valign="top">
+                Left rear inner sensor distance to object 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                LRO_DIST 
+
+              </td>
+              <td valign="top">
+                Left rear outer sensor distance to object 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                RRI_DIST 
+
+              </td>
+              <td valign="top">
+                Right rear inner sensor distance to object 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                RRO_DIST 
+
+              </td>
+              <td valign="top">
+                Right rear outer sensor distance to object 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                TRANSGR 
+
+              </td>
+              <td valign="top">
+                Transmission gearshift (PRNDL) position 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>DTC Charts 
+</b></p>
+      <a name="table_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Parking Aid Module (PAM)
+       DTC Chart 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          This module utilizes a 5-character DTC followed by a 2-character failure type code. The failure type code provides information about specific fault conditions such as opens, or shorts to ground. Continuous Memory DTCs have an additional 2-character DTC status code suffix to assist in determining DTC history. 
+
+        </i></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                DTC 
+
+              </th>
+              <th align="center" valign="top">
+                Description 
+
+              </th>
+              <th align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                B1B44:01 
+
+              </td>
+              <td valign="top">
+                Right Rear Outer Sensor: General Electrical Failure 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1B44:96 
+
+              </td>
+              <td valign="top">
+                Right Rear Outer Sensor: Component Internal Failure 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1B46:01 
+
+              </td>
+              <td valign="top">
+                Right Rear Inner Sensor: General Electrical Failure 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1B46:96 
+
+              </td>
+              <td valign="top">
+                Right Rear Inner Sensor: Component Internal Failure 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1B48:01 
+
+              </td>
+              <td valign="top">
+                Left Rear Outer Sensor: General Electrical Failure 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1B48:96 
+
+              </td>
+              <td valign="top">
+                Left Rear Outer Sensor: Component Internal Failure 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1B50:01 
+
+              </td>
+              <td valign="top">
+                Left Rear Inner Sensor: General Electrical Failure 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1B50:96 
+
+              </td>
+              <td valign="top">
+                Left Rear Inner Sensor: Component Internal Failure 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1B52:12 
+
+              </td>
+              <td valign="top">
+                Rear Sounder-Park Aid: Circuit Short to Battery 
+
+              </td>
+              <td valign="top">
+                CLEAR the DTCs. REPEAT the self-test. If DTC B1B52:12 is recorded again, INSTALL a new Parking Aid Module (PAM)
+      . REFER to <a data-linkid="ID0EEFAE" data-for="413-13_s3p8777q0" data-procuid="n1275230" class="expand-link" xmlns:str="http://xsltsl.org/string">Parking Aid Module (PAM)</a><span id="spanID0EEFAE" xmlns:str="http://xsltsl.org/string"></span> in this section. REPEAT the self-test. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1B52:14 
+
+              </td>
+              <td valign="top">
+                Rear Sounder-Park Aid: Circuit Short to Ground or Open 
+
+              </td>
+              <td valign="top">
+                CLEAR the DTCs. REPEAT the self-test. If DTC B1B52:14 is recorded again, INSTALL a new <abbr title="Parking Aid Module" xmlns:str="http://xsltsl.org/string">PAM</abbr> . REFER to <a data-linkid="ID0EFGAE" data-for="413-13_s3p8777q0" data-procuid="n1275230" class="expand-link" xmlns:str="http://xsltsl.org/string">Parking Aid Module (PAM)</a><span id="spanID0EFGAE" xmlns:str="http://xsltsl.org/string"></span> in this section. REPEAT the self-test. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0155:87 
+
+              </td>
+              <td valign="top">
+                Lost Communication With Instrument Panel Cluster (IPC)
+       Control Module: Missing Message 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-C" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test C</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0294:87 
+
+              </td>
+              <td valign="top">
+                Lost Communication With Powertrain Control Monitor Module: Missing Message 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-D" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test D</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:41 
+
+              </td>
+              <td valign="top">
+                Control Module: General Check Sum Failure 
+
+              </td>
+              <td valign="top">
+                CLEAR the DTCs. REPEAT the self-test. If DTC U3000:41 is recorded again. INSTALL a new <abbr title="Parking Aid Module" xmlns:str="http://xsltsl.org/string">PAM</abbr> . REFER to <a data-linkid="ID0E4IAE" data-for="413-13_s3p8777q0" data-procuid="n1275230" class="expand-link" xmlns:str="http://xsltsl.org/string">Parking Aid Module (PAM)</a><span id="spanID0E4IAE" xmlns:str="http://xsltsl.org/string"></span> in this section. CLEAR all DTCs. REPEAT the self-test. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:46 
+
+              </td>
+              <td valign="top">
+                Control Module: Calibration/Parameter Memory Failure 
+
+              </td>
+              <td valign="top">
+                CLEAR the DTCs. REPEAT the self-test. If DTC U3000:46 is recorded again, INSTALL a new <abbr title="Parking Aid Module" xmlns:str="http://xsltsl.org/string">PAM</abbr> . REFER to <a data-linkid="ID0E5JAE" data-for="413-13_s3p8777q0" data-procuid="n1275230" class="expand-link" xmlns:str="http://xsltsl.org/string">Parking Aid Module (PAM)</a><span id="spanID0E5JAE" xmlns:str="http://xsltsl.org/string"></span> in this section. REPEAT the self-test. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:54 
+
+              </td>
+              <td valign="top">
+                Control Module: Missing Calibration 
+
+              </td>
+              <td valign="top">
+                The <abbr title="Parking Aid Module" xmlns:str="http://xsltsl.org/string">PAM</abbr>  needs to be configured. CARRY OUT Programmable Module Installation (PMI)
+       for the <abbr title="Parking Aid Module" xmlns:str="http://xsltsl.org/string">PAM</abbr> . REFER to <a data-linkid="ID0ELLAE" data-sectnum="418-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          418-01</a><span id="spanID0ELLAE" xmlns:str="http://xsltsl.org/string"></span>. CLEAR all DTCs. REPEAT the self-test. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart 
+</b></p>
+      <a name="SC1" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>No communication with the Parking Aid Module (PAM)
+      </li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Fuse 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Parking Aid Module">PAM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REFER to <a data-linkid="ID0ENNAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0ENNAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The parking aid is inoperative/does not operate correctly 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Parking aid sensor alignment 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Parking Aid Module">PAM</abbr> 
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Rear bumper 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-A">GO to Pinpoint Test A</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Continuous or intermittent tone when no obstacles or fault codes are present (certain obstacles may not be detected or recognized due to their shape, size or material) 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Dirty or iced over parking aid sensor(s) 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>CLEAN the rear bumper and sensors with high-pressure water. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Parking aid sensor bezel(s) or parking aid sensor(s) locked into the rear bumper incorrectly 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Incorrectly mounted sensor and/or grommet 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Parking aid sensors are not aligned correctly 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REMOVE and correctly INSTALL the parking aid sensor(s) and or bezel(s) as necessary. REFER to <a data-linkid="ID0E1QAE" data-for="413-13_s3p8491q0" data-procuid="n1196668" class="expand-link">Parking Aid Sensor</a><span id="spanID0E1QAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Parking aid sensor(s) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Parking Aid Module">PAM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>CARRY OUT the azimuth system check and elevation system check. REFER to <a data-linkid="ID0EDSAE" data-for="413-13_s5p8461q0" data-procuid="n1133466" class="expand-link">Azimuth System Check</a><span id="spanID0EDSAE"></span> and <a data-linkid="ID0EHSAE" data-for="413-13_s5p8530q0" data-procuid="n1133467" class="expand-link">Elevation System Check</a><span id="spanID0EHSAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The audio does not reduce when the parking aid tone sounds 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Communication network concern 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Instrument Panel Cluster (IPC)
+      
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Audio Front Control Module (ACM)
+      
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>RETRIEVE and REPAIR all related <abbr title="Instrument Panel Cluster">IPC</abbr>  and <abbr title="Audio Front Control Module">ACM</abbr>  DTCs. For <abbr title="Instrument Panel Cluster">IPC</abbr>  DTCs, REFER to <a data-linkid="ID0EOUAE" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EOUAE"></span>. For <abbr title="Audio Front Control Module">ACM</abbr>  DTCs, Refer to the appropriate section in Group 415 for the procedure.</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The reverse parking aid menu is not available in the message center and cannot be deactivated 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>A MyKey® restricted key is in use 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>The parking aid disable feature is not available when a MyKey® restricted key is in use. This is normal operation. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The message center displays the "Rear Parking Aid Off" selection message and cannot be selected ON 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>The vehicle is equipped with a Trailer Brake Control (TBC)
+       module and a trailer with electric trailer brakes is connected to the vehicle. 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>This is normal operation. The parking aid is selected OFF when a Trailer Brake Control (TBC)
+       module and a trailer with electric trailer brakes is connected. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_5" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-A" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test A: The Parking Aid Is Inoperative/Does Not Operate Correctly 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The parking aid system is enabled when the ignition switch is in the RUN position and the reverse gear is selected. The Parking Aid Module (PAM)
+       receives a reverse gear input message from the PCM over the High Speed Controller Area Network (HS-CAN)
+      . The <abbr title="Parking Aid Module">PAM</abbr>  supplies reference voltage and signal return to the parking aid sensors. The <abbr title="Parking Aid Module">PAM</abbr>  receives an input signal from each individual parking aid sensor. The system can be disabled through the message center which is part of the Instrument Panel Cluster (IPC)
+      . 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Parking aid sensor alignment 
+
+          </li>
+          <li>
+            
+              <abbr title="Parking Aid Module">PAM</abbr> 
+            
+          </li>
+          <li>
+            Rear bumper 
+
+          </li>
+        </ul>
+        <a name="A" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST A : THE PARKING AID IS INOPERATIVE/DOES NOT OPERATE CORRECTLY 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A1" data-ajax="false"></a><b>A1 
+                CHECK THE DTCS FROM BOTH THE CONTINUOUS AND ON-DEMAND PAM  SELF-TESTS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the <abbr title="Parking Aid Module">PAM</abbr>  DTCs from the continuous and on-demand self-tests. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any <abbr title="Parking Aid Module">PAM</abbr>  DTCs recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to DTC Charts in this section. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A2">A2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A2" data-ajax="false"></a><b>A2 
+                CHECK THE MESSAGE CENTER FOR CORRECT OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                While observing the message center, disable and enable the parking aid system. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the message center display REAR PARK AID OFF when the parking aid system is disabled, and display REAR PARK AID ON when the parking aid system is enabled? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A3">A3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EC4AE" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EC4AE"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A3" data-ajax="false"></a><b>A3 
+                CHECK FOR CORRECT REVERSE GEAR INPUT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Apply the parking brake. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Select REVERSE. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Parking Aid Module">PAM</abbr>  DataLogger 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Monitor the <abbr title="Parking Aid Module">PAM</abbr>  TRANSGR PID. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the PID read REVERSE (transmission in reverse)? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A4">A4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A5">A5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A4" data-ajax="false"></a><b>A4 
+                CHECK THE PARKING AID SENSORS FOR CORRECT ALIGNMENT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                If the vehicle was in a rear end collision, the parking aid sensors may not be aligned correctly. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Check the bumper for correct alignment. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Carry out the azimuth system check. Refer to <a data-linkid="ID0E2AAG" data-for="413-13_s5p8461q0" data-procuid="n1133466" class="expand-link">Azimuth System Check</a><span id="spanID0E2AAG"></span> in this section. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Carry out the elevation system check. Refer to <a data-linkid="ID0EFBAG" data-for="413-13_s5p8530q0" data-procuid="n1133467" class="expand-link">Elevation System Check</a><span id="spanID0EFBAG"></span> in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the parking aid system pass both system checks? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REALIGN or INSTALL a new bumper cover. REFER to <a data-linkid="ID0ECCAG" data-sectnum="501-19" class="section-link">Section 
+          501-19</a><span id="spanID0ECCAG"></span>. If the vehicle was in a rear end collision, additional body work may be required to bring the parking aid sensors into correct alignment. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A5" data-ajax="false"></a><b>A5 
+                CHECK FOR CORRECT PAM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect the <abbr title="Parking Aid Module">PAM</abbr>  connector. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect the <abbr title="Parking Aid Module">PAM</abbr>  connector and make sure it seats correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and determine if the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Parking Aid Module">PAM</abbr> . REFER to <a data-linkid="ID0EAFAG" data-for="413-13_s3p8777q0" data-procuid="n1275230" class="expand-link">Parking Aid Module (PAM)</a><span id="spanID0EAFAG"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-B" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test B: DTCs B1B44:01, 96; B1B46:01, 96; B1B48:01, 96; B1B50:01, 96 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','131')">131</a> , Parking Aid for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The Parking Aid Module (PAM)
+       supplies a reference voltage and signal return to the parking aid sensors. When an object is present behind the vehicle, the reference voltage to the <abbr title="Parking Aid Module">PAM</abbr>  changes based on how close the object is from the rear of the vehicle. The input signal from the sensors determines the distance of the object to the vehicle. A fault condition occurs when the <abbr title="Parking Aid Module">PAM</abbr>  detects an open in the parking aid sensor circuits or the parking aid sensor input signal is shorted to ground. 
+</p>
+        
+        <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_3" xmlns:str="http://xsltsl.org/string"></a>
+          <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+            
+            
+            <thead>
+              <tr>
+                <th align="center" valign="top">
+                  DTC Description 
+
+                </th>
+                <th align="center" valign="top">
+                  Fault Trigger Conditions 
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1B44:01 — Right Rear Outer Sensor: General Electrical Failure 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  A continuous and on-demand DTC that sets when the right rear outer parking aid sensor circuits are shorted to battery voltage, open or the sensor signal line is shorted to ground. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1B44:96 — Right Rear Outer Sensor: Component Internal Failure 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  A continuous and on-demand DTC that sets when the <abbr title="Parking Aid Module" xmlns:str="http://xsltsl.org/string">PAM</abbr>  detects an internal failure to the right rear outer parking aid sensor. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1B46:01 — Right Rear Inner Sensor: General Electrical Failure 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  A continuous and on-demand DTC that sets when the right rear inner parking aid sensor circuits are shorted to battery voltage, open or the sensor signal line is shorted to ground. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1B46:96 — Right Rear Inner Sensor: Component Internal Failure 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  A continuous and on-demand DTC that sets when the <abbr title="Parking Aid Module" xmlns:str="http://xsltsl.org/string">PAM</abbr>  detects an internal failure to the right rear inner parking aid sensor. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1B48:01 — Left Rear Outer Sensor: General Electrical Failure 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  A continuous and on-demand DTC that sets when the left rear outer parking aid sensor circuits are shorted to battery voltage, open or the sensor signal line is shorted to ground. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1B48:96 — Left Rear Outer Sensor: Component Internal Failure 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  A continuous and on-demand DTC that sets when the <abbr title="Parking Aid Module" xmlns:str="http://xsltsl.org/string">PAM</abbr>  detects an internal failure to the left rear outer parking aid sensor. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1B50:01 — Left Rear Inner Sensor: General Electrical Failure 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  A continuous and on-demand DTC that sets when the left rear inner parking aid sensor circuits are shorted to battery voltage, open or the sensor signal line is shorted to ground. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1B50:96 — Left Rear Inner Sensor: Component Internal Failure 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  A continuous and on-demand DTC that sets when the <abbr title="Parking Aid Module" xmlns:str="http://xsltsl.org/string">PAM</abbr>  detects an internal failure to the left rear inner parking aid sensor. 
+
+                </td>
+              </tr>
+            </tbody>
+          </table><br>
+        <br xmlns:str="http://xsltsl.org/string">
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            
+              <abbr title="Parking Aid Module">PAM</abbr> 
+            
+          </li>
+          <li>
+            Parking aid sensor(s) 
+
+          </li>
+          <li>
+            Parking aid bumper harness 
+
+          </li>
+        </ul>
+        <a name="B" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST B : DTCS B1B44:01, 96; B1B46:01, 96; B1B48:01, 96; B1B50:01, 96 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B1" data-ajax="false"></a><b>B1 
+                RETRIEVE THE DTCS FROM BOTH THE CONTINUOUS AND ON-DEMAND PAM  SELF-TESTS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the <abbr title="Parking Aid Module">PAM</abbr>  DTCs from the continuous and on-demand self-tests. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are multiple DTCs recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B2">B2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                For DTC B1B44:01, B1B44:96, B1B46:01, B1B46:96, B1B48:01, B1B48:96, B1B50:01 or B1B50:96, GO to <a data-ajax="false" href="#B3">B3</a>. 
+
+                <br>For all other DTCs, REFER to DTC Charts in this section. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B2" data-ajax="false"></a><b>B2 
+                CHECK THE BUMPER WIRING HARNESS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Inspect the bumper wiring harness for opens, shorts, grounds, or corrosion. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the bumper wiring harness OK? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B3">B3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR or INSTALL a new bumper wiring harness. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B3" data-ajax="false"></a><b>B3 
+                CHECK THE SENSOR CIRCUITRY FOR OPENS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Suspect Parking Aid Sensor <a href="javascript:connectorlinkwithpin('ED2','C4009','')">C4009</a>, <a href="javascript:connectorlinkwithpin('ED2','C4010','')">C4010</a>, <a href="javascript:connectorlinkwithpin('ED2','C4011','')">C4011</a> or <a href="javascript:connectorlinkwithpin('ED2','C4012','')">C4012</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Parking Aid Module">PAM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2023','')">C2023</a>
+                  .
+              </li>
+      </ul>
+              
+                
+                Measure the resistance between the <abbr title="Parking Aid Module">PAM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2023','')">C2023</a>, harness side and the suspect parking aid sensor, harness side as follows: 
+
+                <br><br><a name="table_4"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+        <colgroup>
+          <col align="center">
+          <col align="center">
+          <col align="center">
+          <col align="center">
+          <col align="center">
+        </colgroup>
+                    
+                    
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          DTC 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Rear Sensor 
+
+                        </th>
+                        <th align="center" valign="top">
+                          PAM Connector- Pin 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Sensor Connector- Pin 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top" style="border-bottom:none;border-top:none">
+                          B1B44:01, 96 
+
+                        </td>
+                        <td valign="top" style="border-bottom:none;border-top:none">
+                          RH outer 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2023','9')">C2023</a> Pin 9
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4011','1')">C4011</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          VMP17 (YE/OG) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                           
+                        </td>
+                        <td valign="top">
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2023','13')">C2023</a> Pin 13
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4011','3')">C4011</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          RMP07 (GN/WH) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top" style="border-bottom:none;border-top:none">
+                          B1B46:01, 96 
+
+                        </td>
+                        <td valign="top" style="border-bottom:none;border-top:none">
+                          RH inner 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2023','10')">C2023</a> Pin 10
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4012','1')">C4012</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          VMP16 (YE/GY) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                           
+                        </td>
+                        <td valign="top">
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2023','13')">C2023</a> Pin 13
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4012','3')">C4012</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          RMP07 (GN/WH) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top" style="border-bottom:none;border-top:none">
+                          B1B48:01, 96 
+
+                        </td>
+                        <td valign="top" style="border-bottom:none;border-top:none">
+                          LH outer 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2023','12')">C2023</a> Pin 12
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4009','1')">C4009</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          VMP15 (YE/GN) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                           
+                        </td>
+                        <td valign="top">
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2023','13')">C2023</a> Pin 13
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4009','3')">C4009</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          RMP07 (GN/WH) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top" style="border-bottom:none;border-top:none">
+                          B1B50:01, 96 
+
+                        </td>
+                        <td valign="top" style="border-bottom:none;border-top:none">
+                          LH inner 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2023','11')">C2023</a> Pin 11
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4010','1')">C4010</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          VMP14 (WH/OG) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                           
+                        </td>
+                        <td valign="top">
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2023','13')">C2023</a> Pin 13
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4010','3')">C4010</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          RMP07 (GN/WH) 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=n0102257&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B4">B4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B4" data-ajax="false"></a><b>B4 
+                CHECK THE SENSOR CIRCUITRY FOR SHORTS TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the suspect parking aid sensor, harness side and ground as follows: 
+
+                <br><br><a name="table_5"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          DTC 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Rear Sensor 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Connector- Pin 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          B1B44:01, 96 
+
+                        </td>
+                        <td valign="top">
+                          RH outer 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4011','1')">C4011</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          VMP17 (YE/OG) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          B1B46:01, 96 
+
+                        </td>
+                        <td valign="top">
+                          RH inner 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4012','1')">C4012</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          VMP16 (YE/GY) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          B1B48:01, 96 
+
+                        </td>
+                        <td valign="top">
+                          LH outer 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4009','1')">C4009</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          VMP15 (YE/GN) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          B1B50:01, 96 
+
+                        </td>
+                        <td valign="top">
+                          LH inner 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4010','1')">C4010</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          VMP14 (WH/OG) 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=n0102258&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B5">B5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B5" data-ajax="false"></a><b>B5 
+                CHECK THE PARKING AID SENSOR CIRCUITRY FOR A SHORT TOGETHER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the suspect parking aid sensor pins, harness side as follows: 
+
+                <br><br><a name="table_6"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          DTC 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Parking Aid Sensor 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Connector- Pin/Circuit 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Connector- Pin/Circuit 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          B1B44:01, 96 
+
+                        </td>
+                        <td valign="top">
+                          RH outer 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4011','1')">C4011</a> Pin 1
+                           
+                          <p class="singlespace"></p>VMP17 (YE/OG) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4011','3')">C4011</a> Pin 3
+                           
+                          <p class="singlespace"></p>RMP07 (GN/WH) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          B1B46:01, 96 
+
+                        </td>
+                        <td valign="top">
+                          RH inner 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4012','1')">C4012</a> Pin 1
+                           
+                          <p class="singlespace"></p>VMP16 (YE/GY) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4012','3')">C4012</a> Pin 3
+                           
+                          <p class="singlespace"></p>RMP07 (GN/WH) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          B1B48:01, 96 
+
+                        </td>
+                        <td valign="top">
+                          LH outer 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4009','1')">C4009</a> Pin 1
+                           
+                          <p class="singlespace"></p>VMP15 (YE/GN) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4009','3')">C4009</a> Pin 3
+                           
+                          <p class="singlespace"></p>RMP07 (GN/WH) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          B1B50:01, 96 
+
+                        </td>
+                        <td valign="top">
+                          LH inner 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4010','1')">C4010</a> Pin 1
+                           
+                          <p class="singlespace"></p>VMP14 (WH/OG) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4010','3')">C4010</a> Pin 3
+                           
+                          <p class="singlespace"></p>RMP07 (GN/WH) 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0120897&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B6">B6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuits in question. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B6" data-ajax="false"></a><b>B6 
+                CHECK THE SENSOR CIRCUITRY FOR SHORTS TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the suspect parking aid sensor, harness side and ground as follows: 
+
+                <br><br><a name="table_7"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          DTC 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Rear Sensor 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Connector- Pin 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          B1B44:01, 96 
+
+                        </td>
+                        <td valign="top">
+                          RH outer 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4011','1')">C4011</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          VMP17 (YE/OG) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          B1B46:01, 96 
+
+                        </td>
+                        <td valign="top">
+                          RH inner 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4012','1')">C4012</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          VMP16 (YE/GY) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          B1B48:01, 96 
+
+                        </td>
+                        <td valign="top">
+                          LH outer 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4009','1')">C4009</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          VMP15 (YE/GN) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          B1B50:01, 96 
+
+                        </td>
+                        <td valign="top">
+                          LH inner 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4010','1')">C4010</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          VMP14 (WH/OG) 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0082178&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If all of the parking aid sensors recorded DTCs, GO to <a data-ajax="false" href="#B7">B7</a>. 
+
+                <br>If one or more parking aid sensor(s) recorded DTCs, INSTALL a new sensor(s) for the one in question. REFER to <a data-linkid="ID0EU2BG" data-for="413-13_s3p8491q0" data-procuid="n1196668" class="expand-link">Parking Aid Sensor</a><span id="spanID0EU2BG"></span> in this section. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B7" data-ajax="false"></a><b>B7 
+                CHECK FOR CORRECT PAM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect the <abbr title="Parking Aid Module">PAM</abbr>  connector. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect the <abbr title="Parking Aid Module">PAM</abbr>  connector and make sure it seats correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and determine if the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Parking Aid Module">PAM</abbr> . REFER to <a data-linkid="ID0ER5BG" data-for="413-13_s3p8777q0" data-procuid="n1275230" class="expand-link">Parking Aid Module (PAM)</a><span id="spanID0ER5BG"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-C" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test C: DTC U0155:87 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U0155:87 (Lost Communication With Instrument Panel Cluster (IPC)
+       Control Module: Missing Message) — the Parking Aid Module (PAM)
+       set this DTC if data messages received from the Instrument Panel Cluster (IPC)
+       over the High Speed Controller Area Network (HS-CAN)
+       are missing for 5 seconds. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Module communication 
+
+          </li>
+          <li>
+            
+              <abbr title="Instrument Panel Cluster">IPC</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Parking Aid Module">PAM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="C" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST C : DTC U0155:87 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="C1" data-ajax="false"></a><b>C1 
+                VERIFY CUSTOMER CONCERN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Verify that there is an observable symptom present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is an observable symptom present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C2">C2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C2" data-ajax="false"></a><b>C2 
+                CHECK THE COMMUNICATION NETWORK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Network Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Carry out the network test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the <abbr title="Instrument Panel Cluster">IPC</abbr>  pass the network test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C3">C3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EHFAI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EHFAI"></span>, The <abbr title="Instrument Panel Cluster">IPC</abbr>  Does Not Respond To The Scan Tool. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C3" data-ajax="false"></a><b>C3 
+                CHECK THE IPC  FOR DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for recorded <abbr title="Instrument Panel Cluster">IPC</abbr>  DTCs from the self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any DTCs recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EAHAI" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EAHAI"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C4">C4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C4" data-ajax="false"></a><b>C4 
+                RECHECK THE PAM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait 10 seconds. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Repeat the <abbr title="Parking Aid Module">PAM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0155:87 still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C5">C5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The DTC may have been set due to high network traffic or intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C5" data-ajax="false"></a><b>C5 
+                CHECK FOR DTC U0155 OR U0155:00 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve the continuous memory DTCs from all modules. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0155 or U0155:00 set in the <abbr title="Audio Front Control Module">ACM</abbr>  or the ABS module? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Instrument Panel Cluster">IPC</abbr> . REFER to <a data-linkid="ID0EHLAI" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EHLAI"></span>. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Parking Aid Module">PAM</abbr> . REFER to <a data-linkid="ID0E2LAI" data-for="413-13_s3p8777q0" data-procuid="n1275230" class="expand-link">Parking Aid Module (PAM)</a><span id="spanID0E2LAI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-D" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test D: DTC U0294:87 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U0294:87 (Lost Communication With Powertrain Control Monitor Module: Missing Message) — the Parking Aid Module (PAM)
+       sets this DTC if data messages received from the PCM over the High Speed Controller Area Network (HS-CAN)
+       are missing for 5 seconds. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Module communication 
+
+          </li>
+          <li>
+            
+              <abbr title="Parking Aid Module">PAM</abbr> 
+            
+          </li>
+          <li>
+            PCM 
+
+          </li>
+        </ul>
+        <a name="D" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST D : DTC U0294:87 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="D1" data-ajax="false"></a><b>D1 
+                VERIFY CUSTOMER CONCERN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Verify that there is an observable symptom present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is an observable symptom present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D2">D2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D2" data-ajax="false"></a><b>D2 
+                CHECK THE COMMUNICATION NETWORK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Network Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Carry out the network test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the PCM pass the network test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D3">D3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EORAI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EORAI"></span>, The PCM Does Not Respond To The Scan Tool. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D3" data-ajax="false"></a><b>D3 
+                CHECK THE PCM FOR DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for recorded PCM DTCs from the self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any DTCs recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0ETSAI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0ETSAI"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D4">D4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D4" data-ajax="false"></a><b>D4 
+                RECHECK THE PAM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait 10 seconds. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Repeat the <abbr title="Parking Aid Module">PAM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0294:87 still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D5">D5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The DTC may have been set due to high network traffic or intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D5" data-ajax="false"></a><b>D5 
+                CHECK FOR DTC U0100 OR U0100:00 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve the continuous memory DTCs from all modules. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0100 or U0100:00 set in the ABS module or the <abbr title="Instrument Panel Cluster">IPC</abbr> ? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new PCM. REFER to <a data-linkid="ID0EUWAI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EUWAI"></span>. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Parking Aid Module">PAM</abbr> . REFER to <a data-linkid="ID0EIXAI" data-for="413-13_s3p8777q0" data-procuid="n1275230" class="expand-link">Parking Aid Module (PAM)</a><span id="spanID0EIXAI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+  
+
+

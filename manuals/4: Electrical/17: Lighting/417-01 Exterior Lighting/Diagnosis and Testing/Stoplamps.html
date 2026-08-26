@@ -1,0 +1,2798 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="417-01" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="417-01 Exterior Lighting" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n2252424" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>417-01 Exterior Lighting</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      10/13/2016</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Stoplamps" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Stoplamps
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('417-01','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-1V Digital Multimeter
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=st2834a&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          
+            Vehicle Communication Module (VCM)
+       and Integrated Diagnostic System (IDS)
+       software with appropriate hardware, or equivalent scan tool
+          <br>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2574A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Flex Probe Kit
+          <br>NUD105-R025D or equivalent 
+
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">The Body Control Module (BCM)
+       monitors the input from the stoplamp switch. When the brake pedal is applied, voltage is routed to the <abbr title="Body Control Module">BCM</abbr>  and the PCM. The <abbr title="Body Control Module">BCM</abbr>  then supplies voltage to the stoplamps. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">Aside from the stoplamp operation, when the brake pedal is applied, voltage passes through the <abbr title="Body Control Module">BCM</abbr>  fuse 31 (5A) to the Trailer Brake Control (TBC)
+       module and a separate circuit for customer use. 
+</p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          Field-Effect Transistor (FET)
+       Protection 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">A Field-Effect Transistor (FET)
+       is a type of transistor that, when used with module software, monitors and controls current flow on module outputs. The <abbr title="Field-Effect Transistor">FET</abbr>  protection strategy prevents module damage in the event of excessive current flow. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr>  utilizes a <abbr title="Field-Effect Transistor">FET</abbr>  protective circuit strategy for many of its outputs (such as a headlamp output circuit). Output loads (current level) are monitored for excessive current (typically short circuits) and are shut down when a fault event is detected. A short circuit DTC is stored at the fault event and a cumulative counter is started. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When the demand for the output is no longer present, the module resets the <abbr title="Field-Effect Transistor">FET</abbr>  protection, allowing the circuit to function. If the circuit is still shorted the next time the driver requests a circuit to activate that has been shut down by a previous short (<abbr title="Field-Effect Transistor">FET</abbr>  protection), the <abbr title="Field-Effect Transistor">FET</abbr>  protection shuts off the circuit again and the cumulative counter advances. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When the excessive circuit load occurs often enough, the module shuts down the output until a repair procedure is carried out. Each <abbr title="Field-Effect Transistor">FET</abbr>  protected circuit has 3 predefined levels of short circuit tolerance based on the harmful effect of each circuit fault on the <abbr title="Field-Effect Transistor">FET</abbr>  and the ability of the <abbr title="Field-Effect Transistor">FET</abbr>  to withstand it. A module lifetime level of fault events is established based upon the durability of the <abbr title="Field-Effect Transistor">FET</abbr> . If the total tolerance level is determined to be 600 fault events, the 3 predefined levels would be 200, 400 and 600 fault events. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When a tolerance level is reached, the short circuit DTC that was stored on the first failure cannot be cleared by the clear the continuous DTCs command. The module does not allow this code to be cleared or the circuit restored to normal operation until a successful self-test proves that the fault has been repaired. After the self-test has successfully completed (no on-demand DTCs present), DTC U1000:00 and the associated DTC (the DTC related to the shorted circuit) automatically clears and the circuit function returns. The module never resets the fault event counter to zero and continues to advance the fault event counter as short circuit fault events occur. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">If the number of short circuit fault events reach the third level, then DTCs U1000:00 and U3000:49 set along with the associated short circuit DTC. DTC U3000:49 cannot be cleared and the module must be replaced after the repair. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr> <abbr title="Field-Effect Transistor">FET</abbr>  protected output circuits for the stoplamps system are the high mounted stoplamp, and the LH and RH rear stoplamp output circuits. 
+</p>
+      
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern. 
+
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect for obvious signs of mechanical or electrical damage. 
+
+        <br><br>
+          <p class="singlespace"><b>
+             
+            
+            Visual Inspection Chart
+          </b></p>
+          <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+      <colgroup>
+        <col align="left">
+        <col align="left">
+      </colgroup>
+            
+            
+            <thead>
+              <tr>
+                <th align="center" valign="top">
+                  
+                    Mechanical
+                   
+                </th>
+                <th align="center" valign="top">
+                  
+                    Electrical
+                   
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td valign="top">
+                  <ul type="disc">
+                    <li>
+                      Stoplamp switch 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  <ul type="disc">
+                    <li>
+                      
+                        Battery Junction Box (BJB)
+       fuse 46 (10A) (stoplamp switch) 
+
+                    </li>
+                    <li>
+                      
+                        Body Control Module (BCM)
+       fuse(s): 
+
+                      <ul style="list-style-type: square">
+                  <li>
+                        13 (15A) (RH rear stoplamp) 
+
+                      </li>
+                </ul>
+                      <ul style="list-style-type: square">
+                  <li>
+                        14 (15A) (LH rear stoplamp) 
+
+                      </li>
+                </ul>
+                      <ul style="list-style-type: square">
+                  <li>
+                        15 (15A) (high mounted stoplamp) 
+
+                      </li>
+                </ul>
+                    </li>
+                    <li>
+                      Bulb 
+
+                    </li>
+                    <li>
+                      Bulb socket 
+
+                    </li>
+                    <li>
+                      Wiring, terminals or connectors 
+
+                    </li>
+                    <li>
+                      Rear lamp assembly 
+
+                    </li>
+                    <li>
+                      High mounted stoplamp 
+
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><br>
+        <br>
+      </li>
+</ol>
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step. 
+
+      </li>
+</ol>
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Make sure to use the latest scan tool software release. 
+
+        </i></p>
+        If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC)
+      . 
+
+      </li>
+</ol>
+      <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          The Vehicle Communication Module (VCM)
+       LED prove-out confirms power and ground from the <abbr title="Data Link Connector">DLC</abbr>  are provided to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </i></p>
+        If the scan tool does not communicate with the <abbr title="Vehicle Communication Module">VCM</abbr> : 
+
+        <ul type="disc">
+      <li>
+          check the <abbr title="Vehicle Communication Module">VCM</abbr>  connection to the vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          check the scan tool connection to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0EXGAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EXGAC"></span>, No Power To The Scan Tool, to diagnose no power to the scan tool. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the scan tool does not communicate with the vehicle: 
+
+        <ul type="disc">
+      <li>
+          verify the ignition is on. 
+
+          <ul style="list-style-type: square">
+          <li>
+            The air bag warning indicator prove-out confirms ignition on (other indicators may not prove ignition on). If the ignition does not turn on, refer to <a data-linkid="ID0EMHAC" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EMHAC"></span> to diagnose no power in run. 
+
+          </li>
+        </ul>
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          verify the scan tool operation with a known good vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0E6HAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E6HAC"></span>, The PCM Does Not Respond To The Scan Tool, to diagnose no response from the PCM. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the network test. 
+
+        <ul type="disc">
+      <li>
+          If the scan tool responds with no communication for one or more modules, refer to <a data-linkid="ID0EQIAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EQIAC"></span>. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          If the network test passes, retrieve and record the continuous memory DTCs. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Clear the continuous DTCs and carry out the self-test diagnostics for the <abbr title="Body Control Module">BCM</abbr> . 
+
+      </li>
+</ol>
+      <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the DTCs retrieved are related to the concern, refer to <a data-linkid="ID0EOJAC" data-for="417-01_s4p265q0" data-procuid="n2252423" class="expand-link">Diagnostic Trouble Code (DTC) Chart</a><span id="spanID0EOJAC"></span> in this section. For all other DTCs, refer to the Diagnostic Trouble Code (DTC) Chart in <a data-linkid="ID0ESJAC" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0ESJAC"></span>. 
+
+      </li>
+</ol>
+      <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If no DTCs related to the concern are retrieved, GO to <a data-ajax="false" href="#STOPLAMPS">Symptom Chart</a>. 
+
+      </li>
+</ol>
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart 
+</b></p>
+      <a name="STOPLAMPS" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>All the stoplamps are inoperative 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Fuse 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Stoplamp switch 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Body Control Module (BCM)
+      
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>VERIFY the bulbs are OK. If OK, <a data-ajax="false" href="#PS2-I">GO to Pinpoint Test I</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>One or more stoplamps are inoperative 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Fuse 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Bulb socket 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>High mounted stoplamp 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Body Control Module">BCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>VERIFY the bulbs are OK. If OK, <a data-ajax="false" href="#PS2-J">GO to Pinpoint Test J</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The stoplamp(s) are on continuously 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Stoplamp switch 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Trailer Brake Control (TBC)
+       module 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>PCM 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Body Control Module">BCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-K">GO to Pinpoint Test K</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-I" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test I: All The Stoplamps Are Inoperative 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','090')">90</a> , Turn Signal/Stop/Hazard Lamps for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The stoplamp switch is supplied voltage from the Battery Junction Box (BJB)
+       fuse 46 (10A). When the brake pedal is applied, the stoplamp switch routes voltage to the Body Control Module (BCM)
+      , indicating the brake pedal is applied. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr>  provides voltage to all the stoplamps (on independent circuits) when it detects the brake pedal is applied. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Fuse 
+
+          </li>
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Stoplamp switch 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="I" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST I : ALL THE STOPLAMPS ARE INOPERATIVE 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="I1" data-ajax="false"></a><b>I1 
+                CHECK FOR VOLTAGE TO THE STOPLAMP SWITCH 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Stoplamp Switch <a href="javascript:connectorlinkwithpin('ED2','C278','')">C278</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the stoplamp switch <a href="javascript:connectorlinkwithpin('ED2','C278','4')">C278</a> Pin 4, circuit SBB46 (BN/RD), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0104362&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#I2">I2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                VERIFY the <abbr title="Battery Junction Box">BJB</abbr>  fuse 46 (10A) is OK. If OK, REPAIR circuit SBB46 (BN/RD) for an open. TEST the system for normal operation. If not OK, REFER to the Wiring Diagrams manual to identify the possible causes of the circuit short. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="I2" data-ajax="false"></a><b>I2 
+                BYPASS THE STOPLAMP SWITCH 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Connect a fused jumper wire between the stoplamp switch <a href="javascript:connectorlinkwithpin('ED2','C278','4')">C278</a> Pin 4, circuit SBB46 (BN/RD), harness side and the stoplamp switch <a href="javascript:connectorlinkwithpin('ED2','C278','1')">C278</a> Pin 1, circuit CCB08 (VT/WH), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0038807&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the stoplamps illuminated? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REMOVE the jumper wire. INSTALL a new stoplamp switch. REFER to <a data-linkid="ID0EJGAE" data-for="417-01_s3p701760q0" data-procuid="n1134859" class="expand-link">Stoplamp Switch</a><span id="spanID0EJGAE"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                LEAVE the jumper wire connected. GO to <a data-ajax="false" href="#I3">I3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="I3" data-ajax="false"></a><b>I3 
+                CHECK THE STOPLAMP SWITCH SIGNAL TO THE BCM </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280B','')">C2280B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280B','28')">C2280B</a> Pin 28, circuit CCB08 (VT/WH), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112019&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REMOVE the jumper wire. GO to <a data-ajax="false" href="#I4">I4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REMOVE the jumper wire. REPAIR circuit CCB08 (VT/WH) for an open. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="I4" data-ajax="false"></a><b>I4 
+                CHECK FOR CORRECT BCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect all the <abbr title="Body Control Module">BCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all the <abbr title="Body Control Module">BCM</abbr>  connectors and make sure they seat correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-J" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test J: One Or More Stoplamps Are Inoperative 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','090')">90</a> , Turn Signal/Stop/Hazard Lamps for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the brake pedal is applied, the stoplamp switch routes voltage to the Body Control Module (BCM)
+      , indicating the brake pedal is applied. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr>  provides voltage to all the stoplamps (on independent circuits) when it detects the brake pedal is applied. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The LH stoplamps share the fused power source with the LH front turn lamp and the LH exterior mirror turn lamp. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The RH stoplamps share the fused power source with the RH front turn lamp and the RH exterior mirror turn lamp. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The high mounted stoplamp shares the fused power source with the reversing lamps. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The rear stoplamps share a common ground circuit. 
+</p>
+        <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+          <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+            
+            
+            <thead>
+              <tr>
+                <th align="center" valign="top">
+                  DTC Description 
+
+                </th>
+                <th align="center" valign="top">
+                  Fault Trigger Conditions 
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1115:11 — High Mounted Stop Lamp Control: Circuit Short To Ground 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  detects a short to ground from the high mounted stoplamp voltage supply circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B132B:11 — Left Stop/Turn Lamp: Circuit Short To Ground 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  detects a short to ground from the LH rear stop/turn lamp voltage supply circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B132B:15 — Left Stop/Turn Lamp: Circuit Short To Battery or Open 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  detects an open from the LH rear stop/turn lamp voltage supply circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B132C:11 — Right Stop/Turn Lamp: Circuit Short To Ground 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  detects a short to ground from the RH rear stop/turn lamp voltage supply circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B132C:15 — Right Stop/Turn Lamp: Circuit Short To Battery or Open 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  detects an open from the RH rear stop/turn lamp voltage supply circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      U1000:00 — Solid State Driver Protection Active - Driver Disabled: No Sub Type Information 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  has temporarily shut down the output driver. <b xmlns:str="http://xsltsl.org/string">The module has temporarily disabled a stoplamp output because an excessive current draw exists (such as a short to ground). The <abbr title="Body Control Module">BCM</abbr>  cannot enable the stoplamp output until the cause of the short is corrected, the DTCs have been cleared and a successful self-test is run.</b>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      U3000:49 — Control Module: Internal Electronic Failure 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  has permanently shut down the output driver. <b xmlns:str="http://xsltsl.org/string">The module has permanently disabled a stoplamp output because an excessive current draw fault (such as a short to ground) has exceeded the limits that the <abbr title="Body Control Module">BCM</abbr>  can withstand. CORRECT the cause of the excessive current draw before installing a new <abbr title="Body Control Module">BCM</abbr> .</b>
+                </td>
+              </tr>
+            </tbody>
+          </table><br>
+        <br xmlns:str="http://xsltsl.org/string">
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Fuse 
+
+          </li>
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Bulb socket 
+
+          </li>
+          <li>
+            High mounted stoplamp 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="J" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST J : ONE OR MORE STOPLAMPS ARE INOPERATIVE 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td><b>NOTE: </b><i>
+            Make sure the bulb is good before continuing diagnostics. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="J1" data-ajax="false"></a><b>J1 
+                DETERMINE THE INOPERATIVE STOPLAMP 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Apply the brake pedal and observe the stoplamps. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are all the stoplamps inoperative? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  <a data-ajax="false" href="#PS2-I">GO to Pinpoint Test I</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                For the high mounted stoplamp, GO to <a data-ajax="false" href="#J2">J2</a>. 
+
+              <br>
+                If an individual rear stoplamp is inoperative, GO to <a data-ajax="false" href="#J7">J7</a>. 
+
+              <br>
+                If both LH and RH rear stoplamps are inoperative, REPAIR circuit GD117 (BK) for an open. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="J2" data-ajax="false"></a><b>J2 
+                CHECK FOR VOLTAGE TO THE HIGH MOUNTED STOPLAMP 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  High Mounted Stoplamp <a href="javascript:connectorlinkwithpin('ED2','C904','')">C904</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                While applying the brake pedal, measure the voltage between the high mounted stoplamp <a href="javascript:connectorlinkwithpin('ED2','C904','3')">C904</a> Pin 3, circuit CLS52 (BN), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0117374&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#J3">J3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                VERIFY the <abbr title="Body Control Module">BCM</abbr>  fuse 15 (15A) is OK. If OK, GO to <a data-ajax="false" href="#J4">J4</a>. If not OK, REFER to the Wiring Diagrams manual to identify the possible causes of the circuit short. 
+
+              <br>
+                If no DTCs are present, TEST the system for normal operation. 
+
+              <br>
+                If DTC U1000:00 is present, CLEAR the DTCs <b>and</b> REPEAT the self-test <b>(required to enable the stoplamp output driver if DTC U1000:00 is present).</b> TEST the system for normal operation. 
+
+              <br>
+                If DTC U3000:49 is present, 
+INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="J3" data-ajax="false"></a><b>J3 
+                CHECK THE HIGH MOUNTED STOPLAMP GROUND CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                While applying the brake pedal, measure the voltage between the high mounted stoplamp <a href="javascript:connectorlinkwithpin('ED2','C904','3')">C904</a> Pin 3, circuit CLS52 (BN), harness side and the high mounted stoplamp <a href="javascript:connectorlinkwithpin('ED2','C904','1')">C904</a> Pin 1, circuit GD139 (BK/YE), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0117376&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new high mounted stoplamp. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit GD139 (BK/YE) for an open. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="J4" data-ajax="false"></a><b>J4 
+                CARRY OUT THE BCM  ON-DEMAND SELF-TEST AND RECHECK FOR VOLTAGE TO THE HIGH MOUNTED STOPLAMP 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs and repeat the <abbr title="Body Control Module">BCM</abbr>  on-demand self-test. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                While applying the brake pedal, measure the voltage between the high mounted stoplamp <a href="javascript:connectorlinkwithpin('ED2','C904','3')">C904</a> Pin 3, circuit CLS52 (BN), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0117374&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new high mounted stoplamp. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#J5">J5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="J5" data-ajax="false"></a><b>J5 
+                CHECK THE HIGH MOUNTED STOPLAMP OUTPUT CIRCUIT FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280D','')">C2280D</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the high mounted stoplamp <a href="javascript:connectorlinkwithpin('ED2','C904','3')">C904</a> Pin 3, circuit CLS52 (BN), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0117377&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#J6">J6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CLS52 (BN) for a short to ground. After the repair: 
+
+              <br>
+                If no DTCs are present, TEST the system for normal operation. 
+
+              <br>
+                If DTC U1000:00 is present, CLEAR the DTCs <b>and</b> REPEAT the self-test <b>(required to enable the stoplamp output driver if DTC U1000:00 is present).</b> TEST the system for normal operation. 
+
+              <br>
+                If DTC U3000:49 is present, 
+INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="J6" data-ajax="false"></a><b>J6 
+                CHECK THE HIGH MOUNTED STOPLAMP OUTPUT CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the high mounted stoplamp <a href="javascript:connectorlinkwithpin('ED2','C904','3')">C904</a> Pin 3, circuit CLS52 (BN), harness side and the <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280D','14')">C2280D</a> Pin 14, circuit CLS52 (BN), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0117378&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#J12">J12</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CLS52 (BN) for an open. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="J7" data-ajax="false"></a><b>J7 
+                CHECK FOR VOLTAGE TO THE REAR STOPLAMP 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  Inoperative Rear Lamp 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                While applying the brake pedal, measure the voltage between the inoperative lamp, harness side and ground as follows: 
+
+                <br><br><a name="table_2"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                    
+                    
+                    
+                    <thead valign="middle">
+                      <tr>
+                        <th align="center" valign="top">
+                          Inoperative Lamp 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Connector-Pin 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          LH upper 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4112','3')">C4112</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          CLS18 (GY/BN) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          LH lower 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4113','3')">C4113</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          CLS18 (GY/BN) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          RH upper 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4114','3')">C4114</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          CLS19 (VT/OG) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          RH lower 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4115','3')">C4115</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          CLS19 (VT/OG) 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0064675&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#J8">J8</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                VERIFY the <abbr title="Body Control Module">BCM</abbr>  fuse 14 (15A) (LH stoplamps) or fuse 13 (15A) (RH stoplamps) is OK. If OK, GO to <a data-ajax="false" href="#J9">J9</a>. If not OK, REFER to the Wiring Diagrams manual to identify the possible causes of the circuit short. 
+
+              <br>
+                If no DTCs are present, TEST the system for normal operation. 
+
+              <br>
+                If DTC U1000:00 is present, CLEAR the DTCs <b>and</b> REPEAT the self-test <b>(required to enable the stoplamp output driver if DTC U1000:00 is present).</b> TEST the system for normal operation. 
+
+              <br>
+                If DTC U3000:49 is present, 
+INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="J8" data-ajax="false"></a><b>J8 
+                CHECK THE REAR STOPLAMP GROUND CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                While applying the brake pedal, measure the voltage between the inoperative lamp, harness side and ground as follows: 
+
+                <br><br><a name="table_3"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                    
+                    
+                    
+                    <thead valign="middle">
+                      <tr>
+                        <th align="center" valign="top">
+                          Inoperative Lamp 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Connector-Pin 
+
+                          <p class="singlespace"></p>Circuit 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Connector-Pin 
+
+                          <p class="singlespace"></p>Circuit 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          LH upper 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4112','3')">C4112</a> Pin 3
+                           
+                          <p class="singlespace"></p>CLS18 (GY/BN) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4112','1')">C4112</a> Pin 1
+                           
+                          <p class="singlespace"></p>GD117 (BK) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          LH lower 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4113','3')">C4113</a> Pin 3
+                           
+                          <p class="singlespace"></p>CLS18 (GY/BN) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4113','1')">C4113</a> Pin 1
+                           
+                          <p class="singlespace"></p>GD117 (BK) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          RH upper 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4114','3')">C4114</a> Pin 3
+                           
+                          <p class="singlespace"></p>CLS19 (VT/OG) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4114','1')">C4114</a> Pin 1
+                           
+                          <p class="singlespace"></p>GD117 (BK) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          RH lower 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4115','3')">C4115</a> Pin 3
+                           
+                          <p class="singlespace"></p>CLS19 (VT/OG) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4115','1')">C4115</a> Pin 1
+                           
+                          <p class="singlespace"></p>GD117 (BK) 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0090078&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new bulb socket. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit GD176 (BK/WH) for an open. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="J9" data-ajax="false"></a><b>J9 
+                CARRY OUT THE BCM  ON-DEMAND SELF-TEST AND RECHECK FOR VOLTAGE TO THE REAR STOPLAMP 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                If both lamps are inoperative on the same side, disconnect one lamp at a time when carrying out this test. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs and repeat the <abbr title="Body Control Module">BCM</abbr>  on-demand self-test. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                While applying the brake pedal, measure the voltage between the inoperative lamp, harness side and ground as follows: 
+
+                <br><br><a name="table_4"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                    
+                    
+                    
+                    <thead valign="middle">
+                      <tr>
+                        <th align="center" valign="top">
+                          Inoperative Lamp 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Connector-Pin 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          LH upper 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4112','3')">C4112</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          CLS18 (GY/BN) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          LH lower 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4113','3')">C4113</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          CLS18 (GY/BN) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          RH upper 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4114','3')">C4114</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          CLS19 (VT/OG) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          RH lower 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4115','3')">C4115</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          CLS19 (VT/OG) 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0064675&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new bulb socket. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#J10">J10</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="J10" data-ajax="false"></a><b>J10 
+                CHECK THE REAR STOPLAMP VOLTAGE SUPPLY CIRCUIT FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                It is important to disconnect the corresponding trailer tow stop/turn relay for correct test results. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280D','')">C2280D</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Corresponding Trailer Tow Stop/Turn Relay 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280D','12')">C2280D</a> Pin 12 (LH stoplamps), circuit CLS18 (GY/BN), harness side and ground; or between the <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280D','15')">C2280D</a> Pin 15 (RH stoplamps), circuit CLS19 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112023&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#J11">J11</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CLS18 (GY/BN) (LH stoplamps) or circuit CLS19 (VT/OG) (RH stoplamps) for a short to ground. After the repair: 
+
+              <br>
+                If no DTCs are present, TEST the system for normal operation. 
+
+              <br>
+                If DTC U1000:00 is present, CLEAR the DTCs <b>and</b> REPEAT the self-test <b>(required to enable the stoplamp output driver if DTC U1000:00 is present).</b> TEST the system for normal operation. 
+
+              <br>
+                If DTC U3000:49 is present, 
+INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="J11" data-ajax="false"></a><b>J11 
+                CHECK THE REAR STOPLAMP VOLTAGE SUPPLY CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the inoperative rear lamp, harness side and the <abbr title="Body Control Module">BCM</abbr> , harness side as follows: 
+
+                <br><br><a name="table_5"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                    
+                    
+                    
+                    <thead valign="middle">
+                      <tr>
+                        <th align="center" valign="top">
+                          Inoperative Lamp 
+
+                          <p class="singlespace"></p>Connector-Pin 
+
+                        </th>
+                        <th align="center" valign="top">
+                          
+                            <abbr title="Body Control Module">BCM</abbr> 
+                           
+                          <p class="singlespace"></p>Connector-Pin 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          LH upper 
+
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4112','3')">C4112</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2280D','12')">C2280D</a> Pin 12
+                           
+                        </td>
+                        <td valign="top">
+                          CLS18 (GY/BN) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          LH lower 
+
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4113','3')">C4113</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2280D','12')">C2280D</a> Pin 12
+                           
+                        </td>
+                        <td valign="top">
+                          CLS18 (GY/BN) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          RH upper 
+
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4114','3')">C4114</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2280D','15')">C2280D</a> Pin 15
+                           
+                        </td>
+                        <td valign="top">
+                          CLS19 (VT/OG) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          RH lower 
+
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C4115','3')">C4115</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2280D','15')">C2280D</a> Pin 15
+                           
+                        </td>
+                        <td valign="top">
+                          CLS19 (VT/OG) 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0117363&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#J12">J12</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CLS18 (GY/BN) (LH stoplamps) or circuit CLS19 (VT/OG) (RH stoplamps) for an open. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="J12" data-ajax="false"></a><b>J12 
+                CHECK FOR CORRECT BCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect all the <abbr title="Body Control Module">BCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all the <abbr title="Body Control Module">BCM</abbr>  connectors and make sure they seat correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-K" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test K: The Stoplamp(s) Are On Continuously 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','090')">90</a> , Turn Signal/Stop/Hazard Lamps for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the brake pedal is applied, the stoplamp switch routes voltage to the PCM and to the Body Control Module (BCM)
+       to indicate that the brake pedal is applied. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr>  provides voltage to all the stoplamps (on independent circuits) when it detects that the brake pedal is applied. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The voltage from the stoplamp switch also passes through the <abbr title="Body Control Module">BCM</abbr>  fuse 31 (5A) and is routed to the Trailer Brake Control (TBC)
+       module on one circuit and for a customer access use on another circuit. 
+</p>
+        <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_6" xmlns:str="http://xsltsl.org/string"></a>
+          <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+            
+            
+            <thead>
+              <tr>
+                <th align="center" valign="top">
+                  DTC Description 
+
+                </th>
+                <th align="center" valign="top">
+                  Fault Trigger Conditions 
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B132B:15 — Left Stop/Turn Lamp: Circuit Short To Battery or Open 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  detects a short to voltage from the LH rear stop/turn lamp voltage supply circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B132C:15 — Right Stop/Turn Lamp: Circuit Short To Battery or Open 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  detects a short to voltage from the RH rear stop/turn lamp voltage supply circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      C0040:12 — Brake Pedal Switch "A": Circuit Short To Battery 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  detects a short to voltage from the stoplamp switch input circuit. 
+
+                </td>
+              </tr>
+            </tbody>
+          </table><br>
+        <br xmlns:str="http://xsltsl.org/string">
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Stoplamp switch 
+
+          </li>
+          <li>
+            
+              <abbr title="Trailer Brake Control">TBC</abbr>  module 
+
+          </li>
+          <li>
+            PCM 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="K" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST K : THE STOPLAMP(S) ARE ON CONTINUOUSLY 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="K1" data-ajax="false"></a><b>K1 
+                DETERMINE IF ALL THE STOPLAMPS ARE ON 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Observe the stoplamps. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are all the stoplamps on? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#K3">K3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#K2">K2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="K2" data-ajax="false"></a><b>K2 
+                CHECK THE STOPLAMP VOLTAGE SUPPLY CIRCUITS FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280D','')">C2280D</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does any stoplamp continue to illuminate? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                If the LH rear lamps continue to illuminate, REPAIR circuit CLS18 (GY/BN) for a short to voltage. TEST the system for normal operation. 
+
+              <br>
+                If the RH rear lamps continue to illuminate, REPAIR circuit CLS19 (VT/OG) for a short to voltage. TEST the system for normal operation. 
+
+              <br>
+                If the high mounted stoplamp continues to illuminate, REPAIR circuit CLS52 (BN) for a short to voltage. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#K9">K9</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="K3" data-ajax="false"></a><b>K3 
+                CHECK THE STOPLAMP SWITCH 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  Stoplamp Switch <a href="javascript:connectorlinkwithpin('ED2','C278','')">C278</a>.
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the stoplamps continue to illuminate? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#K4">K4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new stoplamp switch. REFER to <a data-linkid="ID0EIXBG" data-for="417-01_s3p701760q0" data-procuid="n1134859" class="expand-link">Stoplamp Switch</a><span id="spanID0EIXBG"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="K4" data-ajax="false"></a><b>K4 
+                CHECK THE PCM 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1551','')">C1551</a> (3.5L), <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a> (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a> (5.0L/6.2L) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the stoplamps continue to illuminate? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                If the vehicle is equipped with an aftermarket <abbr title="Trailer Brake Control">TBC</abbr>  module, GO to <a data-ajax="false" href="#K5">K5</a>. 
+
+              <br>
+                If the vehicle is not equipped with an aftermarket <abbr title="Trailer Brake Control">TBC</abbr>  module, GO to <a data-ajax="false" href="#K6">K6</a>. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#K8">K8</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="K5" data-ajax="false"></a><b>K5 
+                CHECK THE TBC  MODULE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Trailer Brake Control">TBC</abbr>  Module <a href="javascript:connectorlinkwithpin('ED2','C2142','')">C2142</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the stoplamps continue to illuminate? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#K6">K6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Trailer Brake Control">TBC</abbr>  module. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="K6" data-ajax="false"></a><b>K6 
+                CHECK THE CUSTOMER ACCESS CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280F','')">C2280F</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the stoplamps continue to illuminate? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#K7">K7</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CBP31 (BU/OG) for a short to voltage. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="K7" data-ajax="false"></a><b>K7 
+                CHECK THE STOPLAMP SWITCH INPUT AND TBC  MODULE BRAKE INPUT CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280B','')">C2280B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280B','28')">C2280B</a> Pin 28, circuit CCB08 (VT/WH), harness side and ground; and between the <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280B','4')">C2280B</a> Pin 4, circuit CBP31 (BU/OG), harness side and ground 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0117379&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR circuit CCB08 (VT/WH) or circuit CBP31 (BU/OG) for a short to voltage as necessary. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#K9">K9</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="K8" data-ajax="false"></a><b>K8 
+                CHECK FOR CORRECT PCM OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect all the PCM connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all the PCM connectors and make sure they seat correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new PCM. REFER to <a data-linkid="ID0EPEAI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EPEAI"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="K9" data-ajax="false"></a><b>K9 
+                CHECK FOR CORRECT BCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect all the <abbr title="Body Control Module">BCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all the <abbr title="Body Control Module">BCM</abbr>  connectors and make sure they seat correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+  
+
+

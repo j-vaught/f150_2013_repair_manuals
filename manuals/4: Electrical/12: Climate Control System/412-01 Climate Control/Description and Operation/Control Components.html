@@ -1,0 +1,319 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="412-01" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="412-01 Climate Control" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Description and Operation" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1493551" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>412-01 Climate Control</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Description and Operation</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      08/30/2012</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Control Components" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Control Components
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('412-01','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Control System Logic 
+</b></p>
+      
+        <p xmlns:str="http://xsltsl.org/string"><b>A/C Request 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">For vehicles equipped with <abbr title="Electronic Manual Temperature Control">EMTC</abbr>  base system with 4 blower motor speed positions, when A/C button is pressed, a message is sent from the HVAC module over the <abbr title="Medium Speed Controller Area Network">MS-CAN</abbr>  bus to the <abbr title="Body Control Module">BCM</abbr> , then from the <abbr title="Body Control Module">BCM</abbr>  through the <abbr title="High Speed Controller Area Network">HS-CAN</abbr>  bus to the PCM. 
+</p>
+      
+      <p xmlns:str="http://xsltsl.org/string">For vehicles equipped with <abbr title="Electronic Manual Temperature Control">EMTC</abbr>  non touch 4.2" display (<abbr title="Front Control/Display Interface Module">FCDIM</abbr> ) system (with 7 blower motor speed positions), when A/C is requested by pressing the A/C button on the <abbr title="Front Controls Interface Module">FCIM</abbr> , the A/C request message is sent over the <abbr title="Medium Speed Controller Area Network">MS-CAN</abbr>  bus to the HVAC module that A/C has been selected. The HVAC module then sends an A/C request message over the <abbr title="Medium Speed Controller Area Network">MS-CAN</abbr>  bus to the <abbr title="Body Control Module">BCM</abbr> , then from the <abbr title="Body Control Module">BCM</abbr>  through the <abbr title="High Speed Controller Area Network">HS-CAN</abbr>  bus to the PCM. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string"> For vehicles equipped with 8" touchscreen, when A/C is requested by touching the <abbr title="Front Display Interface Module">FDIM</abbr> , a message is sent from the <abbr title="Accessory Protocol Interface Module">APIM</abbr>  over the <abbr title="Medium Speed Controller Area Network">MS-CAN</abbr>  bus to the HVAC module. The HVAC module then sends an A/C request message over the <abbr title="Medium Speed Controller Area Network">MS-CAN</abbr>  bus to the <abbr title="Body Control Module">BCM</abbr> , then from the <abbr title="Body Control Module">BCM</abbr>  through the <abbr title="High Speed Controller Area Network">HS-CAN</abbr>  bus to the PCM. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">Voltage is provided to the A/C clutch relay coil and switch contacts from <abbr title="Battery Junction Box">BJB</abbr> . When A/C is requested and A/C line pressures allow, a ground is provided to the A/C clutch relay coil from the PCM, energizing the A/C clutch relay. When the PCM energizes the relay, voltage is supplied to the A/C compressor clutch field coil from the relay. Ground is supplied for the A/C compressor clutch field coil. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">An accurate evaporator temperature is critical for compressor engagement. The PCM uses the temperature measurement to turn the A/C compressor off before the evaporator temperatures are cold enough to freeze the condensation on the evaporator core. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">When an A/C request is received by the PCM, the A/C compressor clutch will only be engaged through the A/C clutch relay if all of the following conditions are met: 
+</p>
+      <ul type="disc" xmlns:str="http://xsltsl.org/string">
+        <li>
+          The PCM does not detect excessively high or low refrigerant pressure from the A/C pressure transducer. 
+
+        </li>
+        <li>
+          The PCM does not detect excessively high engine coolant temperature. 
+
+        </li>
+        <li>
+          The PCM does not detect an ambient air temperature below -1°C (30°F). 
+
+        </li>
+        <li>
+          The PCM has not detected a <abbr title="Wide Open Throttle">WOT</abbr>  condition. 
+
+        </li>
+        <li>
+          The HVAC module does not detect an evaporator discharge air temperature below 2°C (36°F). 
+
+        </li>
+      </ul>
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>
+        <abbr title="Electronic Manual Temperature Control">EMTC</abbr>  — Base 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">All customer commands for the <abbr title="Electronic Manual Temperature Control">EMTC</abbr>  base climate control system come through the HVAC control head. The <abbr title="Electronic Manual Temperature Control">EMTC</abbr>  base system heats or cools the vehicle depending on the HVAC control panel selection. The <abbr title="Electronic Manual Temperature Control">EMTC</abbr>  base system has 4 blower motor speed positions. 
+</p>
+      <ul type="disc" xmlns:str="http://xsltsl.org/string">
+        <li>
+          During A/C operation, the system reduces the relative humidity of the air inside the vehicle. 
+
+        </li>
+        <li>
+          The control panel selection determines heating or cooling, air distribution and enables blower motor operation. 
+
+        </li>
+        <li>
+          The temperature control setting determines the outlet air temperature. 
+
+        </li>
+        <li>
+          The blower motor switch varies the blower motor speed. 
+
+        </li>
+        <li>
+          A/C compressor operation. 
+
+        </li>
+      </ul>
+      <p xmlns:str="http://xsltsl.org/string">The HVAC module is mounted to the center instrument panel finish panel below the <abbr title="Audio Front Control Module">ACM</abbr> . 
+</p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Control System Inputs 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The temperature control selector setting determines air temperature. Movement of the temperature display from COOL (blue) to WARM (red) causes a corresponding movement of the temperature blend door and determines the discharge air temperature that the air distribution system will maintain. The temperature control selector is an integral part of the HVAC module and cannot be installed separately. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The airflow mode setting determines air discharge location. Pressing each airflow mode selector button causes a corresponding movement of the airflow mode doors and determines the air discharge location. The airflow mode selector buttons are an integral part of the HVAC module and cannot be installed separately. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The A/C request button determines A/C compressor operation, except when the airflow mode selector is in the OFF, MAX A/C or DEFROST mode. The A/C request button is an integral part of the HVAC module and cannot be installed separately. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The recirculated air request button can select recirculated air in any mode except DEFROST, and fresh air in any mode except MAX A/C or OFF. The recirculated air request button is an integral part of the HVAC module and cannot be installed separately. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The rear defog button signals activation of the heated backlight. The rear defog button is an integral part of the HVAC module and cannot be installed separately. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The blower motor speed setting controls blower motor speed by adding or bypassing resistors in the blower motor resistor in all modes except OFF. The blower motor speed selector is an integral part of the HVAC module and cannot be installed separately. 
+</p>
+      
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Control System Outputs 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Electronic Manual Temperature Control">EMTC</abbr>  base system has 4 control system outputs. 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Blower Motor Speed 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The HVAC module blower motor speed selector varies the blower motor ground circuit resistance by adding or bypassing series resistance in the blower motor resistor. Increased resistance lowers the blower motor speed, and lowered resistance increases blower motor speed. When the blower motor is in the HI (4) position, the blower motor resistor is bypassed. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The blower motor resistor is located on the heater core and evaporator core housing behind the glove compartment. 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Temperature Blend Door Position 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The temperature blend door actuator moves the temperature blend door on command from the HVAC module. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The temperature blend door actuator contains a reversible electric motor and a potentiometer. The potentiometer circuit consists of a 5-volt reference signal connected to one end of a variable resistor, and a signal ground connected to the other. A signal circuit is connected to a contact wiper, which is driven along the variable resistor by the actuator shaft. The signal to the HVAC module from the contact wiper indicates the position of the temperature blend door. The HVAC module powers the actuator motor to move the temperature blend door to the desired position. The vehicle occupants use the temperature selector knob to set the desired position. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">On the <abbr title="Electronic Manual Temperature Control">EMTC</abbr>  system, the temperature blend door actuator is located on the top of the heater core and evaporator core housing. 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Airflow Mode Door Position 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The airflow mode door actuator uses a cam and lever assembly to position the defrost/panel/floor airflow mode doors on command from the HVAC module. The airflow mode door actuator contains a reversible electric motor and potentiometer. The potentiometer allows the HVAC module to monitor the position of the airflow mode doors. The potentiometer circuit consists of a 5-volt reference signal connected to one end of a variable resistor, and a signal ground connected to the other. A signal circuit is connected to a contact wiper, which is driven along the variable resistor by the actuator shaft. The signal to the HVAC module from the contact wiper indicates the position of the airflow mode doors. The HVAC module powers the actuator motor to move the airflow mode doors to the desired position. The vehicle occupants use the mode selector buttons to set the desired position. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The airflow mode door actuator is located on the heater core and evaporator core housing to the right of the steering column. The HVAC module powers the actuator motor to move the airflow mode doors to the desired position. The desired position is set by the vehicle occupants using the mode selector buttons. 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Air Inlet Mode Door Position 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The air inlet mode door actuator moves the air inlet door between the fresh and RECIRC positions on command from the HVAC module. The air inlet mode door actuator contains a reversible electric motor and potentiometer. The potentiometer allows the HVAC module to monitor the position of the air inlet door. The potentiometer circuit consists of a 5-volt reference signal connected to one end of a variable resistor, and a signal ground connected to the other. A signal circuit is connected to a contact wiper, which is driven along the variable resistor by the actuator shaft. The signal to the HVAC module from the contact wiper indicates the position of the air inlet door. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The air inlet mode door actuator is located on the air inlet duct behind the glove compartment. The HVAC module powers the actuator motor to move the air inlet door to the desired position. Under certain conditions, the air inlet door may stop at intermediate positions to provide a mix of fresh and recirculated air to meet cooling/heating requirements. The air inlet mode door actuator will automatically engage when ambient temperature is above 75°F, once per ignition cycle when in Panel or Panel/Floor modes. 
+</p>
+      
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>HVAC Module — Remote Mount 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">The <abbr title="Electronic Automatic Temperature Control">EATC</abbr>  dual zone and the <abbr title="Electronic Manual Temperature Control">EMTC</abbr>  4.2 inch display systems use a remote HVAC module that is separate from the control interface. For details on the HVAC module communication, REFER to Control System Logic. The HVAC module also controls the outputs for the rear window defrost and heated seats. The HVAC module utilizes Field-Effect Transistor (FET) protective circuit strategy for its actuator outputs. Output load (current level) is monitored for excessive current (typically short circuits) and is shut down (turns off the voltage or ground provided by the module) when a fault event is detected. A short circuit DTC is stored at the fault event and a cumulative counter is started. When the demand for the output is no longer present, the module resets the FET circuit protection to allow the circuit to function. The next time the driver requests a circuit to activate that has been shut down by a previous short (FET protection) and the circuit is still shorted, the FET protection shuts off the circuit again and the cumulative counter advances. When the excessive circuit load occurs often enough, the module shuts down the output until a repair procedure is carried out. The FET protected circuit has 3 predefined levels of short circuit tolerance based on the harmful effect of each circuit fault on the FET and the ability of the FET to withstand it. A module lifetime level of fault events is established based upon the durability of the FET. If the total tolerance level is determined to be 600 fault events, the 3 predefined levels would be 200, 400 and 600 fault events. When each tolerance level is reached, the short circuit DTC that was stored on the first failure cannot be cleared by a command to clear the DTCs. The module does not allow the DTC to be cleared or the circuit to be restored to normal operation until a successful self-test proves that the fault has been repaired. After the self-test has successfully completed (no on-demand DTCs present), DTC U1000:00 and the associated DTC (the DTC related to the shorted circuit) automatically clears and the circuit function returns. When each level is reached, the DTC associated with the short circuit sets along with DTC U1000:00. These DTCs can be cleared using the module self-test, then the Clear DTC operation on the scan tool. The module never resets the fault event counter to zero and continues to advance the fault event counter as short circuit fault events occur. If the number of short circuit fault events reach the third level, then DTCs U1000:00 and U3000:49 set along with the associated short circuit DTC. DTC U3000:49 cannot be cleared and a new module must be installed after the repair. The HVAC requires PMI when it is replaced. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The <abbr title="Electronic Automatic Temperature Control">EATC</abbr>  dual zone and the <abbr title="Electronic Manual Temperature Control">EMTC</abbr>  4.2 inch display systems use a remote HVAC module that is separate from the control interface. The <abbr title="Electronic Manual Temperature Control">EMTC</abbr>  with 4.2 inch display system has 7 blower motor speed positions. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The HVAC module analyzes input from the following sources: 
+</p>
+      <ul type="disc" xmlns:str="http://xsltsl.org/string">
+        <li>
+          Temperature, airflow direction, blower, A/C and RECIRC selection (made by the vehicle occupants) 
+
+        </li>
+        <li>
+          In-vehicle temperature and humidity sensor 
+
+        </li>
+        <li>
+          
+            <abbr title="Ambient Air Temperature">AAT</abbr>  sensor 
+
+        </li>
+        <li>
+          Autolamp/Sunload sensor (solar radiation sensor, only on dual zone system) 
+
+        </li>
+        <li>
+          Vehicle speed 
+
+        </li>
+        <li>
+          Engine coolant temperature 
+
+        </li>
+      </ul>
+      <p xmlns:str="http://xsltsl.org/string">Using these inputs, the HVAC module determines the correct conditions for the following outputs: 
+</p>
+      <ul type="disc" xmlns:str="http://xsltsl.org/string">
+        <li>
+          A/C compressor operation 
+
+        </li>
+        <li>
+          Blower speed 
+
+        </li>
+        <li>
+          Driver side and passenger side (if equipped) temperature blend door positions 
+
+        </li>
+        <li>
+          Defrost/panel/floor airflow mode door position 
+
+        </li>
+        <li>
+          Air inlet door position 
+
+        </li>
+      </ul>
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Control System Inputs 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">Both <abbr title="Electronic Automatic Temperature Control">EATC</abbr>  dual zone system and the <abbr title="Electronic Manual Temperature Control">EMTC</abbr>  4.2 inch display without touchscreen system have remote mounted HVAC modules. 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>HVAC Module — Without Touchscreen System 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Vehicles equipped with the non touchscreen 4.2 inch display use a remote HVAC module that is separate from the control interface. This <abbr title="Electronic Manual Temperature Control">EMTC</abbr>  system has 7 blower motor speed positions. The <abbr title="Front Controls Interface Module">FCIM</abbr>  provides the interface for the vehicle occupants to control the climate control system. When selections are made, the <abbr title="Front Controls Interface Module">FCIM</abbr>  communicates the selections to the HVAC module through the <abbr title="Medium Speed Controller Area Network">MS-CAN</abbr> . The remote HVAC module controls the climate control system based on the <abbr title="Front Controls Interface Module">FCIM</abbr>  selections. 
+</p>
+        
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>HVAC Module — With Touchscreen System 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Vehicles equipped with the touchscreen <abbr title="Electronic Automatic Temperature Control">EATC</abbr>  dual zone system use a remote HVAC module that is separate from the control interface. The <abbr title="Front Display Interface Module">FDIM</abbr>  provides the touchscreen interface for the vehicle occupants to control the climate control system. When selections are made, the <abbr title="Front Controls Interface Module">FCIM</abbr>  communicates the selections to the HVAC module over the <abbr title="Medium Speed Controller Area Network">MS-CAN</abbr> . The remote HVAC module controls the climate control system based on the <abbr title="Front Display Interface Module">FDIM</abbr>  selections, or automatically controls the climate control system in the AUTO mode. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The remote HVAC module is located at the top center of the instrument panel and can be accessed through the upper instrument panel storage tray opening with the tray removed. 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>In-Vehicle Temperature and Humidity Sensor 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The in-vehicle temperature and humidity sensor contains 2 thermistors, which separately measure the in-vehicle air temperature and humidity and send those readings to the HVAC module. An aspirator hose and elbow is connected between the heater core and evaporator core housing and the in-vehicle temperature and humidity sensor. The aspirator hose uses airflow from the heater core and evaporator core housing air stream to create a venturi-type suction to draw in-vehicle air through the in-vehicle temperature and humidity sensor and across the thermistors. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The in-vehicle temperature and humidity sensor is mounted to the instrument panel to the right of the steering column. 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Autolamp/Sunload Sensor (Solar Radiation Sensor) 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The autolamp/sunload sensor supplies information to the dual-zone HVAC module indicating sunload. When sunload is detected, the information from the sensor is used to lower the A/C temperature output to compensate for radiant heat warming the vehicle interior and occupants. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The sunload sensor is located on the center of the instrument panel at the base of the windshield. 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>
+            <abbr title="Ambient Air Temperature">AAT</abbr>  Sensor 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The <abbr title="Ambient Air Temperature">AAT</abbr>  sensor signal is hard wired to the PCM and is sent over the vehicle communication network. The <abbr title="Ambient Air Temperature">AAT</abbr>  sensor is located in front of the radiator to the right of the hood latch. For information regarding the external air temperature display, <a data-linkid="ID0E1KAC" data-sectnum="412-00" class="section-link">Section 
+          412-00</a><span id="spanID0E1KAC"></span>. 
+</p>
+        
+      
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Control System Outputs 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          Each of the 4 control system outputs may be overridden by the passenger if desired. 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string">When operating in AUTO mode (if equipped), the control system outputs will be automatically adjusted by the HVAC module. 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Blower Motor Speed 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The blower motor speed control controls the blower motor speed by converting low power signals from the HVAC module to a high-current, variable ground feed for the blower motor. The HVAC module adjusts blower motor speed based on the difference between the in-vehicle temperature sensor signal and set temperature. A delay function is used to provide a gradual increase or decrease in blower motor speed under all conditions. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The blower motor speed control is located on the heater core and evaporator core housing near the blower motor. 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Single Zone Temperature Blend Door Position 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The single zone temperature blend door actuator moves the temperature blend door on command from the HVAC module. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The single zone temperature blend door actuator contains a reversible electric motor and a potentiometer. The potentiometer circuit consists of a 5-volt reference signal connected to one end of a variable resistor, and a signal ground connected to the other. A signal circuit is connected to a contact wiper, which is driven along the variable resistor by the actuator shaft. The signal to the HVAC module from the contact wiper indicates the position of the temperature blend door. The HVAC module powers the actuator motor to move the temperature blend door to the desired position. The desired temperature blend door positions are calculated by the HVAC module based on the set temperature, in-vehicle temperature and humidity, and ambient air temperature. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">On the single zone system, the temperature blend door actuator is located on the top of the heater core and evaporator core housing. 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Dual Zone Temperature Blend Door Position 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The dual-zone <abbr title="Electronic Automatic Temperature Control">EATC</abbr>  system uses 2 temperature blend door actuators to control 2 separate temperature blend doors. The temperature blend doors independently vary the driver side and passenger side temperature settings, as desired. The temperature blend door actuators each contain a reversible electric motor and a potentiometer. The potentiometer circuit consists of a 5-volt reference signal connected to one end of a variable resistor, and a signal ground connected to the other. A signal circuit is connected to a contact wiper, which is driven along the variable resistor by the actuator shaft. The signal to the HVAC module from the contact wiper indicates the position of the temperature blend door. The HVAC module powers the actuator motors to move the temperature blend doors to the desired positions. The desired temperature blend door positions are calculated by the HVAC module based on the set temperature, in-vehicle temperature and humidity, ambient air temperature and sunload. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">On the dual-zone <abbr title="Electronic Automatic Temperature Control">EATC</abbr>  system, the temperature blend door-driver side actuator is located on the bottom of the heater core and evaporator core housing. The temperature blend door-passenger side actuator is located on the top of the heater core and evaporator core housing. 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Airflow Mode Door Position 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The airflow mode door actuator uses a cam and lever assembly to position the defrost/panel/floor airflow mode doors on command from the HVAC module. The airflow mode door actuator contains a reversible electric motor and potentiometer. The potentiometer allows the HVAC module to monitor the position of the airflow mode doors. The potentiometer circuit consists of a 5-volt reference signal connected to one end of a variable resistor, and a signal ground connected to the other. A signal circuit is connected to a contact wiper, which is driven along the variable resistor by the actuator shaft. The signal to the HVAC module from the contact wiper indicates the position of the airflow mode doors. The HVAC module powers the actuator motor to move the airflow mode doors to the desired position. The HVAC module determines the desired airflow mode door position based on the calculated outlet temperature. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The airflow mode door actuator is located on the heater core and evaporator core housing to the right of the steering column. 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Air Inlet Mode Door Position 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The air inlet mode door actuator moves the air inlet door between the fresh and RECIRC positions on command from the HVAC module. The air inlet mode door actuator contains a reversible electric motor and potentiometer. The potentiometer allows the HVAC module to monitor the position of the air inlet door. The potentiometer circuit consists of a 5-volt reference signal connected to one end of a variable resistor, and a signal ground connected to the other. A signal circuit is connected to a contact wiper, which is driven along the variable resistor by the actuator shaft. The signal to the HVAC module from the contact wiper indicates the position of the air inlet door. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The air inlet mode door actuator is located on the air inlet duct behind the glove compartment. The HVAC module powers the actuator motor to move the air inlet door to the desired position. Under certain conditions, the air inlet door may stop at intermediate positions to provide a mix of fresh and recirculated air to meet cooling/heating requirements. The air inlet mode door actuator will automatically engage when ambient temperature is above 75°F, once per ignition cycle when in Panel or Panel/Floor modes. 
+</p>
+      
+    
+  
+
+

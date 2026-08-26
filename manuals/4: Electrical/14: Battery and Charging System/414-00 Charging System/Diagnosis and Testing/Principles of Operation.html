@@ -1,0 +1,285 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="414-00" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="414-00 Charging System" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1252250" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>414-00 Charging System</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      01/20/2016</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Principles of Operation" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Principles of Operation
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('414-00','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Charging System 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">The <abbr title="Powertrain Control Module">PCM</abbr> -controlled, or Smart Charge charging system determines the optimal voltage setpoint for the charging system and communicates this information to the voltage regulator. The Smart Charge charging system is designed to set a <abbr title="Diagnostic Trouble Code">DTC</abbr>  any time a charging system fault is present. All DTCs can set as continuous faults, but not all DTCs set as on-demand faults. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">This system uses 2 communication lines between the <abbr title="Powertrain Control Module">PCM</abbr>  and the generator/voltage regulator. Both of these communication lines use Pulse-Width Modulation (PWM)
+      . The generator communication (GENCOM) line communicates the desired setpoint from the <abbr title="Powertrain Control Module">PCM</abbr>  to the voltage regulator. The generator monitor (GENMON) line communicates the generator load and error conditions to the <abbr title="Powertrain Control Module">PCM</abbr> . The GENCOM command is only sent by the <abbr title="Powertrain Control Module">PCM</abbr>  when it is necessary to adjust the voltage setpoint. If the setpoint does not need to be changed, several seconds may elapse between <abbr title="Powertrain Control Module">PCM</abbr>  GENCOM commands. This normal operation appears in the <abbr title="Parameter Identification">PID</abbr>  as occasional bursts of pulse-width commands. The third pin on the voltage regulator, the "A" pin, is a circuit dedicated to monitor or sense battery voltage. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The <abbr title="Powertrain Control Module">PCM</abbr>  simultaneously controls and monitors the output of the generator. When the current consumption is high or the battery is discharged, the <abbr title="Powertrain Control Module">PCM</abbr>  raises engine speed as needed to increase generator output. The generator charges the battery and at the same time supplies power for all of the electrical loads that are required. The battery is more effectively charged with a higher voltage when the battery is cold and a lower voltage when the battery is warm. The <abbr title="Powertrain Control Module">PCM</abbr>  is able to adjust the charging voltage according to the battery temperature, calculated by using a signal from the Intake Air Temperature (IAT)
+       sensor. The <abbr title="Powertrain Control Module">PCM</abbr>  also uses other inputs to control charging system voltage such as the Vehicle Speed Sensor (VSS)
+       and Engine Coolant Temperature (ECT)
+      . The voltage setpoint is calculated by the <abbr title="Powertrain Control Module">PCM</abbr>  and communicated to the voltage regulator by the GENCOM circuit based on the needs of the vehicle and the conditions. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The <abbr title="Powertrain Control Module">PCM</abbr>  turns off the generator during cranking to reduce the generator load and improve cranking speed. Once the engine starts, the <abbr title="Powertrain Control Module">PCM</abbr>  slowly increases generator output to the desired voltage. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The <abbr title="Powertrain Control Module">PCM</abbr>  reports any charging system faults and sends a message through High Speed Controller Area Network (HS-CAN)
+       to the Body Control Module (BCM)
+      . The <abbr title="Body Control Module">BCM</abbr>  controls the charging system warning indicator by sending a message over the Medium Speed Controller Area Network (MS-CAN)
+       to the Instrument Panel Cluster (IPC)
+      . The <abbr title="Instrument Panel Cluster">IPC</abbr>  then controls charging system warning indication based on the message from the <abbr title="Powertrain Control Module">PCM</abbr>  through the <abbr title="Body Control Module">BCM</abbr> . The status of the <abbr title="Powertrain Control Module">PCM</abbr>  charging system warning indicator and/or message can be confirmed by viewing <abbr title="Powertrain Control Module">PCM</abbr> <abbr title="Parameter Identification">PID</abbr>  generator fault indicator lamp (GENFIL). Any charging system fault detected by the <abbr title="Powertrain Control Module">PCM</abbr>  results in 1 or more DTCs being set and the <abbr title="Parameter Identification">PID</abbr>  GENFIL having a status of On. If equipped with a charging system warning indicator, the <abbr title="Instrument Panel Cluster">IPC</abbr>  turns the indicator on or off. If equipped with a message center, the <abbr title="Instrument Panel Cluster">IPC</abbr>  displays a CHECK CHARGING SYSTEM message. When the ignition is ON and the engine is off on vehicles equipped with a message center, the CHECK CHARGING SYSTEM message may not be displayed. For information regarding the <abbr title="Instrument Panel Cluster">IPC</abbr>  and message center, refer to <a data-linkid="ID0EWH" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EWH"></span>. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">Under certain circumstances, the charging system may have a concern, but still keeps the battery charged and the vehicle running. GENCOM is normally used to initiate charging, but the generator may charge with a fault in this circuit. If the engine operates at more than 2,000 rpm momentarily, the generator may self-excite or start charging on its own. The charging system warning indicator is illuminated and/or CHECK CHARGING SYSTEM message is displayed, and the generator operates in a default mode (approximately 13.5 volts) until the engine is turned off. When the engine is restarted and the engine operates at more than 2,000 rpm momentarily, the generator may again self-excite and again the charging system warning indicator is illuminated and/or CHECK CHARGING SYSTEM message is displayed. 
+</p>
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Electrical Energy Management 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTICE: 
+        When the Body Control Module (BCM)
+       is being programmed, connect an external battery charger to make sure that the module programming is completed without the interruption due to the load shedding feature becoming active. The external battery charger must maintain a system voltage above 13 volts. This may require a charger setting higher than the lowest charge setting. The external battery charger negative connection must be made to an engine or vehicle chassis ground and not the negative battery terminal. If the connection is to the negative battery terminal, load shedding cannot be prevented from being invoked and module programming may be corrupted. After charging has begun, start the engine to clear any load shed states and then turn the engine off and proceed with programming. 
+
+      </b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+        To maintain correct operation of the load shed system, any electrical devices or equipment must be grounded to the engine or chassis ground and not the negative battery terminal. A connection to the negative battery terminal may cause an inaccurate measurement of the battery state of charge and may cause incorrect load shed system operation. 
+
+      </i></p>
+      <p xmlns:str="http://xsltsl.org/string">This vehicle is equipped with load shed strategy. The Body Control Module (BCM)
+       monitors system voltage to the <abbr title="Body Control Module">BCM</abbr>  and the Power Steering Control Module (PSCM)
+       as well as the battery state of charge using the battery current sensor attached to the negative battery cable. 
+</p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Battery State of Charge 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr>  uses the battery current sensor to keep track of the battery state of charge. The battery current sensor is a Hall-effect sensor attached to the battery ground cable. During a drive cycle the Electrical Energy Management software will adjust the battery state of charge by monitoring the charge and discharge current and adjusting the state of charge up during charging, and down during discharge. During rest periods (key off with no electrical loads) when the vehicle enters sleep mode, the battery voltage is sampled to recalibrate the State of Charge. The <abbr title="Body Control Module">BCM</abbr>  automatically executes this recalibration anytime the vehicle enters sleep mode and when the total vehicle current draw is below 300mA. It takes 8 hours in the sleep mode to recalibrate the battery state of charge to high accuracy. If the system draw does not allow the battery state of charge recalibration over the previous 7 to 10 days the State of Charge quality factor will change to flag this and some Electrical Energy Management Functions which rely on the accuracy of the battery state of charge may be temporarily turned off until a recalibration takes place. 
+</p>
+      
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Engine Off Load Shed 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">When the engine is off, and the <abbr title="Body Control Module">BCM</abbr>  determines the battery state of charge is below 40% or 10% of the charge has been drained or 45 minutes have elapsed, a load shed message is sent over the Controller Area Network (CAN)
+      . This message turns off the audio/navigation system to save the remaining battery charge. Under this condition, the Front Display Interface Module (FDIM)
+       displays SYS OFF TO SAVE BATT (without navigation) or BATTERY SAVER — SYSTEM OFF PLEASE START THE ENGINE (with navigation) to notify the driver that battery protection actions are active. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">Engine off load shed occurs when the engine is not running, and the ignition is in the ACC or RUN position. To clear the load shed state, restart the engine. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          To maintain correct operation of the load shed system, any electrical devices or equipment must be grounded to the engine or chassis ground and not the negative battery terminal. A connection to the negative battery terminal may cause an inaccurate measurement of the battery state of charge and may cause incorrect load shed system operation. 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string">When the ignition is in the RUN position and load shed occurs, the <abbr title="Instrument Panel Cluster">IPC</abbr>  message center displays either TURN POWER OFF TO SAVE BATT (base message center) or TURN POWER OFF TO SAVE BATTERY (optional message center). The audio/navigation system will shut down after the message center displays it's warning. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">If a fault occurs with the battery current sensor or circuit(s), the only engine off load shed strategy is a 45 minute timer. After 45 minutes have elapsed, the audio/navigation system turns off. To clear the load shed state, restart the engine. 
+</p>
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Engine Running Load Shed 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">When the <abbr title="Body Control Module">BCM</abbr>  and/or <abbr title="Power Steering Control Module">PSCM</abbr>  voltage is low, with the engine running, a message is sent by the <abbr title="Body Control Module">BCM</abbr>  to either minimize or shut down the climate controlled seats, rear defrost, heated mirrors and Dual Automatic Temperature Control (DATC)
+       blower motor to improve system voltage. Under this condition, the <abbr title="Instrument Panel Cluster">IPC</abbr>  message center displays either LOW BATTERY LESS FEATURES (base message center) or LOW BATTERY FEATURES TEMPORARILY TURNED OFF (optional message center) to notify the driver that battery protection actions are active. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">There are 3 states of engine running load shed: 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Load shed 1 
+
+          </li>
+          <li>
+            Load shed 2 transient 
+
+          </li>
+          <li>
+            Load shed 2 continuous 
+
+          </li>
+        </ul>
+        <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+          <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col>
+    <col>
+    <col>
+    <col>
+  </colgroup>
+            
+            
+            
+            
+            <thead>
+              <tr>
+                <th align="center" valign="top">
+                  Load Shed State 
+
+                </th>
+                <th valign="top">
+                  Entry Conditions 
+
+                </th>
+                <th valign="top">
+                  Impact to Features 
+
+                </th>
+                <th valign="top">
+                  Clear Conditions 
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td valign="top">
+                  Load shed 1 
+
+                </td>
+                <td align="left" valign="top">
+                  <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>If vehicle speed is below 16 km/h (10 mph): 
+</b></p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    
+                    <li>
+                      Voltage to the <abbr title="Power Steering Control Module">PSCM</abbr>  is less than 11.5 volts. 
+
+                    </li>
+                    <li>
+                      
+                        <abbr title="Power Steering Control Module">PSCM</abbr>  measures current draw greater than 0 amps. 
+
+                    </li>
+                  </ul>
+                  <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>If vehicle speed is above 16 km/h (10 mph): 
+</b></p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    
+                    <li>
+                      Voltage to the <abbr title="Body Control Module">BCM</abbr>  is less than 11.6 volts. 
+
+                    </li>
+                  </ul>
+                </td>
+                <td align="left" valign="top">
+                  Climate controlled seats switch from HIGH to MED. If the are already at MED, the state does not change. 
+
+                </td>
+                <td align="left" valign="top">
+                  Voltage to the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  is greater than 12.7 volts <b xmlns:str="http://xsltsl.org/string">or</b> the generator field duty cycle is less than 88%. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  Load shed 2 transient 
+
+                </td>
+                <td align="left" valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      Voltage to the <abbr title="Power Steering Control Module">PSCM</abbr>  is less than 11.0 volts. 
+
+                    </li>
+                    <li>
+                      
+                        <abbr title="Power Steering Control Module">PSCM</abbr>  measures current draw greater than 20 amps. 
+
+                    </li>
+                  </ul>
+                </td>
+                <td align="left" valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      If equipped, climate controlled seats are disabled, but the indicators remain illuminated. 
+
+                    </li>
+                    <li>
+                      If equipped, rear defrost and heated mirrors are disabled, but the indicator remain illuminated. 
+
+                    </li>
+                  </ul>
+                </td>
+                <td align="left" valign="top">
+                  Voltage to the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  is greater than 12.4 volts. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  Load shed 2 continuous 
+
+                </td>
+                <td align="left" valign="top">
+                  Vehicle was in load shed 2 transient state for greater than 20 seconds. 
+
+                </td>
+                <td align="left" valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      If equipped, climate controlled seats are disabled and the indicators are off. 
+
+                    </li>
+                    <li>
+                      If equipped, rear defrost and heated mirrors are disabled and the indicator is off. 
+
+                    </li>
+                    <li>
+                      If equipped with <abbr title="Dual Automatic Temperature Control">DATC</abbr> , the blower motor is reduced to 50% speed. 
+
+                    </li>
+                    <li>
+                      If equipped, DC/AC inverter (AC powerpoint) is disabled. 
+
+                    </li>
+                    <li>
+                      The base <abbr title="Instrument Panel Cluster">IPC</abbr>  message center displays LOW BATTERY LESS FEATURES. 
+
+                    </li>
+                    <li>
+                      The optional <abbr title="Instrument Panel Cluster">IPC</abbr>  message center displays LOW BATTERY FEATURES TEMPORARILY TURNED OFF. 
+
+                    </li>
+                  </ul>
+                </td>
+                <td align="left" valign="top">
+                  Voltage to the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  is greater than 12.4 volts for more than 60 seconds. 
+
+                </td>
+              </tr>
+            </tbody>
+          </table><br>
+        <br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Battery Charging 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">When charging the vehicle battery by <b>connecting the charger to engine or chassis ground</b>, the negative charger clamp must be connected to an unpainted chassis surface or a solid engine component such as a generator mount or engine lifting eye. In this instance, after charging, the <abbr title="Battery Monitoring System">BMS</abbr>  Reset <b>is not required</b>. Through this method of charging the <abbr title="Body Control Module">BCM</abbr>  will update the battery state of charge during the charging process. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When charging the vehicle battery by <b>connecting the charger to the negative battery terminal is necessary</b>, such as when using a combination battery charger and battery tester/analyzer, like the GR 1 190 V3.0 Intelligent Diagnostic Charger, the <abbr title="Body Control Module">BCM</abbr>  will not immediately update the battery state of charge. In this instance, after charging, you must carry out the Battery Monitoring System (BMS)
+       Reset using the scan tool. This reset is needed for proper engine off load shedding and to prevent invoking of engine off load shedding earlier than normal. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">If the reset is not carried out, when the battery is charged by connecting the charger to the negative battery terminal, it takes approximately 8 hours for the <abbr title="Body Control Module">BCM</abbr>  to learn the new battery state of charge. During this 8 hour period, the vehicle must be undisturbed, with no doors opened or keyless entry button presses. If the vehicle is used before the <abbr title="Body Control Module">BCM</abbr>  is allowed to learn the new battery state of charge, engine off load shedding can still occur and a message may be displayed. 
+</p>
+      
+    
+  
+
+

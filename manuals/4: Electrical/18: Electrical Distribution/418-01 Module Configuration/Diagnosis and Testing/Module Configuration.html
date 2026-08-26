@@ -1,0 +1,2058 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="418-01" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="418-01 Module Configuration" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1471010" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>418-01 Module Configuration</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      09/05/2015</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Module Configuration" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Module Configuration
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('418-01','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          
+            Vehicle Communication Module (VCM)
+       and Integrated Diagnostic System (IDS)
+       software with appropriate hardware, or equivalent scan tool
+          <br>
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">Configurable modules accommodate a variety of vehicle options, eliminating the need for many unique modules for one vehicle line. These modules must be configured when replaced as part of a repair procedure. Configurable modules should not be exchanged between vehicles since the settings are unique to each vehicle. Failure to configure a new module can result in improper operation and/or DTCs setting. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The following are the 3 different methods of configuration: 
+</p>
+      <ul type="disc" xmlns:str="http://xsltsl.org/string">
+        <li>
+          
+            Programmable Module Installation (PMI)
+      
+          
+        </li>
+        <li>
+          Module reprogramming ("flashing") 
+
+        </li>
+        <li>
+          Programmable parameters 
+
+        </li>
+      </ul>
+      <p xmlns:str="http://xsltsl.org/string">Some modules do not support all 3 methods. 
+</p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Definition of Terms 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The following are definitions of configuration terms: 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>
+            Programmable Module Installation (PMI)
+      
+          </b></p>
+          <p xmlns:str="http://xsltsl.org/string">
+            <abbr title="Programmable Module Installation">PMI</abbr>  is a scan tool process which configures settings in a new module. Data used for the <abbr title="Programmable Module Installation">PMI</abbr>  process is automatically downloaded from the original module and stored when a scan tool session is started. If this data cannot be retrieved from the module being replaced, the scan tool may prompt for As-Built data entry or display a list of parameter values that need to be manually selected. Some modules are reprogrammed during <abbr title="Programmable Module Installation">PMI</abbr>  when a strategy/calibration update is available. To carry out <abbr title="Programmable Module Installation">PMI</abbr> , refer to <a data-linkid="ID0E3D" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link">Programmable Module Installation (PMI)</a><span id="spanID0E3D"></span> in this section. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          It is important that the scan tool identifies the vehicle and obtains configuration data prior to removing any modules. The new module must be able to communicate with the scan tool in order to carry out <abbr title="Programmable Module Installation">PMI</abbr> . 
+
+        </i></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Module Reprogramming 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Module reprogramming (also referred to as "flashing") is a scan tool process which updates the strategy/calibration in a module. Reprogramming a module with the same level of software does not improve module operation or repair a hardware failure. Module reprogramming is automatically carried out during <abbr title="Programmable Module Installation">PMI</abbr>  when a later strategy/calibration is available. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          Limit module reprogramming to circumstances where a published TSB procedure recommends doing so. 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          A module cannot communicate with other modules on the communication network while being reprogrammed. After the reprogramming process, clear any network communication DTCs which may have been set in other modules. 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          Some modules are reprogrammed in coordination with other modules. Follow the Integrated Diagnostic System (IDS)
+       key cycling instructions carefully to avoid reprogramming errors, including failure of programming one or more of the coordinated modules. 
+
+        </i></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>
+            Accessory Protocol Interface Module (APIM)
+       Programming 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">
+            <abbr title="Accessory Protocol Interface Module">APIM</abbr>  programming is a process that updates the <abbr title="Accessory Protocol Interface Module">APIM</abbr> Consumer Interface Processor (CIP)
+       and Vehicle Interface Processor (VIP)
+       software. The <abbr title="Vehicle Interface Processor">VIP</abbr>  programming updates the calibration files in the portion of the <abbr title="Accessory Protocol Interface Module">APIM</abbr>  that interfaces with the Controller Area Network (CAN)
+      . The <abbr title="Consumer Interface Processor">CIP</abbr>  programming updates calibration files in the portion of the <abbr title="Accessory Protocol Interface Module">APIM</abbr>  that interfaces with mobile phones and other customer devices. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">
+          <abbr title="Accessory Protocol Interface Module">APIM</abbr>  programming uses the <abbr title="Vehicle Communication Module">VCM</abbr>  to read and program the <abbr title="Vehicle Interface Processor">VIP</abbr>  software through the Data Link Connector (DLC)
+      . A web-based On-Line Automotive Service Information System (OASIS)
+       application reads and programs the <abbr title="Consumer Interface Processor">CIP</abbr>  software via a Universal Serial Bus (USB)
+       cable between the scan tool and vehicle <abbr title="Universal Serial Bus">USB</abbr>  port. Both the <abbr title="Vehicle Communication Module">VCM</abbr>  and the Universal Serial Bus (USB)
+       cable must remain connected, and <abbr title="On-Line Automotive Service Information System">OASIS</abbr>  application must be running on the scan tool during <abbr title="Accessory Protocol Interface Module">APIM</abbr>  programming. Carry out <abbr title="Accessory Protocol Interface Module">APIM</abbr>  programming. Refer to the appropriate section in Group 415 for the procedure.</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Programmable Parameters 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Programmable parameters are customer preference items that may be modified by the dealer via the scan tool, or in some cases, by the customer following a procedure listed in the vehicle Owner's Literature. While many configuration options may exist for a module, only a few of these options are programmable parameters. 
+</p>
+        
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Adaptive Learning and Calibration 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Some modules require a separate learning procedure be carried out if replaced as part of a repair procedure. For adaptive learning and calibration instructions, refer to the specific module removal and installation procedures. 
+</p>
+        
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>
+            Vehicle Identification (VID)
+       Block 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Some PCMs contain a memory area called a Vehicle Identification (VID)
+       block. The PCM <abbr title="Vehicle Identification">VID</abbr>  block commonly stores powertrain configuration items such as Vehicle Identification Number (VIN)
+      , tire size, axle ratio, and whether or not the vehicle is equipped with speed control. 
+</p>
+        
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Module Address 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">A unique module address is assigned to each module on the network for identification. 
+</p>
+        
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>As-Built Data 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">As-Built data is a <abbr title="Vehicle Identification Number">VIN</abbr> -specific module configuration record. During vehicle build, the configuration from all modules is downloaded and stored in the As-Built database. As-Built data does not reflect customer preference items that have been changed from the default state. These items need to be changed using programmable parameters after the module is configured. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          It is not necessary to obtain As-Built data unless directed to do so by the scan tool. This data may be accessed from the technician service publication web site. 
+
+        </i></p>
+        <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+          <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            Module Configuration and Parameter Chart 
+</b></p>
+          <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="center">
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+            
+            
+            
+            
+            
+            <thead>
+              <tr>
+                <th align="center" valign="top">
+                  Module 
+
+                </th>
+                <th align="center" valign="top">
+                  Requires <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> 
+                </th>
+                <th align="center" valign="top">
+                  Reprogram/ Flash Capable 
+
+                </th>
+                <th align="center" valign="top">
+                  Requires Adaptive Learning or Calibration 
+
+                </th>
+                <th align="center" valign="top">
+                  Available Programmable Parameters 
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td valign="top">
+                  ABS module 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      Stability control initialization 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      Hill start assist enabled 
+
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Accessory Protocol Interface Module (APIM)
+      
+                   
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      Stereo in pass-through 
+
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Audio Front Control Module (ACM)
+      
+                   
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  Audio Digital Signal Processing (DSP)
+       module 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Body Control Module (BCM)
+      
+                   
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      Axle ratio 
+
+                    </li>
+                    <li>
+                      Autolamps delay time 
+
+                    </li>
+                    <li>
+                      Front turn lamp outage configuration 
+
+                    </li>
+                    <li>
+                      Fog lamps present 
+
+                    </li>
+                    <li>
+                      Cruise control 
+
+                    </li>
+                    <li>
+                      Police dark car feature 
+
+                    </li>
+                    <li>
+                      Police rear door enable/disable 
+
+                    </li>
+                    <li>
+                      Smart unlocking 
+
+                    </li>
+                    <li>
+                      Rear turn lamp outage configuration 
+
+                    </li>
+                    <li>
+                      Tire placard pressure 
+
+                    </li>
+                    <li>
+                      Tire size 
+
+                    </li>
+                    <li>
+                      Daytime running lamps 
+
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Driver Seat Module (DSM)
+      
+                   
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Dual Climate Controlled Seat Module (DCSM)
+      
+                   
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Front Controls Interface Module (FCIM)
+      
+                   
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Front Control/Display Interface Module (FCDIM)
+      
+                   
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Front Display Interface Module (FDIM)
+       (without navigation) 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Global Positioning System Module (GPSM)
+      
+                   
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  HVAC module — <abbr title="Dual Automatic Temperature Control" xmlns:str="http://xsltsl.org/string">DATC</abbr> 
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  HVAC module — <abbr title="Electronic Manual Temperature Control" xmlns:str="http://xsltsl.org/string">EMTC</abbr> 
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Instrument Panel Cluster (IPC)
+      
+                   
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      
+                        Trailer Brake Control (TBC)
+       gain 
+
+                    </li>
+                    <li>
+                      Trailer sway 
+
+                    </li>
+                    <li>
+                      Fuel tank selection (3.5L only) 
+
+                    </li>
+                    <li>
+                      Fuel capacity 
+
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    <abbr title="Occupant Classification System Module" xmlns:str="http://xsltsl.org/string">OCSM</abbr> 
+                   
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      Seat weight sensor re-zero 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Parking Aid Module (PAM)
+      
+                   
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Power Steering Control Module (PSCM)
+      
+                   
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  PCM 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      Adaptive airflow 
+
+                    </li>
+                    <li>
+                      Idle speed 
+
+                    </li>
+                    <li>
+                      Refueling event 
+
+                    </li>
+                    <li>
+                      Fuel trim 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      Speed control 
+
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Power Running Board (PRB)
+       module 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Restraints Control Module (RCM)
+      
+                   
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      Seat weight sensor re-zero 
+
+                    </li>
+                    <li>
+                      Stability control initialization 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      Driver seat Belt-Minder® activation 
+
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Steering Column Control Module (SCCM)
+      
+                   
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Trailer Brake Control (TBC)
+       module 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Transfer Case Control Module (TCCM)
+      
+                   
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  
+                    Tire Pressure Monitor (TPM)
+       module (also known as Radio Transceiver Module [RTM])
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+                <td valign="top">
+                  No 
+
+                </td>
+                <td valign="top">
+                  None 
+
+                </td>
+              </tr>
+            </tbody>
+          </table><br>
+        <br xmlns:str="http://xsltsl.org/string">
+      
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">This section provides step-by-step module configuration procedures. Carry out the Programmable Module Installation (PMI)
+       procedure in this section when another workshop manual section directs you to carry out configuration or when DTCs from the following chart are present: 
+</p>
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            DTC Chart 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          Some modules on this vehicle utilize a 5-character DTC followed by a 2-character failure-type code. The failure-type code provides information about specific fault conditions such as opens, or shorts to ground. Continuous Memory DTCs have an additional 2-character DTC status code suffix to assist in determining DTC history. 
+
+        </i></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                DTC 
+
+              </th>
+              <th align="center" valign="top">
+                Description 
+
+              </th>
+              <th align="center" valign="top">
+                Source 
+
+              </th>
+              <th align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                B2477 
+
+              </td>
+              <td valign="top">
+                Module Configuration Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    ABS module 
+
+                  </li>
+                  <li>
+                    
+                      Dual Climate Controlled Seat Module (DCSM)
+      
+                    
+                  </li>
+                  <li>
+                    
+                      Driver Seat Module (DSM)
+      
+                    
+                  </li>
+                  <li>
+                    
+                      Front Display Interface Module (FDIM)
+      
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT Programmable Module Installation (PMI)
+      . REFER to <a data-linkid="ID0EW5AE" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EW5AE" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B2900 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Vehicle Identification Number" xmlns:str="http://xsltsl.org/string">VIN</abbr>  Mismatch 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    ABS module 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0ELAAG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0ELAAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B6050 
+
+              </td>
+              <td valign="top">
+                No Application Present 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Dual Climate Controlled Seat Module">DCSM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0E6BAG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0E6BAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0602 
+
+              </td>
+              <td valign="top">
+                Powertrain Control Module Programming Error 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    PCM 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EMDAG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EMDAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0605 
+
+              </td>
+              <td valign="top">
+                Internal Control Module Read Only Memory (<abbr title="Read-Only Memory" xmlns:str="http://xsltsl.org/string">ROM</abbr> ) Error 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    PCM 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EAFAG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EAFAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0630 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Vehicle Identification Number" xmlns:str="http://xsltsl.org/string">VIN</abbr>  Not Programmed or Incompatible - ECM/PCM 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    PCM 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EUGAG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EUGAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P1639 
+
+              </td>
+              <td valign="top">
+                Vehicle ID Block Corrupted, Not Programmed 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    PCM 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EBIAG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EBIAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0300 
+
+              </td>
+              <td valign="top">
+                Internal Control Module Software Incompatibility 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    PCM 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EOJAG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EOJAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0300:00 
+
+              </td>
+              <td valign="top">
+                Internal Control Module Software Incompatibility: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Restraints Control Module (RCM)
+      
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0ECLAG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0ECLAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2014:41 
+
+              </td>
+              <td valign="top">
+                Control Module Hardware: General Checksum Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Audio Front Control Module (ACM)
+      
+                    
+                  </li>
+                  <li>
+                    Audio Digital Signal Processing (DSP)
+       module 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0ECNAG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0ECNAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2014:41 
+
+              </td>
+              <td valign="top">
+                Control Module Hardware: General Checksum Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Front Controls Interface Module (FCIM)
+      
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new <abbr title="Front Controls Interface Module" xmlns:str="http://xsltsl.org/string">FCIM</abbr> . Refer to the appropriate section in Group 415 for the procedure.
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2014:42 
+
+              </td>
+              <td valign="top">
+                Control Module Hardware: General Memory Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Audio Front Control Module">ACM</abbr> 
+                    
+                  </li>
+                  <li>
+                    Audio <abbr title="Digital Signal Processing">DSP</abbr>  module 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EVQAG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EVQAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2014:42 
+
+              </td>
+              <td valign="top">
+                Control Module Hardware: General Memory Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Front Controls Interface Module">FCIM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new <abbr title="Front Controls Interface Module" xmlns:str="http://xsltsl.org/string">FCIM</abbr> . Refer to the appropriate section in Group 415 for the procedure.
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U201A:51 
+
+              </td>
+              <td valign="top">
+                Control Module Main Calibration Data: Missing Calibration 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Audio Front Control Module">ACM</abbr> 
+                    
+                  </li>
+                  <li>
+                    
+                      <abbr title="Front Control/Display Interface Module">FCDIM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EIUAG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EIUAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U201A:51 
+
+              </td>
+              <td valign="top">
+                Control Module Main Calibration Data: Not Programmed 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Front Controls Interface Module">FCIM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new <abbr title="Front Controls Interface Module" xmlns:str="http://xsltsl.org/string">FCIM</abbr> . REFER to Refer to the appropriate section in Group 415 for the procedure.. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U201A:51 
+
+              </td>
+              <td valign="top">
+                Control Module Main Calibration Data: Not Programmed 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Audio <abbr title="Digital Signal Processing">DSP</abbr>  module 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EQXAG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EQXAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2050 
+
+              </td>
+              <td valign="top">
+                No Application Present 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    ABS module 
+
+                  </li>
+                  <li>
+                    
+                      <abbr title="Driver Seat Module">DSM</abbr> 
+                    
+                  </li>
+                  <li>
+                    
+                      <abbr title="Front Display Interface Module">FDIM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EVZAG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EVZAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2050 
+
+              </td>
+              <td valign="top">
+                No Application Present 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Power Running Board">PRB</abbr>  module 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new <abbr title="Power Running Board" xmlns:str="http://xsltsl.org/string">PRB</abbr>  module. REFER to <a data-linkid="ID0EJ2AG" data-sectnum="501-08" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          501-08</a><span id="spanID0EJ2AG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2051 
+
+              </td>
+              <td valign="top">
+                One or More Calibration Files Missing / Corrupt 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    ABS module 
+
+                  </li>
+                  <li>
+                    
+                      <abbr title="Front Display Interface Module">FDIM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0ED4AG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0ED4AG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2100:00 
+
+              </td>
+              <td valign="top">
+                Initial Configuration Not Complete: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Body Control Module">BCM</abbr> 
+                    
+                  </li>
+                  <li>
+                    
+                      <abbr title="Audio Front Control Module">ACM</abbr> 
+                    
+                  </li>
+                  <li>
+                    Audio <abbr title="Digital Signal Processing">DSP</abbr>  module 
+
+                  </li>
+                  <li>
+                    
+                      <abbr title="Front Control/Display Interface Module">FCDIM</abbr> 
+                    
+                  </li>
+                  <li>
+                    
+                      Instrument Panel Cluster (IPC)
+      
+                    
+                  </li>
+                  <li>
+                    HVAC module 
+
+                  </li>
+                  <li>
+                    
+                      Power Steering Control Module (PSCM)
+      
+                    
+                  </li>
+                  <li>
+                    
+                      <abbr title="Restraints Control Module">RCM</abbr> 
+                    
+                  </li>
+                  <li>
+                    
+                      Steering Column Control Module (SCCM)
+      
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EQBBG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EQBBG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2100:00 
+
+              </td>
+              <td valign="top">
+                Initial Configuration Not Complete: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Global Positioning System Module">GPSM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new <abbr title="Global Positioning System Module" xmlns:str="http://xsltsl.org/string">GPSM</abbr> . Refer to the appropriate section in Group 415 for the procedure.
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2100:00 
+
+              </td>
+              <td valign="top">
+                Initial Configuration Not Complete: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Accessory Protocol Interface Module">APIM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Accessory Protocol Interface Module" xmlns:str="http://xsltsl.org/string">APIM</abbr>  programming. Refer to the appropriate section in Group 415 for the procedure.
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2101:00 
+
+              </td>
+              <td valign="top">
+                Control Module Configuration Incompatible: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Audio Front Control Module">ACM</abbr> 
+                    
+                  </li>
+                  <li>
+                    Audio <abbr title="Digital Signal Processing">DSP</abbr>  module 
+
+                  </li>
+                  <li>
+                    
+                      <abbr title="Front Control/Display Interface Module">FCDIM</abbr> 
+                    
+                  </li>
+                  <li>
+                    
+                      Steering Column Control Module (SCCM)
+      
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EOHBG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EOHBG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2101:00 
+
+              </td>
+              <td valign="top">
+                Control Module Configuration Incompatible: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Global Positioning System Module">GPSM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new <abbr title="Global Positioning System Module" xmlns:str="http://xsltsl.org/string">GPSM</abbr> . Refer to the appropriate section in Group 415 for the procedure.
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2101:00 
+
+              </td>
+              <td valign="top">
+                Control Module Configuration Incompatible: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Accessory Protocol Interface Module">APIM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Accessory Protocol Interface Module" xmlns:str="http://xsltsl.org/string">APIM</abbr>  programming. Refer to the appropriate section in Group 415 for the procedure.
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2200:00 
+
+              </td>
+              <td valign="top">
+                Control Module Configuration Memory Corrupt: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Restraints Control Module">RCM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EIMBG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EIMBG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2200:55 
+
+              </td>
+              <td valign="top">
+                Control Module Configuration Memory Corrupt 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Body Control Module">BCM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0E3NBG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0E3NBG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2300:54 
+
+              </td>
+              <td valign="top">
+                Central Configuration: Not Configured 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Transfer Case Control Module (TCCM)
+      
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new Transfer Case Control Module (TCCM)
+      . REFER to <a data-linkid="ID0EQPBG" data-sectnum="308-07A" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          308-07A</a><span id="spanID0EQPBG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2300:55 
+
+              </td>
+              <td valign="top">
+                Central Configuration: Not Configured 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Transfer Case Control Module (TCCM)
+      
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new Transfer Case Control Module (TCCM)
+      . REFER to <a data-linkid="ID0EFRBG" data-sectnum="308-07A" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          308-07A</a><span id="spanID0EFRBG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2300:55 
+
+              </td>
+              <td valign="top">
+                Central Configuration: Not Configured 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Power Steering Control Module">PSCM</abbr> 
+                    
+                  </li>
+                  <li>
+                    
+                      <abbr title="Restraints Control Module">RCM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EGTBG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EGTBG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2300:56 
+
+              </td>
+              <td valign="top">
+                Central Configuration: Invalid/Incompatible Configuration 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Transfer Case Control Module (TCCM)
+      
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new Transfer Case Control Module (TCCM)
+      . REFER to <a data-linkid="ID0E1UBG" data-sectnum="308-07A" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          308-07A</a><span id="spanID0E1UBG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:41 
+
+              </td>
+              <td valign="top">
+                Control Module: Calibration / General Checksum Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Audio Front Control Module">ACM</abbr> 
+                    
+                  </li>
+                  <li>
+                    Audio <abbr title="Digital Signal Processing">DSP</abbr>  module 
+
+                  </li>
+                  <li>
+                    
+                      <abbr title="Front Control/Display Interface Module">FCDIM</abbr> 
+                    
+                  </li>
+                  <li>
+                    HVAC module 
+
+                  </li>
+                  <li>
+                    
+                      <abbr title="Power Steering Control Module">PSCM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EYXBG" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EYXBG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:41 
+
+              </td>
+              <td valign="top">
+                Control Module: Calibration / General Checksum Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Parking Aid Module (PAM)
+      
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new <abbr title="Parking Aid Module" xmlns:str="http://xsltsl.org/string">PAM</abbr> . REFER to <a data-linkid="ID0EMZBG" data-sectnum="413-13" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          413-13</a><span id="spanID0EMZBG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:41 
+
+              </td>
+              <td valign="top">
+                Control Module: Calibration / General Checksum Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Front Controls Interface Module">FCIM</abbr> 
+                    
+                  </li>
+                  <li>
+                    
+                      <abbr title="Global Positioning System Module">GPSM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new <abbr title="Front Controls Interface Module" xmlns:str="http://xsltsl.org/string">FCIM</abbr>  or <abbr title="Global Positioning System Module" xmlns:str="http://xsltsl.org/string">GPSM</abbr> . Refer to the appropriate section in Group 415 for the procedure.
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:41 
+
+              </td>
+              <td valign="top">
+                Control Module: Calibration / General Checksum Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Transfer Case Control Module (TCCM)
+      
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new Transfer Case Control Module (TCCM)
+      . REFER to <a data-linkid="ID0EG4BG" data-sectnum="308-07A" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          308-07A</a><span id="spanID0EG4BG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:41 
+
+              </td>
+              <td valign="top">
+                Control Module: Calibration / General Checksum Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Accessory Protocol Interface Module">APIM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Accessory Protocol Interface Module" xmlns:str="http://xsltsl.org/string">APIM</abbr>  programming. Refer to the appropriate section in Group 415 for the procedure.
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:46 
+
+              </td>
+              <td valign="top">
+                Control Module: Calibration / Parameter Memory Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Transfer Case Control Module (TCCM)
+      
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new Transfer Case Control Module (TCCM)
+      . REFER to <a data-linkid="ID0EPAAI" data-sectnum="308-07A" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          308-07A</a><span id="spanID0EPAAI" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:46 
+
+              </td>
+              <td valign="top">
+                Control Module: Calibration / Parameter Memory Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Power Steering Control Module">PSCM</abbr> 
+                    
+                  </li>
+                  <li>
+                    
+                      <abbr title="Restraints Control Module">RCM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EQCAI" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EQCAI" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:46 
+
+              </td>
+              <td valign="top">
+                Control Module: Calibration / Parameter Memory Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Parking Aid Module">PAM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new <abbr title="Parking Aid Module" xmlns:str="http://xsltsl.org/string">PAM</abbr> . REFER to <a data-linkid="ID0EEEAI" data-sectnum="413-13" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          413-13</a><span id="spanID0EEEAI" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:54 
+
+              </td>
+              <td valign="top">
+                Control Module: Missing Calibration 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Occupant Classification System Module">OCSM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new <abbr title="Occupant Classification System Module" xmlns:str="http://xsltsl.org/string">OCSM</abbr> . REFER to <a data-linkid="ID0EZFAI" data-sectnum="501-20B" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          501-20B</a><span id="spanID0EZFAI" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:54 
+
+              </td>
+              <td valign="top">
+                Control Module: Missing Calibration 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Parking Aid Module">PAM</abbr> 
+                    
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                INSTALL a new PAM. REFER to <a data-linkid="ID0EIHAI" data-sectnum="413-13" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          413-13</a><span id="spanID0EIHAI" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3002:62 
+
+              </td>
+              <td valign="top">
+                Vehicle Identification Number: Signal Compare Failure 
+
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      <abbr title="Restraints Control Module">RCM</abbr> 
+                    
+                  </li>
+                  <li>
+                    HVAC module 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                The PCM Vehicle Identification Number (VIN)
+       is not correct. CARRY OUT <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EIJAI" data-for="418-01_s5p9344q0" data-procuid="n989294" class="expand-link" xmlns:str="http://xsltsl.org/string">Programmable Module Installation (PMI)</a><span id="spanID0EIJAI" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+    
+  
+
+

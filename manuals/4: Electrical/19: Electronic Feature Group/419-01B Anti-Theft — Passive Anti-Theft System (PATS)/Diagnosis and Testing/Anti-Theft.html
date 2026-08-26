@@ -1,0 +1,2574 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="419-01B" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="419-01B Anti-Theft — Passive Anti-Theft System (PATS)" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n2252463" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>419-01B Anti-Theft — Passive Anti-Theft System (PATS)</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      10/13/2016</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Anti-Theft" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Anti-Theft
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('419-01','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-IV Digital Multimeter 
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          
+            Vehicle Communication Module (VCM)
+       and Integrated Diagnostic System (IDS)
+       software with appropriate hardware, or equivalent scan tool
+          <br>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=st2574a&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Flex Probe Kit
+          <br>NUD105-R025D or equivalent 
+
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          Passive Anti-Theft System (PATS)
+       Operation 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The Passive Anti-Theft System (PATS)
+       is controlled by the Body Control Module (BCM)
+      . There are 2 main checks that <abbr title="Passive Anti-Theft System">PATS</abbr>  carries out before allowing the engine to start. If either of these checks fail, <abbr title="Passive Anti-Theft System">PATS</abbr>  does not allow the engine to start and STARTING SYSTEM FAULT is displayed in the message center. These two checks are the <abbr title="Body Control Module">BCM</abbr>  verifying the PCM ID to make sure it matches the PCM ID stored in memory and to verify that a programmed key was used to turn the ignition to the RUN or START position. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The first check is initiated by the <abbr title="Body Control Module">BCM</abbr>  waking up the PCM by supplying voltage on the wake up control circuit. The <abbr title="Body Control Module">BCM</abbr>  activates the wake up control circuit when: 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            the driver door is opened. 
+
+          </li>
+          <li>
+            a remote start request is received (if equipped with factory remote start). 
+
+          </li>
+          <li>
+            the brake pedal is pressed. 
+
+          </li>
+          <li>
+            a key is inserted into the ignition. 
+
+          </li>
+          <li>
+            or when the ignition is in the RUN or START position. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">Once the PCM is awake, the <abbr title="Body Control Module">BCM</abbr>  sends the PCM a challenge message over the High Speed Controller Area Network (HS-CAN)
+      . When the PCM receives the challenge message, it generates a response and sends it back to the <abbr title="Body Control Module">BCM</abbr> . If the response from the PCM does not match the response in the <abbr title="Body Control Module">BCM</abbr>  memory, this first check fails and the engine will not start. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">Once the PCM ID has been verified, <abbr title="Passive Anti-Theft System">PATS</abbr>  performs the second check to make sure a programmed key is in the ignition. When the <abbr title="Body Control Module">BCM</abbr>  determines the ignition has been turned to the RUN or START position, it generates a challenge message. It sends the challenge message to the <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver on the transmit (TX) circuit. The transceiver in turn reads the key and generates a response message that is sent back to the <abbr title="Body Control Module">BCM</abbr>  on the receive (RX) circuit. If the message received from the transceiver does not match a key stored in the <abbr title="Body Control Module">BCM</abbr>  memory, the engine will not start. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">If both the PCM ID and key verification pass, <abbr title="Passive Anti-Theft System">PATS</abbr>  is enabled and allows the engine to start. <abbr title="Passive Anti-Theft System">PATS</abbr>  cannot disable an engine that has already been started. 
+</p>
+      
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Spare Key Programming 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The customer spare key programming allows spare keys to be programmed (up to a maximum of 8) to the <abbr title="Body Control Module">BCM</abbr>  without having to use a scan tool. Two programmed keys are required to carry out the procedure. This procedure can be disabled so that spare keys can only be programmed to the vehicle using a scan tool. Refer to <a data-linkid="ID0EKAAC" data-for="419-01B_s5p5754q2986" data-procuid="n1232348" class="expand-link">Key Programming — Program a Key Using Two Programmed Keys</a><span id="spanID0EKAAC"></span> in this section for the customer spare key programming procedure or <a data-linkid="ID0EOAAC" data-for="419-01B_s5p5754q6685" data-procuid="n1232349" class="expand-link">Key Programming — Enable/Disable Spare Key Programming</a><span id="spanID0EOAAC"></span> in this section for the enable/disable procedure. 
+</p>
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Unlimited Key Mode 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          Passive Anti-Theft System (PATS)
+       contains a feature called unlimited key mode. This feature allows a customer to program more than 8 keys to their vehicle if they request it. Each vehicle in unlimited key mode is set up with a special unlimited transponder security key code. This allows all of the customer vehicles to share the same mechanically cut keys. For an individual customer, any randomly selected security key that has been previously mechanically cut and electronically programmed to the vehicle is acceptable. Refer to <a data-linkid="ID0EBBAC" data-for="419-01B_s5p5754q7063" data-procuid="n1232350" class="expand-link">Key Programming — Unlimited Key Mode</a><span id="spanID0EBBAC"></span> in this section. 
+</p>
+      
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          Passive Anti-Theft System (PATS)
+       PIDs 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Passive Anti-Theft System">PATS</abbr>  PIDs are a useful tool when diagnosing a <abbr title="Passive Anti-Theft System">PATS</abbr>  concerns. They can also be used to determine if unlimited key mode or customer spare key programming are enabled/disabled. 
+</p>
+        <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+          <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col>
+    <col>
+    <col>
+  </colgroup>
+            
+            
+            
+            <thead>
+              <tr>
+                <th valign="top">
+                  
+                    <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> 
+                    <abbr title="Passive Anti-Theft System" xmlns:str="http://xsltsl.org/string">PATS</abbr>  PID 
+
+                </th>
+                <th valign="top">
+                  PID Description 
+
+                </th>
+                <th valign="top">
+                  PID reading required for <abbr title="Passive Anti-Theft System" xmlns:str="http://xsltsl.org/string">PATS</abbr>  to be enabled 
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td valign="top">
+                  PROGRMD_KEY 
+
+                </td>
+                <td valign="top">
+                  Determines if the key in the ignition lock cylinder is a programmed key. 
+
+                </td>
+                <td valign="top">
+                  Present 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  MIN_KEYS_RQD 
+
+                </td>
+                <td valign="top">
+                  Minimum number of programmed keys required. This PID always reads 2. 
+
+                </td>
+                <td valign="top">
+                  — 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  KEYS_PROGMD 
+
+                </td>
+                <td valign="top">
+                  Number of keys currently programmed into the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  (If unlimited key mode is enabled, this PID will only read 2 regardless of how many keys are programmed). 
+
+                </td>
+                <td valign="top">
+                  2 to 8 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  START_ENABLD 
+
+                </td>
+                <td valign="top">
+                  Indicates if <abbr title="Passive Anti-Theft System" xmlns:str="http://xsltsl.org/string">PATS</abbr>  will allow the engine to start 
+
+                </td>
+                <td valign="top">
+                  Enabled 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  PCM_ID 
+
+                </td>
+                <td valign="top">
+                  Indicates if there is a PCM ID currently stored into the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> 
+                </td>
+                <td valign="top">
+                  Stored 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  PCM_VERIFY 
+
+                </td>
+                <td valign="top">
+                  Indicates if the PCM ID received by the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  matches the PCM ID stored in the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  memory 
+
+                </td>
+                <td valign="top">
+                  Yes 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  UNL_KEY_ID 
+
+                </td>
+                <td valign="top">
+                  Displays the unlimited key code 8 digit keycode (this PID is not available when unlimited key mode is enabled). 
+
+                </td>
+                <td valign="top">
+                  — 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  UNL_KEY_MODE 
+
+                </td>
+                <td valign="top">
+                  Indicates if unlimited key mode is enabled/disabled. 
+
+                </td>
+                <td valign="top">
+                  — 
+
+                </td>
+              </tr>
+            </tbody>
+          </table><br>
+        <br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_5" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          Field-Effect Transistor (FET)
+       Protection 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">A Field-Effect Transistor (FET)
+       is a type of transistor that when used with module software can be used to monitor and control current flow on module outputs. The <abbr title="Field-Effect Transistor">FET</abbr>  protection strategy is used to prevent module damage in the event of excessive current flow. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr>  utilizes an <abbr title="Field-Effect Transistor">FET</abbr>  protective circuit strategy for many of its outputs (for example, a headlamp output circuit). Output loads (current level) are monitored for excessive current (typically short circuits) and are shut down (turns off the voltage or ground provided by the module) when a fault event is detected. A short circuit DTC is stored at the fault event and a cumulative counter is started. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When the demand for the output is no longer present, the module resets the <abbr title="Field-Effect Transistor">FET</abbr>  circuit protection to allow the circuit to function. The next time the driver requests a circuit to activate that has been shut down by a previous short (<abbr title="Field-Effect Transistor">FET</abbr>  protection) and the circuit is still shorted, the <abbr title="Field-Effect Transistor">FET</abbr>  protection shuts off the circuit again and the cumulative counter advances. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When the excessive circuit load occurs often enough, the module shuts down the output until a repair procedure is carried out. Each <abbr title="Field-Effect Transistor">FET</abbr>  protected circuit has 3 predefined levels of short circuit tolerance based on the harmful effect of each circuit fault on the <abbr title="Field-Effect Transistor">FET</abbr>  and the ability of the <abbr title="Field-Effect Transistor">FET</abbr>  to withstand it. A module lifetime level of fault events is established based upon the durability of the <abbr title="Field-Effect Transistor">FET</abbr> . If the total tolerance level is determined to be 600 fault events, the 3 predefined levels would be 200, 400 and 600 fault events. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When each tolerance level is reached, the short circuit DTC that was stored on the first failure cannot be cleared by a command to clear the continuous DTCs. The module does not allow this code to be cleared or the circuit restored to normal operation until a successful self-test proves that the fault has been repaired. After the self-test has successfully completed (no on-demand DTCs present), DTC U1000:00 and the associated DTC (the DTC related to the shorted circuit) automatically clears and the circuit function returns. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When each level is reached, the DTC associated with the short circuit sets along with DTC U1000:00. These DTCs can be cleared using the module on-demand self-test, then the Clear DTC operation on the scan tool (if the on-demand test shows the fault corrected). The module never resets the fault event counter to zero and continues to advance the fault event counter as short circuit fault events occur. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">If the number of short circuit fault events reach the third level, then DTCs U1000:00 and U3000:49 set along with the associated short circuit DTC. DTC U3000:49 cannot be cleared and the module must be replaced after the repair. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr> <abbr title="Field-Effect Transistor">FET</abbr>  protected output circuit for <abbr title="Passive Anti-Theft System">PATS</abbr>  is the wake up control output. 
+</p>
+      
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern. 
+
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect for obvious signs of mechanical or electrical damage. 
+
+      </li>
+</ol>
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string">
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Visual Inspection Chart
+        </b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                
+                  Mechanical
+                 
+              </th>
+              <th align="center" valign="top">
+                
+                  Electrical
+                 
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Large metallic objects or electronic devices on the key ring that can be used to purchase gasoline or similar items 
+
+                  </li>
+                  <li>
+                    
+                      Passive Anti-Theft System (PATS)
+       key 
+
+                  </li>
+                  <li>
+                    Use of a non-<abbr title="Passive Anti-Theft System">PATS</abbr>  key or incorrect <abbr title="Passive Anti-Theft System">PATS</abbr>  key 
+
+                  </li>
+                  <li>
+                    More than one <abbr title="Passive Anti-Theft System">PATS</abbr>  key on key ring 
+
+                  </li>
+                  <li>
+                    Aftermarket remote start system installed 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Body Control Module (BCM)
+       fuse 18 (10A) 
+
+                  </li>
+                  <li>
+                    Wiring, terminals or connectors 
+
+                  </li>
+                  <li>
+                    
+                      <abbr title="Body Control Module">BCM</abbr> 
+                    
+                  </li>
+                  <li>
+                    PCM 
+
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step. 
+
+      </li>
+</ol>
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Make sure to use the latest scan tool software release. 
+
+        </i></p>
+        If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC)
+      . 
+
+      </li>
+</ol>
+      <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          The Vehicle Communication Module (VCM)
+       LED prove-out confirms power and ground from the <abbr title="Data Link Connector">DLC</abbr>  are provided to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </i></p>
+        If the scan tool does not communicate with the <abbr title="Vehicle Communication Module">VCM</abbr> : 
+
+        <ul type="disc">
+      <li>
+          check the <abbr title="Vehicle Communication Module">VCM</abbr>  connection to the vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          check the scan tool connection to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0EOFAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EOFAE"></span>, No Power To The Scan Tool, to diagnose no power to the scan tool. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the scan tool does not communicate with the vehicle: 
+
+        <ul type="disc">
+      <li>
+          verify the ignition key is in the ON position. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          verify the scan tool operation with a known good vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0ELGAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0ELGAE"></span> to diagnose no response from the PCM. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the network test. 
+
+        <ul type="disc">
+      <li>
+          If the scan tool responds with no communication for one or more modules, refer to <a data-linkid="ID0E3GAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E3GAE"></span>. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          If the network test passes, retrieve and record the continuous memory DTCs. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Clear the continuous DTCs and carry out the self-test diagnostics for the <abbr title="Body Control Module">BCM</abbr>  and PCM. 
+
+      </li>
+</ol>
+      <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the DTCs retrieved are related to the concern, go to the <abbr title="Body Control Module">BCM</abbr>  DTC Chart or the PCM DTC Chart. For all other <abbr title="Body Control Module">BCM</abbr>  DTCs, refer to <a data-linkid="ID0EGIAE" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0EGIAE"></span>. For all other PCM DTCs, refer to <a data-linkid="ID0ELIAE" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0ELIAE"></span>. 
+
+      </li>
+</ol>
+      <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If no DTCs related to the concern are retrieved, GO to <a data-ajax="false" href="#SC1">Symptom Chart</a>. 
+
+      </li>
+</ol>
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>DTC Charts 
+</b></p>
+      <a name="table_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Body Control Module (BCM)
+       DTC Chart 
+</b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                DTC 
+
+              </th>
+              <th align="center" valign="top">
+                Description 
+
+              </th>
+              <th align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                B10D5:13 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Passive Anti-Theft System" xmlns:str="http://xsltsl.org/string">PATS</abbr>  Antenna: Circuit Open 
+
+              </td>
+              <td valign="top">
+                The Body Control Module (BCM)
+       received an incomplete or corrupt response from the transceiver. INSTALL a new transceiver. REFER to <a data-linkid="ID0E2LAE" data-for="419-01B_s3p8989q0" data-procuid="n1196783" class="expand-link" xmlns:str="http://xsltsl.org/string">Passive Anti-Theft System (PATS) Transceiver</a><span id="spanID0E2LAE" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10D7:05 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Passive Anti-Theft System" xmlns:str="http://xsltsl.org/string">PATS</abbr>  Key: System Programming Failure 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-A" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test A</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10D7:51 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Passive Anti-Theft System" xmlns:str="http://xsltsl.org/string">PATS</abbr>  Key: Not Programmed 
+
+              </td>
+              <td valign="top">
+                There is an unprogrammed Passive Anti-Theft System (PATS)
+       key. PROGRAM the <abbr title="Passive Anti-Theft System" xmlns:str="http://xsltsl.org/string">PATS</abbr>  key. REFER to <a data-linkid="ID0EKOAE" data-for="419-01B_s5p5754q2986" data-procuid="n1232348" class="expand-link" xmlns:str="http://xsltsl.org/string">Key Programming — Program a Key Using Two Programmed Keys</a><span id="spanID0EKOAE" xmlns:str="http://xsltsl.org/string"></span> or <a data-linkid="ID0EOOAE" data-for="419-01B_s5p8826q0" data-procuid="n1232346" class="expand-link" xmlns:str="http://xsltsl.org/string">Key Programming Using Diagnostic Equipment</a><span id="spanID0EOOAE" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10D7:55 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Passive Anti-Theft System" xmlns:str="http://xsltsl.org/string">PATS</abbr>  Key: Not Configured 
+
+              </td>
+              <td valign="top">
+                <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+                  Once the <abbr title="Body Control Module">BCM</abbr> Programmable Module Installation (PMI)
+       is complete, follow the scan tool on-screen instructions for carrying out the Configurable Engine Immobilizer (CEI)
+       Lock Configuration. 
+
+                </i></p>
+                The <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  (<abbr title="Configurable Engine Immobilizer" xmlns:str="http://xsltsl.org/string">CEI</abbr> ) was not configured after Programmable Module Installation (PMI)
+      . CARRY OUT the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> <abbr title="Programmable Module Installation" xmlns:str="http://xsltsl.org/string">PMI</abbr> . REFER to <a data-linkid="ID0EERAE" data-sectnum="418-01" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          418-01</a><span id="spanID0EERAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10D7:87 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Passive Anti-Theft System" xmlns:str="http://xsltsl.org/string">PATS</abbr>  Key: Missing Message 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10D7:8F 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Passive Anti-Theft System" xmlns:str="http://xsltsl.org/string">PATS</abbr>  Key: Erratic 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-B" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test B</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10D8:00 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Passive Anti-Theft System" xmlns:str="http://xsltsl.org/string">PATS</abbr>  Key Less Than Minimum Programmed: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                Less than 2 keys are programmed into the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> . CYCLE the customer's second key in the ignition to program (when less than 2 keys are programmed, the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  automatically programs the first 2 keys that are cycled in the ignition). 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10D9:87 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Passive Anti-Theft System" xmlns:str="http://xsltsl.org/string">PATS</abbr>  Transponder: Missing Message 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-C" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test C</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B10DA:51 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Passive Anti-Theft System" xmlns:str="http://xsltsl.org/string">PATS</abbr>  Target Identifier: Not Programmed 
+
+              </td>
+              <td valign="top">
+                There is no PCM ID stored in the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> . CARRY OUT a parameter reset. REFER to <a data-linkid="ID0E1WAE" data-for="419-01B_s5p703512q0" data-procuid="n1256729" class="expand-link" xmlns:str="http://xsltsl.org/string">Passive Anti-Theft System (PATS) Parameter Reset</a><span id="spanID0E1WAE" xmlns:str="http://xsltsl.org/string"></span> in this section. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                C113A:11 
+
+              </td>
+              <td valign="top">
+                Wakeup Control: Circuit Short to Ground 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-D" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test D</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                C113A:15 
+
+              </td>
+              <td valign="top">
+                Wakeup Control: Circuit Short to Battery or Open 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-D" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test D</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U1000:00 
+
+              </td>
+              <td valign="top">
+                Solid State Driver Protection Activated - Driver Disabled: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                The <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  has temporarily disabled an output because an excessive current draw exists (such as a short to ground). The <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  cannot enable the output until the cause of the short is corrected. ADDRESS all other DTCs first. After the cause of the concern is corrected, CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                All other DTCs 
+
+              </td>
+              <td valign="top">
+                — 
+
+              </td>
+              <td valign="top">
+                REFER to the Diagnostic Trouble Code (DTC) Chart in <a data-linkid="ID0EI1AE" data-sectnum="419-10" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-10</a><span id="spanID0EI1AE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_3" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            PCM DTC Chart 
+</b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                DTC 
+
+              </th>
+              <th align="center" valign="top">
+                Description 
+
+              </th>
+              <th align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                P161A 
+
+              </td>
+              <td valign="top">
+                Incorrect Response from Immobilizer Control Module 
+
+              </td>
+              <td valign="top">
+                The <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  ID received by the PCM does not match the ID stored in the PCM memory. CARRY OUT a parameter reset. REFER to <a data-linkid="ID0E63AE" data-for="419-01B_s5p703512q0" data-procuid="n1256729" class="expand-link" xmlns:str="http://xsltsl.org/string">Passive Anti-Theft System (PATS) Parameter Reset</a><span id="spanID0E63AE" xmlns:str="http://xsltsl.org/string"></span> in this section. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                All other DTCs 
+
+              </td>
+              <td valign="top">
+                — 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E14AE" data-sectnum="303-14" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          303-14</a><span id="spanID0E14AE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart 
+</b></p>
+      <a name="SC1" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The engine does not start 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Driveability concern 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Passive Anti-Theft System (PATS)
+       concern 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Starting system concern 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-E">GO to Pinpoint Test E</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>All keys/<abbr title="Remote Keyless Entry">RKE</abbr>  transmitters lost, perimeter alarm activated, and unable to program new keys 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Customer lost all keys/<abbr title="Remote Keyless Entry">RKE</abbr>  transmitters 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>PROGRAM an <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter. REFER to <a data-linkid="ID0EHBAG" data-sectnum="501-14" class="section-link">Section 
+          501-14</a><span id="spanID0EHBAG"></span>. UNLOCK the doors with the programmed <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter. ERASE all keys and PROGRAM two keys. REFER to <a data-linkid="ID0ESBAG" data-for="419-01B_s5p8826q0" data-procuid="n1232346" class="expand-link">Key Programming Using Diagnostic Equipment</a><span id="spanID0ESBAG"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_5" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_6" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-A" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test A: DTC B10D7:05 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the Body Control Module (BCM)
+       enters a key programming state, it activates the transceiver to read the key in the ignition. If a valid Passive Anti-Theft System (PATS)
+       key is used and there are no concerns with the <abbr title="Passive Anti-Theft System">PATS</abbr>  the key is programed into the <abbr title="Body Control Module">BCM</abbr>  memory. 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC B10D7:05 (<abbr title="Passive Anti-Theft System">PATS</abbr>  Key: System Programming Failure) — sets when a Passive Anti-Theft System (PATS)
+       key is unsuccessfully programmed into the <abbr title="Body Control Module">BCM</abbr> . 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            
+              <abbr title="Passive Anti-Theft System">PATS</abbr>  key 
+
+          </li>
+        </ul>
+        <a name="A" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST A : DTC B10D7:05 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="A1" data-ajax="false"></a><b>A1 
+                CHECK THE BCM  DTCS FROM THE SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the recorded results from the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC B10D5:13, B10D7:87, B10D7:8F, or B10D9:87 retrieved? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to the <abbr title="Body Control Module">BCM</abbr>  DTC Chart in this section. RESOLVE these DTCs first. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A2">A2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A2" data-ajax="false"></a><b>A2 
+                CHECK THE PATS  KEY 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                  The keys must have "HA" or "SA" stamped on the key blade. 
+
+                </i><p class="singlespace"></p>
+                Check that the correct <abbr title="Passive Anti-Theft System">PATS</abbr>  keys are used with the vehicle. Compare the Integrated Keyhead Transmitters (IKTs)
+       with the one shown in <a data-linkid="ID0EEIAG" data-for="419-01B_s1p4596q0" data-procuid="n1256725" class="expand-link">Anti-Theft</a><span id="spanID0EEIAG"></span> in the Description and Operation portion of this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the correct keys being used? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                ATTEMPT to program the key again. If key programming fails, DISCARD the damaged key and PROGRAM a new key. REFER to <a data-linkid="ID0EZIAG" data-for="419-01B_s5p5754q2986" data-procuid="n1232348" class="expand-link">Key Programming — Program a Key Using Two Programmed Keys</a><span id="spanID0EZIAG"></span> or <a data-linkid="ID0E4IAG" data-for="419-01B_s5p8826q0" data-procuid="n1232346" class="expand-link">Key Programming Using Diagnostic Equipment</a><span id="spanID0E4IAG"></span> in this section. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                OBTAIN the correct key(s) for the vehicle. PROGRAM the new key(s). REFER to <a data-linkid="ID0EKJAG" data-for="419-01B_s5p5754q2986" data-procuid="n1232348" class="expand-link">Key Programming — Program a Key Using Two Programmed Keys</a><span id="spanID0EKJAG"></span> or <a data-linkid="ID0EOJAG" data-for="419-01B_s5p8826q0" data-procuid="n1232346" class="expand-link">Key Programming Using Diagnostic Equipment</a><span id="spanID0EOJAG"></span> in this section. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_7" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-B" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test B: DTC B10D7:87 or B10D7:8F 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the ignition is turned to the RUN or START position, the Body Control Module (BCM)
+       activates the transceiver to read the key in the ignition. If the <abbr title="Body Control Module">BCM</abbr>  does not receive a Passive Anti-Theft System (PATS)
+       key code or if the code is invalid, <abbr title="Passive Anti-Theft System">PATS</abbr>  is disabled and the engine does not start. 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC B10D7:87 (<abbr title="Passive Anti-Theft System">PATS</abbr>  Key: Missing Message) — sets when there is no Passive Anti-Theft System (PATS)
+       key read. This DTC sets if a non-<abbr title="Passive Anti-Theft System">PATS</abbr>  key is used to turn the ignition on. 
+
+          </li>
+          <li>
+            DTC B10D7:8F (<abbr title="Passive Anti-Theft System">PATS</abbr>  Key: Erratic) — sets when there is a partial or corrupt <abbr title="Passive Anti-Theft System">PATS</abbr>  key read. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            
+              <abbr title="Passive Anti-Theft System">PATS</abbr>  key 
+
+          </li>
+          <li>
+            
+              <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver 
+
+          </li>
+        </ul>
+        <a name="B" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST B : DTC B10D7:87 OR B10D7:8F 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTE: </b><i>
+            Large metallic objects or electronic devices on the key ring that can be used to purchase gasoline or similar items, or a second key on the same key ring as the <abbr title="Passive Anti-Theft System">PATS</abbr>  key can cause vehicle starting concerns and record DTCs under certain conditions. If a fault cannot be identified, examine the customer key ring for such objects or devices. If present, inform the customer that they need to keep these objects from touching the <abbr title="Passive Anti-Theft System">PATS</abbr>  key while starting the engine. These objects and devices cannot damage the <abbr title="Passive Anti-Theft System">PATS</abbr>  key, but can cause a momentary concern if they are too close to the key during engine start. If a concern occurs, turn the ignition switch off and restart the engine with all other objects on the key ring held away from the ignition key. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td><b>NOTE: </b><i>
+            Aftermarket or dealer-installed remote start systems may adversely affect the <abbr title="Passive Anti-Theft System">PATS</abbr>  operation. Disconnect these systems before diagnosing any <abbr title="Passive Anti-Theft System">PATS</abbr>  concerns. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B1" data-ajax="false"></a><b>B1 
+                CHECK THE PATS  KEYS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                  The keys must have "HA" or "SA" stamped on the key blade. 
+
+                </i><p class="singlespace"></p>
+                Check that the correct <abbr title="Passive Anti-Theft System">PATS</abbr>  keys are used with the vehicle. Compare the Integrated Keyhead Transmitters (IKTs)
+       with the one shown in <a data-linkid="ID0EDQAG" data-for="419-01B_s1p4596q0" data-procuid="n1256725" class="expand-link">Anti-Theft</a><span id="spanID0EDQAG"></span> in the Description and Operation portion of this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the correct keys being used? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B2">B2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                OBTAIN the correct key(s) for the vehicle. PROGRAM the new key(s). REFER to <a data-linkid="ID0EERAG" data-for="419-01B_s5p5754q2986" data-procuid="n1232348" class="expand-link">Key Programming — Program a Key Using Two Programmed Keys</a><span id="spanID0EERAG"></span> or <a data-linkid="ID0EIRAG" data-for="419-01B_s5p8826q0" data-procuid="n1232346" class="expand-link">Key Programming Using Diagnostic Equipment</a><span id="spanID0EIRAG"></span> in this section. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B2" data-ajax="false"></a><b>B2 
+                ISOLATE THE PATS  KEYS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                  Follow this procedure using both <abbr title="Passive Anti-Theft System">PATS</abbr>  keys (using one at a time). 
+
+                </i><p class="singlespace"></p>
+                Place a <abbr title="Passive Anti-Theft System">PATS</abbr>  key in the ignition and turn to the RUN position. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Clear <abbr title="Body Control Module">BCM</abbr>  Continuous DTCs 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Cycle the ignition from RUN to OFF and then back to the RUN position. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  Self-Test 
+.
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC B10D7:87 or B10D7:8F retrieved for both keys? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver. REFER to <a data-linkid="ID0EVUAG" data-for="419-01B_s3p8989q0" data-procuid="n1196783" class="expand-link">Passive Anti-Theft System (PATS) Transceiver</a><span id="spanID0EVUAG"></span> in this section. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                DISCARD the key in question and PROGRAM a new key. REFER to <a data-linkid="ID0ECVAG" data-for="419-01B_s5p5754q2986" data-procuid="n1232348" class="expand-link">Key Programming — Program a Key Using Two Programmed Keys</a><span id="spanID0ECVAG"></span> or <a data-linkid="ID0EGVAG" data-for="419-01B_s5p8826q0" data-procuid="n1232346" class="expand-link">Key Programming Using Diagnostic Equipment</a><span id="spanID0EGVAG"></span> in this section. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_8" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-C" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test C: DTC B10D9:87 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','112')">112</a> , Passive Anti-Theft System for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The Body Control Module (BCM)
+       fuse 18 (10A) supplies voltage to the Passive Anti-Theft System (PATS)
+       transceiver. When the ignition is turned to the RUN or START positions, the <abbr title="Body Control Module">BCM</abbr>  initiates the key interrogation sequence. The <abbr title="Body Control Module">BCM</abbr>  starts the interrogation sequence by generating a signal and sending that signal to the transceiver on the transmit (TX) circuit. When the transceiver receives the signal from the <abbr title="Body Control Module">BCM</abbr> , it reads the <abbr title="Passive Anti-Theft System">PATS</abbr>  key and generates a challenge response to the <abbr title="Body Control Module">BCM</abbr>  signal. The transceiver sends the challenge response back to the <abbr title="Body Control Module">BCM</abbr>  on the receive (RX) circuit. 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC B10D9:87 (<abbr title="Passive Anti-Theft System">PATS</abbr>  Transponder: Missing Message) — sets when the <abbr title="Body Control Module">BCM</abbr>  does not receive a response from the <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Fuse 
+
+          </li>
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            
+              <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="C" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST C : DTC B10D9:87 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C1" data-ajax="false"></a><b>C1 
+                RETRIEVE THE BCM  DTCS FROM THE SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the recorded results from the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC C113A:11 or DTC C113A:15 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  <a data-ajax="false" href="#PS2-D">GO to Pinpoint Test D</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C2">C2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C2" data-ajax="false"></a><b>C2 
+                CHECK FOR VOLTAGE TO THE PATS  TRANSCEIVER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Passive Anti-Theft System">PATS</abbr>  Transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','')">C252</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','1')">C252</a> Pin 1, circuit CE436 (VT/OG), harness side and the <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','2')">C252</a> Pin 2, circuit GD133 (BK). 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0113061&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C4">C4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C3">C3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C3" data-ajax="false"></a><b>C3 
+                CHECK THE PATS  TRANSCEIVER VOLTAGE SUPPLY CIRCUIT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','1')">C252</a> Pin 1, circuit CE436 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0002393&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR circuit GD133 (BK) for an open. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                VERIFY the <abbr title="Body Control Module">BCM</abbr>  fuse 18 (10A) is OK. If OK, REPAIR circuit CE436 (VT/OG) for an open. If not OK, REFER to the Wiring Diagrams Manual to identify the possible causes of the circuit short. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C4" data-ajax="false"></a><b>C4 
+                CHECK THE PATS  TRANSCEIVER CIRCUITS FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280B','')">C2280B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','3')">C252</a> Pin 3, circuit VRT24 (YE/OG), harness side and ground; and between the <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','4')">C252</a> Pin 4, circuit VRT23 (VT/GY), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0113062&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR the circuit in question for a short to voltage. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C5">C5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C5" data-ajax="false"></a><b>C5 
+                CHECK THE PATS  TRANSCEIVER CIRCUITS FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','3')">C252</a> Pin 3, circuit VRT24 (YE/OG), harness side and ground; and between the <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','4')">C252</a> Pin 4, circuit VRT23 (VT/GY), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0113063&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C6">C6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit in question for a short to ground. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C6" data-ajax="false"></a><b>C6 
+                CHECK THE PATS  TRANSCEIVER CIRCUITS FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Body Control Module">BCM</abbr> , harness side and the <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver, harness side as follows: 
+
+                <br><br><a name="table_4"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          
+                            <abbr title="Body Control Module">BCM</abbr>  Connector-Pin 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                        <th align="center" valign="top">
+                          
+                            <abbr title="Passive Anti-Theft System">PATS</abbr>  Transceiver Connector-Pin 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2280B','36')">C2280B</a> Pin 36
+                           
+                        </td>
+                        <td valign="top">
+                          VRT23 (VT/GY) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C252','4')">C252</a> Pin 4
+                           
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2280B','37')">C2280B</a> Pin 37
+                           
+                        </td>
+                        <td valign="top">
+                          VRT24 (YE/OG) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C252','3')">C252</a> Pin 3
+                           
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0113064&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver. REFER to <a data-linkid="ID0EXNBG" data-for="419-01B_s3p8989q0" data-procuid="n1196783" class="expand-link">Passive Anti-Theft System (PATS) Transceiver</a><span id="spanID0EXNBG"></span> in this section. CLEAR the DTCs. REPEAT the self-test. 
+
+              <br>
+                If DTC B10D9:87 is retrieved again, GO to <a data-ajax="false" href="#C7">C7</a>. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit in question for an open. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C7" data-ajax="false"></a><b>C7 
+                CHECK FOR CORRECT BCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect the <abbr title="Body Control Module">BCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect the <abbr title="Body Control Module">BCM</abbr>  connectors and make sure it seats correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_9" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-D" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test D: DTC C113A:11 or C113A:15 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','112')">112</a> , Passive Anti-Theft System for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The wake up control circuit is used to wake up the PCM prior to engine cranking. The PCM needs to wake up prior to a crank request so that it has time to go through its initialization. The wake up control circuit is also used to power the Passive Anti-Theft System (PATS)
+       transceiver. The wake up control circuit is controlled by the Body Control Module (BCM)
+       and receives voltage from fuse 18 (10A). 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Body Control Module">BCM</abbr>  activates the wake up control circuit when: 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            the driver door is opened. 
+
+          </li>
+          <li>
+            a remote start request is received (if equipped with factory remote start). 
+
+          </li>
+          <li>
+            the brake pedal is pressed. 
+
+          </li>
+          <li>
+            a key is inserted into the ignition. 
+
+          </li>
+          <li>
+            or when the ignition is in the RUN or START position. 
+
+          </li>
+        </ul>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC C113A:11 (Wakeup Control: Circuit Short To Ground) — sets when the <abbr title="Body Control Module">BCM</abbr>  detects a short to ground on the wake up control circuit. 
+
+          </li>
+          <li>
+            DTC C113A:15 (Wakeup Control: Circuit Short To Battery or Open) — sets when the <abbr title="Body Control Module">BCM</abbr>  detects a short to voltage or an open on the wake up control circuit. 
+
+          </li>
+          <li>
+            DTC U1000:00 (Solid State Driver Protection Activated - Driver Disabled: No Sub Type Information) — sets when the <abbr title="Body Control Module">BCM</abbr>  has temporarily shut down the output driver. The module has temporarily disabled the wake up control circuit because an excessive current draw exists (such as a short to ground). The <abbr title="Body Control Module">BCM</abbr>  cannot enable the wake up control circuit until the cause of the short is corrected, the DTCs have been cleared and a successful self-test is run. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            
+              <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver 
+
+          </li>
+          <li>
+            PCM 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="D" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST D : DTC C113A:11 OR C113A:15 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D1" data-ajax="false"></a><b>D1 
+                RETRIEVE THE BCM  DTCS FROM THE SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the recorded results from the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC C113A:11 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D2">D2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                For DTC C113A:15, GO to <a data-ajax="false" href="#D5">D5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D2" data-ajax="false"></a><b>D2 
+                CHECK THE PCM FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a> (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a> (5.0/6.2L) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Clear <abbr title="Body Control Module">BCM</abbr>  Continuous DTCs 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  Self-Test 
+.
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC C113A:11 retrieved? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D3">D3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D9">D9</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D3" data-ajax="false"></a><b>D3 
+                CHECK THE PATS  TRANSCEIVER FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Passive Anti-Theft System">PATS</abbr>  Transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','')">C252</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Clear <abbr title="Body Control Module">BCM</abbr>  Continuous DTCs 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  Self-Test 
+.
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC C113A:11 retrieved? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D4">D4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver. REFER to <a data-linkid="ID0EP6BG" data-for="419-01B_s3p8989q0" data-procuid="n1196783" class="expand-link">Passive Anti-Theft System (PATS) Transceiver</a><span id="spanID0EP6BG"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D4" data-ajax="false"></a><b>D4 
+                CHECK THE WAKEUP CONTROL CIRCUIT FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280F','')">C2280F</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280F','5')">C2280F</a> Pin 5, circuit CE436 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0099635&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D10">D10</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CE436 (VT/OG) for a short to ground. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D5" data-ajax="false"></a><b>D5 
+                CHECK THE WAKEUP CONTROL CIRCUIT FOR AN OPEN OR SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Start the engine. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the engine start? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D7">D7</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D6">D6</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D6" data-ajax="false"></a><b>D6 
+                CHECK THE WAKEUP CONTROL CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Passive Anti-Theft System">PATS</abbr>  Transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','')">C252</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280F','')">C2280F</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','1')">C252</a> Pin 1, circuit CE436 (VT/OG), harness side and the <abbr title="Body Control Module">BCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2280F','5')">C2280F</a> Pin 5, circuit CE436 (VT/OG), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0113065&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D10">D10</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CE436 (VT/OG) for an open. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D7" data-ajax="false"></a><b>D7 
+                CHECK THE WAKEUP CONTROL CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Passive Anti-Theft System">PATS</abbr>  Transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','')">C252</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2280F','')">C2280F</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','1')">C252</a> Pin 1, circuit CE436 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0002393&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D8">D8</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D10">D10</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D8" data-ajax="false"></a><b>D8 
+                CHECK THE PCM FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a> (3.7L) or <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a> (5.0/6.2L) 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Passive Anti-Theft System">PATS</abbr>  transceiver <a href="javascript:connectorlinkwithpin('ED2','C252','1')">C252</a> Pin 1, circuit CE436 (VT/OG), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0002393&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR circuit CE436 (VT/OG) for a short to voltage. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D9">D9</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D9" data-ajax="false"></a><b>D9 
+                CHECK FOR CORRECT PCM OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect the PCM connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect the PCM connectors and make sure it seats correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new PCM. REFER to <a data-linkid="ID0EEQAI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EEQAI"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D10" data-ajax="false"></a><b>D10 
+                CHECK FOR CORRECT BCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect the <abbr title="Body Control Module">BCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect the <abbr title="Body Control Module">BCM</abbr>  connectors and make sure it seats correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_10" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-E" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test E: The Engine Does Not Start 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The Passive Anti-Theft System (PATS)
+       disables the engine from starting by disabling the fuel injectors and starter. When the ignition is turned to the RUN or START position, the <abbr title="Passive Anti-Theft System">PATS</abbr>  reads the <abbr title="Passive Anti-Theft System">PATS</abbr>  key and checks the PCM ID. If an unprogrammed <abbr title="Passive Anti-Theft System">PATS</abbr>  key is used or an invalid PCM ID is received, the <abbr title="Passive Anti-Theft System">PATS</abbr>  disables the engine. If there is a <abbr title="Passive Anti-Theft System">PATS</abbr>  concern that caused the engine to be disabled, "STARTING SYSTEM FAULT" is displayed in the message center. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Driveability concern 
+
+          </li>
+          <li>
+            
+              <abbr title="Passive Anti-Theft System">PATS</abbr>  concern 
+
+          </li>
+          <li>
+            Starting system concern 
+
+          </li>
+        </ul>
+        <a name="E" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST E : THE ENGINE DOES NOT START 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="E1" data-ajax="false"></a><b>E1 
+                CHECK FOR COMMUNICATION WITH THE PCM AND THE BCM </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Carry out the network test using the scan tool. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the scan tool establish communication with the PCM and the Body Control Module (BCM)
+      ? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E2">E2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0ECYAI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0ECYAI"></span> to diagnose the module that is not communicating with the scan tool. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E2" data-ajax="false"></a><b>E2 
+                CHECK FOR BCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  Self-Test 
+.
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any <abbr title="Body Control Module">BCM</abbr>  DTCs present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to the <abbr title="Body Control Module">BCM</abbr>  DTC Chart in this section. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The no-start condition is not caused by <abbr title="Passive Anti-Theft System">PATS</abbr> . REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual to diagnose the cause of the no-start condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+  
+
+
