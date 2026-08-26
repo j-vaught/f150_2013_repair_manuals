@@ -1,0 +1,2993 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="211-04" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="211-04 Steering Column" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1270069" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>211-04 Steering Column</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      08/30/2012</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Steering Column" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Steering Column
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('211-04','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2574A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Flex Probe Kit
+          <br>NUD105-R025D or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-IV Digital Multimeter
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3094A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Test Light
+          <br>SGT 27000 or equivalent 250-300 mA incandescent bulb test lamp 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          
+            Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan tool
+          
+          <br>
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Power Adjustable Tilt/Telescope Steering Column 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The power adjustable tilt/telescope steering column is controlled by the steering column control switch and 2 electric motors that are powered by the Steering Column Control Module (SCCM)
+      . The steering column control switch is a 4-position, momentary-contact switch. When the steering column control switch is moved to any of the 4 positions, it sends a signal to the <abbr title="Steering Column Control Module">SCCM</abbr>  to tilt the steering column up or down or telescope the steering column forward or rearward. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Steering Column Control Module">SCCM</abbr>  continuously monitors the steering column tilt and telescoping motors and circuits for faults. If a fault is detected, the <abbr title="Steering Column Control Module">SCCM</abbr>  is capable of setting DTCs. 
+</p>
+      
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Tilt/Telescoping Motor Sensors 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Steering Column Control Module">SCCM</abbr>  receives digital signals from Hall-effect type rotation sensors that are integral to the tilt and telescoping motors. The <abbr title="Steering Column Control Module">SCCM</abbr>  uses these signals to calculate the location of the steering column in relation to the full forward/rearward and full up/down positions. The <abbr title="Steering Column Control Module">SCCM</abbr>  also uses these signals to store and recall memory positions, carry out the easy entry/exit operations and to make sure the tilt and telescoping motors do not stall against the steering column end of travel in the forward/rearward or up/down directions. Both the tilt and telescopic motors can be serviced separately from the steering column. 
+</p>
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Jog Mode 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">If the <abbr title="Steering Column Control Module">SCCM</abbr>  loses the signal from either of the motor sensors, the affected steering column motor operates in jog mode. Jog mode allows limited operation of the affected steering column motor using only the steering column control switch. When the steering column control switch is operated in jog mode, the steering column moves in the desired direction for one second, then stops. The steering column control switch must be released, then pressed again in order to move the steering column for an additional second. Jog mode is an indication that there is a tilt or telescoping motor sensor fault. If the adjustable steering column is operating in jog mode, a DTC can set in the <abbr title="Steering Column Control Module">SCCM</abbr> . 
+</p>
+      
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Memory Position Programming and Recall 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Steering Column Control Module">SCCM</abbr>  monitors steering column position using Hall-effect sensors that are integral to the tilt and telescoping motors. When a memory position is recalled through either the memory SET switch or the Remote Keyless Entry (RKE)
+       transmitter, the <abbr title="Steering Column Control Module">SCCM</abbr>  monitors the Hall-effect sensors and stops sending voltage to the steering column motors once the commanded memory position is reached. If the <abbr title="Steering Column Control Module">SCCM</abbr>  receives a steering column switch input during a memory position recall function, the module stops the memory recall and responds to the new steering column switch position input. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When the <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter is activated, a message is sent over the Medium Speed Controller Area Network (MS-CAN)
+       to the Driver Seat Module (DSM)
+      . When the memory SET switch is pressed, the <abbr title="Driver Seat Module">DSM</abbr>  senses continuity to ground on the switch circuit. When the <abbr title="Driver Seat Module">DSM</abbr>  receives either the <abbr title="Medium Speed Controller Area Network">MS-CAN</abbr>  message or the ground input through the switch circuit, it sends a message over the <abbr title="Medium Speed Controller Area Network">MS-CAN</abbr>  to the Body Control Module (BCM)
+      . The <abbr title="Body Control Module">BCM</abbr>  acts as a gateway module, relaying the <abbr title="Medium Speed Controller Area Network">MS-CAN</abbr>  message that was received from the <abbr title="Driver Seat Module">DSM</abbr>  to the <abbr title="Steering Column Control Module">SCCM</abbr>  over the High Speed Controller Area Network (HS-CAN)
+      . The <abbr title="Steering Column Control Module">SCCM</abbr>  then sends voltage over the appropriate circuit to the steering column tilt or telescoping motor to adjust the steering column position. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">For information on setting and recalling a memory position, refer to the Owner's Literature or Memory Position Programming in <a data-linkid="ID0EKBAC" data-sectnum="501-10" class="section-link">Section 
+          501-10</a><span id="spanID0EKBAC"></span>. 
+</p>
+      
+      <a name="procsub2_5" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Easy Entry/Exit 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The easy entry/exit function moves the steering column to the full inward and upward position when the selector lever is in the PARK position and the ignition switch indicates the ignition key has been removed from the ignition lock cylinder. The <abbr title="Steering Column Control Module">SCCM</abbr>  receives an ignition status message over the High Speed Controller Area Network (HS-CAN)
+      . When the ignition status message indicates the ignition key has been removed from the lock cylinder, the <abbr title="Steering Column Control Module">SCCM</abbr>  commands the steering column to the full upward/forward position. The <abbr title="Steering Column Control Module">SCCM</abbr>  cancels this operation if a valid input is received from the steering column control switch or memory position switch. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Steering Column Control Module">SCCM</abbr>  records the current steering column position before powering the steering column for an easy exit operation. This recorded position returns the steering column to this position on the next easy entry operation. During easy entry operation, the steering column is returned to the position previous to the easy exit operation. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The easy entry/exit feature can be activated or deactivated using the message center. Refer to driver controls in the Owner's Literature for additional instructions for using the message center. 
+</p>
+      
+      <a name="procsub2_6" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Power Tilt Steering Column Hard Stop/Soft Stop 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">A hard stop occurs when the power column physically reaches the end of travel and cannot go any further. A soft stop occurs when the power column stops before physically reaching the end of travel. The hard stop is set by steering column design and cannot be changed or adjusted. The soft stop is set by the <abbr title="Steering Column Control Module">SCCM</abbr> . To prevent unnecessary stress on the power column and motors, the <abbr title="Steering Column Control Module">SCCM</abbr>  sets 4 soft stop positions, one for tilt up, one for tilt down, one for telescope out and one for telescope in. The <abbr title="Steering Column Control Module">SCCM</abbr>  uses a preset distance from the hard stop to determine where the soft stop occurs. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The soft stops must be relearned by the <abbr title="Steering Column Control Module">SCCM</abbr>  whenever a new steering column or <abbr title="Steering Column Control Module">SCCM</abbr>  is installed. 
+</p>
+      
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern. 
+
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect for obvious signs of mechanical or electrical damage. 
+
+      </li>
+</ol>
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect for obstructions preventing column movement. 
+
+      </li>
+</ol>
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string">
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Visual Inspection Chart
+        </b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                
+                  Mechanical
+                 
+              </th>
+              <th align="center" valign="top">
+                
+                  Electrical
+                 
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Steering column control switch 
+
+                  </li>
+                  <li>
+                    Adjustable steering column tilt motor 
+
+                  </li>
+                  <li>
+                    Adjustable steering column telescope motor 
+
+                  </li>
+                  <li>
+                    Steering column assembly 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Wiring, terminals or connectors 
+
+                  </li>
+                  <li>
+                    
+                      Steering Column Control Module (SCCM)
+      
+                    
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step. 
+
+      </li>
+</ol>
+      <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Make sure to use the latest scan tool software release. 
+
+        </i></p>
+        If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC)
+      . 
+
+      </li>
+</ol>
+      <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          The Vehicle Communication Module (VCM)
+       LED prove out confirms power and ground from the <abbr title="Data Link Connector">DLC</abbr>  are provided to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </i></p>
+        If the scan tool does not communicate with the <abbr title="Vehicle Communication Module">VCM</abbr> : 
+
+        <ul type="disc">
+      <li>
+          check the <abbr title="Vehicle Communication Module">VCM</abbr>  connection to the vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          check the scan tool connection to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0E6KAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E6KAC"></span>, No Power To The Scan Tool, to diagnose no power to the scan tool. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the scan tool does not communicate with the vehicle: 
+
+        <ul type="disc">
+      <li>
+          verify the ignition is ON. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          verify the scan tool operation with a known good vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0E3LAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E3LAC"></span>, The PCM Does Not Respond To The Scan Tool, to diagnose no response from the PCM. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the network test. 
+
+        <ul type="disc">
+      <li>
+          If the scan tool responds with no communication for one or more modules, refer to <a data-linkid="ID0ENMAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0ENMAC"></span>. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          If the network test passes, proceed with module self-test diagnostics. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the self-test diagnostics for the <abbr title="Steering Column Control Module">SCCM</abbr> . 
+
+      </li>
+</ol>
+      <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the DTCs retrieved are related to the concern, go to Steering Column Control Module (SCCM)
+       DTC Chart. For all other <abbr title="Steering Column Control Module">SCCM</abbr>  DTCs, refer to the Master DTC Chart in <a data-linkid="ID0EXNAC" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EXNAC"></span>. 
+
+      </li>
+</ol>
+      <ol start="11. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If no DTCs related to the concern are retrieved, GO to <a data-ajax="false" href="#SC1">Symptom Chart</a>. 
+
+      </li>
+</ol>
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>DTC Chart 
+</b></p>
+      <a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Steering Column Control Module (SCCM)
+       DTC Chart 
+</b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                DTC 
+
+              </th>
+              <th align="center" valign="top">
+                Description 
+
+              </th>
+              <th align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                B1298:09 
+
+              </td>
+              <td valign="top">
+                Steering Column Adjust Up Switch: Component Failure 
+
+              </td>
+              <td valign="top">
+                INSTALL a new steering column control switch. REFER to Brake Pedal Control Switch in <a data-linkid="ID0E2AAE" data-sectnum="206-06" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          206-06</a><span id="spanID0E2AAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p> CLEAR the DTCs. VERIFY correct system operation. REPEAT the self-test. 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p> If DTC B1298:09 returns, INSTALL a new Steering Column Control Module (SCCM)
+      . REFER to <a data-linkid="ID0ELBAE" data-sectnum="211-05" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          211-05</a><span id="spanID0ELBAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p> CLEAR the DTCs. VERIFY correct system operation. REPEAT the self-test. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1299:09 
+
+              </td>
+              <td valign="top">
+                Steering Column Adjust Down Switch: Component Failure 
+
+              </td>
+              <td valign="top">
+                INSTALL a new steering column control switch. REFER to Brake Pedal Control Switch in <a data-linkid="ID0EJCAE" data-sectnum="206-06" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          206-06</a><span id="spanID0EJCAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p> CLEAR the DTCs. VERIFY correct system operation. REPEAT the self-test. 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p> If DTC B1299:09 returns, INSTALL a new <abbr title="Steering Column Control Module" xmlns:str="http://xsltsl.org/string">SCCM</abbr> . REFER to <a data-linkid="ID0EZCAE" data-sectnum="211-05" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          211-05</a><span id="spanID0EZCAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p> CLEAR the DTCs. VERIFY correct system operation. REPEAT the self-test. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B12A1:09 
+
+              </td>
+              <td valign="top">
+                Steering Column Adjust Out Switch: Component Failure 
+
+              </td>
+              <td valign="top">
+                INSTALL a new steering column control switch. REFER to Brake Pedal Control Switch in <a data-linkid="ID0EXDAE" data-sectnum="206-06" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          206-06</a><span id="spanID0EXDAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p> CLEAR the DTCs. VERIFY correct system operation. REPEAT the self-test. 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p> If DTC B12A1:09 returns, INSTALL a new <abbr title="Steering Column Control Module" xmlns:str="http://xsltsl.org/string">SCCM</abbr> . REFER to <a data-linkid="ID0EHEAE" data-sectnum="211-05" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          211-05</a><span id="spanID0EHEAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p> CLEAR the DTCs. VERIFY correct system operation. REPEAT the self-test. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B12A2:09 
+
+              </td>
+              <td valign="top">
+                Steering Column Adjust In Switch: Component Failure 
+
+              </td>
+              <td valign="top">
+                INSTALL a new steering column control switch. REFER to Brake Pedal Control Switch in <a data-linkid="ID0EFFAE" data-sectnum="206-06" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          206-06</a><span id="spanID0EFFAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p> CLEAR the DTCs. VERIFY correct system operation. REPEAT the self-test. 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p> If DTC B12A2:09 returns, INSTALL a new <abbr title="Steering Column Control Module" xmlns:str="http://xsltsl.org/string">SCCM</abbr> . REFER to <a data-linkid="ID0EVFAE" data-sectnum="211-05" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          211-05</a><span id="spanID0EVFAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p> CLEAR the DTCs. VERIFY correct system operation. REPEAT the self-test. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1375:18 
+
+              </td>
+              <td valign="top">
+                Steering Column Tilt Motor: Circuit Current Below Threshold 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-A" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test A</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1375:19 
+
+              </td>
+              <td valign="top">
+                Steering Column Tilt Motor: Circuit Current Above Threshold 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-A" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test A</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1375:71 
+
+              </td>
+              <td valign="top">
+                Steering Column Tilt Motor: Actuator Stuck 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-A" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test A</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B137E:18 
+
+              </td>
+              <td valign="top">
+                Steering Column Telescope Motor: Current Below Threshold 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-A" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test A</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B137E:19 
+
+              </td>
+              <td valign="top">
+                Steering Column Telescope Motor: Current Above Threshold 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-A" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test A</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B137E:71 
+
+              </td>
+              <td valign="top">
+                Steering Column Telescope Motor: Actuator Stuck 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-A" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test A</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1C33:11 
+
+              </td>
+              <td valign="top">
+                Steering Column Tilt Feedback Signal: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-C" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test C</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1C33:12 
+
+              </td>
+              <td valign="top">
+                Steering Column Tilt Feedback Signal: Circuit Short To Battery 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-C" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test C</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1C35:11 
+
+              </td>
+              <td valign="top">
+                Steering Column Telescope Feedback Signal: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-C" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test C</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1C35:12 
+
+              </td>
+              <td valign="top">
+                Steering Column Telescope Feedback Signal: Circuit Short To Battery 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-C" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test C</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                — 
+
+              </td>
+              <td valign="top">
+                All Other <abbr title="Steering Column Control Module" xmlns:str="http://xsltsl.org/string">SCCM</abbr>  DTCs 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E5OAE" data-sectnum="211-05" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          211-05</a><span id="spanID0E5OAE" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart 
+</b></p>
+      <a name="SC1" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>No communication with the Steering Column Control Module (SCCM)
+      </li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Fuse 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Steering Column Control Module">SCCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REFER to <a data-linkid="ID0EARAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EARAE"></span> to diagnose the no communication condition. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The adjustable steering column is inoperative in one or more directions — using the steering column control switch 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Fuse 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Steering column control switch 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Adjustable steering column tilt motor 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Adjustable steering column telescopic motor 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Steering Column Control Module">SCCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-A">GO to Pinpoint Test A</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The adjustable steering column is inoperative in one or more directions — using the memory SET switch buttons 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Memory SET switch 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Driver Seat Module (DSM)
+      
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Steering Column Control Module">SCCM</abbr> 
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Body Control Module (BCM)
+      
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-B">GO to Pinpoint Test B</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The adjustable steering column is inoperative in one or more directions — using an Remote Keyless Entry (RKE)
+       transmitter 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Driver Seat Module">DSM</abbr> 
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Steering Column Control Module">SCCM</abbr> 
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Body Control Module">BCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-B">GO to Pinpoint Test B</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The adjustable steering column is inoperative in one or more directions — using the easy entry/exit feature 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Entry/exit feature is disabled in the message center 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Steering Column Control Module">SCCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-B">GO to Pinpoint Test B</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The adjustable steering column operates in one second intervals when using the steering column control switch (jog mode) 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Adjustable steering column tilt motor 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Adjustable steering column telescopic motor 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Steering Column Control Module">SCCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-C">GO to Pinpoint Test C</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Looseness felt in the steering wheel or tilt mechanism 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Loose tilt motor fastener(s) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Loose steering column assembly fastener(s) 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>TIGHTEN fasteners. For additional information, refer to <a data-linkid="ID0EW2AE" data-for="211-04_s3p705369q704743" data-procuid="n1270074" class="expand-link">Steering Column Motor — Tilt</a><span id="spanID0EW2AE"></span> or <a data-linkid="ID0E12AE" data-for="211-04_s3p705369q706061" data-procuid="n1272145" class="expand-link">Steering Column Motor — Telescopic</a><span id="spanID0E12AE"></span>.
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wore internal steering column component(s) or loose internal fastener/fasteners 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Steering column tilt housing fastener(s) 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li> INSTALL a new steering column. For additional information, REFER to <a data-linkid="ID0E33AE" data-for="211-04_s3p1980q0" data-procuid="n1397417" class="expand-link">Steering Column</a><span id="spanID0E33AE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_5" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_7" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-A" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test A: The Adjustable Steering Column is Inoperative in One or More Directions — Using the Steering Column Control Switch 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','128')">128</a> , Adjustable Steering Column for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the steering column control switch is activated, the Steering Column Control Module (SCCM)
+       supplies voltage and ground to the applicable steering column tilt or telescoping motor to move the steering column to the desired position. 
+</p>
+        
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Fuse 
+
+          </li>
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Steering column control switch 
+
+          </li>
+          <li>
+            Adjustable steering column tilt motor 
+
+          </li>
+          <li>
+            Adjustable steering column telescopic motor 
+
+          </li>
+          <li>
+            
+              <abbr title="Steering Column Control Module">SCCM</abbr> 
+            
+          </li>
+        </ul>
+        <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_2" xmlns:str="http://xsltsl.org/string"></a>
+          <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+            
+            
+            <thead>
+              <tr>
+                <th align="center" valign="top">
+                  DTC Description 
+
+                </th>
+                <th align="center" valign="top">
+                  Fault Trigger Conditions 
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1375:18 — Steering Column Tilt Motor: Circuit Current Below Threshold 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Steering Column Control Module" xmlns:str="http://xsltsl.org/string">SCCM</abbr>  senses current flow to the adjustable steering column tilt motor is below a preset limit while the steering column control switch is activated. This may be caused by an open or high resistance in the adjustable steering column tilt motor circuits. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1375:19 — Steering Column Tilt Motor: Circuit Current Above Threshold 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Steering Column Control Module" xmlns:str="http://xsltsl.org/string">SCCM</abbr>  senses current flow to the adjustable steering column tilt motor is above a preset limit while the steering column control switch is activated. This may be caused by a short to ground in the adjustable steering column tilt motor circuits. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1375:71 — Steering Column Tilt Motor: Actuator Stuck 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Steering Column Control Module" xmlns:str="http://xsltsl.org/string">SCCM</abbr>  senses current flow to the adjustable steering column tilt motor is within a specific range but above a preset limit during self test. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B137E:18 — Steering Column Telescope Motor: Current Below Threshold 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Steering Column Control Module" xmlns:str="http://xsltsl.org/string">SCCM</abbr>  senses current flow to the adjustable steering column telescope motor is below a preset limit while the steering column control switch is activated. This may be caused by an open or high resistance in the adjustable steering column telescope motor circuits. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B137E:19 — Steering Column Telescope Motor: Current Above Threshold 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Steering Column Control Module" xmlns:str="http://xsltsl.org/string">SCCM</abbr>  senses current flow to the adjustable steering column telescope motor is above a preset limit while the steering column control switch is activated. This may be caused by a short to ground in the adjustable steering column telescope motor circuits. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B137E:71 — Steering Column Telescope Motor: Actuator Stuck 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Steering Column Control Module" xmlns:str="http://xsltsl.org/string">SCCM</abbr>  senses current flow to the adjustable steering column telescope motor is within a specific range but above a preset limit during on-demand self test. 
+
+                </td>
+              </tr>
+            </tbody>
+          </table><br>
+        <br xmlns:str="http://xsltsl.org/string">
+        <a name="A" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST A : THE ADJUSTABLE STEERING COLUMN IS INOPERATIVE IN ONE OR MORE DIRECTIONS — USING THE STEERING COLUMN CONTROL SWITCH 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multi-meter probes. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td><b>NOTE: </b><i>
+            If the adjustable steering column only operates in one second intervals when activating the steering column control switch, <a data-ajax="false" href="#PS2-C">GO to Pinpoint Test C</a>. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A1" data-ajax="false"></a><b>A1 
+                CHECK THE OPERATION OF THE ADJUSTABLE COLUMN USING THE STEERING COLUMN CONTROL SWITCH 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Operate the adjustable steering column in all directions using the steering column control switch. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the steering column operate correctly in at least one direction using the steering column control switch? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A4">A4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If the steering column does not move in any direction at all using the steering column switch, GO to <a data-ajax="false" href="#A2">A2</a>. 
+
+              <br>
+                If the steering column moves in only one second intervals (jog mode) in one or more directions using the steering column switch, <a data-ajax="false" href="#PS2-C">GO to Pinpoint Test C</a>. 
+
+              </td>
+          </tr>
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A2" data-ajax="false"></a><b>A2 
+                CHECK FOR VOLTAGE AT THE SCCM </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414A','')">C2414A</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414A','10')">C2414A</a> Pin 10, circuit SBP23 (WH/RD), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112442&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414B','8')">C2414B</a> Pin 8, circuit SBP24 (VT/RD), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0119444&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the voltages greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A3">A3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                VERIFY <abbr title="Body Control Module">BCM</abbr>  fuses 23 (15A) and 24 (15A) are OK. If OK, REPAIR the affected circuit(s). 
+
+                <br>If not OK, REFER to the Wiring Diagrams manual to identify the cause for the circuit short. 
+
+                <br>TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A3" data-ajax="false"></a><b>A3 
+                CHECK THE SCCM  GROUND CIRCUITS FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414A','13')">C2414A</a> Pin 13, circuit GD133 (BK), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112444&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414B','5')">C2414B</a> Pin 5, circuit GD138 (BK/WH), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0119446&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A4">A4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A4" data-ajax="false"></a><b>A4 
+                CHECK THE SCCM  STEERING COLUMN ADJUST SWITCH (STRCOL_ADJ) PID 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414A','')">C2414A</a> (if previously disconnected).
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a> (if previously disconnected).
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — <abbr title="Steering Column Control Module">SCCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Monitor the STRCOL_ADJ PID while moving the steering column control switch in all directions. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the PID values agree with the steering column control switch positions? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A5">A5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new steering column control switch. REFER to Brake Pedal Control Switch in <a data-linkid="ID0EGTAG" data-sectnum="206-06" class="section-link">Section 
+          206-06</a><span id="spanID0EGTAG"></span>. 
+
+                <br> CLEAR the DTCs. VERIFY correct system operation. REPEAT the self-test 
+
+                <br>If the concern is still present, INSTALL a new Steering Column Control Module (SCCM)
+      . REFER to <a data-linkid="ID0EWTAG" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EWTAG"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A5" data-ajax="false"></a><b>A5 
+                CHECK THE ADJUSTABLE STEERING COLUMN MOTOR CIRCUITS FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','')">C2414C</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between ground and: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','1')">C2414B</a> Pin 1, circuit CPP22 (GY/BN), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','2')">C2414B</a> Pin 2, circuit CPP04 (GY), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','7')">C2414B</a> Pin 7, circuit CPP02 (BN), harness side. 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0119637&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A6">A6</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A6" data-ajax="false"></a><b>A6 
+                CHECK THE ADJUSTABLE STEERING COLUMN MOTOR CIRCUITS FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between ground and: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','1')">C2414B</a> Pin 1, circuit CPP22 (GY/BN), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','2')">C2414B</a> Pin 2, circuit CPP04 (GY), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','7')">C2414B</a> Pin 7, circuit CPP02 (BN), harness side. 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0119449&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A7">A7</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A7" data-ajax="false"></a><b>A7 
+                CHECK THE ADJUSTABLE STEERING COLUMN MOTOR CIRCUITS FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  Adjustable Steering Column Tilt Motor <a href="javascript:connectorlinkwithpin('ED2','C2600','')">C2600</a> or Adjustable Steering Column Telescope Motor <a href="javascript:connectorlinkwithpin('ED2','C2601','')">C2601</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                For an inoperative adjustable steering column tilt motor, measure the resistance between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a> and adjustable steering column tilt motor <a href="javascript:connectorlinkwithpin('ED2','C2600','')">C2600</a> using the following chart: 
+
+                <br><br><a name="table_3"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          
+                            <abbr title="Steering Column Control Module">SCCM</abbr> 
+                           
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Adjustable Steering Column Tilt Motor 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414B','7')">C2414B</a> Pin 7
+                           
+                        </td>
+                        <td valign="top">
+                          CPP02 (BN) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2600','2')">C2600</a> Pin 2
+                           
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414B','2')">C2414B</a> Pin 2
+                           
+                        </td>
+                        <td valign="top">
+                          CPP04 (GY) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2600','1')">C2600</a> Pin 1
+                           
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0122534&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                For an inoperative adjustable steering column telescope motor, measure the resistance between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a> and adjustable steering column telescope motor <a href="javascript:connectorlinkwithpin('ED2','C2601','')">C2601</a> using the following chart: 
+
+                <br><br><a name="table_4"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          
+                            <abbr title="Steering Column Control Module">SCCM</abbr> 
+                           
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Adjustable Steering Column Telescope Motor 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414B','7')">C2414B</a> Pin 7
+                           
+                        </td>
+                        <td valign="top">
+                          CPP02 (BN) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2601','2')">C2601</a> Pin 2
+                           
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414B','1')">C2414B</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          CPP22 (GY/BN) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2601','1')">C2601</a> Pin 1
+                           
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0122581&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For a tilt motor that is inoperative/does not operate correctly, GO to <a data-ajax="false" href="#A8">A8</a>. 
+
+              <br>
+                For a telescope motor that is inoperative/does not operate correctly, GO to <a data-ajax="false" href="#A9">A9</a>. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A8" data-ajax="false"></a><b>A8 
+                CHECK THE SCCM  OUTPUT TO THE ADJUSTABLE STEERING COLUMN TILT MOTOR 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','')">C2414C</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                <b>NOTICE: 
+                  The following step uses a test light to simulate normal circuit loads. Use only the test light recommended in the Special Tools table at the beginning of this section. To avoid connector terminal damage, use the Flex Probe Kit for the test light probe connection to the vehicle. Do not use the test light probe directly on any connector. 
+
+                </b><p class="singlespace"></p>
+                Connect a 12-volt incandescent test light between adjustable steering column tilt motor <a href="javascript:connectorlinkwithpin('ED2','C2600','1')">C2600</a> Pin 1, circuit CPP02 (BN), harness side and <a href="javascript:connectorlinkwithpin('ED2','C2600','2')">C2600</a> Pin 2, circuit CPP04 (GY), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0122613&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                   Because the steering column motor (Hall-effect sensor) is disconnected, the <abbr title="Steering Column Control Module">SCCM</abbr>  only activates the output for approximately 1 second each time the steering column control switch is activated (jog mode). 
+
+                </i><p class="singlespace"></p>
+                Activate the steering column control switch in both the UP and DOWN positions (release the switch briefly between each switch activation) while observing the test light. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the test light momentarily illuminate when the steering column control switch is activated in both UP and DOWN positions? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                 INSTALL a new adjustable steering column tilt motor. REFER to <a data-linkid="ID0EPKBG" data-for="211-04_s3p705369q704743" data-procuid="n1270074" class="expand-link">Steering Column Motor — Tilt</a><span id="spanID0EPKBG"></span> in this section. CLEAR the DTCs. TEST the system for normal operation. REPEAT the self test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A10">A10</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A9" data-ajax="false"></a><b>A9 
+                CHECK THE SCCM  OUTPUT TO THE ADJUSTABLE STEERING COLUMN TELESCOPE MOTOR 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','')">C2414C</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                <b>NOTICE: 
+                  The following step uses a test light to simulate normal circuit loads. Use only the test light recommended in the Special Tools table at the beginning of this section. To avoid connector terminal damage, use the Flex Probe Kit for the test light probe connection to the vehicle. Do not use the test light probe directly on any connector. 
+
+                </b><p class="singlespace"></p>
+                Connect a 12-volt incandescent test light between adjustable steering column telescope motor <a href="javascript:connectorlinkwithpin('ED2','C2601','2')">C2601</a> Pin 2, circuit CPP02 (BN), harness side and <a href="javascript:connectorlinkwithpin('ED2','C2601','1')">C2601</a> Pin 1, circuit CPP22 (GY/BN), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0122614&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                   Because the steering column motor (Hall-effect sensor) is disconnected, the <abbr title="Steering Column Control Module">SCCM</abbr>  only activates the output for approximately 1 second each time the steering column control switch is activated (jog mode). 
+
+                </i><p class="singlespace"></p>
+                Activate the steering column control switch in both the FORWARD and REARWARD positions (release the switch briefly between each switch activation) while observing the test light. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the test light momentarily illuminate when the steering column control switch is activated in both FORWARD and REARWARD positions? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                 INSTALL a new adjustable steering column telescopic motor. REFER to <a data-linkid="ID0E6OBG" data-for="211-04_s3p705369q706061" data-procuid="n1272145" class="expand-link">Steering Column Motor — Telescopic</a><span id="spanID0E6OBG"></span> in this section. CLEAR the DTCs. TEST the system for normal operation. REPEAT the self test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A10">A10</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A10" data-ajax="false"></a><b>A10 
+                CHECK THE SCCM  CONNECTORS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the <abbr title="Steering Column Control Module">SCCM</abbr>  electrical connectors for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  Reconnect all previously disconnected electrical connectors.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Make sure the connectors are seated correctly then operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Steering Column Control Module">SCCM</abbr> . REFER to <a data-linkid="ID0ECSBG" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0ECSBG"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_8" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-B" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test B: The Adjustable Steering Column is Inoperative in One or More Directions — Using the Memory SET Switch Buttons/Using an <abbr title="Remote Keyless Entry">RKE</abbr>  Transmitter/Using the Easy Entry/Exit Feature 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','128')">128</a> , Adjustable Steering Column for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the desired memory position is selected using the memory SET switch or an Remote Keyless Entry (RKE)
+       transmitter, the Driver Seat Module (DSM)
+       communicates the desired steering column position in a message on the Medium Speed Controller Area Network (MS-CAN)
+       to the Body Control Module (BCM)
+      . The <abbr title="Body Control Module">BCM</abbr>  acts as a gateway module, relaying the message to the Steering Column Control Module (SCCM)
+       over the High Speed Controller Area Network (HS-CAN)
+      . The <abbr title="Steering Column Control Module">SCCM</abbr>  monitors the position of the adjustable steering column using Hall-effect type rotation sensors that are integral to the tilt and telescoping motors. The sensors provide a digital signal used by the <abbr title="Steering Column Control Module">SCCM</abbr>  to calculate the position of the steering column in relation to the full forward/rearward and full up/down positions. The <abbr title="Steering Column Control Module">SCCM</abbr>  uses these signals to store and recall memory positions, carry out easy entry/exit operations and to make sure the tilt and telescope motors do not stall against the steering column end of travel. If a tilt or telescope motor sensor DTC sets, the <abbr title="Steering Column Control Module">SCCM</abbr>  does not recall a programmed memory position or automatically position the steering column during the easy entry/exit operation. If a DTC sets for either sensor, the affected adjustable steering column motor operates in jog mode. Jog mode allows limited operation of the affected steering column motor using only the steering column control switch. When the steering column control switch is operated in jog mode, the steering column moves in the desired direction for one second, then stops. The steering column control switch must be released, then pressed again in order to move the steering column for an additional second. 
+</p>
+        
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Entry/exit feature is disabled in the message center 
+
+          </li>
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Memory SET switch 
+
+          </li>
+          <li>
+            
+              <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter 
+
+          </li>
+          <li>
+            
+              <abbr title="Driver Seat Module">DSM</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Steering Column Control Module">SCCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="B" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST B : THE ADJUSTABLE STEERING COLUMN IS INOPERATIVE IN ONE OR MORE DIRECTIONS — USING THE MEMORY SET SWITCH BUTTONS/USING AN RKE  TRANSMITTER/USING THE EASY ENTRY/EXIT FEATURE 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multi-meter probes. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B1" data-ajax="false"></a><b>B1 
+                CHECK THE OPERATION OF THE ADJUSTABLE COLUMN USING THE STEERING COLUMN CONTROL SWITCH 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Operate the adjustable steering column in all directions using the steering column control switch. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the steering column move for more than one second in each direction using the steering column control switch? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                If the adjustable steering column is inoperative using the easy entry/exit feature, GO to <a data-ajax="false" href="#B2">B2</a>. 
+
+              <br>
+                If the adjustable steering column is inoperative using the memory SET switch, GO to <a data-ajax="false" href="#B3">B3</a>. 
+
+              <br>
+                If the adjustable steering column is inoperative using an <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter, GO to <a data-ajax="false" href="#B4">B4</a>. 
+
+              </td>
+          </tr>
+              
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If the steering column does not move in any direction at all using the steering column switch, <a data-ajax="false" href="#PS2-A">GO to Pinpoint Test A</a>. 
+
+              <br>
+                If the steering column moves in only one second intervals (jog mode) in one or more directions using the steering column switch, <a data-ajax="false" href="#PS2-C">GO to Pinpoint Test C</a>. 
+
+              </td>
+          </tr>
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B2" data-ajax="false"></a><b>B2 
+                VERIFY THE EASY ENTRY/EXIT FEATURE IS ENABLED 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Verify the easy entry/exit feature is enabled using the message center. Refer to the Owner's Literature for additional instructions for using the message center. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the message center indicate that the easy entry/exit feature is enabled? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B5">B5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                TOGGLE the easy entry/exit feature on using the message center controls. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B3" data-ajax="false"></a><b>B3 
+                CHECK THE OPERATION OF THE MEMORY SEATS, MEMORY MIRRORS AND STEERING COLUMN USING THE MEMORY SET SWITCH 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the operation of the seats, memory mirrors and steering column using the memory SET switch. Refer to the Owner's Literature for additional instructions for programming a memory position. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the seats and mirrors operate properly using the memory SET switch? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                If only the adjustable steering column is inoperative using the memory SET switch, GO to <a data-ajax="false" href="#B5">B5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If the seats and mirrors are also inoperative using the memory SET switch, REFER to <a data-linkid="ID0EK4BG" data-sectnum="501-10" class="section-link">Section 
+          501-10</a><span id="spanID0EK4BG"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B4" data-ajax="false"></a><b>B4 
+                CHECK THE OPERATION OF THE MEMORY SEATS, MIRRORS AND STEERING COLUMN USING AN RKE  TRANSMITTER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the operation of the seats, mirrors and steering column using an <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter. Refer to the Owner's Literature for additional instructions for programming a memory position to an <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the seats and mirrors operate correctly using an <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                If only the adjustable steering column is inoperative using an <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter, GO to <a data-ajax="false" href="#B5">B5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If the seats and mirrors are also inoperative using an <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter, REFER to <a data-linkid="ID0EDAAI" data-sectnum="501-10" class="section-link">Section 
+          501-10</a><span id="spanID0EDAAI"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B5" data-ajax="false"></a><b>B5 
+                CHECK FOR DSM , BCM  AND SCCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — <abbr title="Driver Seat Module">DSM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — <abbr title="Body Control Module">BCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self-Test — <abbr title="Steering Column Control Module">SCCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Record all DTCs retrieved from the <abbr title="Driver Seat Module">DSM</abbr> , <abbr title="Body Control Module">BCM</abbr>  and <abbr title="Steering Column Control Module">SCCM</abbr> . 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any symptom or communication related DTCs present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                To diagnose the <abbr title="Driver Seat Module">DSM</abbr>  DTCs, REFER to <a data-linkid="ID0ENEAI" data-sectnum="501-10" class="section-link">Section 
+          501-10</a><span id="spanID0ENEAI"></span>. 
+
+              <br>
+                To diagnose the <abbr title="Body Control Module">BCM</abbr>  DTCs, REFER to <a data-linkid="ID0E5EAI" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0E5EAI"></span>. 
+
+              <br>
+                To diagnose the <abbr title="Steering Column Control Module">SCCM</abbr>  DTCs, REFER to <a data-linkid="ID0EPFAI" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EPFAI"></span>. 
+
+              </td>
+          </tr>
+              
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Steering Column Control Module">SCCM</abbr> . REFER to <a data-linkid="ID0EDGAI" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EDGAI"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_9" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-C" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test C: The Adjustable Steering Column Operates in One Second Intervals When Using the Steering Column Control Switch (Jog Mode) 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','128')">128</a> , Adjustable Steering Column for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The Steering Column Control Module (SCCM)
+       monitors the position of the adjustable steering column using of Hall-effect type rotation sensors that are integral to the tilt and telescoping motors. Both the adjustable steering column tilt motor and telescope motor can be serviced separately from the steering column. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Steering Column Control Module">SCCM</abbr>  sends a reference voltage along the sensor feed circuit through the Hall-effect sensor and back to the <abbr title="Steering Column Control Module">SCCM</abbr>  through a shared signal return circuit. The sensors provide a digital signal used by the <abbr title="Steering Column Control Module">SCCM</abbr>  to calculate the position of the steering column in relation to the full forward/rearward and full up/down positions. The <abbr title="Steering Column Control Module">SCCM</abbr>  uses this signal to store and recall memory positions, to carry out the easy entry/exit operations and to make sure the adjustable steering column tilt and telescope motors do not stall against the steering column end of travel. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">If an adjustable steering column tilt or telescope motor sensor DTC sets (or if either of the sensor circuits become open), the <abbr title="Steering Column Control Module">SCCM</abbr>  does not recall a programmed memory position or automatically position the steering column during the easy entry/exit operations. The affected steering column motor operates in jog mode. Jog mode allows limited operation of the affected steering column motor using only the steering column control switch. When the steering column control switch is operated in jog mode, the steering column moves in the desired direction for one second, then stops regardless of the length of time the switch is actually activated. The steering column control switch must be released, then activated again in order to move the steering column for an additional second. 
+</p>
+        <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_5" xmlns:str="http://xsltsl.org/string"></a>
+          <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+            
+            
+            <thead>
+              <tr>
+                <th align="center" valign="top">
+                  DTC Description 
+
+                </th>
+                <th align="center" valign="top">
+                  Fault Trigger Conditions 
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1C33:11 — Steering Column Tilt Feedback Signal: Circuit Short To Ground 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Steering Column Control Module" xmlns:str="http://xsltsl.org/string">SCCM</abbr>  senses the adjustable steering column tilt motor feedback sensor signal is below 1.5 volts. This may be caused by a short to ground in the sensor signal circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1C33:12 — Steering Column Tilt Feedback Signal: Circuit Short To Battery 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Steering Column Control Module" xmlns:str="http://xsltsl.org/string">SCCM</abbr>  senses the adjustable steering column tilt motor feedback sensor signal is above 7 volts. This may be caused by a short to voltage in the sensor signal circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1C35:11 — Steering Column Telescope Feedback Signal: Circuit Short To Ground 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Steering Column Control Module" xmlns:str="http://xsltsl.org/string">SCCM</abbr>  senses the adjustable steering column telescope motor feedback sensor signal is below 1.5 volts. This may be caused by a short to ground in the sensor signal circuit. 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                    <li>
+                      B1C35:12 — Steering Column Telescope Feedback Signal: Circuit Short To Battery 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  This DTC sets when the <abbr title="Steering Column Control Module" xmlns:str="http://xsltsl.org/string">SCCM</abbr>  senses the adjustable steering column telescope motor feedback sensor signal is above 7 volts. This may be caused by a short to voltage in the sensor signal circuit. 
+
+                </td>
+              </tr>
+            </tbody>
+          </table><br>
+        <br xmlns:str="http://xsltsl.org/string">
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Adjustable steering column tilt motor 
+
+          </li>
+          <li>
+            Adjustable steering column telescopic motor 
+
+          </li>
+          <li>
+            
+              <abbr title="Steering Column Control Module">SCCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="C" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST C : THE ADJUSTABLE STEERING COLUMN OPERATES IN ONE SECOND INTERVALS WHEN USING THE STEERING COLUMN CONTROL SWITCH (JOG MODE) 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multi-meter probes. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C1" data-ajax="false"></a><b>C1 
+                CHECK THE TILT/TELESCOPE SENSOR CIRCUITS FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','')">C2414C</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Adjustable Steering Column Tilt Motor <a href="javascript:connectorlinkwithpin('ED2','C2600','')">C2600</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Adjustable Steering Column Telescope Motor <a href="javascript:connectorlinkwithpin('ED2','C2601','')">C2601</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between ground and: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','3')">C2414C</a> Pin 3, circuit RPP06 (GN), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','4')">C2414C</a> Pin 4, circuit VPP08 (WH), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','5')">C2414C</a> Pin 5, circuit VPP17 (VT/BN), harness side. 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0119638&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C2">C2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C2" data-ajax="false"></a><b>C2 
+                CHECK THE TILT/TELESCOPE SENSOR CIRCUITS FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between ground and: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','3')">C2414C</a> Pin 3, circuit RPP06 (GN), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','4')">C2414C</a> Pin 4, circuit VPP08 (WH), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','5')">C2414C</a> Pin 5, circuit VPP17 (VT/BN), harness side. 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0119639&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C3">C3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C3" data-ajax="false"></a><b>C3 
+                CHECK THE TILT/TELESCOPE SENSOR CIRCUITS FOR A SHORT TOGETHER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414C','4')">C2414C</a> Pin 4, circuit VPP08 (WH), harness side and <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414C','5')">C2414C</a> Pin 5, circuit VPP17 (VT/BN), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0119640&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C4">C4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C4" data-ajax="false"></a><b>C4 
+                CHECK THE TILT/TELESCOPE SENSOR CIRCUITS FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414C','')">C2414C</a>, harness side and adjustable steering column tilt motor <a href="javascript:connectorlinkwithpin('ED2','C2600','')">C2600</a>; and between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414C','')">C2414C</a>, harness side and adjustable steering column telescope motor <a href="javascript:connectorlinkwithpin('ED2','C2601','')">C2601</a>, harness side using the following chart: 
+
+                <br><br><a name="table_6"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          
+                            <abbr title="Steering Column Control Module">SCCM</abbr> 
+                           
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Adjustable Steering Column Tilt/Telescope Motor 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414C','3')">C2414C</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          RPP06 (GN) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2600','3')">C2600</a> Pin 3
+                           
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414C','3')">C2414C</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          RPP06 (GN) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2601','3')">C2601</a> Pin 3
+                           
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414C','4')">C2414C</a> Pin 4
+                           
+                        </td>
+                        <td valign="top">
+                          VPP08 (WH) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2600','4')">C2600</a> Pin 4
+                           
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414C','5')">C2414C</a> Pin 5
+                           
+                        </td>
+                        <td valign="top">
+                          VPP17 (VT/BN) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2601','4')">C2601</a> Pin 4
+                           
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0122620&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C5">C5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C5" data-ajax="false"></a><b>C5 
+                CHECK THE SCCM  CONNECTOR 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check <abbr title="Steering Column Control Module">SCCM</abbr>  connector <a href="javascript:connectorlinkwithpin('ED2','C2414C','')">C2414C</a> for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','')">C2414C</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  Adjustable Steering Column Tilt Motor <a href="javascript:connectorlinkwithpin('ED2','C2600','')">C2600</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  Adjustable Steering Column Telescope Motor <a href="javascript:connectorlinkwithpin('ED2','C2601','')">C2601</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Make sure the connectors are seated correctly then operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                If the adjustable steering column does not operate correctly when the steering column control switch is in the UP/DOWN (tilt) position(s), INSTALL a new adjustable steering column tilt motor. REFER to <a data-linkid="ID0EPEBI" data-for="211-04_s3p705369q704743" data-procuid="n1270074" class="expand-link">Steering Column Motor — Tilt</a><span id="spanID0EPEBI"></span> in this section. CLEAR the DTCs. REPEAT the self-test. If the concern is still present, INSTALL a new <abbr title="Steering Column Control Module">SCCM</abbr> . REFER to <a data-linkid="ID0EZEBI" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EZEBI"></span>. TEST the system for normal operation. 
+
+              <br>
+                If the adjustable steering column does not operate correctly when the steering column control switch is in the FORWARD/REARWARD (telescope) position(s), INSTALL a new adjustable steering column telescopic motor. REFER to <a data-linkid="ID0EEFBI" data-for="211-04_s3p705369q706061" data-procuid="n1272145" class="expand-link">Steering Column Motor — Telescopic</a><span id="spanID0EEFBI"></span> in this section. CLEAR the DTCs. REPEAT the self-test. If the concern is still present, INSTALL a new <abbr title="Steering Column Control Module">SCCM</abbr> . REFER to <a data-linkid="ID0EOFBI" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EOFBI"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+  
+
+

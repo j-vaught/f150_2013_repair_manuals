@@ -1,0 +1,2790 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="204-04" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="204-04 Wheels and Tires" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n2252323" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>204-04 Wheels and Tires</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      10/13/2016</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Tire Pressure Monitoring System (TPMS)" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Tire Pressure Monitoring System (TPMS)
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('204-04','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2941A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Activation Tool, Tire Pressure Monitor
+          <br><a data-for="204-363" class="tools-link">204-363</a> 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2869A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Digital Tire Pressure Gauge
+          <br><a data-for="204-354" class="tools-link">204-354</a> 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS)
+          <br>software with appropriate hardware, or equivalent scan tool 
+
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b><img src="/content/images/workshop/warning.jpg">WARNING: 
+        The tire pressure monitoring system (TPMS) sensor battery may release hazardous chemicals if exposed to extreme mechanical damage. If these chemicals contact the skin or eyes, flush immediately with water for a minimum of 15 minutes and get prompt medical attention. If any part of the battery is swallowed, contact a physician immediately. When disposing of TPMS sensors, follow the correct procedures for hazardous material disposal. Failure to follow these instructions may result in serious personal injury.
+      </b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+        The TPM module is also known as the Radio Transceiver Module (RTM). 
+
+      </i></p>
+      <p xmlns:str="http://xsltsl.org/string">The Tire Pressure Monitor (TPM)
+       module monitors the tire pressure of all 4 road tires. The wheel-mounted tire pressure sensors transmit signals via radio frequency to the <abbr title="Tire Pressure Monitor">TPM</abbr>  module. The <abbr title="Tire Pressure Monitor">TPM</abbr>  module is a radio receiver that collects the tire pressure data from the tire pressure sensors. The <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor radio transmissions are sent once approximately every 60 seconds when the vehicle speed exceeds 32 km/h (20 mph). The data is then sent to the Body Control Module (BCM)
+       where a predetermined pass/fail criteria is applied. The <abbr title="Body Control Module">BCM</abbr>  compares each <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor transmission against a low-pressure limit. If it has been determined that the tire pressure has fallen below this limit, the <abbr title="Body Control Module">BCM</abbr>  communicates this on the vehicle communication bus to the Instrument Panel Cluster (IPC)
+      . The <abbr title="Instrument Panel Cluster">IPC</abbr>  then illuminates the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator and displays the appropriate message(s) in the message center. 
+</p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Ambient Temperature Change and Tire Pressure 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">Tire pressures fluctuate with temperature changes. For this reason, tire pressure must be set to specification when tires are at outdoor ambient temperatures. If the vehicle is allowed to warm up to shop temperatures, and the outside temperature is less than shop temperature, the tire inflation pressure must be adjusted accordingly. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">If the tires are inflated to specification at shop temperatures, and the vehicle is moved outdoors when the outdoor ambient temperature is significantly lower, the tire pressure may drop enough to be detected by the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  and activate the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">As the ambient temperature decreases by 6°C (10°F), tire pressure decreases 7 kPa (1 psi). Adjust the tire pressure by 7 kPa (1 psi) for each 6°C (10°F) ambient temperature drop as necessary to keep the tire at the specified Vehicle Certification (VC)
+       label pressure. Refer to the following tables to adjust the tire pressure indoors for colder outside temperatures. 
+</p>
+        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0057700&amp;w=650&amp;t=JPG" border="1" width="650" xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          Tire Pressure Monitoring System (TPMS)
+       Warning Indicator and Message Center Messages 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator and vehicle message center sometimes display faults that cannot be resolved by the customer. Treat these messages as <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  faults that must be serviced. 
+</p>
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          Tire Pressure Monitoring System (TPMS)
+       Warning Indicator Illuminates Continuously 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          When directed to train or re-train any <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors, use <b>only</b> the sensor training procedure outlined in <a data-linkid="ID0EOH" data-for="204-04_s5p11142q0" data-procuid="n1133678" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor Training</a><span id="spanID0EOH"></span>. Do not use the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  reset procedure outlined in the Owner's Literature as this procedure <b>will not</b> program new sensors to the module. 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator remains on continuously and the message center displays LOW TIRE PRESSURE when any of the tire pressures are low. When this condition exists, adjust the tire pressure to the recommended cold pressure indicated on the <abbr title="Vehicle Certification">VC</abbr>  label. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          The <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors do not transmit when the vehicle is stationary. If the vehicle has been stationary for more than 30 minutes, it is necessary to wake up the sensors so that they transmit the latest tire pressure information to the <abbr title="Tire Pressure Monitor">TPM</abbr>  module. 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string">If the vehicle has been stationary for more than 30 minutes, carry out the <a data-linkid="ID0EABAC" data-for="204-04_s5p704806q0" data-procuid="n1133679" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor Activation</a><span id="spanID0EABAC"></span> procedure in this section. 
+</p>
+      
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  Warning Indicator Flashes 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator flashes for 70 seconds, then remains ON continuously when the ignition switch is turned to the ON position and 1 or more of the following conditions exists: 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Tire Pressure Sensor Fault — The message center displays TIRE PRESSURE SENSOR FAULT when a <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor is malfunctioning. GO to <a data-ajax="false" href="#SC3">Symptom Chart</a>. 
+
+          </li>
+          <li>
+            No communication with the <abbr title="Body Control Module">BCM</abbr> . The <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  indicator is illuminated when the <abbr title="Instrument Panel Cluster">IPC</abbr>  has not received any signals from the <abbr title="Body Control Module">BCM</abbr>  for more than 5 seconds. The message center displays TIRE PRESSURE MONITOR FAULT. GO to <a data-ajax="false" href="#SC3">Symptom Chart</a>. 
+
+          </li>
+          <li>
+            Tire Pressure Monitor Fault — The message center displays TIRE PRESSURE MONITOR FAULT when the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  is malfunctioning or communication with the <abbr title="Instrument Panel Cluster">IPC</abbr>  has been lost. GO to <a data-ajax="false" href="#SC3">Symptom Chart</a>. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">The TP_STAT <abbr title="Parameter Identification">PID</abbr>  can be used to determine why the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator is flashing. 
+</p>
+      
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>
+        Tire Pressure Monitoring System (TPMS)
+      
+        <abbr title="Parameter Identification">PID</abbr>  Definitions and Intermittent Troubleshooting 
+</b></p>
+      <a name="procsub2_5" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  Status <abbr title="Parameter Identification">PID</abbr> </b></p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Tire Pressure Monitor">TPM</abbr>  monitors the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  status. The current status can be viewed by accessing the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  status <abbr title="Parameter Identification">PID</abbr> : TPMS_STAT using the scan tool. This helps identify the current system status and may aid in diagnosing the system. The <abbr title="Parameter Identification">PID</abbr>  has 4 valid states: 
+</p>
+        <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          TPMS_STAT = SENSOR FAULT. 
+
+          <ul type="disc">
+      <li>
+            If the module has not received the tire pressure status from 1 to 3 <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors for 20 minutes when the vehicle speed is above 32 km/h (20 mph), the <abbr title="Parameter Identification">PID</abbr>  displays SENSOR FAULT. 
+
+          </li>
+    </ul>
+        </li>
+</ol>
+        <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          TPMS_STAT = SYSTEM FAULT. 
+
+          <ul type="disc">
+      <li>
+            If the module has not received the tire pressure status from all 4 <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors for 20 minutes and the vehicle speed is above 32 km/h (20 mph), the <abbr title="Parameter Identification">PID</abbr>  displays SYSTEM FAULT. 
+
+          </li>
+    </ul>
+        </li>
+</ol>
+        <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          TPMS_STAT = LOW. 
+
+          <ul type="disc">
+      <li>
+            If the module has detected that at least 1 <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor is reporting low tire pressure, the <abbr title="Parameter Identification">PID</abbr>  displays LOW. 
+
+          </li>
+    </ul>
+        </li>
+</ol>
+        <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          TPMS_STAT = SYSTEM ACTIVE. 
+
+          <ul type="disc">
+      <li>
+            If the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  is functioning normally, the <abbr title="Parameter Identification">PID</abbr>  displays SYSTEM ACTIVE. 
+
+          </li>
+    </ul>
+        </li>
+</ol>
+      
+      <a name="procsub2_6" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  Last Warning Event <abbr title="Parameter Identification">PID</abbr>  Definitions 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  uses the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  last warning event <abbr title="Parameter Identifications">PIDs</abbr>  to store detailed information about the last 5 times the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator was activated. These <abbr title="Parameter Identifications">PIDs</abbr>  can be used to acquire more information about a particular <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  event, but must be used carefully. 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>EVT1_AGE_IGN through EVT5_AGE_IGN 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The number of key cycles since the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  indicator was activated. This <abbr title="Parameter Identification">PID</abbr>  cycles from zero to 255. Default is $00, this can be used to determine how long ago a <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  event occurred and the time (in key cycles) between events. 
+</p>
+        
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>EVT1_TR_LOC through EVT5_TR_LOC 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">This is the last programmed location for the sensor identifier causing each <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  event. Due to tire rotation, the sensor may no longer be at the original location. It is suggested that all the <abbr title="Parameter Identifications">PIDs</abbr>  be recorded, the system retrained, and then the sensor identifier <abbr title="Parameter Identifications">PIDs</abbr>  be used to pinpoint the actual location of each sensor. 
+</p>
+        
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>EVT1_PRESS through EVT5_PRESS 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">This is the tire pressure associated with each <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator event. This can be used along with the function code to clearly identify the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  events that were strictly due to low pressure. It can also be used to determine when a sensor is transmitting inaccurate tire pressure. 
+</p>
+        
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>EVT1_SNSR_ST through EVT5_SNSR_ST 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Describes the warning status of each <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  event by using the information received from the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  status (TPMS_STAT) <abbr title="Parameter Identification">PID</abbr> . If there is a communication issue, the status could be Normal. 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Unknown 
+
+          </li>
+          <li>
+            Normal (normal operation) 
+
+          </li>
+          <li>
+            Low (low pressure event) 
+
+          </li>
+          <li>
+            Fault (sensor fault or system fault) 
+
+          </li>
+        </ul>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>EVT1_SNSR_ID through EVT5_SNSR_ID 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">This is the identifier of the sensor involved in each <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  event. EVT1 is the most recent event that triggered the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator. Default is $ 00 00 00 00. 
+</p>
+        
+      
+      <a name="procsub2_7" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Wheel Rotation and Sensor Training Techniques 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Moving a Problem Sensor/Wheel to a Different Position 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">If a sensor in a certain location has caused several events, yet the sensor trains and seems to operate normally, moving that particular wheel to a different location on the vehicle is a good way to isolate the issue to a certain sensor/wheel location. Rotate the wheels and road test the vehicle. This can be done in an attempt to replicate the issue. This determines if the issue followed the sensor or remained in the original sensor location. 
+</p>
+        
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Training Sensors in a Different Order 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">This is a technique to get past a left front sensor that may not be responding to determine if the remaining sensors train to the module. This can help save time determining if other sensors are having issues or if the module is experiencing training difficulties with a certain location. 
+</p>
+        
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Training Known Good Sensors From Another Vehicle 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Training known good sensors from another vehicle cannot differentiate between a faulted module and Radio Frequency Interference (RFI)
+      , as some noise source could be preventing the <abbr title="Tire Pressure Monitor">TPM</abbr>  module from receiving the tire pressure status from the original sensors as well as the known good sensors. This technique can be used to differentiate between a sensor and module issue. If the <abbr title="Tire Pressure Monitor">TPM</abbr>  module cannot train any of the sensors on the same vehicle, and likewise cannot train known good sensors from another vehicle, then the issue is with the <abbr title="Tire Pressure Monitor">TPM</abbr>  module or <abbr title="Radio Frequency Interference">RFI</abbr>  and not with the original sensors. The original sensors should not be replaced. 
+</p>
+        
+      
+      <a name="procsub2_8" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Items That Cause <abbr title="Radio Frequency Interference">RFI</abbr> </b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Non-OEM Equipment 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The following equipment has been found to sometimes cause <abbr title="Radio Frequency Interference">RFI</abbr> : 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Video equipment has been found to cause <abbr title="Radio Frequency Interference">RFI</abbr>  especially when the video and power supply lines are near the <abbr title="Tire Pressure Monitoring System">TPMS</abbr> . 
+
+          </li>
+          <li>
+            Car alarms (even those installed by dealerships) have been found to create enough <abbr title="Radio Frequency Interference">RFI</abbr>  to cause the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  to malfunction or lose considerable range. These car alarms can sometimes be difficult to locate, as they are usually hidden somewhere out of the way for reduced accessibility. 
+
+          </li>
+          <li>
+            Many different in-vehicle cell phone chargers have been found to cause considerable <abbr title="Radio Frequency Interference">RFI</abbr> . The vehicles with the power point closest to the <abbr title="Tire Pressure Monitor">TPM</abbr>  module are the most affected. It must be noted that most cell phone chargers do not produce high levels of <abbr title="Radio Frequency Interference">RFI</abbr>  all the time. This depends on the state of charge of the cell phone battery. The phone must be almost completely discharged in some cases. 
+
+          </li>
+          <li>
+            Power supplies and DC/AC inverters typically create a lot of <abbr title="Radio Frequency Interference">RFI</abbr> . Most consumer grade equipment has very little filtering or shielding. 
+
+          </li>
+        </ul>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>OEM Modules 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">In some cases, the <abbr title="Radio Frequency Interference">RFI</abbr>  may actually be caused by a module or ground on the vehicle. Depending on the severity of the issue, a dirty ground, improperly built ground shield or module can disable the system. Modules that have microcontrollers using clock circuits to create the timing pulses for the microprocessor may radiate <abbr title="Radio Frequency Interference">RFI</abbr> . 
+</p>
+        
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Using Customer's Electronics to Pinpoint the Radio Frequency Interference (RFI)
+       Source 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">This can be a way to determine the cause of an issue well before the sensors and module are replaced with little or no affect on the system performance. Since this takes more up-front work, it relies on working with the customer to determine what equipment was being used at the time of the event. 
+</p>
+        
+      
+      <a name="procsub2_9" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Options for Eliminating Intermittent <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  Conditions Caused by <abbr title="Radio Frequency Interference">RFI</abbr> </b></p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            If an OEM component or customer device is causing an <abbr title="Radio Frequency Interference">RFI</abbr>  issue, replace the device. 
+
+          </li>
+          <li>
+            If a phone charger is causing an <abbr title="Radio Frequency Interference">RFI</abbr>  issue, the customer should consult their cell phone provider to acquire a different phone charger. 
+
+          </li>
+          <li>
+            If a device such as a dealer-installed alarm is causing an <abbr title="Radio Frequency Interference">RFI</abbr>  issue, move the device to another location on the vehicle. In the case of a portable device, move the power cord to another power point location. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">In summary, if the <abbr title="Radio Frequency Interference">RFI</abbr>  source is present and cannot be moved or replaced, the intermittent issue remains. The <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  system must accept <abbr title="Radio Frequency Interference">RFI</abbr>  and the unwanted system operation it can cause. 
+</p>
+      
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern. Keep the following items in mind when diagnosing any <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  related issue: 
+
+        <ul type="disc">
+      <li>
+          The tire pressure sensors are not designed to be used with aftermarket wheels. The use of run-flat tires (tires with steel body cord plies in the tire sidewall) that are not originally equipped, may block the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  signal and are not recommended. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          Non-OEM modifications made to the vehicle may result in false <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warnings. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          Swapping wheels on vehicles with the same <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors sets a fault if the sensors are not trained. Refer to <a data-linkid="ID0EFKAE" data-for="204-04_s5p11142q0" data-procuid="n1133678" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor Training</a><span id="spanID0EFKAE"></span> in this section. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          The tire pressure calibrations in the <abbr title="Tire Pressure Monitor">TPM</abbr>  for the system cannot be changed to use lower tire pressures than those listed on the Vehicle Certification (VC)
+       label. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          Certain non-OEM electronic equipment may cause <abbr title="Radio Frequency Interference">RFI</abbr>  and false <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warnings. To aid in diagnosis, obtain information from the owner regarding any equipment that has been added or was in use at the time the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  fault occurred. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          It may be necessary to disconnect any electronic add-on equipment to verify its impact on <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  operation. For intermittent cases, it may be necessary to ask the customer to provide portable electronic equipment to verify its impact on the system. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect for obvious signs of mechanical or electrical damage. 
+
+      </li>
+</ol>
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string">
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Visual Inspection Chart
+        </b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                
+                  Mechanical
+                 
+              </th>
+              <th align="center" valign="top">
+                
+                  Electrical
+                 
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Low tire pressure 
+
+                  </li>
+                  <li>
+                    Spare tire installed as a road wheel 
+
+                  </li>
+                  <li>
+                    Sensors not trained after a tire rotation 
+
+                  </li>
+                  <li>
+                    
+                      Tire Pressure Monitoring System (TPMS)
+       sensor damaged or missing 
+
+                  </li>
+                  <li>
+                    Incorrect <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor installed 
+
+                  </li>
+                  <li>
+                    
+                      <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor installed incorrectly 
+
+                  </li>
+                  <li>
+                    Non-OEM wheels installed (aftermarket rims) 
+
+                  </li>
+                  <li>
+                    Non-OEM equipped run-flat tires or rigid sidewall tires (19.5" steel carcass heavy-duty tires) installed 
+
+                  </li>
+                  <li>
+                    Other non-OEM modifications (roll cages, service barriers, part racks, ladder racks) 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Body Control Module (BCM)
+       fuse 26 (5A) 
+
+                  </li>
+                  <li>
+                    Wiring, terminals or connectors 
+
+                  </li>
+                  <li>
+                    
+                      <abbr title="Tire Pressure Monitor">TPM</abbr>  missing or damaged 
+
+                  </li>
+                  <li>
+                    Aftermarket electronic accessories (in-car chargers or supplies, DC/AC inverters, video screens, car alarms) 
+
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step. 
+
+      </li>
+</ol>
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Make sure to use the latest scan tool software release. 
+
+        </i></p>
+        If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC)
+      . 
+
+      </li>
+</ol>
+      <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          The Vehicle Communication Module (VCM)
+       LED prove-out confirms power and ground from the <abbr title="Data Link Connector">DLC</abbr>  are provided to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </i></p>
+        If the scan tool does not communicate with the <abbr title="Vehicle Communication Module">VCM</abbr> : 
+
+        <ul type="disc">
+      <li>
+          check the <abbr title="Vehicle Communication Module">VCM</abbr>  connection to the vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          check the scan tool connection to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0EOUAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EOUAE"></span>, No Power To The Scan Tool, to diagnose no power to the scan tool. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the scan tool does not communicate with the vehicle: 
+
+        <ul type="disc">
+      <li>
+          verify the ignition key is in the ON position. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          verify the scan tool operation with a known good vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0ELVAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0ELVAE"></span>, The PCM Does Not Respond To the Scan Tool, to diagnose no response from the PCM. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the network test. 
+
+        <ul type="disc">
+      <li>
+          If the scan tool responds with no communication for one or more modules, refer to <a data-linkid="ID0E3VAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E3VAE"></span>. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          If the network test passes, retrieve and record Continuous Memory Diagnostic Trouble Codes (CMDTCs)
+      . 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Clear the <abbr title="Continuous Memory Diagnostic Trouble Codes">CMDTCs</abbr>  and carry out the self-test diagnostics for the <abbr title="Body Control Module">BCM</abbr>  and the <abbr title="Tire Pressure Monitor">TPM</abbr>  module. 
+
+      </li>
+</ol>
+      <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the DTCs retrieved are related to the concern, go to the <abbr title="Body Control Module">BCM</abbr>  DTC Chart or the <abbr title="Tire Pressure Monitor">TPM</abbr>  Module DTC Chart. For all other DTCs, refer to the Diagnostic Trouble Code (DTC) Chart in <a data-linkid="ID0EZXAE" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0EZXAE"></span>. 
+
+      </li>
+</ol>
+      <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If no DTCs related to the concern are retrieved, GO to <a data-ajax="false" href="#SC3">Symptom Chart</a>. 
+
+      </li>
+</ol>
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>DTC Charts 
+</b></p>
+      <a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Body Control Module (BCM)
+       DTC Chart 
+</b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                DTC 
+
+              </th>
+              <th align="center" valign="top">
+                Description 
+
+              </th>
+              <th align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                B1182:00 
+
+              </td>
+              <td valign="top">
+                
+                  Tire Pressure Monitoring System (TPMS)
+      : No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-F" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test F</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1182:55 
+
+              </td>
+              <td valign="top">
+                
+                  Tire Pressure Monitoring System (TPMS)
+      : Not Configured 
+
+              </td>
+              <td valign="top">
+                This DTC is only present when a new <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  is installed, the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  is flashed or is reconfigured. TRAIN the tire pressure sensors. REFER to <a data-linkid="ID0ER3AE" data-for="204-04_s5p11142q0" data-procuid="n1133678" class="expand-link" xmlns:str="http://xsltsl.org/string">Tire Pressure Monitoring System (TPMS) Sensor Training</a><span id="spanID0ER3AE" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B124D:02 
+
+              </td>
+              <td valign="top">
+                Tire Pressure Sensor: General Signal Failure 
+
+              </td>
+              <td valign="top">
+                <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+                  If the vehicle has been stationary for more than 30 minutes, the sensors go into sleep mode to conserve battery power. It may be necessary to wake them up so they transmit the latest tire pressure information to the <abbr title="Tire Pressure Monitor">TPM</abbr>  module. 
+
+                </i></p>
+                ACTIVATE the <abbr title="Tire Pressure Monitoring System" xmlns:str="http://xsltsl.org/string">TPMS</abbr>  sensors. REFER to <a data-linkid="ID0E54AE" data-for="204-04_s5p704806q0" data-procuid="n1133679" class="expand-link" xmlns:str="http://xsltsl.org/string">Tire Pressure Monitoring System (TPMS) Sensor Activation</a><span id="spanID0E54AE" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p>REPEAT the self-test. If DTC B124D:02 is retrieved again, <a data-ajax="false" href="#PS2-F" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test F</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1251:00 
+
+              </td>
+              <td valign="top">
+                Tire Pressure Sensor Low Battery: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-H" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test H</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1254:51 
+
+              </td>
+              <td valign="top">
+                Right Rear (Outside on Dual Wheel) Tire Pressure Sensor and Transmitter Assembly: Not Programmed 
+
+              </td>
+              <td valign="top">
+                This DTC is only present when a new <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  is installed, the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  is flashed or reconfigured. TRAIN the tire pressure sensors. REFER to <a data-linkid="ID0EGAAG" data-for="204-04_s5p11142q0" data-procuid="n1133678" class="expand-link" xmlns:str="http://xsltsl.org/string">Tire Pressure Monitoring System (TPMS) Sensor Training</a><span id="spanID0EGAAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1255:51 
+
+              </td>
+              <td valign="top">
+                Left Rear (Outside on Dual Wheel) Tire Pressure Sensor and Transmitter Assembly: Not Programmed 
+
+              </td>
+              <td valign="top">
+                This DTC is only present when a new <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  is installed, the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  is flashed or reconfigured. TRAIN the tire pressure sensors. REFER to <a data-linkid="ID0ENBAG" data-for="204-04_s5p11142q0" data-procuid="n1133678" class="expand-link" xmlns:str="http://xsltsl.org/string">Tire Pressure Monitoring System (TPMS) Sensor Training</a><span id="spanID0ENBAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                C1A56:51 
+
+              </td>
+              <td valign="top">
+                Left Front Tire Pressure Sensor and Transmitter Assembly: Not Programmed 
+
+              </td>
+              <td valign="top">
+                This DTC is only present when a new <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  is installed, the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  is flashed or reconfigured. TRAIN the tire pressure sensors. REFER to <a data-linkid="ID0EUCAG" data-for="204-04_s5p11142q0" data-procuid="n1133678" class="expand-link" xmlns:str="http://xsltsl.org/string">Tire Pressure Monitoring System (TPMS) Sensor Training</a><span id="spanID0EUCAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                C1A58:51 
+
+              </td>
+              <td valign="top">
+                Right Front Tire Pressure Sensor and Transmitter Assembly: Not Programmed 
+
+              </td>
+              <td valign="top">
+                This DTC is only present when a new <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  is installed, the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr>  is flashed or reconfigured. TRAIN the tire pressure sensors. REFER to <a data-linkid="ID0E2DAG" data-for="204-04_s5p11142q0" data-procuid="n1133678" class="expand-link" xmlns:str="http://xsltsl.org/string">Tire Pressure Monitoring System (TPMS) Sensor Training</a><span id="spanID0E2DAG" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                All other DTCs 
+
+              </td>
+              <td valign="top">
+                — 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0EWEAG" data-sectnum="419-10" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-10</a><span id="spanID0EWEAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Tire Pressure Monitor (TPM)
+       Module DTC Chart 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          The TPM module is also known as the Radio Transceiver Module (RTM). 
+
+        </i></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                DTC 
+
+              </th>
+              <th align="center" valign="top">
+                Description 
+
+              </th>
+              <th align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                B1D55:01 
+
+              </td>
+              <td valign="top">
+                Antenna #2: General Electrical Failure 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0ETHAG" data-sectnum="303-06" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          303-06</a><span id="spanID0ETHAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0140:87 
+
+              </td>
+              <td valign="top">
+                Lost Communication with Body Control Module: Missing Message 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-I" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test I</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0422:68 
+
+              </td>
+              <td valign="top">
+                Invalid Data Received from Body Control Module (BCM)
+      : Event Information 
+
+              </td>
+              <td valign="top">
+                RETRIEVE and REPAIR all non-network DTCs in the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> . REFER to <a data-linkid="ID0EWJAG" data-sectnum="419-10" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-10</a><span id="spanID0EWJAG" xmlns:str="http://xsltsl.org/string"></span>. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+    
+    <a name="procsub1_5" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart 
+</b></p>
+      <a name="SC3" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        <tr>
+    <td colspan="3"><b>NOTE: </b><i>
+          For vehicles with different front and rear tire pressures, the tire pressures must be adjusted and the tire pressure sensors must be trained following a tire rotation. Failure to train the sensors results in a false low tire pressure event, causing the Tire Pressure Monitoring System (TPMS)
+       indicator to illuminate. 
+
+          <p class="singlespace"></p>For vehicles with the same tire pressure for front and rear tires, training the sensors is not necessary after a tire rotation. 
+
+          <p class="singlespace"></p>Failure of a <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  component may not cause the message center to display a fault message or store a DTC. The Symptom Chart is a starting point to begin diagnosis of these concerns. 
+
+        </i></td>
+  </tr>
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The Tire Pressure Monitoring System (TPMS)
+       warning indicator is on continuously and the message center displays LOW TIRE PRESSURE 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Spare tire currently in use 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Tire pressure not set to specifications listed on the Vehicle Certification (VC)
+       label 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors not trained following tire rotation 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-D">GO to Pinpoint Test D</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The Body Control Module (BCM)
+       cannot enter sensor training mode when using the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor training procedure 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Stoplamp switch concern 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Ignition switch concern 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Body Control Module">BCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-E">GO to Pinpoint Test E</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator illuminates with DTCs present 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Not all <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors are installed 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors not trained 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li> Intermittent <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  operation due to Radio Frequency Interference (RFI)
+      </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Tire Pressure Monitor">TPM</abbr>  module wiring 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Tire Pressure Monitor">TPM</abbr>  module 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Body Control Module">BCM</abbr>  wiring 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Body Control Module">BCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-F">GO to Pinpoint Test F</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator illuminates with no DTCs present 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Communication network concern 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Instrument Panel Cluster (IPC)
+      
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REFER to <a data-linkid="ID0EPUAG" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EPUAG"></span> to diagnose the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator is always on. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>One or more <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors do not train and DTCs are present 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Vehicle communication issue 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Intermittent <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  operation due to <abbr title="Radio Frequency Interference">RFI</abbr> </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Tire Pressure Monitor">TPM</abbr>  module wiring 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Tire Pressure Monitor">TPM</abbr>  module 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Body Control Module">BCM</abbr>  wiring 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Body Control Module">BCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>FOLLOW the diagnostics for the DTC(s) retrieved. REFER to DTC Charts in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>One or more <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors do not train and no DTCs are present 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                Radio Frequency Interference (RFI)
+      
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-G">GO to Pinpoint Test G</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_6" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_10" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-D" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test D: The Tire Pressure Monitoring System (TPMS)
+       Warning Indicator Is ON Continuously and The Message Center Displays LOW TIRE PRESSURE 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The Tire Pressure Monitor (TPM)
+       module monitors the air pressure of all 4 road tires. The wheel-mounted tire pressure sensors transmit data via radio frequency signals to the <abbr title="Tire Pressure Monitor">TPM</abbr>  module. The <abbr title="Tire Pressure Monitor">TPM</abbr>  module is a radio receiver that collects the air pressure data from the Tire Pressure Monitoring System (TPMS)
+       tire pressure sensors. The data is then sent to the Body Control Module (BCM)
+       where a predetermined pass/fail criteria is applied. The <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor radio transmissions are sent approximately once every 60 seconds when the vehicle speed exceeds 32 km/h (20 mph). The <abbr title="Body Control Module">BCM</abbr>  compares each <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor transmission against a low-pressure limit. If it has been determined that the tire pressure has fallen below this limit, the <abbr title="Body Control Module">BCM</abbr>  communicates this on the vehicle communication bus to the Instrument Panel Cluster (IPC)
+      . The <abbr title="Instrument Panel Cluster">IPC</abbr>  then illuminates the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator and displays the appropriate message(s) in the message center . 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">This symptom can also be caused by a spare tire currently being used in place of a road tire. Make sure that the spare tire is not currently in use. On vehicles with different front and rear tire pressures, if the sensors are not trained following a tire rotation, this symptom may result. Advise the customer that on vehicles with different front and rear tire pressures, the sensors must be trained as directed in the Owner's Literature. 
+</p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Spare tire currently in use 
+
+          </li>
+          <li>
+            Tire pressure not set to specifications listed on the Vehicle Certification (VC)
+       label 
+
+          </li>
+          <li>
+            
+              <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors not trained following tire rotation 
+
+          </li>
+          <li>
+            
+              <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) 
+
+          </li>
+        </ul>
+        <a name="D" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST D :  THE TPMS  WARNING INDICATOR IS ON CONTINUOUSLY AND THE MESSAGE CENTER DISPLAYS LOW TIRE PRESSURE 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTE: </b><i>
+            Use only the Digital Tire Pressure Gauge any time tire pressures are measured to be sure that accurate values are obtained. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td><b>NOTE: </b><i>
+            If a warranty case is opened for an actual <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  fault, document and include the actual tire pressure data in all warranty communications. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D1" data-ajax="false"></a><b>D1 
+                CHECK FOR LOW TIRE PRESSURE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Using the Digital Tire Pressure Gauge, measure and record the air pressure in all 4 tires. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Adjust the pressure for those found to be below the specification listed on the <abbr title="Vehicle Certification">VC</abbr>  label. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Activate each sensor at least twice with the training tool or customer activation tool to make sure the <abbr title="Tire Pressure Monitor">TPM</abbr>  module gets the latest air pressure data. Refer to <a data-linkid="ID0ETABG" data-for="204-04_s5p704806q0" data-procuid="n1133679" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor Activation</a><span id="spanID0ETABG"></span> or drive the vehicle for at least 2 minutes above 32 km/h (20 mph) to clear the low pressure warning. Do not train the sensors at this time. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Has the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator gone out? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern was caused by low tire pressure. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D2">D2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D2" data-ajax="false"></a><b>D2 
+                CHECK FOR SPARE TIRE IN USE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                The spare tire is not programmable even if it is equipped with a <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor. If a damaged road wheel is located in the cargo area, the sensor may still be recognized by the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  as low. Make sure the spare tire is not currently in use. To restore <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  functionality, repair the damaged road wheel and re-mount it to the vehicle. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Check spare tire location. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the spare tire in use? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR and REMOUNT the wheel to the vehicle. REFER to <a data-linkid="ID0ESDBG" data-for="204-04_s12p1721q0" data-procuid="n1100829" class="expand-link">Wheel and Tire</a><span id="spanID0ESDBG"></span> in this section. ADJUST tire pressures to the required pressure as defined on the <abbr title="Vehicle Certification">VC</abbr>  label located in the driver door jam. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D3">D3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D3" data-ajax="false"></a><b>D3 
+                CHECK IF THE TIRES WERE ROTATED WITHOUT TPMS  SENSOR TRAINING 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                If the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors at the front of the vehicle are still trained in the rear positions but inflated to the front air pressures, the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator illuminates continuously. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — <abbr title="Body Control Module">BCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Monitor and record the following <abbr title="Body Control Module">BCM</abbr>  PIDs: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  Left Front Tire Pressure (TPM_PRES_LF) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Right Front Tire Pressure (TPM_PRES_RF) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Left Rear Tire Pressure (TPM_PRES_LRO) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Right Rear Tire Pressure (TPM_PRES_RRO) 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the rear PIDs show front air pressures and the front PIDs show rear air pressures? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                The tires have been rotated without training the sensors. TRAIN the sensors. REFER to <a data-linkid="ID0ETHBG" data-for="204-04_s5p11142q0" data-procuid="n1133678" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor Training</a><span id="spanID0ETHBG"></span> in this section. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D4">D4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D4" data-ajax="false"></a><b>D4 
+                CHECK FOR STUCK TPMS  SENSOR 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Monitor and record the following <abbr title="Body Control Module">BCM</abbr>  PIDs: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  Left Front Tire Pressure (TPM_PRES_LF) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Right Front Tire Pressure (TPM_PRES_RF) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Left Rear Tire Pressure (TPM_PRES_LRO) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Right Rear Tire Pressure (TPM_PRES_RRO) 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Using the Digital Tire Pressure Gauge, measure the actual tire pressures. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Compare the air pressure PIDs with the actual air pressures. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the compared tire pressure values match within ± 5 psi? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EPKBG" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EPKBG"></span> to diagnose the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator is always on. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) for the sensor(s) in question. REFER to <a data-linkid="ID0EJLBG" data-for="204-04_s9p703417q0" data-procuid="n1100830" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor</a><span id="spanID0EJLBG"></span> in this section. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_11" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-E" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test E: The Body Control Module (BCM)
+       Cannot Enter Sensor Training Mode When Using the Tire Pressure Monitoring System (TPMS)
+       Sensor Training Procedure 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">For the Body Control Module (BCM)
+       to enter Tire Pressure Monitoring System (TPMS)
+       sensor training mode, the <abbr title="Body Control Module">BCM</abbr>  must receive valid inputs from the stoplamp switch (off) and ignition switch (run), and it must receive valid vehicle speed sensor input (0 km/h [0 mph]). Refer to <a data-linkid="ID0E4MBG" data-for="204-04_s5p11142q0" data-procuid="n1133678" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor Training</a><span id="spanID0E4MBG"></span> in this section for the complete sensor training procedure. 
+</p>
+        
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Stoplamp switch concern 
+
+          </li>
+          <li>
+            Ignition switch concern 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="E" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST E : THE BCM  CANNOT ENTER SENSOR TRAINING MODE WHEN USING THE TPM  SENSOR TRAINING PROCEDURE 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="E1" data-ajax="false"></a><b>E1 
+                CHECK THE STOPLAMP OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Press and release the brake pedal while monitoring the stoplamps. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the stoplamps operate properly? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E2">E2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0E5PBG" data-sectnum="417-01" class="section-link">Section 
+          417-01</a><span id="spanID0E5PBG"></span> to continue diagnosis of the stoplamp switch. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E2" data-ajax="false"></a><b>E2 
+                CHECK THE IGNITION SWITCH INPUT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Body Control Module">BCM</abbr>  DataLogger 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Monitor the <abbr title="Body Control Module">BCM</abbr>  ignition switch PID (IGN_SW_STATE) with the ignition in the RUN position. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the PID indicate the correct ignition switch position? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E3">E3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EOSBG" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EOSBG"></span> to continue diagnosis of the ignition switch. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E3" data-ajax="false"></a><b>E3 
+                CHECK FOR VEHICLE SPEED-RELATED DTCS IN THE BCM </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Carry out the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any vehicle speed-related DTCs present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to the <abbr title="Body Control Module">BCM</abbr>  DTC Chart in <a data-linkid="ID0EGUBG" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0EGUBG"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E4">E4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E4" data-ajax="false"></a><b>E4 
+                CHECK FOR CORRECT BCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect all the <abbr title="Body Control Module">BCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check the connectors for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all the <abbr title="Body Control Module">BCM</abbr>  connectors and make sure that they are seated correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_12" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-F" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test F: The Tire Pressure Monitoring System (TPMS)
+       Warning Indicator Illuminates With DTCs Present 
+</b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">If there is a fault with 1, 2 or 3 of the Tire Pressure Monitoring System (TPMS)
+       sensors, DTC B124D:02 sets. The <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator flashes for 70 seconds and then remains on continuously when the ignition switch is turned to the ON position and the message center displays TIRE PRESSURE SENSOR FAULT. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">If the <abbr title="Tire Pressure Monitor">TPM</abbr>  module does not get a response from all 4 of the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors and transfers that information to the <abbr title="Body Control Module">BCM</abbr> , DTC B1182:00 sets and the message center displays TIRE PRESSURE MONITOR FAULT. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">It should be noted that <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor communication to the <abbr title="Tire Pressure Monitor">TPM</abbr>  module can be interrupted by radio frequency noise, which can cause intermittent issues that are not vehicle concerns. Radio frequency noise is generated by electrical motors and appliance operation, cellular telephones, remote transmitters, power inverters and portable entertainment equipment. Anytime the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor training procedure is performed successfully, the warning indicator is extinguished and the vehicle must be driven for 18-20 minutes before the <abbr title="Tire Pressure Monitor">TPM</abbr>  module sets a fault. 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC B1182:00 (Tire Pressure Monitoring System (TPMS)
+      : No Sub Type Information) — set by the <abbr title="Body Control Module">BCM</abbr>  when <b>all 4</b> of the tire pressure sensors are faulted, not responding or not heard by the <abbr title="Tire Pressure Monitor">TPM</abbr>  module. 
+
+          </li>
+          <li>
+            DTC B124D:02 (Tire Pressure Sensor: General Signal Failure) — set by the <abbr title="Body Control Module">BCM</abbr>  when 1, 2 or 3 of the tire pressure sensors are faulted, not responding or not heard by the <abbr title="Tire Pressure Monitor">TPM</abbr>  module. 
+
+          </li>
+          <li>
+            TPMS_STAT <abbr title="Parameter Identification">PID</abbr>  = SENSOR FAULT — when the <abbr title="Body Control Module">BCM</abbr>  does not receive the tire pressure status for 1 to 3 <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors from the <abbr title="Tire Pressure Monitor">TPM</abbr>  module for 20 minutes with vehicle speed above 32 km/h (20 mph). 
+
+          </li>
+          <li>
+            TP_STAT <abbr title="Parameter Identification">PID</abbr>  = SYSTEM FAULT when the <abbr title="Body Control Module">BCM</abbr>  does not receive a signal transmission from <b>all 4</b><abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors from the <abbr title="Tire Pressure Monitor">TPM</abbr>  module for 20 minutes with vehicle speed above 32 km/h (20 mph). 
+
+          </li>
+        </ul>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Not all <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors are installed 
+
+          </li>
+          <li>
+            
+              <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors not trained 
+
+          </li>
+          <li>
+            
+              <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) 
+
+          </li>
+          <li>
+            
+              <abbr title="Tire Pressure Monitor">TPM</abbr>  module wiring 
+
+          </li>
+          <li>
+            
+              <abbr title="Tire Pressure Monitor">TPM</abbr>  module 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr>  wiring 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="F" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST F : THE TPMS  WARNING INDICATOR ILLUMINATES WITH DTCS PRESENT 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTE: </b><i>
+            If a warranty case is opened for an actual <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  fault, document and include the actual tire pressure data in all warranty communications. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td><b>NOTE: </b><i>
+            If the vehicle has been stationary for more than 30 minutes, the sensors go into a "sleep mode" to conserve battery power. It is necessary to wake them up so that they transmit the latest tire pressure information to the <abbr title="Tire Pressure Monitor">TPM</abbr>  module. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="F1" data-ajax="false"></a><b>F1 
+                VERIFY TPM  MODULE COMMUNICATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                  The TPM module is also known as the Radio Transceiver Module (RTM). 
+
+                </i><p class="singlespace"></p>
+                Using a scan tool, carry out the Network Test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the <abbr title="Tire Pressure Monitor">TPM</abbr>  module pass the Network Test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#F2">F2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EWDAI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EWDAI"></span> to diagnose the <abbr title="Tire Pressure Monitor">TPM</abbr>  module does not respond to the scan tool. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="F2" data-ajax="false"></a><b>F2 
+                CHECK THE SENSOR IDENTIFIERPIDS  AND SYSTEM STATUS PID </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — <abbr title="Body Control Module">BCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Read and record the following <abbr title="Parameter Identifications">PIDs</abbr> : 
+
+                <ul style="list-style-type: square">
+            <li>
+                  Left Front Tire Transmitter Identifier (TPM_S_ID_LF) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Right Front Tire Transmitter Identifier (TPM_S_ID_RF) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Left Rear Tire Transmitter Identifier (TPM_S_ID_LRO) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Right Rear Tire Transmitter Identifier (TPM_S_ID_RRO) 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Monitor the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  system status (TPMS_STAT) <abbr title="Parameter Identification">PID</abbr> . 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the TPMS_STAT <abbr title="Parameter Identification">PID</abbr>  display SENSOR FAULT? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#F3">F3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If the TPMS_STAT <abbr title="Parameter Identification">PID</abbr>  displays SYSTEM FAULT, GO to <a data-ajax="false" href="#F4">F4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="F3" data-ajax="false"></a><b>F3 
+                CARRY OUT THE SENSOR TRAINING PROCEDURE (SENSOR FAULT) 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Train all 4 tire pressure sensors. Refer to <a data-linkid="ID0EXIAI" data-for="204-04_s5p11142q0" data-procuid="n1133678" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor Training</a><span id="spanID0EXIAI"></span> in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Did all of the tire pressure sensors transmit correctly and did the horn sound when each <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor transmitted to the <abbr title="Tire Pressure Monitor">TPM</abbr>  module? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                Using the scan tool, LOCATE the updated <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor identifiers trained to the <abbr title="Body Control Module">BCM</abbr>  module. 
+
+              <br>
+                COMPARE these values to those recorded prior to the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor training procedure. Disregarding sensor position, any sensor identifiers that do not match those retrieved from the module were changed, but not retrained. The sensors are now trained to the vehicle, diagnosis is complete. 
+
+              <br>
+                DOCUMENT all <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor identifiers on the applicable warranty claim. 
+
+                <br>TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  <b>Before installing a new sensor(s)</b>: If a sensor does not respond to the Tire Pressure Monitor Activation Tool, MOVE the vehicle to rotate the wheels at least one-fourth of a turn and ATTEMPT to activate the same sensor again. If the sensor still fails to train, ATTEMPT to train the sensor with the vehicle doors open. 
+
+              <br>
+                If the sensor(s) fails to train a second time, INSTALL a new <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) for the sensor(s) in question. REFER to <a data-linkid="ID0EWLAI" data-for="204-04_s9p703417q0" data-procuid="n1100830" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor</a><span id="spanID0EWLAI"></span> in this section. 
+
+              </td>
+          </tr>
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="F4" data-ajax="false"></a><b>F4 
+                CARRY OUT THE SENSOR TRAINING PROCEDURE (SYSTEM FAULT) 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Train all 4 tire pressure sensors. Refer to <a data-linkid="ID0EKMAI" data-for="204-04_s5p11142q0" data-procuid="n1133678" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor Training</a><span id="spanID0EKMAI"></span> in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Did all of the tire pressure sensors transmit correctly and did the horn sound when each <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor transmitted to the <abbr title="Tire Pressure Monitor">TPM</abbr>  module? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                Using the scan tool, LOCATE the updated <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor identifiers trained to the <abbr title="Body Control Module">BCM</abbr>  module. 
+
+              <br>
+                COMPARE these values to those recorded prior to the Tire Pressure Monitoring System (TPMS)
+       Sensor Training procedure. Disregarding sensor position, any sensor identifiers that do not match those retrieved from the module were changed, but not retrained. The sensors are now trained to the vehicle, diagnosis is complete. 
+
+              <br>
+                DOCUMENT all <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor identifiers on the applicable warranty claim. 
+
+                <br>TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  <b>Before installing a <abbr title="Tire Pressure Monitor">TPM</abbr>  module</b>: If sensors do not respond to the Tire Pressure Monitor Activation Tool, MOVE the vehicle to rotate the wheels at least one-fourth of a turn and ATTEMPT to activate the same sensors again. If the sensors still fail to train, ATTEMPT to train the sensors with the vehicle doors open. 
+
+              <br>
+                If the sensors still fail to train, INSTALL a new <abbr title="Tire Pressure Monitor">TPM</abbr>  module. REFER to <a data-linkid="ID0EQPAI" data-for="204-04_s3p703776q0" data-procuid="n1270060" class="expand-link">Tire Pressure Monitor (TPM) Module</a><span id="spanID0EQPAI"></span> in this section. 
+
+              <br>
+                TEST the system for normal operation. If the concern is still present, GO to <a data-ajax="false" href="#F5">F5</a>. 
+
+              </td>
+          </tr>
+              
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="F5" data-ajax="false"></a><b>F5 
+                CHECK FOR CORRECT BCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect all the <abbr title="Body Control Module">BCM</abbr>  electrical connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check the connectors for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all the <abbr title="Body Control Module">BCM</abbr>  connectors and make sure that they are seated correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  <b>NOTE:</b> The <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors may not be present. DISMOUNT the tire. REFER to <a data-linkid="ID0EYSAI" data-for="204-04_s12p1721q0" data-procuid="n1100829" class="expand-link">Wheel and Tire</a><span id="spanID0EYSAI"></span> in this section. VERIFY the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors are present and mounted to the wheels. If missing, INSTALL new <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors. 
+
+                <br>If the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors are present, 
+INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_13" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-G" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test G: One Or More <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  Sensors Do Not Train And No DTCs Are Present 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          If the vehicle has been stationary for more than 30 minutes, the sensors go into a sleep mode to conserve battery power. It becomes necessary to wake them up so they transmit the latest tire pressure information to the <abbr title="Tire Pressure Monitor">TPM</abbr>  module. For additional information, refer to <a data-linkid="ID0EYUAI" data-for="204-04_s5p704806q0" data-procuid="n1133679" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor Activation</a><span id="spanID0EYUAI"></span> in this section. 
+
+        </i></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The <abbr title="Tire Pressure Monitor">TPM</abbr>  module monitors the tire pressure of all 4 road tires. The wheel-mounted tire pressure sensors transmit signals via radio frequency to the Tire Pressure Monitor (TPM)
+       module. The <abbr title="Tire Pressure Monitor">TPM</abbr>  module is a radio receiver that collects the tire pressure data from the tire pressure sensors. The <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor radio transmissions are sent approximately once every 60 seconds when the vehicle speed exceeds 32 km/h (20 mph). The <abbr title="Body Control Module">BCM</abbr>  learns the position on the vehicle of each <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor through the training process. Refer to <a data-linkid="ID0EIWAI" data-for="204-04_s5p11142q0" data-procuid="n1133678" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor Training</a><span id="spanID0EIWAI"></span> in this section for the complete sensor training procedure. 
+</p>
+        
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            
+              <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors 
+
+          </li>
+          <li>
+            
+              Radio Frequency Interference (RFI)
+      
+            
+          </li>
+        </ul>
+        <a name="G" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST G : ONE OR MORE TPMS  SENSORS DO NOT TRAIN AND NO DTCS ARE PRESENT 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="G1" data-ajax="false"></a><b>G1 
+                ATTEMPT TO TRAIN THE TPMS SENSORS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                Banded <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors are not compatible with the valve mounted <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor system. 
+
+              </i></p>
+              <p class="singlespace"><b>NOTE: </b><i>
+                The <abbr title="Body Control Module">BCM</abbr>  has a 2-minute time limit between sensor responses. If the <abbr title="Body Control Module">BCM</abbr>  does not recognize any 1 of the 4 tire pressure sensors during this time limit, the horn sounds twice, the message center displays TIRE NOT TRAINED REPEAT, and the entire procedure must be repeated. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Train all 4 <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors. Refer to <a data-linkid="ID0ENZAI" data-for="204-04_s5p11142q0" data-procuid="n1133678" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor Training</a><span id="spanID0ENZAI"></span> in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do all of the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors train? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by <abbr title="Radio Frequency Interference">RFI</abbr> . 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If one or more <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors trained, GO to <a data-ajax="false" href="#G2">G2</a>. 
+
+              <br>
+                If none of the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors trained, <a data-ajax="false" href="#PS2-E">GO to Pinpoint Test E</a>. 
+
+              </td>
+          </tr>
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="G2" data-ajax="false"></a><b>G2 
+                CHECK FOR RADIO FREQUENCY INTERFERENCE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Move the vehicle to rotate the wheels at least one-fourth turn. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Train all 4 <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors. Refer to <a data-linkid="ID0ER3AI" data-for="204-04_s5p11142q0" data-procuid="n1133678" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor Training</a><span id="spanID0ER3AI"></span> in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Did the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) train? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by <abbr title="Radio Frequency Interference">RFI</abbr> . 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                ATTEMPT to train the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) with the doors open. If the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) still do not train INSTALL a new <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) for the sensor(s) in question. REFER to <a data-linkid="ID0EO5AI" data-for="204-04_s9p703417q0" data-procuid="n1100830" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor</a><span id="spanID0EO5AI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_14" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-H" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test H: DTC B1251:00 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC B1251:00 (Tire Pressure Sensor Low Battery: No Sub Type Information) — This DTC sets in continuous memory in the Body Control Module (BCM)
+       when there is a fault in the Tire Pressure Monitoring System (TPMS)
+      , such as a damaged or missing <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s), or when attempting to train a <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) with a low battery. The <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  warning indicator flashes for 70 seconds then illuminates continuously when the ignition switch is turned to the ON position. The message center also displays TIRE PRESSURE SENSOR FAULT. 
+
+          </li>
+        </ul>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            
+              <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) 
+
+          </li>
+        </ul>
+        <a name="H" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST H :  DTC B1251:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="H1" data-ajax="false"></a><b>H1 
+                TRAIN THE TPMS  SENSORS TO DETERMINE THE INOPERATIVE SENSOR 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Train all 4 <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors. Refer to <a data-linkid="ID0EVBBI" data-for="204-04_s5p11142q0" data-procuid="n1133678" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor Training</a><span id="spanID0EVBBI"></span> in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Did all of the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors transmit correctly when each <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor transmitted to the <abbr title="Tire Pressure Monitor">TPM</abbr>  module? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensors fail to train, REFER to <b>Wheel Rotation And Sensor Training Techniques</b> in this section. 
+
+                <br>If the <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) fails to train a second time, INSTALL a new <abbr title="Tire Pressure Monitoring System">TPMS</abbr>  sensor(s) for the sensor(s) in question. REFER to <a data-linkid="ID0E3DBI" data-for="204-04_s9p703417q0" data-procuid="n1100830" class="expand-link">Tire Pressure Monitoring System (TPMS) Sensor</a><span id="spanID0E3DBI"></span> in this section. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_15" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-I" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test I: DTC U0140:87 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U0140:87 (Lost Communication With Body Control Module: Missing Message) — This DTC is set by the Tire Pressure Monitor (TPM)
+       module in continuous memory if data messages received from the <abbr title="Body Control Module">BCM</abbr>  are missing. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b></b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Communication network concern 
+
+          </li>
+          <li>
+            
+              <abbr title="Tire Pressure Monitor">TPM</abbr>  module 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="I" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST I : DTC U0140:87 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="I1" data-ajax="false"></a><b>I1 
+                VERIFY THE CUSTOMER CONCERN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Verify there is an observable symptom present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is an observable symptom present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#I2">I2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="I2" data-ajax="false"></a><b>I2 
+                CHECK THE COMMUNICATION NETWORK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                  The TPM module is also known as the Radio Transceiver Module (RTM). 
+
+                </i><p class="singlespace"></p>
+                Using a scan tool, carry out the Network Test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do both the <abbr title="Body Control Module">BCM</abbr>  and the <abbr title="Tire Pressure Monitor">TPM</abbr>  module pass the Network Test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#I3">I3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If either module does not pass the Network Test, REFER to <a data-linkid="ID0E6JBI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E6JBI"></span> to diagnose the <abbr title="Body Control Module">BCM</abbr>  does not respond to the scan tool or the <abbr title="Tire Pressure Monitor">TPM</abbr>  module does not respond to the scan tool. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="I3" data-ajax="false"></a><b>I3 
+                CHECK THE TPM  MODULE CMDTCS </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                  The TPM module is also known as the Radio Transceiver Module (RTM). 
+
+                </i><p class="singlespace"></p>
+                Using a scan tool, carry out the <abbr title="Tire Pressure Monitor">TPM</abbr>  module self-test. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Using a scan tool, clear the <abbr title="Tire Pressure Monitor">TPM</abbr>  module DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait 10 seconds. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                  The TPM module is also known as the Radio Transceiver Module (RTM). 
+
+                </i><p class="singlespace"></p>
+                Using a scan tool, carry out the <abbr title="Tire Pressure Monitor">TPM</abbr>  module self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0140:87 retrieved again? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#I4">I4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="I4" data-ajax="false"></a><b>I4 
+                CHECK FOR DTCS IN THE BCM </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Using a scan tool, carry out the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U3003:16 or U3003:17 present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  <abbr title="Tire Pressure Monitor">TPM</abbr>  module DTC U0140:87 may have been set due to a voltage issue in the <abbr title="Body Control Module">BCM</abbr> . REFER to the <abbr title="Body Control Module">BCM</abbr>  DTC Chart in <a data-linkid="ID0EAQBI" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0EAQBI"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#I5">I5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="I5" data-ajax="false"></a><b>I5 
+                CHECK FOR DTC U0140, U0140:00, OR U0140:87 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Clear the <abbr title="Continuous Memory Diagnostic Trouble Codes">CMDTCs</abbr>  from all modules. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait 10 seconds. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Using a scan tool, retrieve the <abbr title="Continuous Memory Diagnostic Trouble Codes">CMDTCs</abbr>  from all modules. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0140, U0140:00, or U0140:87 set in more than one module? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . CLEAR all continuous DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Tire Pressure Monitor">TPM</abbr>  module. REFER to <a data-linkid="ID0EHTBI" data-for="204-04_s3p703776q0" data-procuid="n1270060" class="expand-link">Tire Pressure Monitor (TPM) Module</a><span id="spanID0EHTBI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+  
+
+

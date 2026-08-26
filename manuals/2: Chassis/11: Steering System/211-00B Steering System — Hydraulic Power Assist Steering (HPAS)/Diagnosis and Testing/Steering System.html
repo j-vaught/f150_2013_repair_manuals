@@ -1,0 +1,2614 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="211-00B" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="211-00B Steering System — Hydraulic Power Assist Steering (HPAS)" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1510160" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>211-00B Steering System — Hydraulic Power Assist Steering (HPAS)</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      10/18/2012</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Steering System" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Steering System
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('211-00','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST1300A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          100W/12 Volt DC UV Lamp 
+          <br>164-R0751 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST1396A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Dial Thermometer 0-220°F
+          <br><a data-for="023-R0007" class="tools-link">023-R0007</a> or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2670A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Evacuation Cap, Power Steering
+          <br><a data-for="211-265" class="tools-link">211-265</a> or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST1176A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Vacuum Pump Kit
+          <br><a data-for="416-D002" class="tools-link">416-D002</a> (D95L-7559-A) or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan tool
+          <br>
+        </td>
+      </tr>
+    </table>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" width="50%" cellspacing="0" cellpadding="3" xmlns:str="http://xsltsl.org/string">
+  <caption>Material</caption>
+  <tr valign="top">
+    <th>Item</th>
+    <th>Specification</th>
+  </tr>
+      <tr valign="top">
+        <td>
+          Dye-Lite® ATF/Power Steering Fluid Leak Detection Dye
+
+          <br>164-R3701 (Rotunda)
+
+        </td>
+        <td align="center">—
+</td>
+      </tr>
+      <tr valign="top">
+        <td>
+          Motorcraft® MERCON® LV Automatic Transmission Fluid
+
+          <br>XT-10-QLVC (US); CXT-10-LV12 (Canada)
+
+        </td>
+        <td align="center">MERCON® LV
+</td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      
+        <p xmlns:str="http://xsltsl.org/string"><b>Power Steering 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The power steering system uses a vane-type pump to move the fluid from the reservoir to the steering gear and through the rest of the steering hydraulic system. The power steering pump is mounted to the engine and driven by the engine accessory drive belt. Power steering fluid flows into the pump from the reservoir. The power steering fluid is trapped between the pump vanes and moved to the high pressure side of the pump creating a flow of fluid. The restriction of this flow by the steering gear creates the pressure that provides the steering assist. A combined pressure relief/flow valve is built into the pump to control the maximum pressure and flow provided to the steering system. This action prevents damage to the system and provides the correct level of assist during all engine speeds. While under pressure, the power steering fluid flows through the high pressure power steering line to the steering gear. The fluid exits the gear and flows through the return line, cooler and finally to the reservoir. The reservoir slows the fluid, allows air to escape and filters the fluid before returning it to the pump. 
+</p>
+      
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTICE: 
+        Do not adjust the steering gear pinion preload or steering gear wear and/or damage to the steering gear may occur. 
+
+      </b></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern. 
+
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect for obvious signs of mechanical damage or leaks. 
+
+      </li>
+</ol>
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string">
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Visual Inspection Chart
+        </b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+  </colgroup>
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                
+                  Mechanical
+                 
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Fluid level 
+
+                  </li>
+                  <li>
+                    Tire pressure 
+
+                  </li>
+                  <li>
+                    Tires 
+
+                  </li>
+                  <li>
+                    Drive belt 
+
+                  </li>
+                  <li>
+                    Drive belt tensioner 
+
+                  </li>
+                  <li>
+                    Steering column alignment 
+
+                  </li>
+                  <li>
+                    Tie-rod ends 
+
+                  </li>
+                  <li>
+                    Suspension components 
+
+                  </li>
+                  <li>
+                    Steering column shaft U-joints 
+
+                  </li>
+                  <li>
+                    Intermediate shaft bolts 
+
+                  </li>
+                  <li>
+                    Power steering reservoir baffle 
+
+                  </li>
+                  <li>
+                    Power steering reservoir screen 
+
+                  </li>
+                  <li>
+                    Power steering pressure lines, fittings or O-rings 
+
+                  </li>
+                  <li>
+                    Power steering return hoses and clamps 
+
+                  </li>
+                  <li>
+                    Steering gear 
+
+                  </li>
+                  <li>
+                    Power steering pump 
+
+                  </li>
+                  <li>
+                    Power steering fluid cooler (if equipped) 
+
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Inspect the power steering fluid for the following conditions: 
+
+        <ul type="disc">
+      <li>
+          Aeration or foam: Purge the power steering system. Refer to <a data-linkid="ID0ESBAC" data-for="211-00B_s5p8634q0" data-procuid="n1505269" class="expand-link">Power Steering System Purging</a><span id="spanID0ESBAC"></span> in this section. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          Overheating or contamination: Flush the power steering system. Refer to <a data-linkid="ID0E4BAC" data-for="211-00B_s5p5420q0" data-procuid="n1505268" class="expand-link">Power Steering System Flushing</a><span id="spanID0E4BAC"></span> in this section. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          It may be necessary to add power steering fluid to achieve the correct level. 
+
+        </i></p>
+        Check the fluid level and clean the power steering components. 
+
+        <br>With the ignition OFF: 
+
+        <ul type="disc">
+      <li>
+          check the power steering fluid level and add fluid as necessary. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          wipe off any visible signs of fluid or residue build up. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          <p><b>NOTICE: 
+            Do not hold the steering wheel at the stops for an extended amount of time. Damage to the power steering pump may occur. 
+
+          </b></p>
+          Start the engine and turn the steering wheel from stop-to-stop several times. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect the power steering hydraulic line/hose connections for damage or leaks. 
+
+      </li>
+</ol>
+      <ul type="disc" xmlns:str="http://xsltsl.org/string">
+        <li>
+          If a leak is detected at a threaded fitting or clamp plate joint, tighten to specification. If the leak is still evident, visually inspect the O-rings or Teflon® seals. Install new O-rings or Teflon® seals as necessary. Refer to <a data-linkid="ID0ESDAC" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0ESDAC"></span>. 
+
+        </li>
+        <li>
+          If a leak is detected at a constant tension spring clamp, verify that the hose is not damaged and fully installed on the hose fitting. Make sure that the constant tension spring clamp is positioned 2 mm (0.078 in) from the end of the hose. If the leak remains, install a new constant tension spring clamp. 
+
+        </li>
+        <li>
+          If a leak is detected at a screw clamp joint, verify that the hose is not damaged and fully installed on the hose fitting and the clamp is positioned 2 mm (0.078 in) from the end of the hose before tightening the screw clamp. If the leak remains, install a new screw clamp. Refer to <a data-linkid="ID0ECEAC" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0ECEAC"></span>. 
+
+        </li>
+      </ul>
+      <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect the power steering components for leaks. 
+
+      </li>
+</ol>
+      <ul type="disc" xmlns:str="http://xsltsl.org/string">
+        <li>
+          If a leak is detected in the power steering pressure line or return hose, install a new hose. Refer to <a data-linkid="ID0EVEAC" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EVEAC"></span>. 
+
+        </li>
+        <li>
+          If a leak is detected in the steering gear turn tubes, repair or install new turn tubes. Refer to <a data-linkid="ID0EAFAC" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EAFAC"></span>. 
+
+        </li>
+        <li>
+          If a leak is detected in the power steering pump, install a new power steering pump. Refer to <a data-linkid="ID0ELFAC" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0ELFAC"></span>. 
+
+        </li>
+        <li>
+          <p><b>NOTE: </b><i>
+            On vehicles with rack-and-pinion steering gear, it may be necessary to remove the bellows boot clamp from the steering gear bellows boot to inspect for internal steering gear leaks. 
+
+          </i></p>
+          If a leak is detected in the steering gear, repair or install a new steering gear. Refer to <a data-linkid="ID0E2FAC" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0E2FAC"></span>. 
+
+        </li>
+        <li>
+          If a leak is detected in the power steering reservoir, install a new reservoir. Refer to <a data-linkid="ID0EGGAC" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EGGAC"></span>. 
+
+        </li>
+      </ul>
+      <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        For information on power steering leak detection, refer to Component Tests in this section. 
+
+      </li>
+</ol>
+      <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding. 
+
+      </li>
+</ol>
+      <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the cause is not visually evident, verify the symptom and GO to <a data-ajax="false" href="#SC1">Symptom Chart — Steering System</a> or GO to <a data-ajax="false" href="#SC2">Symptom Chart - NVH</a>. 
+
+      </li>
+</ol>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Steering System Symptom Definitions 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTICE: 
+          Do not adjust the steering gear pinion preload or steering gear wear and/or damage to the steering gear may occur. 
+
+        </b></p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Drift/Pull 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Pull is described as a tugging sensation felt by the hands on the steering wheel that must be overcome to keep the vehicle going straight. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">Drift describes what a vehicle with this condition does with the hands off the steering wheel. 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            A vehicle-related drift/pull on a flat road can cause a consistent deviation from the straight-ahead path and require constant steering input in the opposite direction to counteract the effect. 
+
+          </li>
+          <li>
+            Drift/pull can be induced by conditions external to the vehicle, such as wind or road camber. 
+
+          </li>
+        </ul>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Excessive Steering Wheel Play 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Excessive steering wheel play is a condition in which there is too much steering wheel movement before the wheels move. A small amount of steering wheel free play is considered normal. 
+</p>
+        
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Lack of Assist or Inconsistent Assist 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Lack of assist or inconsistent assist is experienced when the steering wheel effort is higher than normal. Hard steering can remain constant through the full turn or occur near the end of a turn. It is important to know the difference between hard steering/lack of assist and poor returnability/sticky steering. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">Hard steering or lack of assist can result from either hydraulic or mechanical conditions. It is extremely important to know if this concern occurs during driving or during high-effort parking maneuvers. 
+</p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Poor Returnability/Sticky Steering 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Poor returnability and sticky steering is used to describe the poor return of the steering wheel to center after a turn or steering correction is completed. 
+</p>
+        
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Wander 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Wander is the tendency of the vehicle to require frequent, random left and right steering wheel corrections to maintain a straight path down a level road. 
+</p>
+        
+      
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart — Steering System 
+</b></p>
+      <a name="SC1" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart — Steering System 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        <tr>
+    <td colspan="3"><b>NOTICE: 
+          Do not adjust the steering gear pinion preload or steering gear wear and/or damage to the steering gear may occur. 
+
+        </b></td>
+  </tr>
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Steering has lack of assist or inconsistent assist 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Contaminated power steering fluid 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Steering gear 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Power steering pump 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Restricted power steering lines/hoses 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-A">GO to Pinpoint Test A</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Excessive steering wheel play 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering gear 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Steering column shaft/coupling 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Steering linkage 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-B">GO to Pinpoint Test B</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Steering system drift/pull/wander 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering column shaft/U-joints 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Steering gear 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Steering gear mounts 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-C">GO to Pinpoint Test C</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Poor returnability/sticky steering 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Binding steering column shaft/coupling U-joints 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL a new steering column shaft. REFER to <a data-linkid="ID0EAOAC" data-sectnum="211-04" class="section-link">Section 
+          211-04</a><span id="spanID0EAOAC"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Suspension components 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>To continue the suspension diagnosis, REFER to <a data-linkid="ID0E5OAC" data-sectnum="204-00" class="section-link">Section 
+          204-00</a><span id="spanID0E5OAC"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Binding steering column bearing(s) 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL a new steering column. REFER to <a data-linkid="ID0E3PAC" data-sectnum="211-04" class="section-link">Section 
+          211-04</a><span id="spanID0E3PAC"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Binding dash boot seal 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL a new dash boot seal. REFER to <a data-linkid="ID0E2AAE" data-sectnum="211-04" class="section-link">Section 
+          211-04</a><span id="spanID0E2AAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering gear turn tube banjo bolts/dampers 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL new banjo bolt/dampers. REFER to Steering Gear Turn Tubes Removal and Installation in <a data-linkid="ID0EZBAE" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EZBAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering gear 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>The steering gear cannot be adjusted. INSTALL a new steering gear as necessary. REFER to <a data-linkid="ID0EXCAE" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EXCAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart — NVH 
+</b></p>
+      <a name="SC2" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart — NVH 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        <tr>
+    <td colspan="3"><b>NOTE: </b><i>
+          NVH symptoms should be identified using the diagnostic tools that are available. For a list of these tools, an explanation of their uses and a glossary of common terms, refer to <a data-linkid="ID0EQDAE" data-sectnum="100-04" class="section-link">Section 
+          100-04</a><span id="spanID0EQDAE"></span>. Since it is possible any one of multiple systems may be the cause of a symptom, it may be necessary to use a process of elimination type of diagnostic approach to pinpoint the responsible system. If this is not the causal system for the symptom, refer back to <a data-linkid="ID0EVDAE" data-sectnum="100-04" class="section-link">Section 
+          100-04</a><span id="spanID0EVDAE"></span> for the next likely system and continue diagnosis. 
+
+        </i></td>
+  </tr>
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Steering system cold start noise 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Blockage in the power steering fluid reservoir filter screen or return ports caused by power steering fluid contamination 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li><b>NOTE: </b><i>
+                Some noise during an extremely cold start (-12.2°C [-10°F]) is normal and should improve as the steering system warms up (usually within 60 seconds). 
+
+              </i></li>
+      </ul>
+              <ul class="nospace">
+        <li><b>NOTE: </b><i>
+                It may be necessary to remove the power steering fluid reservoir to flush contamination trapped in the reservoir filter/screen or to remove blockage in the return ports. 
+
+              </i></li>
+      </ul>
+              <ul class="nospace">
+        <li>CHECK the power steering fluid reservoir filter/screen or return ports for contaminants or blockage. FLUSH the power steering system as necessary. REFER to <a data-linkid="ID0E2EAE" data-for="211-00B_s5p5420q0" data-procuid="n1505268" class="expand-link">Power Steering System Flushing</a><span id="spanID0E2EAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Air in the steering hydraulic system (aerated fluid) 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>CHECK for leaks in the system. REFER to Power Steering Leak Test Component Test. PURGE the air from the system. REFER to <a data-linkid="ID0EYFAE" data-for="211-00B_s5p8634q0" data-procuid="n1505269" class="expand-link">Power Steering System Purging</a><span id="spanID0EYFAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Steering grunt or shudder — occurs when turning into or out of a turn at low speeds (temperature sensitive) 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Air in the steering hydraulic system (aerated fluid) 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>CHECK for leaks in the system. REFER to Power Steering Leak Test Component Test. PURGE the air from the system. REFER to <a data-linkid="ID0EVGAE" data-for="211-00B_s5p8634q0" data-procuid="n1505269" class="expand-link">Power Steering System Purging</a><span id="spanID0EVGAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering gear or power steering hoses 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>GO to Steering Gear Grunt/Shudder Component Test in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Steering system clonk — hydraulic knocking sound 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Air in the steering hydraulic system (aerated fluid) 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li><b>NOTE: </b><i>
+                Some amount of clonk noise is considered acceptable. If in doubt of the acceptability, compare to another vehicle. 
+
+              </i></li>
+      </ul>
+              <ul class="nospace">
+        <li>CHECK for leaks in the system. REFER to Power Steering Leak Test Component Test. PURGE the air from the system. REFER to <a data-linkid="ID0EPIAE" data-for="211-00B_s5p8634q0" data-procuid="n1505269" class="expand-link">Power Steering System Purging</a><span id="spanID0EPIAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Power steering pump moan — loud humming noise occurs when the steering wheel is rotated to the stop position. Produces a 120-600 Hz frequency that changes with rpm 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Low fluid and/or air in the steering hydraulic system (aerated fluid) 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>CHECK for leaks in the system. REFER to Power Steering Leak Test Component Test. PURGE the air from the system. REFER to <a data-linkid="ID0EMJAE" data-for="211-00B_s5p8634q0" data-procuid="n1505269" class="expand-link">Power Steering System Purging</a><span id="spanID0EMJAE"></span> in this section. If a pump moan still exists, INSTALL a new power steering pump. REFER to <a data-linkid="ID0EQJAE" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EQJAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Blockage in the power steering fluid reservoir filter/screen or return ports caused by power steering fluid contamination 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li><b>NOTE: </b><i>
+                It may be necessary to remove the power steering fluid reservoir to flush contamination trapped in the reservoir filter/screen or to remove blockage in the return ports. 
+
+              </i></li>
+      </ul>
+              <ul class="nospace">
+        <li>CHECK the power steering fluid reservoir filter/screen or return ports for contaminants or blockage. FLUSH the power steering system as necessary. REFER to <a data-linkid="ID0ETKAE" data-for="211-00B_s5p5420q0" data-procuid="n1505268" class="expand-link">Power Steering System Flushing</a><span id="spanID0ETKAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Power steering line/hose grounded to chassis 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSPECT the power steering lines/hoses. REPAIR as necessary. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Power steering pump brackets loose or misaligned 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>CHECK bolts, brackets and bracket alignment. TIGHTEN bolts to specification. REPAIR or INSTALL new brackets as necessary. REFER to <a data-linkid="ID0EIMAE" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EIMAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering gear isolators 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSPECT the isolators for wear or damage. REPAIR as necessary. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Steering gear clunk — occurs only while cornering over a bump (can be temperature sensitive) 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering gear 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSPECT the steering gear for loose mounting bolts. TIGHTEN to specification as necessary. REFER to <a data-linkid="ID0E5NAE" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0E5NAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Feedback (rattle, chuckle or knocking noise in the steering gear) — roughness is felt in the steering wheel when the vehicle is driven over rough surfaces 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering column shaft/coupling joints damaged or worn 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL a new steering column shaft. REFER to <a data-linkid="ID0E3OAE" data-sectnum="211-04" class="section-link">Section 
+          211-04</a><span id="spanID0E3OAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Loose, damaged or worn tie-rod ends 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSPECT and INSTALL new tie-rod ends as necessary. GO to Steering Linkage Component Test in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering gear insulators or mounting bolts loose or damaged 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>TIGHTEN the bolts to specification or INSTALL new bolts as necessary. REFER to <a data-linkid="ID0ESQAE" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0ESQAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering column shaft/coupling bolts are loose 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>TIGHTEN the bolts to specification. REFER to <a data-linkid="ID0EQRAE" data-sectnum="211-04" class="section-link">Section 
+          211-04</a><span id="spanID0EQRAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering column damaged or worn 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REPAIR or INSTALL a new steering column as necessary. REFER to <a data-linkid="ID0EOSAE" data-sectnum="211-04" class="section-link">Section 
+          211-04</a><span id="spanID0EOSAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Power steering hiss or whistle 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering column shaft/coupling-to-steering gear is binding or misaligned 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REPAIR or INSTALL a new steering column shaft as necessary. REFER to <a data-linkid="ID0EMTAE" data-sectnum="211-04" class="section-link">Section 
+          211-04</a><span id="spanID0EMTAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Grounded or loose steering column boot at the dash panel 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REPAIR as necessary. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Damaged or worn steering gear input shaft and valve 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REPAIR or INSTALL a new steering gear as necessary. REFER to <a data-linkid="ID0ECVAE" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0ECVAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Restricted power steering lines/hoses 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-A">GO to Pinpoint Test A</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Steering column rattle 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Loose bolts or attaching brackets 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>TIGHTEN the bolts to specification. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Loose, worn or insufficiently lubricated column bearings 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>LUBRICATE bearings or INSTALL new steering column bearings or steering column as necessary. REFER to <a data-linkid="ID0EUXAE" data-sectnum="211-04" class="section-link">Section 
+          211-04</a><span id="spanID0EUXAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering shaft insulators damaged or worn 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL new insulators. REFER to <a data-linkid="ID0ESYAE" data-sectnum="211-04" class="section-link">Section 
+          211-04</a><span id="spanID0ESYAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering column shaft/coupling compressed or extended 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSPECT the rubber spider coupling for damage. INSTALL a new intermediate/flexible shaft. REFER to <a data-linkid="ID0EQZAE" data-sectnum="211-04" class="section-link">Section 
+          211-04</a><span id="spanID0EQZAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Steering gear squeak 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Incorrect power steering fluid in system 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>If incorrect power steering fluid is suspected, FLUSH the power steering system. REFER to <a data-linkid="ID0EO1AE" data-for="211-00B_s5p5420q0" data-procuid="n1505268" class="expand-link">Power Steering System Flushing</a><span id="spanID0EO1AE"></span> in this section. If noise persists after system flush, INSTALL a new steering gear. REFER to <a data-linkid="ID0ES1AE" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0ES1AE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering gear rotary seal 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li><b>NOTE: </b><i>
+                Use the chassis ears to verify that the steering gear is the source of the noise. It may be necessary to replicate the customer operating conditions (fluid temperature, turning rate of steering wheel) to get the squeak to reoccur. 
+
+              </i></li>
+      </ul>
+              <ul class="nospace">
+        <li>INSTALL a new steering gear as necessary. REFER to <a data-linkid="ID0EV2AE" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EV2AE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Stone shield (if equipped) 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>MAKE SURE that the stone shield is correctly installed and that it is not making contact with the steering shaft. REPOSITION stone shield or INSTALL a new stone shield as necessary. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Steering column squeak, cracks or grinds 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Loose or misaligned steering column shrouds 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>TIGHTEN or ALIGN the steering column shrouds. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering wheel rubbing against steering column shrouds 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REPOSITION the steering column shrouds. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Steering column ticking or creaking noise 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Steering column lower bearing 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>VERIFY that the noise is coming from the lower bearing and INSTALL a new bearing as necessary. REFER to Disassembly and Assembly — Steering Column in <a data-linkid="ID0E25AE" data-sectnum="211-04" class="section-link">Section 
+          211-04</a><span id="spanID0E25AE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li> Power steering pump noisy 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Blockage in the power steering fluid reservoir filter/screen or return ports caused by power steering fluid contamination 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li><b>NOTE: </b><i>
+                It may be necessary to remove the power steering fluid reservoir to flush contamination trapped in the reservoir filter/screen or to remove blockage in the return ports. 
+
+              </i></li>
+      </ul>
+              <ul class="nospace">
+        <li>CHECK the power steering fluid reservoir filter/screen or return ports for contaminants or blockage. FLUSH the power steering system as necessary. REFER to <a data-linkid="ID0E56AE" data-for="211-00B_s5p5420q0" data-procuid="n1505268" class="expand-link">Power Steering System Flushing</a><span id="spanID0E56AE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Power steering pump 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL a new power steering pump as necessary. REFER to <a data-linkid="ID0E3AAG" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0E3AAG"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Power steering pump noise (steering wheel turned fully to stop/lock) 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Power steering fluid flow into the bypass valve of the pump valve housing, with fluid temperature below 54°C (130°F) 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Acceptable condition. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Power steering pump whine noise 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Aerated fluid 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>CHECK for a leak in the system. REFER to Power Steering Fluid Leak Test Component Test. PURGE the air from the system. REFER to <a data-linkid="ID0ESCAG" data-for="211-00B_s5p8634q0" data-procuid="n1505269" class="expand-link">Power Steering System Purging</a><span id="spanID0ESCAG"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Blockage in the power steering fluid reservoir filter/screen or return ports caused by power steering fluid contamination 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li><b>NOTE: </b><i>
+                It may be necessary to remove the power steering fluid reservoir to flush contamination trapped in the reservoir filter/screen or to remove blockage in the return ports. 
+
+              </i></li>
+      </ul>
+              <ul class="nospace">
+        <li>CHECK the power steering fluid reservoir filter/screen or return ports for contaminants or blockage. FLUSH the power steering system as necessary. REFER to <a data-linkid="ID0EUDAG" data-for="211-00B_s5p5420q0" data-procuid="n1505268" class="expand-link">Power Steering System Flushing</a><span id="spanID0EUDAG"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Damaged power steering pump 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL a new power steering pump as necessary. REFER to <a data-linkid="ID0EREAG" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EREAG"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>High speed shake or shimmy — occurs at high speeds 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Worn or damaged steering linkage components 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>GO to Steering Linkage Component Test in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_5" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-A" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test A: Steering Has a Lack of Assist or Inconsistent Assist 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          Hard steering or lack of assist is experienced when the steering wheel effort is higher than normal. Hard steering can remain constant through the full turn, occur near the end of a turn or differ right to left. 
+
+        </i></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Power steering fluid contamination 
+
+          </li>
+          <li>
+            Steering gear 
+
+          </li>
+          <li>
+            Power steering pump 
+
+          </li>
+          <li>
+            Power steering hoses 
+
+          </li>
+        </ul>
+        <a name="A" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST A : STEERING HAS A LACK OF ASSIST OR INCONSISTENT ASSIST — RWD  VEHICLES 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="A1" data-ajax="false"></a><b>A1 
+                CHECK FOR POWER STEERING FLUID CONTAMINATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the power steering fluid for contamination. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the power steering fluid free of any contamination? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A2">A2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                FLUSH the power steering system. REFER to <a data-linkid="ID0EQIAG" data-for="211-00B_s5p5420q0" data-procuid="n1505268" class="expand-link">Power Steering System Flushing</a><span id="spanID0EQIAG"></span> in this section. TEST the system for normal operation. 
+
+                <br>If the assist concern is still present, GO to <a data-ajax="false" href="#A2">A2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A2" data-ajax="false"></a><b>A2 
+                CHECK THE STEERING ASSIST WITH THE ENGINE SPEED RAISED 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                <b>NOTICE: 
+                  Do not hold the steering wheel at the stops for an extended amount of time. Damage to the power steering pump may occur. 
+
+                </b><p class="singlespace"></p>
+                Set the engine speed to 2,100 rpm and turn the steering wheel fully to the left and right. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is steering assist fully restored to normal with the engine speed raised? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new power steering pump. REFER to <a data-linkid="ID0E6JAG" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0E6JAG"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A3">A3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A3" data-ajax="false"></a><b>A3 
+                CHECK FOR A CHANGE IN ASSIST ON LEFT AND RIGHT TURNS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                With the engine running at idle, turn the steering wheel fully to the left and to the right. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the steering assist change when turning from right to left? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new power steering gear. REFER to <a data-linkid="ID0EQLAG" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EQLAG"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A4">A4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A4" data-ajax="false"></a><b>A4 
+                CHECK THE STEERING LINES AND HOSES FOR RESTRICTIONS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Inspect the steering lines and hoses for damage, kinks or restrictions. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the steering lines and hoses free from any damage, kinks and/or restrictions? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A5">A5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL new lines and/or hoses as necessary. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A5" data-ajax="false"></a><b>A5 
+                MONITOR THE ENGINE SPEED CHANGES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTICE: 
+                Do not hold the steering wheel at the stops for an extended amount of time. Damage to the power steering pump may occur. 
+
+              </b></p>
+              <p class="singlespace"><b>NOTE: </b><i>
+                Make sure that the vehicle is on a flat dry surface, all accessories are in the OFF position and that the steering system is at normal operating temperature. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Connect the scan tool. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Start the engine. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                With the engine running at idle, raise the power steering fluid temperature to 74°-80°C (165°-176°F) by rotating the steering wheel fully to the left and to the right several time. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — PCM.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Monitor the Engine Revolutions Per Minute (RPM) PID while turning the steering wheel quickly to the left stop position and then to the right stop position. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Note the engine rpm during the turns. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the engine speed change (even temporarily) by more than 30 rpm when turning the steering wheel? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new power steering gear. REFER to <a data-linkid="ID0EXPAG" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EXPAG"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new power steering pump. REFER to <a data-linkid="ID0EFQAG" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EFQAG"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-B" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test B: Excessive Steering Wheel Play 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Steering linkage 
+
+          </li>
+          <li>
+            Steering column shaft 
+
+          </li>
+          <li>
+            Steering gear 
+
+          </li>
+        </ul>
+        <a name="B" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST B : EXCESSIVE STEERING WHEEL PLAY 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="B1" data-ajax="false"></a><b>B1 
+                CHECK THE STEERING LINKAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Carry out the Steering Linkage Component Test in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the steering linkage OK? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B2">B2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL new steering linkage components as necessary. REFER to <a data-linkid="ID0EXSAG" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EXSAG"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B2" data-ajax="false"></a><b>B2 
+                CHECK THE STEERING COLUMN SHAFT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Inspect the steering column shaft U-joints and fasteners for looseness. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the U-joints and fasteners OK? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new steering gear as necessary. REFER to <a data-linkid="ID0E3TAG" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0E3TAG"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                TIGHTEN the steering column shaft fasteners or INSTALL a new steering column shaft. REFER to <a data-linkid="ID0EKUAG" data-sectnum="211-04" class="section-link">Section 
+          211-04</a><span id="spanID0EKUAG"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-C" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test C: Steering System Drift/Pull/Wander 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Steering column shaft 
+
+          </li>
+          <li>
+            Steering gear 
+
+          </li>
+          <li>
+            Steering gear mounts 
+
+          </li>
+          <li>
+            Steering column shaft U-joints 
+
+          </li>
+        </ul>
+        <a name="C" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST C : STEERING SYSTEM DRIFT/PULL/WANDER 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="C1" data-ajax="false"></a><b>C1 
+                CHECK THE STEERING COLUMN SHAFT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                  Be sure to keep the clockspring centered when disconnecting the intermediate shaft. Refer to <a data-linkid="ID0EGWAG" data-sectnum="501-20B" class="section-link">Section 
+          501-20B</a><span id="spanID0EGWAG"></span>. 
+
+                </i><p class="singlespace"></p>
+                Check the steering column and shaft for grounding. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect the steering column shaft at the steering column. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Inspect the steering column shaft U-joints for looseness or wear. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the steering column shaft U-joints OK? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C2">C2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL new steering column shaft as necessary. REFER to <a data-linkid="ID0EWXAG" data-sectnum="211-04" class="section-link">Section 
+          211-04</a><span id="spanID0EWXAG"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C2" data-ajax="false"></a><b>C2 
+                CHECK THE STEERING GEAR MOUNTING 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the steering gear mounts for looseness or wear. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the steering gear mounts OK? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C3">C3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new steering gear as necessary. REFER to <a data-linkid="ID0EIZAG" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EIZAG"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C3" data-ajax="false"></a><b>C3 
+                CHECK THE STEERING GEAR 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Carry out the Steering Gear Valve Component Test in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the steering gear valve OK? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EN1AG" data-sectnum="204-00" class="section-link">Section 
+          204-00</a><span id="spanID0EN1AG"></span> to diagnose suspension system drift/pull/wander. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new steering gear as necessary. REFER to <a data-linkid="ID0E21AG" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0E21AG"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+    <a name="procsub1_6" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Component Tests 
+</b></p>
+      <a name="procsub2_5" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Power Steering Fluid Leak Test 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          This test should only be carried out if a leak in the system has not been detected during a thorough visual inspection. Refer to Inspection and Verification. 
+
+        </i></p>
+        <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Remove the power steering pump reservoir cap and check the power steering fluid level. If necessary, add the specified power steering fluid. 
+
+        </li>
+</ol>
+        <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Tightly install the Power Steering Evacuation Cap onto the reservoir and connect the Vacuum Pump Kit to the Evacuation Cap. 
+
+        </li>
+</ol>
+        <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Using the Vacuum Pump Kit, apply 68-85 kPa (20-25 in-Hg) of vacuum to the power steering system. 
+
+        </li>
+</ol>
+        <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Observe the vacuum gauge for 30 seconds. If the vacuum gauge reading drops more than 3 kPa (0.88 in-Hg), a leak is present. 
+
+        </li>
+</ol>
+        <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Remove the Vacuum Pump Kit. 
+
+        </li>
+</ol>
+        <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Start the engine and insert the Dial Thermometer into the Evacuation Cap. 
+
+        </li>
+</ol>
+        <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          <p><b>NOTICE: 
+            Do not hold the steering wheel at the stops for an extended amount of time. Damage to the power steering pump may occur. 
+
+          </b></p>
+          With the engine at idle, raise the power steering fluid temperature to 74-80°C (165-176°F) by rotating the steering wheel fully to the left and right several times. 
+
+        </li>
+</ol>
+        <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Stop the engine and visually inspect the system for leaks. 
+
+          <ul type="disc">
+      <li>
+            If a leak is evident, repair as necessary. 
+
+          </li>
+    </ul>
+          <ul type="disc">
+      <li>
+            If a leak is not evident, add the specified UV fluorescent tracer dye to the power steering fluid. Use 14.78 ml (1/2 oz) of dye solution for every 1.89L (2 qt) of power steering fluid. 
+
+          </li>
+    </ul>
+        </li>
+</ol>
+        <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Start the engine. 
+
+        </li>
+</ol>
+        <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          <p><b>NOTICE: 
+            Do not hold the steering wheel at the stops for an extended amount of time. Damage to the power steering pump may occur. 
+
+          </b></p>
+          With the engine at idle, raise the power steering fluid temperature to 74-80°C (165-176°F) by rotating the steering wheel fully to the left and right several times. 
+
+        </li>
+</ol>
+        <ol start="11. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Stop the engine and inspect the system for traces of UV dye using the 100W/12 Volt DC UV Lamp. Repair as necessary. 
+
+        </li>
+</ol>
+      
+      <a name="procsub2_6" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Steering Gear Valve Test 
+</b></p>
+        <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          With the vehicle in NEUTRAL, position it on a hoist. Refer to <a data-linkid="ID0EN5AG" data-sectnum="100-02" class="section-link">Section 
+          100-02</a><span id="spanID0EN5AG"></span>. 
+
+          <ul type="disc">
+      <li>
+            Raise the vehicle until the front wheels are off the ground. 
+
+          </li>
+    </ul>
+        </li>
+</ol>
+        <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          <p><b>NOTE: </b><i>
+            Do not hold the steering wheel while carrying out this step. 
+
+          </i></p>
+          Start the engine. 
+
+          <ul type="disc">
+      <li>
+            If the steering wheel rotates in either direction (with no hand input), install a new steering gear. Refer to <a data-linkid="ID0EI6AG" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EI6AG"></span>. 
+
+          </li>
+    </ul>
+        </li>
+</ol>
+      
+      <a name="procsub2_7" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Steering Gear Grunt/Shudder Test 
+</b></p>
+        <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Place a Dial Thermometer in the power steering fluid reservoir. 
+
+        </li>
+</ol>
+        <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          With the engine cold, start the engine and set engine idle speed to 1,200 rpm. 
+
+        </li>
+</ol>
+        <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          <p><b>NOTICE: 
+            Do not hold the steering wheel against the stops for an extended amount of time. Damage to the power steering pump may occur. 
+
+          </b></p>
+          Rotate the steering wheel to the RH stop, then turn the steering wheel 90 degrees back from that position. Slowly turn the steering wheel back and forth approximately one-twelfth of a full turn. 
+
+        </li>
+</ol>
+        <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Turn the steering wheel another 90 degrees. Slowly turn the steering wheel back and forth approximately one-twelfth of a full turn. 
+
+        </li>
+</ol>
+        <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Repeat the test with the power steering fluid at different temperatures until the temperature reaches 74-80°C (165-176°F). 
+
+        </li>
+</ol>
+        <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If a light grunt is heard or a low (50-200 Hz) shudder is present, this is a normal steering system condition. 
+
+        </li>
+</ol>
+        <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If a loud grunt is heard, or a strong shudder is felt, purge the power steering system. Refer to <a data-linkid="ID0E3ABG" data-for="211-00B_s5p8634q0" data-procuid="n1505269" class="expand-link">Power Steering System Purging</a><span id="spanID0E3ABG"></span> in this section. If a loud grunt or strong shudder still exists, check the power steering lines/hoses for restrictions or damage and repair as necessary. Refer to <a data-linkid="ID0EABBG" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EABBG"></span>. If the lines/hoses are OK, install a new steering gear. Refer to <a data-linkid="ID0EFBBG" data-sectnum="211-02" class="section-link">Section 
+          211-02</a><span id="spanID0EFBBG"></span>. 
+
+        </li>
+</ol>
+      
+      <a name="procsub2_8" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Steering Linkage Test 
+</b></p>
+        <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          With the vehicle in NEUTRAL, position it on a hoist. Refer to <a data-linkid="ID0EWBBG" data-sectnum="100-02" class="section-link">Section 
+          100-02</a><span id="spanID0EWBBG"></span>. 
+
+        </li>
+</ol>
+        <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Using hand force only, check the inner and outer tie rods for vertical and lateral movement in the tie-rod ball studs/sockets. 
+
+          <ul type="disc">
+      <li>
+            If there is any lateral or vertical movement in the tie-rod ball studs/sockets (inner or outer), a new tie-rod must be installed. Refer to the appropriate section in Group 211 for the procedure.
+          </li>
+    </ul>
+        </li>
+</ol>
+      
+    
+  
+
+

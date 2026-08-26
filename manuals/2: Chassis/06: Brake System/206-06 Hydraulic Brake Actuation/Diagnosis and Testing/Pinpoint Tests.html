@@ -1,0 +1,2454 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="206-06" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="206-06 Hydraulic Brake Actuation" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1258936" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>206-06 Hydraulic Brake Actuation</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      08/30/2012</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Pinpoint Tests" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Pinpoint Tests
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('206-06','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2574A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Flex Probe Kit
+          <br>NUD105-R025D or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-IV Digital Multimeter
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3094A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Test Light 
+          <br>SGT 27000 or equivalent 250-350 mA incandescent bulb test lamp SGT 27000 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          
+            Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan tool
+          
+          <br>
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a><a name="PS1-Y" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-A" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test A: The Adjustable Pedals Are Inoperative/Does Not Operate Correctly — Using the Brake Pedal Control Switch 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','127')">127</a> , Adjustable Pedals for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The Steering Column Control Module (SCCM)
+       receives fused battery voltage from Body Control Module (BCM)
+       fuses 23 (15A) and 24 (15A). 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">When the brake pedal control switch is pressed, the <abbr title="Steering Column Control Module">SCCM</abbr>  sends current to the adjustable pedals motor along one circuit and the current returns to the <abbr title="Steering Column Control Module">SCCM</abbr>  along another circuit, which is grounded through the <abbr title="Steering Column Control Module">SCCM</abbr>  to move the pedals in the desired direction. 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC B137D:18 (Pedal Adjustment Motor: Circuit Current Below Threshold) — This DTC sets if the <abbr title="Steering Column Control Module">SCCM</abbr>  senses current flow to the adjustable pedals motor below a preset limit while the brake pedal control switch is pressed, or if there is an open or high resistance in the adjustable pedals motor circuits when the ignition is ON. 
+
+          </li>
+          <li>
+            DTC B137D:19 (Pedal Adjustment Motor: Circuit Current Above Threshold) — This DTC sets if the <abbr title="Steering Column Control Module">SCCM</abbr>  senses current flow to the adjustable pedals motor above a preset limit while the brake pedal control switch is pressed, or if there is a short to ground in the adjustable pedals motor circuits when the ignition is ON. 
+
+          </li>
+          <li>
+            DTC B137D:71 (Pedal Adjustment Motor: Actuator Stuck) — This DTC sets if the <abbr title="Steering Column Control Module">SCCM</abbr>  senses current flow to the adjustable pedals motor within a specific range but above a preset limit while the brake pedal control switch is pressed when the ignition is ON. 
+
+          </li>
+        </ul>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Foreign objects or material 
+
+          </li>
+          <li>
+            Brake pedal control switch 
+
+          </li>
+          <li>
+            Adjustable accelerator pedal and motor with attached cable 
+
+          </li>
+          <li>
+            Adjustable brake pedal and bracket 
+
+          </li>
+          <li>
+            
+              <abbr title="Steering Column Control Module">SCCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="A" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST A : THE ADJUSTABLE PEDALS ARE INOPERATIVE/DOES NOT OPERATE CORRECTLY — USING THE BRAKE PEDAL CONTROL SWITCH 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multi-meter probes. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A1" data-ajax="false"></a><b>A1 
+                CHECK THE ADJUSTABLE PEDALS MOTOR AND CABLE INSTALLATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the adjustable pedals motor and cable for correct installation. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the motor and cable correctly installed? 
+
+                <p class="singlespace"></p>
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A2">A2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                CORRECT the adjustable pedals motor installation. REFER to <a data-linkid="ID0EWAAC" data-sectnum="310-02" class="section-link">Section 
+          310-02</a><span id="spanID0EWAAC"></span>. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A2" data-ajax="false"></a><b>A2 
+                INSPECT FOR FOREIGN MATERIAL 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Inspect the adjustable brake pedal and accelerator assemblies for foreign material causing a binding condition. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the pedal assemblies free from foreign material? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A3">A3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REMOVE the foreign material. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A3" data-ajax="false"></a><b>A3 
+                CHECK FOR VOLTAGE AT THE SCCM </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414A','')">C2414A</a> and <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414A','10')">C2414A</a> Pin 10, circuit SBP23 (WH/RD), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112442&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414B','8')">C2414B</a> Pin 8, circuit SBP24 (VT/RD), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121410&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A4">A4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                VERIFY <abbr title="Body Control Module">BCM</abbr>  fuses 23 (15A) and 24 (15A) are OK. If OK, REPAIR the affected circuit(s). If not OK, REFER to the Wiring Diagrams manual to identify the cause for the circuit(s) short. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A4" data-ajax="false"></a><b>A4 
+                CHECK THE SCCM  GROUND CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414A','13')">C2414A</a> Pin 13, circuit GD133 (BK), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112444&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414B','5')">C2414B</a> Pin 5, circuit GD138 (BK/WH), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121409&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A5">A5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A5" data-ajax="false"></a><b>A5 
+                CHECK THE ADJUSTABLE PEDALS MOTOR CIRCUITS FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  Adjustable Pedals Motor <a href="javascript:connectorlinkwithpin('ED2','C2159','')">C2159</a> (vehicles with memory) or <a href="javascript:connectorlinkwithpin('ED2','C2003','')">C2003</a> (vehicles without memory)
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Vehicles with memory, measure the resistance between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a>, harness side and adjustable pedals motor <a href="javascript:connectorlinkwithpin('ED2','C2159','')">C2159</a>, harness side as follows: 
+
+                <br><br><a name="table_1"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          
+                            <abbr title="Steering Column Control Module">SCCM</abbr> 
+                           
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Adjustable Pedals Motor 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414B','4')">C2414B</a> Pin 4
+                           
+                        </td>
+                        <td valign="top">
+                          CPP01 (WH/OG) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','2')">C2159</a> Pin 2
+                           
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414B','7')">C2414B</a> Pin 7
+                           
+                        </td>
+                        <td valign="top">
+                          CPP02 (BN) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','1')">C2159</a> Pin 1
+                           
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121359&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Vehicles without memory, measure the resistance between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a>, harness side and adjustable pedal motor <a href="javascript:connectorlinkwithpin('ED2','C2003','')">C2003</a>, harness side as follows: 
+
+                <br><br><a name="table_2"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          
+                            <abbr title="Steering Column Control Module">SCCM</abbr> 
+                           
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Adjustable Pedals Motor 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414B','4')">C2414B</a> Pin 4
+                           
+                        </td>
+                        <td valign="top">
+                          CPP01 (WH/OG) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2003','2')">C2003</a> Pin 2
+                           
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414B','7')">C2414B</a> Pin 7
+                           
+                        </td>
+                        <td valign="top">
+                          CPP02 (BN) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2003','1')">C2003</a> Pin 1
+                           
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121408&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A6">A6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A6" data-ajax="false"></a><b>A6 
+                CHECK THE ADJUSTABLE PEDALS MOTOR CIRCUITS FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between ground and: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','4')">C2414B</a> Pin 4, circuit CPP01 (WH/OG), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','7')">C2414B</a> Pin 7, circuit CPP02 (BN), harness side. 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121404&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A7">A7</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A7" data-ajax="false"></a><b>A7 
+                CHECK THE ADJUSTABLE PEDALS MOTOR CIRCUITS FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between ground and: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','4')">C2414B</a> Pin 4, circuit CPP01 (WH/OG), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','7')">C2414B</a> Pin 7, circuit CPP02 (BN), harness side. 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121407&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A8">A8</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A8" data-ajax="false"></a><b>A8 
+                CHECK FOR SCCM  OUTPUT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414A','')">C2414A</a> and <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                <b>NOTICE: 
+                  The following step uses a test light to simulate normal circuit loads. Use only the test light recommended in the Special Tools table at the beginning of this section. To avoid connector terminal damage, use the Flex Probe Kit for the test light probe connection to the vehicle. Do not use the test light probe directly on any connector. 
+
+                </b><p class="singlespace"></p>
+                <b>NOTE: </b><i>
+                  When the adjustable pedals electrical connector is disconnected, the <abbr title="Steering Column Control Module">SCCM</abbr>  only supplies voltage to the adjustable pedals motor in 1 second intervals due to the open on the Hall-effect sensor circuits. 
+
+                </i><p class="singlespace"></p>
+                Vehicles with memory, connect the test light as follows: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  Connect one lead on the test light to <a href="javascript:connectorlinkwithpin('ED2','C2159','1')">C2159</a> Pin 1, circuit CPP02 (BN), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Connect the other lead on the test light to <a href="javascript:connectorlinkwithpin('ED2','C2159','2')">C2159</a> Pin 2, circuit CPP01 (WH/OG), harness side. 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121360&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Vehicles without memory, connect the test light as follows: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  Connect one lead on the test light to <a href="javascript:connectorlinkwithpin('ED2','C2003','1')">C2003</a> Pin 1, circuit CPP02 (BN), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Connect the other lead on the test light to <a href="javascript:connectorlinkwithpin('ED2','C2003','2')">C2003</a> Pin 2, circuit CPP01 (WH/OG), harness side. 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112698&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Press the brake pedal control switch in the forward and rearward positions and verify the test light illuminates. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the test light illuminate when the brake pedal control switch is pressed in each direction? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A9">A9</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A10">A10</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A9" data-ajax="false"></a><b>A9 
+                CHECK THE ADJUSTABLE BRAKE PEDALS CABLE OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Connect:  Adjustable Pedals Motor <a href="javascript:connectorlinkwithpin('ED2','C2159','')">C2159</a> (vehicles with memory feature) or <a href="javascript:connectorlinkwithpin('ED2','C2003 ','')">C2003 </a>(vehicles without memory feature)
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect the adjustable brake pedals cable from the adjustable brake pedal and bracket. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the brake pedal control switch and observe the cable in the conduit. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the adjustable brake pedals cable turn in the conduit? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new brake pedal assembly. REFER to <a data-linkid="ID0EYOAE" data-for="206-06_s3p1844q0" data-procuid="n1278784" class="expand-link">Brake Pedal and Bracket</a><span id="spanID0EYOAE"></span> in this section. CLEAR the DTCs. REPEAT the self test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new adjustable accelerator pedal and motor with attached cable. REFER to Accelerator Pedal — Adjustable, Exploded View in <a data-linkid="ID0EFPAE" data-sectnum="310-02" class="section-link">Section 
+          310-02</a><span id="spanID0EFPAE"></span>. CLEAR the DTCs. REPEAT the self test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A10" data-ajax="false"></a><b>A10 
+                CHECK THE SCCM  ADJUSTABLE PEDALS ACTIVE COMMANDS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Select PARK. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  Adjustable Pedals Motor <a href="javascript:connectorlinkwithpin('ED2','C2159','')">C2159</a> (vehicles with memory feature) or <a href="javascript:connectorlinkwithpin('ED2','C2003 ','')">C2003 </a>(vehicles without memory feature)
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — <abbr title="Steering Column Control Module">SCCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                  Toggling the active command ON causes the pedal to move in the commanded direction for 2 seconds and then the pedal stops. 
+
+                </i><p class="singlespace"></p>
+                Toggle the pedals forward (PEDAL_IN) active command ON. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Toggle the PEDAL_IN active command OFF. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Toggle the pedals rearward (PEDAL_OUT) active command ON. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Toggle the PEDAL_OUT active command OFF. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the adjustable pedals respond correctly to the corresponding active commands? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new brake pedal control switch. REFER to <a data-linkid="ID0EUSAE" data-for="206-06_s3p706547q0" data-procuid="n1262481" class="expand-link">Brake Pedal Control Switch</a><span id="spanID0EUSAE"></span> in this section. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A11">A11</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A11" data-ajax="false"></a><b>A11 
+                CHECK THE SCCM  FOR CORRECT OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414A','')">C2414A</a> and <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414A','')">C2414A</a> and <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a> for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  spread terminals. 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414A','')">C2414A</a> and <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  Adjustable Pedals Motor <a href="javascript:connectorlinkwithpin('ED2','C2159','')">C2159</a> (vehicles with memory feature) or <a href="javascript:connectorlinkwithpin('ED2','C2003 ','')">C2003 </a>(vehicles without memory feature)
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Make sure the connectors seat correctly, then operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Steering Column Control Module">SCCM</abbr> . REFER to <a data-linkid="ID0EWXAE" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EWXAE"></span>. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-B" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test B: The Adjustable Pedals Are Inoperative/Does Not Operate Correctly — Using the Memory SET Switch or the Remote Keyless Entry (RKE)
+       Transmitter 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','127')">127</a> , Adjustable Pedals for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the desired memory position is selected using the memory SET switch or the Remote Keyless Entry (RKE)
+       transmitter, the Driver Seat Module (DSM)
+       communicates the desired pedals position in a message on the Medium Speed Controller Area Network (MS-CAN)
+       bus to the Body Control Module (BCM)
+      . The <abbr title="Body Control Module">BCM</abbr>  acts as a gateway module, relaying the message to the Steering Column Control Module (SCCM)
+       over the High Speed Controller Area Network (HS-CAN)
+       bus. The <abbr title="Steering Column Control Module">SCCM</abbr>  then sends current in one direction to the adjustable pedals motor to move the pedals forward and in another direction (reversed polarity) to move the pedals rearward. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Steering Column Control Module">SCCM</abbr>  uses a Hall-effect sensor that is integral to the pedals motor to identify the current pedal position. The <abbr title="Steering Column Control Module">SCCM</abbr>  sends a reference voltage along one circuit, through the sensor and back to the <abbr title="Steering Column Control Module">SCCM</abbr>  along the signal return circuit. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">If the vehicle is equipped with the memory feature but the <abbr title="Steering Column Control Module">SCCM</abbr>  is incorrectly configured, memory recall may not function correctly when the memory SET switch or the <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter is used to adjust the pedal position. 
+</p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Foreign objects or material 
+
+          </li>
+          <li>
+            Adjustable accelerator pedal and motor with attached cable 
+
+          </li>
+          <li>
+            Adjustable brake pedal and bracket 
+
+          </li>
+          <li>
+            
+              <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter 
+
+          </li>
+          <li>
+            
+              <abbr title="Driver Seat Module">DSM</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Steering Column Control Module">SCCM</abbr> 
+            
+          </li>
+          <li>
+            Incorrect <abbr title="Steering Column Control Module">SCCM</abbr>  configuration 
+
+          </li>
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="B" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST B : THE ADJUSTABLE PEDALS ARE INOPERATIVE/DOES NOT OPERATE CORRECTLY — USING THE MEMORY SET SWITCH BUTTONS OR THE RKE  TRANSMITTER 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multi-meter probes. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B1" data-ajax="false"></a><b>B1 
+                CHECK THE ADJUSTABLE PEDALS OPERATION WITH THE BRAKE PEDAL CONTROL SWITCH 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Press the brake pedal control switch in each direction for more than one second and observe the pedals. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the pedals operate for more than one second in the direction selected using the switch? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B2">B2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If the pedals do not move using the brake pedal control switch, <a data-ajax="false" href="#PS2-A">GO to Pinpoint Test A</a>. 
+
+                <br>If the pedals only move in one second intervals regardless of button operation, <a data-ajax="false" href="#PS2-C">GO to Pinpoint Test C</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B2" data-ajax="false"></a><b>B2 
+                CHECK THE MEMORY SYSTEM OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Set a memory position for the driver seat, exterior mirrors and adjustable pedals to memory SET switch button 1. Refer to Memory Position Programming in <a data-linkid="ID0EABAG" data-sectnum="501-10" class="section-link">Section 
+          501-10</a><span id="spanID0EABAG"></span>. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Select PARK. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Press the memory SET switch button 1 and observe the following items: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  Driver seat 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Exterior mirrors 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Adjustable pedals 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do all 3 items move when the button is pressed? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B3">B3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If all 3 items do not move, REFER to Diagnosis and Testing in <a data-linkid="ID0E3CAG" data-sectnum="501-10" class="section-link">Section 
+          501-10</a><span id="spanID0E3CAG"></span> to diagnose the memory SET switch. 
+
+                <br>If <b>only</b> the adjustable pedals do not move, GO to <a data-ajax="false" href="#B4">B4</a>. 
+
+                <br>If <b>only</b> the driver seat does not move, REFER to Diagnosis and Testing in <a data-linkid="ID0EODAG" data-sectnum="501-10" class="section-link">Section 
+          501-10</a><span id="spanID0EODAG"></span>. 
+
+                <br>If <b>only</b> the exterior mirrors do not move, REFER to Diagnosis and Testing in <a data-linkid="ID0EYDAG" data-sectnum="501-09" class="section-link">Section 
+          501-09</a><span id="spanID0EYDAG"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B3" data-ajax="false"></a><b>B3 
+                CHECK THE RKE  TRANSMITTER OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Set a memory position in the <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter for the driver seat, exterior mirrors and adjustable pedals. Refer to Remote Memory Activation in <a data-linkid="ID0E1EAG" data-sectnum="501-14" class="section-link">Section 
+          501-14</a><span id="spanID0E1EAG"></span>. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Select PARK. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Press the unlock button on the <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter and observe the following items: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  Driver seat 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Exterior mirrors 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Adjustable pedals 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do all 3 items move when the button is pressed? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B4">B4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If all 3 items do not move, REFER to Diagnosis and Testing in <a data-linkid="ID0E4GAG" data-sectnum="501-14" class="section-link">Section 
+          501-14</a><span id="spanID0E4GAG"></span> to diagnose the <abbr title="Remote Keyless Entry">RKE</abbr>  transmitter. 
+
+                <br>If <b>only</b> the adjustable pedals do not move, GO to <a data-ajax="false" href="#B4">B4</a>. 
+
+                <br>If <b>only</b> the driver seat does not move, REFER to Diagnosis and Testing in <a data-linkid="ID0EVHAG" data-sectnum="501-10" class="section-link">Section 
+          501-10</a><span id="spanID0EVHAG"></span>. 
+
+                <br>If <b>only</b> the exterior mirrors do not move, REFER to Diagnosis and Testing in <a data-linkid="ID0E6HAG" data-sectnum="501-09" class="section-link">Section 
+          501-09</a><span id="spanID0E6HAG"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B4" data-ajax="false"></a><b>B4 
+                CHECK THE ADJUSTABLE PEDALS MOTOR AND CABLE INSTALLATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the adjustable pedals motor and cable for correct installation. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the motor and cable correctly installed? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B5">B5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                CORRECT the adjustable pedals motor installation. REFER to <a data-linkid="ID0EQJAG" data-sectnum="310-02" class="section-link">Section 
+          310-02</a><span id="spanID0EQJAG"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B5" data-ajax="false"></a><b>B5 
+                INSPECT FOR FOREIGN OBJECTS OR MATERIAL 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Inspect the adjustable brake pedal and accelerator assemblies for foreign material causing a binding condition. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the pedal assemblies free from foreign material? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B6">B6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REMOVE the foreign material. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B6" data-ajax="false"></a><b>B6 
+                CHECK FOR DSM  OR BCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect the scan tool. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self-Test — <abbr title="Driver Seat Module">DSM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self-Test — <abbr title="Body Control Module">BCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Record any DTCs retrieved from the <abbr title="Driver Seat Module">DSM</abbr>  or the <abbr title="Body Control Module">BCM</abbr> . 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Was DTC U0140 retrieved from the <abbr title="Driver Seat Module">DSM</abbr>  or was DTC U0212:87 retrieved from the <abbr title="Body Control Module">BCM</abbr> ? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                If DTC U0140 is retrieved from the <abbr title="Driver Seat Module">DSM</abbr> , REFER to <a data-linkid="ID0E2OAG" data-sectnum="501-10" class="section-link">Section 
+          501-10</a><span id="spanID0E2OAG"></span> to diagnose the lost communication concern. 
+
+                <br>If DTC U0212:87 is retrieved from the <abbr title="Body Control Module">BCM</abbr> , REFER to <a data-linkid="ID0EJPAG" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0EJPAG"></span> to diagnose the lost communication concern. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B7">B7</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B7" data-ajax="false"></a><b>B7 
+                CHECK THE ADJUSTABLE PEDALS MOTOR AND HALL-EFFECT SENSOR CIRCUITS FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Adjustable Pedals Motor <a href="javascript:connectorlinkwithpin('ED2','C2159','')">C2159</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414B','')">C2414B</a>, harness side and adjustable pedals motor <a href="javascript:connectorlinkwithpin('ED2','C2159','')">C2159</a>, harness side as follows: 
+
+                <br><br><a name="table_3"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          
+                            <abbr title="Steering Column Control Module">SCCM</abbr> 
+                           
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Adjustable Pedals Motor 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414B','4')">C2414B</a> Pin 4
+                           
+                        </td>
+                        <td valign="top">
+                          CPP01 (WH/OG) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','2')">C2159</a> Pin 2
+                           
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414B','7')">C2414B</a> Pin 7
+                           
+                        </td>
+                        <td valign="top">
+                          CPP02 (BN) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','1')">C2159</a> Pin 1
+                           
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121359&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','')">C2414C</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414C','')">C2414C</a>, harness side and adjustable pedals motor <a href="javascript:connectorlinkwithpin('ED2','C2159','')">C2159</a>, harness side as follows 
+
+                <br><br><a name="table_4"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          
+                            <abbr title="Steering Column Control Module">SCCM</abbr> 
+                           
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Adjustable Pedals Motor 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414C','3')">C2414C</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          RPP06 (GN) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','3')">C2159</a> Pin 3
+                           
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414C','6')">C2414C</a> Pin 6
+                           
+                        </td>
+                        <td valign="top">
+                          LPP06 (YE/BU) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','4')">C2159</a> Pin 4
+                           
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121358&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B8">B8</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B8" data-ajax="false"></a><b>B8 
+                CHECK THE ADJUSTABLE PEDALS MOTOR AND HALL-EFFECT SENSOR CIRCUITS FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between ground and: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  adjustable pedals motor <a href="javascript:connectorlinkwithpin('ED2','C2159','1')">C2159</a> Pin 1, circuit CPP02 (BN), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  adjustable pedals motor <a href="javascript:connectorlinkwithpin('ED2','C2159','2')">C2159</a> Pin 2, circuit CPP01 (WH/OG), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  adjustable pedals motor <a href="javascript:connectorlinkwithpin('ED2','C2159','4')">C2159</a> Pin 4, circuit LPP06 (YE/BU), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  adjustable pedals motor <a href="javascript:connectorlinkwithpin('ED2','C2159','3')">C2159</a> Pin 3, circuit RPP06 (GN), harness side. 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121357&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B9">B9</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B9" data-ajax="false"></a><b>B9 
+                CHECK THE ADJUSTABLE PEDALS MOTOR AND HALL-EFFECT SENSOR CIRCUITS FOR A SHORT TOGETHER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between adjustable pedals motor <a href="javascript:connectorlinkwithpin('ED2','C2159','')">C2159</a>, harness side as follows: 
+
+                <br><br><a name="table_5"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          Adjustable Pedals Motor 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Adjustable Pedals Motor 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','4')">C2159</a> Pin 4
+                           
+                        </td>
+                        <td valign="top">
+                          LPP06 (YE/BU) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','2')">C2159</a> Pin 2
+                           
+                        </td>
+                        <td valign="top">
+                          CPP01 (WH/OG) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','4')">C2159</a> Pin 4
+                           
+                        </td>
+                        <td valign="top">
+                          LPP06 (YE/BU) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','3')">C2159</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          RPP06 (GN) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','4')">C2159</a> Pin 4
+                           
+                        </td>
+                        <td valign="top">
+                          LPP06 (YE/BU) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','1')">C2159</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          CPP02 (BN) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','2')">C2159</a> Pin 2
+                           
+                        </td>
+                        <td valign="top">
+                          CPP01 (WH/OG) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','3')">C2159</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          RPP06 (GN) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','2')">C2159</a> Pin 2
+                           
+                        </td>
+                        <td valign="top">
+                          CPP01 (WH/OG) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','1')">C2159</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          CPP02 (BN) 
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','3')">C2159</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          RPP06 (GN) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','1')">C2159</a> Pin 1
+                           
+                        </td>
+                        <td valign="top">
+                          CPP02 (BN) 
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121355&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B10">B10</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B10" data-ajax="false"></a><b>B10 
+                CHECK THE ADJUSTABLE PEDALS MOTOR AND HALL-EFFECT SENSOR CIRCUITS FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between ground and: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  adjustable pedals motor <a href="javascript:connectorlinkwithpin('ED2','C2159','2')">C2159</a> Pin 2, circuit CPP01 (WH/OG), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  adjustable pedals motor <a href="javascript:connectorlinkwithpin('ED2','C2159','4')">C2159</a> Pin 4, circuit LPP06 (YE/BU), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  adjustable pedals motor <a href="javascript:connectorlinkwithpin('ED2','C2159','3')">C2159</a> Pin 3, circuit RPP06 (GN), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  adjustable pedals motor <a href="javascript:connectorlinkwithpin('ED2','C2159','1')">C2159</a> Pin 1, circuit CPP02 (BN), harness side. 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121405&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                CONFIGURE the <abbr title="Steering Column Control Module">SCCM</abbr>  using As-Built data. TEST the system for normal operation. 
+
+              <br>
+                If the adjustable pedals do not operate correctly, INSTALL a new adjustable pedals motor and bracket assembly. REFER to Accelerator Pedal — Adjustable, Exploded View in <a data-linkid="ID0EIMBG" data-sectnum="310-02" class="section-link">Section 
+          310-02</a><span id="spanID0EIMBG"></span>. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-C" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test C: The Adjustable Pedals Only Move in 1 Second Intervals 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','127')">127</a> , Adjustable Pedals for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The Steering Column Control Module (SCCM)
+       uses a Hall-effect sensor integral to the motor to identify the current pedal position. The <abbr title="Steering Column Control Module">SCCM</abbr>  sends a reference voltage along the sensor feed circuit, through the Hall-effect sensor and back to the <abbr title="Steering Column Control Module">SCCM</abbr>  along the signal return circuit. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">When the following DTCs are set, the adjustable pedals enters a "jog mode". When the pedals are in jog mode, the memory system recall does not function from either the Remote Keyless Entry (RKE)
+       transmitter or memory SET switch. When the pedals are activated using the brake pedal control switch, the motor moves the pedals for one second regardless of the length of time the button is pressed. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">If the vehicle is not equipped with memory and the <abbr title="Steering Column Control Module">SCCM</abbr>  is incorrectly configured, the <abbr title="Steering Column Control Module">SCCM</abbr>  expects to receive pedal position information when the vehicle is not equipped to provide it. If this happens, the adjustable pedals enters a "jog mode" similar to if a fault were present in the adjustable pedals position sensor circuits. 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC B1368:11 (Adjustable Pedal Position Feedback Sensor: Circuit Short to Ground) — This DTC sets if the <abbr title="Steering Column Control Module">SCCM</abbr>  detects a short to ground on the Hall-effect sensor feed and/or return circuits when the ignition is ON. 
+
+          </li>
+          <li>
+            DTC B1368:12 (Adjustable Pedal Position Feedback Sensor: Circuit Short to Battery) — This DTC sets if the <abbr title="Steering Column Control Module">SCCM</abbr>  detects a short to voltage on the Hall-effect sensor feed and/or return circuits when the ignition is ON. 
+
+          </li>
+        </ul>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Adjustable accelerator pedal and motor with attached cable 
+
+          </li>
+          <li>
+            
+              <abbr title="Steering Column Control Module">SCCM</abbr> 
+            
+          </li>
+          <li>
+            Incorrect <abbr title="Steering Column Control Module">SCCM</abbr>  configuration 
+
+          </li>
+        </ul>
+        <a name="C" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST C : THE ADJUSTABLE PEDALS ONLY MOVE IN 1 SECOND INTERVALS 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multimeter probes. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C1" data-ajax="false"></a><b>C1 
+                CHECK THE SCCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Review the <abbr title="Steering Column Control Module">SCCM</abbr>  DTCs retrieved during Inspection and Verification. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Were DTCs B1368:11 or B1368:12 retrieved? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C2">C2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                If no DTCs were retrieved, CONFIGURE the <abbr title="Steering Column Control Module">SCCM</abbr>  using As-Built data. REPEAT the self-test. TEST the system for normal operation. 
+
+              <br>
+                If DTCs B1369:09, B137D:18, 19, or 71 were retrieved, REFER to DTC Charts in this section. 
+
+              <br>
+                For all other <abbr title="Steering Column Control Module">SCCM</abbr>  DTCs, REFER to the <abbr title="Steering Column Control Module">SCCM</abbr>  DTC Chart in <a data-linkid="ID0EQTBG" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EQTBG"></span>. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C2" data-ajax="false"></a><b>C2 
+                CHECK THE SCCM  HALL-EFFECT SENSOR CIRCUITS FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Adjustable Pedals Motor <a href="javascript:connectorlinkwithpin('ED2','C2159','')">C2159</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','')">C2414C</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414C','')">C2414C</a>, harness side and adjustable pedals motor <a href="javascript:connectorlinkwithpin('ED2','C2159','')">C2159</a>, harness side as follows: 
+
+                <br><br><a name="table_6"></a>
+                  <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                    
+                    
+                    
+                    <thead>
+                      <tr>
+                        <th align="center" valign="top">
+                          
+                            <abbr title="Steering Column Control Module">SCCM</abbr> 
+                           
+                        </th>
+                        <th align="center" valign="top">
+                          Circuit 
+
+                        </th>
+                        <th align="center" valign="top">
+                          Adjustable Pedals Motor 
+
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414C','3')">C2414C</a> Pin 3
+                           
+                        </td>
+                        <td valign="top">
+                          RPP06 (GN) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','3')">C2159</a> Pin 3
+                           
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2414C','6')">C2414C</a> Pin 6
+                           
+                        </td>
+                        <td valign="top">
+                          LPP06 (YE/BU) 
+
+                        </td>
+                        <td valign="top">
+                          
+                            <a href="javascript:connectorlinkwithpin('ED2','C2159','4')">C2159</a> Pin 4
+                           
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table><br>
+                <br>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121358&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C3">C3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C3" data-ajax="false"></a><b>C3 
+                CHECK THE SCCM  HALL-EFFECT SENSOR CIRCUITS FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between ground and: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','6')">C2414C</a> Pin 6, circuit LPP06 (YE/BU), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','3')">C2414C</a> Pin 3, circuit RPP06 (GN), harness side. 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112694&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are the resistances greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C4">C4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C4" data-ajax="false"></a><b>C4 
+                CHECK THE SCCM  HALL-EFFECT SENSOR CIRCUITS FOR A SHORT TOGETHER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414C','3')">C2414C</a> Pin 3, circuit RPP06 (GN), harness side and <abbr title="Steering Column Control Module">SCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2414C','6')">C2414C</a> Pin 6, circuit LPP06 (YE/BU), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0113510&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C5">C5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C5" data-ajax="false"></a><b>C5 
+                CHECK THE SCCM  HALL-EFFECT SENSOR CIRCUITS FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between ground and: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','6')">C2414C</a> Pin 6, circuit LPP06 (YE/BU), harness side. 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Steering Column Control Module">SCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2414C','3')">C2414C</a> Pin 3, circuit RPP06 (GN), harness side. 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0112696&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR the affected circuit(s). CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new adjustable accelerator pedal and motor with attached cable. REFER to Accelerator Pedal — Adjustable, Exploded View in <a data-linkid="ID0ESCAI" data-sectnum="310-02" class="section-link">Section 
+          310-02</a><span id="spanID0ESCAI"></span>. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              <br>
+                If DTC B1368:11 or B1368:12 return, INSTALL a new <abbr title="Steering Column Control Module">SCCM</abbr> . REFER to <a data-linkid="ID0EDDAI" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EDDAI"></span>. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+  
+
+

@@ -1,0 +1,101 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="211-00A" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="211-00A Steering System — Electronic Power Assist Steering (EPAS)" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1233408" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>211-00A Steering System — Electronic Power Assist Steering (EPAS)</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      08/02/2013</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Steering System" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Steering System
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('211-00','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST1138A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Flex Probe Kit
+          <br>300-NUD105-R025DE or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093a&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-IV Digital Multimeter
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          
+            Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan tool
+          
+          <br>
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          Electronic Power Assist Steering (EPAS)
+       System 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The Electronic Power Assist Steering (EPAS)
+       system provides power steering assist to the driver by replacing the conventional hydraulic valve system with an electric motor coupled to the steering rack by a toothed belt. The motor is controlled by the Power Steering Control Module (PSCM)
+       that senses steering effort/use through an internally mounted steering shaft torque sensor. Steering assist is provided in proportion to the steering input effort and vehicle speed. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Electronic Power Assist Steering">EPAS</abbr>  system requires a 12-volt, hot at all times feed for system operation. The <abbr title="Power Steering Control Module">PSCM</abbr>  is activated when power is applied to the hard-wired ignition/run input. After activation, the <abbr title="Power Steering Control Module">PSCM</abbr>  monitors the High Speed Controller Area Network (HS-CAN)
+       bus to determine if the vehicle is operating in a manner capable of supporting the <abbr title="Electronic Power Assist Steering">EPAS</abbr>  system. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">Once this is determined, vehicle speed sent by the PCM over the <abbr title="High Speed Controller Area Network">HS-CAN</abbr>  bus, steering shaft speed and direction sent by the steering shaft torque sensor and steering wheel angle/position determined by the motor position all provide the necessary information for the <abbr title="Power Steering Control Module">PSCM</abbr>  to determine the amount or level of assist provided by the <abbr title="Electronic Power Assist Steering">EPAS</abbr>  system. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">Assist is primarily based off of vehicle speed. As vehicle speed increases, the amount of assist provided by the system is decreased to improve and enhance road feel at the steering wheel. As vehicle speed decreases, the amount of assist provided by the system is increased to ease vehicle maneuvering. If the vehicle speed is missing or out of range, the <abbr title="Power Steering Control Module">PSCM</abbr>  defaults to a safe level of assist for all driving conditions. If the vehicle speed returns to the correct in-range values, the <abbr title="Power Steering Control Module">PSCM</abbr>  adjusts the level of assist accordingly. Steering wheel/shaft speed, torque and direction information allows the <abbr title="Power Steering Control Module">PSCM</abbr>  to determine how much assist is needed to turn the wheels right and left. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Power Steering Control Module">PSCM</abbr>  continually monitors and adjusts steering efforts based on the torque sensor inputs to enhance the feel of the steering. Compensation is made to reduce the effect of pull or drift that may be experienced when driving on roads with a high degree of camber. Active nibble control is also employed by the <abbr title="Power Steering Control Module">PSCM</abbr>  to reduce the vibrating movement felt at the steering wheel that can be caused by driving on rough surfaces or out of balance wheels. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Power Steering Control Module">PSCM</abbr>  is self-monitoring and has the capability of setting and storing DTCs. Depending on the DTC set, the control module enters into a "safe mode" of manual steering. In addition, the <abbr title="Power Steering Control Module">PSCM</abbr>  may send a request to the Instrument Panel Cluster (IPC)
+       module over the <abbr title="High Speed Controller Area Network">HS-CAN</abbr>  bus to display a message in the message center to alert the driver of a potential <abbr title="Electronic Power Assist Steering">EPAS</abbr>  concern. 
+</p>
+      
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Interactive Diagnostics 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">
+        INSTALL a new  <span class="popup" title="electronic power assist steering" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">EPAS</span>. Refer to the appropriate Removal and Installation procedure in Section 211-02.
+                            
+      </p>
+    
+  
+
+

@@ -1,0 +1,4656 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="206-10" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="206-10 Auxiliary Brake System" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n2252343" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>206-10 Auxiliary Brake System</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      10/13/2016</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Auxiliary Brake System — Trailer Brake Control (TBC) Module" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Auxiliary Brake System
+ — Trailer Brake Control (TBC) Module</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('206-10','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2574A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Flex Probe Kit 
+          <br>NUD105-R025D or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-IV Digital Multimeter 
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          
+            Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan tool
+          
+          <br>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2954A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          7-Way Trailer Emulator 
+          <br>TEK-6562A or equivalent 
+
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+        A trailer brake emulator tool is available to verify that the Trailer Brake Control (TBC)
+       module and vehicle wiring are functioning correctly. The trailer emulator requires the trailer tow connector ground and 12 volt trailer tow charge circuit to be connected in order to check the electric brake circuit. Battery Junction Box (BJB)
+       fuse 21 (30A) and the Trailer Tow/Battery Charge Relay must be installed for battery voltage to be supplied to the trailer tow connector. The fuse and relay are supplied as loose-shipped items with the vehicle and may not have been installed during Pre-Delivery Inspection (PDI)
+      . 
+
+      </i></p>
+      <p xmlns:str="http://xsltsl.org/string">The Trailer Brake Control (TBC)
+       module is an integrated electronic control device designed to provide variable braking power to the electric-actuated drum brakes on a towed trailer (1 to 4 axles only). The braking energy provided to the trailer is varied with a Pulse Width Modulated (PWM)
+       signal that switches between 0 volts and battery voltage, the higher the duty cycle the more braking power available. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The <abbr title="Trailer Brake Control">TBC</abbr>  module receives information from the stoplamp switch and the PCM. The brake pressure transducer is internal to the ABS module. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The stoplamp switch is mounted on the brake pedal bracket and switches on or off depending on the brake pedal position. The <abbr title="Trailer Brake Control">TBC</abbr>  module receives the stoplamp switch and the brake torque information over the High Speed Controller Area Network (HS-CAN)
+       from the PCM. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">The <abbr title="Trailer Brake Control">TBC</abbr>  module receives information through the <abbr title="High Speed Controller Area Network">HS-CAN</abbr> . These inputs are from the PCM, the Instrument Panel Cluster (IPC)
+       and the ABS module. The Body Control Module (BCM)
+       also sends ignition state, park lamp status and illumination dimming level data to the <abbr title="Trailer Brake Control">TBC</abbr>  module. The information sent from the <abbr title="Trailer Brake Control">TBC</abbr>  module is passed to the <abbr title="Instrument Panel Cluster">IPC</abbr>  and is displayed on the message center. 
+</p>
+      <p xmlns:str="http://xsltsl.org/string">To adjust the gain setting up or down, the <abbr title="Trailer Brake Control">TBC</abbr>  module faceplate provides the driver with control buttons which determine the maximum power output. The <abbr title="Trailer Brake Control">TBC</abbr>  module faceplate also provides a manual control lever to manually apply the trailer brakes, independent of the vehicle brakes, to calibrate the gain setting to the specific trailer loading and road conditions. When the manual control lever is activated with a trailer connected to the vehicle, the trailer stoplamps and the vehicle stoplamps (except the center high mount stoplamp) illuminate. If a trailer is not connected and the manual control lever is activated, the vehicle still illuminates the vehicle stoplamps (except the center high mount stoplamp). 
+</p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          Trailer Brake Control (TBC)
+       Module Wake Up 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          These conditions require that a trailer <b>not</b> be connected to the trailer tow connector. 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string">The following conditions describe the normal operation of the <abbr title="Trailer Brake Control">TBC</abbr>  module at start up. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When the ignition key is in the RUN position and the manual lever is set all the way to the left with a gain of 10, the message center should display TRAILER DISCONNECTED. At the same time, with the vehicle stationary, battery voltage should be present at pin 3 of the trailer tow connector. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">When not braking the <abbr title="Trailer Brake Control">TBC</abbr>  module sends a voltage pulse every 4 seconds to pin 3 of the trailer tow connector to determine whether a trailer is connected to the trailer tow connector. 
+</p>
+      
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          Instrument Panel Cluster (IPC)
+       Configuration For Trailer Brake Control (TBC)
+       Functionality 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The same <abbr title="Instrument Panel Cluster">IPC</abbr>  is used for vehicles with and without the <abbr title="Trailer Brake Control">TBC</abbr>  option. <abbr title="Trailer Brake Control">TBC</abbr>  functionality is enabled or disabled using the scan tool. If the vehicle is equipped with a <abbr title="Trailer Brake Control">TBC</abbr>  module, but the <abbr title="Instrument Panel Cluster">IPC</abbr>  was not configured for <abbr title="Trailer Brake Control">TBC</abbr> , the <abbr title="Trailer Brake Control">TBC</abbr>  module shuts down, no <abbr title="Trailer Brake Control">TBC</abbr>  information is displayed in the message center and DTC U2202 sets in the <abbr title="Trailer Brake Control">TBC</abbr>  module. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">If the <abbr title="Instrument Panel Cluster">IPC</abbr>  is configured for <abbr title="Trailer Brake Control">TBC</abbr> , but the vehicle is not equipped with a <abbr title="Trailer Brake Control">TBC</abbr>  module, TRAILER BRAKE MODULE FAULT is displayed in the message center. This symptom could occur if a replacement <abbr title="Instrument Panel Cluster">IPC</abbr>  was installed, but not configured correctly. For information on the <abbr title="Trailer Brake Control">TBC</abbr>  programmable parameter, refer to Programmable Parameters below. 
+</p>
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Programmable Parameters 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The message center displays <abbr title="Trailer Brake Control">TBC</abbr>  FAULT if it is receiving communications from the <abbr title="Trailer Brake Control">TBC</abbr>  module, but has not been configured for a trailer brake system. If the message center displays <abbr title="Trailer Brake Control">TBC</abbr>  FAULT and there are no DTCs stored in the <abbr title="Trailer Brake Control">TBC</abbr>  module, follow these steps to verify and/or modify the <abbr title="Trailer Brake Control">TBC</abbr>  module programmable parameter in the Instrument Panel Cluster (IPC)
+      . 
+</p>
+        <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Identify the vehicle using the normal Integrated Diagnostic System (IDS)
+       process. 
+
+        </li>
+</ol>
+        <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Select Programming and press the check box. 
+
+        </li>
+</ol>
+        <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Select Module Programming and press the check box. 
+
+        </li>
+</ol>
+        <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Select Programmable Parameters and press the check box. 
+
+        </li>
+</ol>
+        <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Select Personality and press the check box. 
+
+        </li>
+</ol>
+        <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Follow the on-screen directions. 
+
+        </li>
+</ol>
+        <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          <p><b>NOTE: </b><i>
+            The scan tool displays either EQUIPPED or NOT EQUIPPED to the left of <abbr title="Trailer Brake Control">TBC</abbr> -<abbr title="Instrument Panel Cluster">IPC</abbr> . 
+
+          </i></p>
+          Highlight <abbr title="Trailer Brake Control">TBC</abbr> -<abbr title="Instrument Panel Cluster">IPC</abbr> . 
+
+        </li>
+</ol>
+        <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          If the <abbr title="Instrument Panel Cluster">IPC</abbr>  needs to be configured for a trailer brake system, choose EQUIPPED and press the check box. 
+
+        </li>
+</ol>
+        <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+          Clear DTCs from the <abbr title="Trailer Brake Control">TBC</abbr>  module, then carry out a self-test on the <abbr title="Trailer Brake Control">TBC</abbr>  module. Refer to the Trailer Brake Control (TBC)
+       Module DTC Chart for any DTCs retrieved. 
+
+        </li>
+</ol>
+      
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+        Carry out all pinpoint tests <b>without</b> a trailer connected to the vehicle. 
+
+      </i></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+        A trailer brake emulator tool is available to verify that the <abbr title="Trailer Brake Control">TBC</abbr>  module and vehicle wiring are functioning correctly. The trailer emulator requires the trailer tow connector ground and 12 volt trailer tow charge circuit to be connected in order to check the electric brake circuit. 
+
+      </i></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern. 
+
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect for obvious signs of mechanical or electrical damage. 
+
+      </li>
+</ol>
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string">
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Visual Inspection Chart
+        </b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                
+                  Mechanical
+                 
+              </th>
+              <th align="center" valign="top">
+                
+                  Electrical
+                 
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Base brake system 
+
+                  </li>
+                  <li>
+                    Trailer 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Battery Junction Box (BJB)
+       fuse 17 (30A) 
+
+                  </li>
+                  <li>
+                    
+                      Body Control Module (BCM)
+       fuse 37 (10A) 
+
+                  </li>
+                  <li>
+                    Wiring, terminals or connectors 
+
+                  </li>
+                  <li>
+                    
+                      Trailer Brake Control (TBC)
+       module 
+
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step. 
+
+      </li>
+</ol>
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Make sure to use the latest scan tool software release. 
+
+        </i></p>
+        If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC)
+      . 
+
+      </li>
+</ol>
+      <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          The Vehicle Communication Module (VCM)
+       LED prove-out confirms power and ground from the <abbr title="Data Link Connector">DLC</abbr>  are provided to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </i></p>
+        If the scan tool does not communicate with the <abbr title="Vehicle Communication Module">VCM</abbr> : 
+
+        <ul type="disc">
+      <li>
+          check the <abbr title="Vehicle Communication Module">VCM</abbr>  connection to the vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          check the scan tool connection to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0E2PAC" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E2PAC"></span>, No Power To The Scan Tool, to diagnose no power to the scan tool. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the scan tool does not communicate with the vehicle: 
+
+        <ul type="disc">
+      <li>
+          verify the ignition is ON. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          verify the scan tool operation with a known good vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0EZAAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EZAAE"></span>, The PCM Does Not Respond To The Scan Tool, to diagnose no response from the PCM. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the network test. 
+
+        <ul type="disc">
+      <li>
+          If the scan tool responds with no communication for one or more modules, refer to <a data-linkid="ID0EKBAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EKBAE"></span>. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          If the network test passes, retrieve and record Continuous Memory Diagnostic Trouble Codes (CMDTCs)
+      . 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Clear the <abbr title="Continuous Memory Diagnostic Trouble Codes">CMDTCs</abbr>  and carry out the self-test diagnostics for the <abbr title="Trailer Brake Control">TBC</abbr>  module. 
+
+      </li>
+</ol>
+      <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the DTCs retrieved are related to the concern, go to the Trailer Brake Control (TBC)
+       Module DTC Chart. For all other DTCs, refer to <a data-linkid="ID0E2CAE" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0E2CAE"></span>. 
+
+      </li>
+</ol>
+      <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If no DTCs related to the concern are retrieved, GO to <a data-ajax="false" href="#SC1">Symptom Chart</a>. 
+
+      </li>
+</ol>
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>DTC Chart 
+</b></p>
+      <a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Trailer Brake Control (TBC)
+       Module DTC Chart 
+</b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                DTC 
+
+              </th>
+              <th align="center" valign="top">
+                Description 
+
+              </th>
+              <th align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                B1317 
+
+              </td>
+              <td valign="top">
+                Battery Voltage High 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-D" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test D</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1318 
+
+              </td>
+              <td valign="top">
+                Battery Voltage Low 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-E" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test E</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1342 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Electronic Control Unit" xmlns:str="http://xsltsl.org/string">ECU</abbr>  is Faulted 
+
+              </td>
+              <td valign="top">
+                INSPECT for a stuck or damaged manual sliding lever and gain control buttons. REPAIR or CLEAR any obstructions or foreign material. 
+
+                <p class="singlespace" xmlns:str="http://xsltsl.org/string"></p>REPAIR all other DTCs before repairing B1342. CLEAR the DTCs. TEST the system for normal operation. 
+
+                <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+                  It takes 2 minutes for the Trailer Brake Control (TBC)
+       module to set this DTC due to a stuck manual sliding lever or a stuck gain control button. 
+
+                </i></p>
+                If the DTC returns, INSTALL a new Trailer Brake Control (TBC)
+       module. REFER to <a data-linkid="ID0EPIAE" data-for="206-10_s3p703433q0" data-procuid="n1193509" class="expand-link" xmlns:str="http://xsltsl.org/string">Trailer Brake Control (TBC) Module</a><span id="spanID0EPIAE" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1863 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Trailer Brake Control" xmlns:str="http://xsltsl.org/string">TBC</abbr>  Ground Open Circuit 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-F" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test F</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                C2806 
+
+              </td>
+              <td valign="top">
+                Trailer Brakes Wiring Circuit Short to Vbatt 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-A" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test A</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                C2807 
+
+              </td>
+              <td valign="top">
+                Trailer Brakes Wiring Circuit Short to Ground 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-A" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test A</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0100 
+
+              </td>
+              <td valign="top">
+                Lost Communication With <abbr title="Engine Control Module" xmlns:str="http://xsltsl.org/string">ECM</abbr> /PCM "B" 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-G" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test G</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0121 
+
+              </td>
+              <td valign="top">
+                Lost Communication With Anti-Lock Brake System (ABS) Control Module 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-H" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test H</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0140 
+
+              </td>
+              <td valign="top">
+                Lost Communication With Body Control Module (GEM) 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-I" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test I</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0155 
+
+              </td>
+              <td valign="top">
+                Lost Communication With Instrument Panel Cluster (IC) Control Module 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-J" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test J</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0415 
+
+              </td>
+              <td valign="top">
+                Invalid Data Received from Anti-Lock Brake System (ABS) Control Module 
+
+              </td>
+              <td valign="top">
+                This DTC indicates that the <abbr title="Trailer Brake Control" xmlns:str="http://xsltsl.org/string">TBC</abbr>  module has received the brake pressure information sent from the ABS module, but that information does not agree with other sensor inputs. REFER to <a data-linkid="ID0EUPAE" data-sectnum="206-09" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          206-09</a><span id="spanID0EUPAE" xmlns:str="http://xsltsl.org/string"></span> to diagnose the ABS module. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2202 
+
+              </td>
+              <td valign="top">
+                Invalid Configuration Data Received 
+
+              </td>
+              <td valign="top">
+                The Instrument Panel Cluster (IPC)
+       is not configured for trailer brakes. REFER to Programmable Parameters in this section. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart 
+</b></p>
+      <a name="SC1" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>No communication with the Trailer Brake Control (TBC)
+       module 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Fuse(s) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Trailer Brake Control">TBC</abbr>  module 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REFER to <a data-linkid="ID0EUSAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EUSAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The trailer brakes are inoperative 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Fuse(s) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Trailer tow connector 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Trailer Brake Control">TBC</abbr>  module 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Customer trailer 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-B">GO to Pinpoint Test B</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The trailer brakes are always engaged 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Trailer Brake Control">TBC</abbr>  module 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Customer trailer 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-C">GO to Pinpoint Test C</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The message center intermittently displays TRAILER DISCONNECTED or WIRING FAULT ON TRAILER while towing a trailer 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Customer trailer 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-A">GO to Pinpoint Test A</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The message center displays <abbr title="Trailer Brake Control">TBC</abbr>  FAULT 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>DTCs present 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>RETRIEVE and RECORD the DTCs. REFER to the Trailer Brake Control (TBC)
+       Module DTC Chart. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The message center displays TRAILER BRAKE MODULE FAULT when the vehicle is not equipped with a <abbr title="Trailer Brake Control">TBC</abbr>  module 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Incorrect <abbr title="Instrument Panel Cluster">IPC</abbr>  configuration 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>CONFIGURE the <abbr title="Instrument Panel Cluster">IPC</abbr> . REFER to Programmable Parameters in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The message center displays WIRING FAULT ON TRAILER 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Trailer Brake Control">TBC</abbr>  module 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Customer trailer 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-A">GO to Pinpoint Test A</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_5" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-A" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test A: The Message Center Displays WIRING FAULT ON TRAILER 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          Carry out all pinpoint tests <b>without</b> a trailer connected to the vehicle. 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','095')">95</a> , Trailer/Camper Adapter for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The braking energy provided to the trailer is varied with a Pulse Width Modulated (PWM)
+       signal that switches between 0 volts and battery voltage, the higher the duty cycle the more braking power available. The Trailer Brake Control (TBC)
+       module varies the <abbr title="Pulse Width Modulated">PWM</abbr>  signal based on various inputs such as the brake torque message, the manual slider switch and the gain buttons. With the vehicle stationary and the manual slider switch fully to the left with a gain of 10, there should be more than 10-12 volts supplied to pin 3 of the 7-pin trailer tow connector. The <abbr title="Trailer Brake Control">TBC</abbr>  module Pulse Width Modulated (PWM)
+       output voltage is speed dependent. With the vehicle stationary and the brake pedal applied, there is approximately 0 volts at the trailer tow connector (pin-3 or pin-7). When the trailer is connected to the vehicle the Instrument Panel Cluster (IPC)
+       should show the TRAILER CONNECTED message. If the WIRING FAULT ON TRAILER is only message displayed when the trailer is connected, the fault is with the trailer wiring. 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">Every 4 seconds (when not braking) the <abbr title="Trailer Brake Control">TBC</abbr>  module sends a voltage pulse to pin 3 of the 7-pin trailer tow connector to determine whether or not a trailer is connected. 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC C2806 (Trailer Brakes Wiring Circuit Short to Vbatt) — this DTC sets in continuous memory when the <abbr title="Trailer Brake Control">TBC</abbr>  module detects that the battery voltage is greater than 9 volts while not braking. The <abbr title="Trailer Brake Control">TBC</abbr>  module shuts off the trailer brake output and then shuts down. 
+
+          </li>
+          <li>
+            DTC C2807 (Trailer Brakes Wiring Circuit Short to Ground) — this DTC sets in continuous memory or on-demand when the <abbr title="Trailer Brake Control">TBC</abbr>  module detects that the battery voltage drops by more than 20 percent during a braking event or the trailer brakes are drawing more than 28 amps. The <abbr title="Trailer Brake Control">TBC</abbr>  module shuts off the trailer brake output and then shuts down. 
+
+          </li>
+        </ul>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            
+              <abbr title="Trailer Brake Control">TBC</abbr>  module 
+
+          </li>
+          <li>
+            Customer trailer 
+
+          </li>
+        </ul>
+        <a name="A" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST A : THE MESSAGE CENTER DISPLAYS WIRING FAULT ON TRAILER 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multi-meter probes. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td><b>NOTE: </b><i>
+            Make sure the trailer brakes are electric-magnet actuated drum type brakes before proceeding with this pinpoint test. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A1" data-ajax="false"></a><b>A1 
+                VERIFY TBC  MODULE DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Verify a trailer is <b>not</b> connected to the trailer tow connector. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Trailer Brake Control">TBC</abbr>  Module Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Test drive the vehicle in the following manner: 
+
+                <ul style="list-style-type: square">
+                  <li>
+                    maintain a speed greater than 5 km/h (3 mph) 
+
+                  </li>
+                  <li>
+                    turn the headlights ON 
+
+                  </li>
+                  <li>
+                    lightly apply the brakes for more than 5 seconds 
+
+                  </li>
+                  <li>
+                    activate the left and right turn signals 
+
+                  </li>
+                </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait at least 10 seconds for all modules to wake up and prove out. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Trailer Brake Control">TBC</abbr>  Module Self-Test 
+.
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC C2806 or C2807 present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A2">A2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                For all other <abbr title="Trailer Brake Control">TBC</abbr>  module DTCs, GO to the <abbr title="Trailer Brake Control">TBC</abbr>  Module DTC Chart. 
+
+              <br>
+                If no DTCs return, the system is operating correctly at this time. INSPECT the 7-pin trailer tow connector for water intrusion, corrosion, pushed-out pins and spread terminals. REPAIR or INSTALL new as necessary. 
+
+              <br>
+                If the 7-pin trailer tow connector is OK, SEND the trailer to an authorized camper/trailer repair facility. 
+
+              </td>
+          </tr>
+              
+              
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A2" data-ajax="false"></a><b>A2 
+                CHECK THE TRAILER TOW CONNECTOR 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Trailer Tow <a href="javascript:connectorlinkwithpin('ED2','C439A','')">C439A</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Trailer Brake Control">TBC</abbr>  Module Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Test drive the vehicle in the following manner: 
+
+                <ul style="list-style-type: square">
+                  <li>
+                    maintain a speed greater than 5 km/h (3 mph) 
+
+                  </li>
+                  <li>
+                    turn the headlights ON 
+
+                  </li>
+                  <li>
+                    lightly apply the brakes for more than 5 seconds 
+
+                  </li>
+                  <li>
+                    activate the left and right turn signals 
+
+                  </li>
+                </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait at least 10 seconds for all modules to wake up and prove out. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Trailer Brake Control">TBC</abbr>  Module Self-Test 
+.
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC C2806 or C2807 present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For DTC C2806, GO to <a data-ajax="false" href="#A4">A4</a>. 
+
+              <br>
+                For DTC C2807, GO to <a data-ajax="false" href="#A3">A3</a>. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new 7-pin trailer tow connector. CLEAR any DTCs present. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A3" data-ajax="false"></a><b>A3 
+                CHECK THE TBC  MODULE PWM  OUTPUT CIRCUIT FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  Trailer Tow <a href="javascript:connectorlinkwithpin('ED2','C439A','')">C439A</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Trailer Brake Control">TBC</abbr>  Module <a href="javascript:connectorlinkwithpin('ED2','C2142','')">C2142</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <a href="javascript:connectorlinkwithpin('ED2','C439A','3')">C439A</a> Pin 3, circuit CAT19 (BU), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0009553&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A5">A5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CAT19 (BU) for a short to ground. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A4" data-ajax="false"></a><b>A4 
+                CHECK THE TBC  MODULE PWM  OUTPUT CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  Trailer Tow <a href="javascript:connectorlinkwithpin('ED2','C439A','')">C439A</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Trailer Brake Control">TBC</abbr>  Module <a href="javascript:connectorlinkwithpin('ED2','C2142','')">C2142</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between <a href="javascript:connectorlinkwithpin('ED2','C439A','3')">C439A</a> Pin 3, circuit CAT19, (BU), harness side and ground while operating the following lamps in turn: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  Parking lamps 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Stop lamps 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  Reversing lamps 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=A0025430&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR circuit CAT19 (BU) for a short to power. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#A5">A5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="A5" data-ajax="false"></a><b>A5 
+                CHECK FOR CORRECT TBC  MODULE OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Inspect the <abbr title="Trailer Brake Control">TBC</abbr>  module connector. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Repair: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion (install a new connector or terminal - clean module pins) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged or bent pins - install new terminals or pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins - install new pins as necessary 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  spread terminals - install new terminals as necessary 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect the <abbr title="Trailer Brake Control">TBC</abbr>  module connector and make sure that it seats correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Test drive the vehicle in the following manner: 
+
+                <ul style="list-style-type: square">
+                  <li>
+                    maintain a speed greater than 5 km/h (3 mph) 
+
+                  </li>
+                  <li>
+                    turn the headlights ON 
+
+                  </li>
+                  <li>
+                    lightly apply the brakes for more than 5 seconds 
+
+                  </li>
+                  <li>
+                    activate the left and right turn signals 
+
+                  </li>
+                </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait at least 10 seconds for all modules to wake up and prove out. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Trailer Brake Control">TBC</abbr>  Module Self-Test 
+.
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC C2806 or C2807 present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Trailer Brake Control">TBC</abbr>  module. REFER to <a data-linkid="ID0EPWAG" data-for="206-10_s3p703433q0" data-procuid="n1193509" class="expand-link">Trailer Brake Control (TBC) Module</a><span id="spanID0EPWAG"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_5" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-B" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test B: The Trailer Brakes are Inoperative 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          Carry out all pinpoint tests <b>without</b> a trailer connected to the vehicle. 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','095')">95</a> , Trailer/Camper Adapter for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The braking energy provided to the trailer is varied with a Pulse Width Modulated (PWM)
+       signal that switches between 0 volts and battery voltage, the higher the duty cycle the more braking power available. The Trailer Brake Control (TBC)
+       module varies the <abbr title="Pulse Width Modulated">PWM</abbr>  signal based on various inputs such as the brake torque message, the manual slider switch and the gain buttons. With the vehicle stationary and the manual slider switch fully to the left with a gain of 10, there should be more than 10-12 volts supplied to the trailer tow connector. The <abbr title="Trailer Brake Control">TBC</abbr>  module Pulse Width Modulated (PWM)
+       output voltage is speed dependent. With the vehicle stationary and the brake pedal applied, there is approximately 0 volts at the trailer tow connector (pin-3 or pin-7). 
+</p>
+        
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Trailer Brake Control">TBC</abbr>  module receives stoplamp switch information from the PCM and information from the ABS module over the High Speed Controller Area Network (HS-CAN)
+      . If there is a problem in the ABS module that is preventing this information from being sent to the <abbr title="Trailer Brake Control">TBC</abbr>  module, the <abbr title="Trailer Brake Control">TBC</abbr>  module enters a limited operating mode. The <abbr title="Trailer Brake Control">TBC</abbr>  module receives fused battery voltage from Battery Junction Box (BJB)
+       fuse 17 (30A) and fused ignition voltage from Body Control Module (BCM)
+       fuse 37 (10A). 
+</p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Fuse(s) 
+
+          </li>
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Trailer tow connector 
+
+          </li>
+          <li>
+            
+              <abbr title="Trailer Brake Control">TBC</abbr>  module 
+
+          </li>
+          <li>
+            Customer trailer 
+
+          </li>
+        </ul>
+        <a name="B" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST B : THE TRAILER BRAKES ARE INOPERATIVE 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multi-meter probes. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td><b>NOTE: </b><i>
+            Make sure the trailer brakes are electric-magnet actuated drum-type brakes before proceeding with this pinpoint test. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B1" data-ajax="false"></a><b>B1 
+                CHECK FOR ANY PCM DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Allow at least 10 seconds for all modules to wake up and prove out. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — PCM Key ON Engine OFF (KOEO)
+      .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve and record any PCM DTCs. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any PCM DTCs retrieved? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EU4AG" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EU4AG"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B2">B2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B2" data-ajax="false"></a><b>B2 
+                CHECK FOR ANY ABS MODULE DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — ABS Module 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve and record any ABS module DTCs. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any ABS module DTCs retrieved? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EQ6AG" data-sectnum="206-09" class="section-link">Section 
+          206-09</a><span id="spanID0EQ6AG"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B3">B3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B3" data-ajax="false"></a><b>B3 
+                CHECK FOR SCAN TOOL COMMUNICATION WITH THE TBC  MODULE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Using a scan tool, carry out the network test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Did the <abbr title="Trailer Brake Control">TBC</abbr>  module pass the network test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B4">B4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0E2BBG" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E2BBG"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B4" data-ajax="false"></a><b>B4 
+                CHECK FOR TBC  MODULE DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Review the DTCs retrieved and recorded during <abbr title="Trailer Brake Control">TBC</abbr>  module self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any <abbr title="Trailer Brake Control">TBC</abbr>  module DTCs present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to the Trailer Brake Control (TBC)
+       Module DTC Chart. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B5">B5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B5" data-ajax="false"></a><b>B5 
+                CHECK THE TBC  MODULE FOR MAXIMUM OUTPUT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                Battery voltage must be greater than 10 volts. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Set a gain of 10 in the <abbr title="Trailer Brake Control">TBC</abbr>  module. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                <b>NOTE: </b><i>
+                  If the manual slider switch is held to the full left position for more than 5 to 20 minutes, the <abbr title="Trailer Brake Control">TBC</abbr>  module automatically shuts down. 
+
+                </i><p class="singlespace"></p>
+                Have an assistant press the manual slider switch fully to the left with a gain of 10 on the <abbr title="Trailer Brake Control">TBC</abbr>  module. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                <b>NOTE: </b><i>
+                  Do not apply the brake pedal during this test. 
+
+                </i><p class="singlespace"></p>
+                Measure the voltage between trailer tow 7-pin trailer tow connector electric brake supply pin, component side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0084023&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10-12 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                The <abbr title="Trailer Brake Control">TBC</abbr>  module is operating correctly. SEND the trailer to an authorized camper/trailer repair center for an overload condition. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B6">B6</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B6" data-ajax="false"></a><b>B6 
+                CHECK THE TRAILER TOW CONNECTOR FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Trailer Tow Connector <a href="javascript:connectorlinkwithpin('ED2','C439A','')">C439A</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Have an assistant press the manual slider switch fully to the left with a gain of 10 on the <abbr title="Trailer Brake Control">TBC</abbr>  module. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the trailer tow connector <a href="javascript:connectorlinkwithpin('ED2','C439A','3')">C439A</a> Pin 3, circuit CAT19 (BU), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0144814&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new trailer tow connector. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B7">B7</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B7" data-ajax="false"></a><b>B7 
+                CHECK THE TBC  MODULE PWM  OUTPUT CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the trailer tow connector <a href="javascript:connectorlinkwithpin('ED2','C439A','3')">C439A</a> Pin 3, circuit CAT19 (BU), harness side and <abbr title="Trailer Brake Control">TBC</abbr>  module <a href="javascript:connectorlinkwithpin('ED2','C2142','14')">C2142</a> Pin 14, circuit CAT19 (BU), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0144815&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B8">B8</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B8" data-ajax="false"></a><b>B8 
+                CHECK THE BATTERY VOLTAGE TO THE TBC  MODULE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between <abbr title="Trailer Brake Control">TBC</abbr>  module <a href="javascript:connectorlinkwithpin('ED2','C2142','8')">C2142</a> Pin 8, circuit SBB17 (RD), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0121967&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage greater than 10 volts? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#B9">B9</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                VERIFY the <abbr title="Battery Junction Box">BJB</abbr>  fuse 17 (30A) is OK. If OK, REPAIR circuit SBB17 (RD) for an open. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="B9" data-ajax="false"></a><b>B9 
+                CHECK FOR CORRECT TBC  MODULE OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect the <abbr title="Trailer Brake Control">TBC</abbr>  module connector. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect the <abbr title="Trailer Brake Control">TBC</abbr>  module connector and make sure it seats correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Trailer Brake Control">TBC</abbr>  module. REFER to <a data-linkid="ID0EJSBG" data-for="206-10_s3p703433q0" data-procuid="n1193509" class="expand-link">Trailer Brake Control (TBC) Module</a><span id="spanID0EJSBG"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_6" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-C" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test C: The Trailer Brakes are Always Engaged 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          Carry out all pinpoint tests <b>without</b> a trailer connected to the vehicle. 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','095')">95</a> , Trailer/Camper Adapter for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The braking energy provided to the trailer is varied with a Pulse Width Modulated (PWM)
+       signal that switches between 0 volts and battery voltage, the higher the duty cycle the more braking power available. With the vehicle stationary and the manual slider switch fully to the left with a gain of 10, there should be more than 10-12 volts supplied to pin 3 of the 7-pin trailer tow connector. The <abbr title="Trailer Brake Control">TBC</abbr>  module Pulse Width Modulated (PWM)
+       output voltage is speed dependent. With the vehicle stationary and the brake pedal applied, there is approximately 0 volts at the trailer tow connector (pin-3 or pin-7). The Trailer Brake Control (TBC)
+       module also receives information from the brake pressure switch (also called the speed control deactivation switch) and the stoplamp switch from the PCM over the High Speed Controller Area Network (HS-CAN)
+      . 
+</p>
+        
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            
+              <abbr title="Trailer Brake Control">TBC</abbr>  module 
+
+          </li>
+          <li>
+            Customer trailer 
+
+          </li>
+        </ul>
+        <a name="C" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST C : THE TRAILER BRAKES ARE ALWAYS ENGAGED 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multi-meter probes. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C1" data-ajax="false"></a><b>C1 
+                CHECK FOR ANY PCM DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Allow at least 10 seconds for all modules to wake up and prove out. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — PCM Key ON Engine OFF (KOEO)
+      .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve and record any PCM DTCs. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any PCM DTCs retrieved? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0ESXBG" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0ESXBG"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C2">C2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C2" data-ajax="false"></a><b>C2 
+                CHECK FOR ANY TBC  MODULE DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — <abbr title="Trailer Brake Control">TBC</abbr>  Module 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve and record any <abbr title="Trailer Brake Control">TBC</abbr>  module DTCs. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any <abbr title="Trailer Brake Control">TBC</abbr>  module DTCs retrieved? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to DTC Charts in this section. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C3">C3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C3" data-ajax="false"></a><b>C3 
+                OBSERVE THE VEHICLE STOPLAMP OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Monitor the vehicle stoplamps while pressing and releasing the brake pedal. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the vehicle stoplamps operate correctly? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C4">C4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EB3BG" data-sectnum="417-01" class="section-link">Section 
+          417-01</a><span id="spanID0EB3BG"></span> to diagnose the stoplamp switch. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C4" data-ajax="false"></a><b>C4 
+                CHECK THE TBC  MODULE OUTPUT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                Every 4 seconds a voltage pulse is applied as a trailer connectivity test. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Make sure the brake pedal is not pressed and the manual slider switch is not being applied. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                <b>NOTE: </b><i>
+                  Do not apply the brake pedal during this test. 
+
+                </i><p class="singlespace"></p>
+                Measure the voltage between 7-pin trailer tow connector electric brake supply pin, component side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0084023&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage approximately 0.3-0.4 volt? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                The <abbr title="Trailer Brake Control">TBC</abbr>  module and vehicle wiring are operating correctly. SEND the trailer to an authorized camper/trailer repair center. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C5">C5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C5" data-ajax="false"></a><b>C5 
+                CHECK THE TBC  MODULE PWM  OUTPUT CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Trailer Brake Control">TBC</abbr>  Module <a href="javascript:connectorlinkwithpin('ED2','C2142','')">C2142</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between 7-pin trailer tow connector electric brake supply pin, component side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0084023&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR the circuit. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#C6">C6</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="C6" data-ajax="false"></a><b>C6 
+                CHECK FOR CORRECT TBC  MODULE OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect the <abbr title="Trailer Brake Control">TBC</abbr>  module connector. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect the <abbr title="Trailer Brake Control">TBC</abbr>  module connector and make sure it seats correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Trailer Brake Control">TBC</abbr>  module. REFER to <a data-linkid="ID0EOEAI" data-for="206-10_s3p703433q0" data-procuid="n1193509" class="expand-link">Trailer Brake Control (TBC) Module</a><span id="spanID0EOEAI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_7" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-D" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test D: DTC B1317 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','013')">13</a> , Power Distribution/BCM for schematic and connector information.<br>
+        </p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC B1317 (Battery Voltage High) — this DTC sets in continuous memory or on-demand in the Trailer Brake Control (TBC)
+       module when the <abbr title="Trailer Brake Control">TBC</abbr>  module detects that battery voltage has risen above 16 volts on the voltage supply circuit while not braking. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Charging system concern 
+
+          </li>
+          <li>
+            
+              <abbr title="Trailer Brake Control">TBC</abbr>  module 
+
+          </li>
+        </ul>
+        <a name="D" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST D : DTC B1317 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTE: </b><i>
+            DTC B1317 may be stored in the module memory due to previous battery charging or vehicle jump starting events. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D1" data-ajax="false"></a><b>D1 
+                CHECK FOR DTC B1317, B1676, P0563 (PCM) OR U3003:17 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Allow at least 10 seconds for all modules to wake up and prove out. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve the continuous memory DTCs from all modules. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC B1317, B1676, P0563 (PCM) or U3003:17 set in more than one module? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0ENIAI" data-sectnum="414-00" class="section-link">Section 
+          414-00</a><span id="spanID0ENIAI"></span> to diagnose an overcharging condition. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D2">D2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D2" data-ajax="false"></a><b>D2 
+                CHECK THE BATTERY VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Turn off all interior/exterior lights and accessories. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Start and run the engine at approximately 2,000 rpm for 3 minutes while monitoring the battery voltage. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the battery voltage rise to 16 volts or higher? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EDKAI" data-sectnum="414-00" class="section-link">Section 
+          414-00</a><span id="spanID0EDKAI"></span> to diagnose an overcharging condition. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#D3">D3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="D3" data-ajax="false"></a><b>D3 
+                RECHECK FOR DTC B1317 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Turn the engine off. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Allow at least 10 seconds for all modules to wake up and prove out. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — <abbr title="Trailer Brake Control">TBC</abbr>  Module 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Clear the continuous memory DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Carry out the <abbr title="Trailer Brake Control">TBC</abbr>  module self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC B1317 present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Trailer Brake Control">TBC</abbr>  module. REFER to <a data-linkid="ID0EINAI" data-for="206-10_s3p703433q0" data-procuid="n1193509" class="expand-link">Trailer Brake Control (TBC) Module</a><span id="spanID0EINAI"></span> module in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set previously during battery charging or while jump starting the vehicle. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_8" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-E" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test E: DTC B1318 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','013')">13</a> , Power Distribution/SJB for schematic and connector information.<br>
+        </p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC B1318 (Battery Voltage Low) — this DTC sets in continuous memory or on-demand in the Trailer Brake Control (TBC)
+       module when the <abbr title="Trailer Brake Control">TBC</abbr>  module detects that battery voltage has dropped below 9 volts on the voltage supply circuit while not braking. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            Charging system concern 
+
+          </li>
+          <li>
+            
+              <abbr title="Trailer Brake Control">TBC</abbr>  module 
+
+          </li>
+        </ul>
+        <a name="E" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST E : DTC B1318 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td><b>NOTE: </b><i>
+            Failure to disconnect the battery when instructed results in false resistance readings. Refer to <a data-linkid="ID0EJQAI" data-sectnum="414-01" class="section-link">Section 
+          414-01</a><span id="spanID0EJQAI"></span>. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E1" data-ajax="false"></a><b>E1 
+                RECHECK THE TBC  MODULE DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Allow at least 10 seconds for all modules to wake up and prove out. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — <abbr title="Trailer Brake Control">TBC</abbr>  Module 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. Repeat the <abbr title="Trailer Brake Control">TBC</abbr>  module self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC B1318 still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E2">E2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set due to a previous low battery voltage condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E2" data-ajax="false"></a><b>E2 
+                CHECK FOR CHARGING SYSTEM DTCS IN THE PCM 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — PCM Key ON Engine OFF (KOEO)
+      .
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC P0620, P0622, P0625, P0626 or P065B set in the PCM? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EOUAI" data-sectnum="414-01" class="section-link">Section 
+          414-01</a><span id="spanID0EOUAI"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E3">E3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E3" data-ajax="false"></a><b>E3 
+                CHECK THE BATTERY CONDITION AND STATE OF CHARGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check the battery condition and verify the battery is fully charged. Refer to <a data-linkid="ID0EPVAI" data-sectnum="414-01" class="section-link">Section 
+          414-01</a><span id="spanID0EPVAI"></span>. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the battery OK and fully charged? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E4">E4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0ERWAI" data-sectnum="414-00" class="section-link">Section 
+          414-00</a><span id="spanID0ERWAI"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E4" data-ajax="false"></a><b>E4 
+                CHECK THE TBC  MODULE VOLTAGE (MODULE_VOLT) PID 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Measure and record the voltage at the battery. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — <abbr title="Trailer Brake Control">TBC</abbr>  Module 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Monitor the <abbr title="Trailer Brake Control">TBC</abbr>  MODULE_VOLT PID. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage within 0.2 volt of the recorded battery voltage? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E7">E7</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E5">E5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E5" data-ajax="false"></a><b>E5 
+                CHECK THE TBC  MODULE VOLTAGE SUPPLY 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Trailer Brake Control">TBC</abbr>  Module <a href="javascript:connectorlinkwithpin('ED2','C2142','')">C2142</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between the <abbr title="Trailer Brake Control">TBC</abbr>  module <a href="javascript:connectorlinkwithpin('ED2','C2142','8')">C2142</a> Pin 8, circuit SBB17 (RD), harness side and ground; and between the <abbr title="Trailer Brake Control">TBC</abbr>  module <a href="javascript:connectorlinkwithpin('ED2','C2142','9')">C2142</a> Pin 9, circuit CBP37 (WH), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0091204&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the voltage within 0.2 volt of the recorded battery voltage? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E6">E6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E6" data-ajax="false"></a><b>E6 
+                CHECK THE TBC  MODULE GROUND CIRCUIT FOR HIGH RESISTANCE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  Negative Battery Cable 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between the <abbr title="Trailer Brake Control">TBC</abbr>  module <a href="javascript:connectorlinkwithpin('ED2','C2142','3')">C2142</a> Pin 3, circuit GD138 (BK/WH), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0091205&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#E7">E7</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit. CLEAR the DTC. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="E7" data-ajax="false"></a><b>E7 
+                CHECK FOR CORRECT TBC  MODULE OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect the <abbr title="Trailer Brake Control">TBC</abbr>  module connector. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect the <abbr title="Trailer Brake Control">TBC</abbr>  module connector and make sure it seats correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Trailer Brake Control">TBC</abbr>  module. REFER to <a data-linkid="ID0EECBI" data-for="206-10_s3p703433q0" data-procuid="n1193509" class="expand-link">Trailer Brake Control (TBC) Module</a><span id="spanID0EECBI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_9" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-F" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test F: DTC B1863 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','095')">95</a> , Trailer/Camper Adapter for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">The Trailer Brake Control (TBC)
+       module receives battery voltage from Battery Junction Box (BJB)
+       fuse 17 (30A) and ignition voltage from Body Control Module (BCM)
+       fuse 37 (10A). 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC B1863 (<abbr title="Trailer Brake Control">TBC</abbr>  Ground Open Circuit) — this DTC sets in continuous memory or on-demand when the <abbr title="Trailer Brake Control">TBC</abbr>  module detects an open circuit in the wiring, a connector condition causes an open in the ground circuit or if an internal failure of the <abbr title="Trailer Brake Control">TBC</abbr>  module causes an open in the ground circuit. The <abbr title="Trailer Brake Control">TBC</abbr>  module also disables trailer braking and sends a TRAILER BRAKE MODULE FAULT message to the message center. A trailer must be connected for this DTC to set. 
+
+          </li>
+        </ul>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            
+              <abbr title="Trailer Brake Control">TBC</abbr>  module 
+
+          </li>
+        </ul>
+        <a name="F" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST F : DTC B1863 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTICE: 
+            Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multi-meter probes. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td><b>NOTE: </b><i>
+            A trailer must be connected to the 7-pin trailer connector for DTC B1863 to set during the on-demand self-test. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="F1" data-ajax="false"></a><b>F1 
+                CHECK THE TBC  MODULE GROUND CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Trailer Brake Control">TBC</abbr>  Module <a href="javascript:connectorlinkwithpin('ED2','C2142','')">C2142</a>.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Trailer Brake Control">TBC</abbr>  module <a href="javascript:connectorlinkwithpin('ED2','C2142','3')">C2142</a> Pin 3, circuit GD138 (BK/WH), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0091205&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 5 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#F2">F2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="F2" data-ajax="false"></a><b>F2 
+                CHECK FOR CORRECT TBC  MODULE OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Disconnect the <abbr title="Trailer Brake Control">TBC</abbr>  module connector. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Check for: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  broken harness wire 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  broken connector 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect the <abbr title="Trailer Brake Control">TBC</abbr>  module connector and make sure it seats correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Trailer Brake Control">TBC</abbr>  module. REFER to <a data-linkid="ID0E3LBI" data-for="206-10_s3p703433q0" data-procuid="n1193509" class="expand-link">Trailer Brake Control (TBC) Module</a><span id="spanID0E3LBI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_10" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-G" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test G: DTC U0100 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U0100 (Lost Communication With ECM/PCM "B") — this DTC sets in continuous memory or on-demand in the Trailer Brake Control (TBC)
+       module if data messages received (vehicle speed) from the PCM are missing for more than 5 seconds. For a complete list of all network messages, refer to <a data-linkid="ID0EBNBI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EBNBI"></span>. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b></b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            PCM 
+
+          </li>
+          <li>
+            
+              <abbr title="Trailer Brake Control">TBC</abbr>  module 
+
+          </li>
+        </ul>
+        <a name="G" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST G : DTC U0100 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="G1" data-ajax="false"></a><b>G1 
+                VERIFY THE SCAN TOOL CAN COMMUNICATE WITH THE PCM 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Allow at least 10 seconds for all modules to wake up and prove out. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Verify that a vehicle session can be established with a scan tool. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Can a vehicle session be established? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#G2">G2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0E3PBI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E3PBI"></span> to diagnose no communication with the PCM. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="G2" data-ajax="false"></a><b>G2 
+                CHECK THE TBC  MODULE CONTINUOUS MEMORY DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — <abbr title="Trailer Brake Control">TBC</abbr>  Module 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. Repeat the <abbr title="Trailer Brake Control">TBC</abbr>  module self-test. Record all <abbr title="Trailer Brake Control">TBC</abbr>  module DTCs. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0100 retrieved again? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#G3">G3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="G3" data-ajax="false"></a><b>G3 
+                RETRIEVE THE RECORDED DTCS FROM THE TBC  MODULE SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for recorded <abbr title="Trailer Brake Control">TBC</abbr>  module DTCs from the previous self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC B1317 or DTC B1318 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For DTC B1317, <a data-ajax="false" href="#PS2-D">GO to Pinpoint Test D</a>. 
+
+              <br>
+                For DTC B1318, <a data-ajax="false" href="#PS2-E">GO to Pinpoint Test E</a>. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#G4">G4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="G4" data-ajax="false"></a><b>G4 
+                RETRIEVE THE RECORDED DTCS FROM THE PCM SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — PCM Key ON Engine OFF (KOEO)
+      .
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC P0562 or DTC P0563 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EKWBI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EKWBI"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#G5">G5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="G5" data-ajax="false"></a><b>G5 
+                CHECK FOR DTC U0100:00 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Using a scan tool, retrieve the continuous memory DTCs from the following modules: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    Accessory Protocol Interface Module (APIM)
+       (if equipped) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    <abbr title="Body Control Module">BCM</abbr> 
+                  
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    Instrument Panel Cluster (IPC)
+      
+                  
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    Occupant Classification System Module (OCSM)
+      
+                  
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    Power Steering Control Module (PSCM)
+       (if equipped) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    Restraints Control Module (RCM)
+      
+                  
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    Transfer Case Control Module (TCCM)
+       (if equipped) 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0100:00 set in any of these modules? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new PCM. REFER to <a data-linkid="ID0EP1BI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EP1BI"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Trailer Brake Control">TBC</abbr>  module. REFER to <a data-linkid="ID0ED2BI" data-for="206-10_s3p703433q0" data-procuid="n1193509" class="expand-link">Trailer Brake Control (TBC) Module</a><span id="spanID0ED2BI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_11" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-H" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test H: DTC U0121 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U0121 (Lost Communication With Anti-Lock Brake System (ABS) Control Module) — this DTC sets in continuous memory or on-demand in the Trailer Brake Control (TBC)
+       module if data messages such as brake torque information are not received from the ABS module. For a complete list of all network messages, refer to <a data-linkid="ID0EA3BI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EA3BI"></span>. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b></b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            ABS module 
+
+          </li>
+          <li>
+            
+              <abbr title="Trailer Brake Control">TBC</abbr>  module 
+
+          </li>
+        </ul>
+        <a name="H" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST H : DTC U0121 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="H1" data-ajax="false"></a><b>H1 
+                VERIFY THE CUSTOMER CONCERN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Allow at least 10 seconds for all modules to wake up and prove out. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Verify that there is an observable symptom present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is an observable symptom present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#H2">H2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="H2" data-ajax="false"></a><b>H2 
+                CHECK THE COMMUNICATION NETWORK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Using a scan tool, carry out the network test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the ABS module pass the network test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#H3">H3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EGACI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EGACI"></span> to diagnose the ABS module does not respond to the scan tool. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="H3" data-ajax="false"></a><b>H3 
+                RETRIEVE ANY DTCS FROM THE TBC  MODULE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — <abbr title="Trailer Brake Control">TBC</abbr>  Module 
+.
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U3003:16 (or B1318) or DTC U3003:17 (or B1317) recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For DTC B1317, <a data-ajax="false" href="#PS2-D">GO to Pinpoint Test D</a>. 
+
+              <br>
+                For DTC B1318, <a data-ajax="false" href="#PS2-E">GO to Pinpoint Test E</a>. 
+
+              <br>
+                For the ABS module, REFER to <a data-linkid="ID0ERCCI" data-sectnum="206-09" class="section-link">Section 
+          206-09</a><span id="spanID0ERCCI"></span>. 
+
+              </td>
+          </tr>
+              
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#H4">H4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="H4" data-ajax="false"></a><b>H4 
+                CHECK FOR DTC U0121:00 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait at least 5 seconds to allow the <abbr title="Trailer Brake Control">TBC</abbr>  module to sleep (power down). 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Allow at least 10 seconds for all modules to wake up and prove out. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Using a scan tool, retrieve the continuous memory DTCs from the following modules: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    Body Control Module (BCM)
+      
+                  
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    Instrument Panel Cluster (IPC)
+      
+                  
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    Power Steering Control Module (PSCM)
+       (if equipped) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  
+                    Transfer Case Control Module (TCCM)
+       (if equipped) 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0121:00 set in any of these modules? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new ABS module. REFER to <a data-linkid="ID0EUGCI" data-sectnum="206-09" class="section-link">Section 
+          206-09</a><span id="spanID0EUGCI"></span>. CLEAR the DTCs. REPEAT the ABS module self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Trailer Brake Control">TBC</abbr>  module. REFER to <a data-linkid="ID0EIHCI" data-for="206-10_s3p703433q0" data-procuid="n1193509" class="expand-link">Trailer Brake Control (TBC) Module</a><span id="spanID0EIHCI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_12" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-I" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test I: DTC U0140 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U0140 (Lost Communication With Body Control Module (GEM)) — this DTC sets in continuous memory or on-demand in the Trailer Brake Control (TBC)
+       module if data messages such as ignition state, park lamp status and illumination dimming level data are not received from the Body Control Module (BCM)
+      . For a complete list of all network messages, refer to <a data-linkid="ID0ELICI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0ELICI"></span>. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Trailer Brake Control">TBC</abbr>  module 
+
+          </li>
+        </ul>
+        <a name="I" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST I : DTC U0140 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="I1" data-ajax="false"></a><b>I1 
+                VERIFY THE CUSTOMER CONCERN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Allow at least 10 seconds for all modules to wake up and prove out. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Verify that there is an observable symptom present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is an observable symptom present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#I2">I2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="I2" data-ajax="false"></a><b>I2 
+                CHECK THE COMMUNICATION NETWORK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Using a scan tool, carry out the network test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the <abbr title="Body Control Module">BCM</abbr>  module pass the network test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#I3">I3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0E4MCI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E4MCI"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="I3" data-ajax="false"></a><b>I3 
+                RETRIEVE ANY DTCS FROM THE TBC  MODULE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — <abbr title="Trailer Brake Control">TBC</abbr>  Module 
+.
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC B1317 or DTC B1318 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For DTC B1317, <a data-ajax="false" href="#PS2-D">GO to Pinpoint Test D</a>. 
+
+              <br>
+                For DTC B1318, <a data-ajax="false" href="#PS2-E">GO to Pinpoint Test E</a>. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#I4">I4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="I4" data-ajax="false"></a><b>I4 
+                RETRIEVE ANY DTCS FROM THE BCM </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — <abbr title="Body Control Module">BCM</abbr> .
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U3003:16 or DTC U3003:17 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EARCI" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0EARCI"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#I5">I5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="I5" data-ajax="false"></a><b>I5 
+                RECHECK THE TBC  MODULE DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during Programmable Module Installation (PMI)
+       or the <abbr title="Programmable Module Installation">PMI</abbr>  may not have been carried out. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. Repeat the <abbr title="Trailer Brake Control">TBC</abbr>  module self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0140 still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#I6">I6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="I6" data-ajax="false"></a><b>I6 
+                CHECK FOR DTC U0140 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait at least 5 seconds to allow the <abbr title="Trailer Brake Control">TBC</abbr>  module to sleep (power down). 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Allow at least 10 seconds for all modules to wake up and prove out. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Using a scan tool, retrieve the continuous memory DTCs from all modules. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0140 set in more than one module? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . REPEAT the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Trailer Brake Control">TBC</abbr>  module. REFER to <a data-linkid="ID0EWWCI" data-for="206-10_s3p703433q0" data-procuid="n1193509" class="expand-link">Trailer Brake Control (TBC) Module</a><span id="spanID0EWWCI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_13" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-J" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test J: DTC U0155 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U0155 (Lost Communication With Instrument Panel Cluster (IC) Control Module) — this DTC sets in continuous memory or on-demand in the Trailer Brake Control (TBC)
+       module if data messages received from the Instrument Panel Cluster (IPC)
+       are missing. The <abbr title="Instrument Panel Cluster">IPC</abbr>  sends a TRAILER BRAKE CONFIG message to the<abbr title="Trailer Brake Control">TBC</abbr>  module. For a complete list of all network messages, refer to <a data-linkid="ID0EFYCI" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EFYCI"></span>. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            
+              <abbr title="Instrument Panel Cluster">IPC</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Trailer Brake Control">TBC</abbr>  module 
+
+          </li>
+        </ul>
+        <a name="J" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST J : DTC U0155 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="J1" data-ajax="false"></a><b>J1 
+                VERIFY THE CUSTOMER CONCERN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Allow at least 10 seconds for all modules to wake up and prove out. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Verify that there is an observable symptom present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is an observable symptom present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#J2">J2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="J2" data-ajax="false"></a><b>J2 
+                CHECK THE COMMUNICATION NETWORK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Using a scan tool, carry out the network test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the <abbr title="Instrument Panel Cluster">IPC</abbr>  pass the network test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#J3">J3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EX3CI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EX3CI"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="J3" data-ajax="false"></a><b>J3 
+                RETRIEVE THE RECORDED DTCS FROM THE TBC  MODULE AND IPC  SELF-TESTS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — <abbr title="Trailer Brake Control">TBC</abbr>  Module 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Record the <abbr title="Trailer Brake Control">TBC</abbr>  module DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self Test — <abbr title="Instrument Panel Cluster">IPC</abbr> .
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U3003:16 (or B1318) or DTC U3003:17 (or B1317) recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For <abbr title="Trailer Brake Control">TBC</abbr>  module DTC B1317, <a data-ajax="false" href="#PS2-D">GO to Pinpoint Test D</a>. 
+
+              <br>
+                For <abbr title="Trailer Brake Control">TBC</abbr>  module DTC B1318, <a data-ajax="false" href="#PS2-E">GO to Pinpoint Test E</a>. 
+
+              <br>
+                For <abbr title="Instrument Panel Cluster">IPC</abbr>  DTCs, REFER to <a data-linkid="ID0EXADI" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EXADI"></span>. 
+
+              </td>
+          </tr>
+              
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#J4">J4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="J4" data-ajax="false"></a><b>J4 
+                CHECK FOR DTC U0155 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait at least 5 seconds to allow the <abbr title="Trailer Brake Control">TBC</abbr>  module to sleep (power down). 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Allow at least 10 seconds for all modules to wake up and prove out. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve the continuous memory DTCs from all modules. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0155:00 or DTC U0155 set in more than one module? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Instrument Panel Cluster">IPC</abbr> . REFER to <a data-linkid="ID0EQDDI" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EQDDI"></span>. CLEAR the DTCs. REPEAT the <abbr title="Instrument Panel Cluster">IPC</abbr>  self-test. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Trailer Brake Control">TBC</abbr>  module. REFER to <a data-linkid="ID0EKEDI" data-for="206-10_s3p703433q0" data-procuid="n1193509" class="expand-link">Trailer Brake Control (TBC) Module</a><span id="spanID0EKEDI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+  
+
+
