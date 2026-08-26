@@ -1,0 +1,4258 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="308-07A" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="308-07A Four Wheel Drive (4WD) Systems" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n2252364" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>308-07A Four Wheel Drive (4WD) Systems</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      10/13/2016</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Electronic Locking Differential (ELD) System" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Electronic Locking Differential (ELD) System
+</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('307-07','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2574A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Flex Probe Kit
+          <br>300-NUD105-R025DE or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-IV Digital Multimeter
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          
+            Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan tool
+          
+          <br>
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Principles of Operation 
+</b></p>
+      <a name="procsub2_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>
+          Electronic Locking Differential (ELD)
+       System 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Electronic Locking Differential">ELD</abbr>  system allows the operator to lock the rear differential side gears. When the <abbr title="Electronic Locking Differential">ELD</abbr>  is engaged both rear wheels turn at the same speed, providing added traction on slippery and/or off road surfaces. The operator can engage the <abbr title="Electronic Locking Differential">ELD</abbr>  per the charts below: 
+</p>
+        <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+          <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+            <abbr title="Electronic Locking Differential">ELD</abbr>  Engagement Speeds — <abbr title="Four-Wheel Drive">4WD</abbr>  Vehicles 
+</b></p>
+          <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="center">
+    <col align="center">
+    <col align="center">
+  </colgroup>
+            
+            
+            
+            
+            <thead>
+              <tr>
+                <th align="center" valign="top">
+                  Switch Position 
+
+                </th>
+                <th align="center" valign="top">
+                  Engage 
+
+                </th>
+                <th align="center" valign="top">
+                  Disengage 
+
+                </th>
+                <th align="center" valign="top">
+                  Re-engage 
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td valign="top">
+                  2H/4A/4H 
+
+                </td>
+                <td valign="top">
+                  31 km/h (19 mph) 
+
+                  <sup xmlns:str="http://xsltsl.org/string">a</sup>
+                </td>
+                <td valign="top">
+                  42 km/h (25 mph) 
+
+                </td>
+                <td valign="top">
+                  31 km/h (19 mph)<sup xmlns:str="http://xsltsl.org/string">a</sup>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  4L 
+
+                </td>
+                <td valign="top">
+                  90 km/h (56 mph)<sup xmlns:str="http://xsltsl.org/string">a</sup>
+                </td>
+                <td valign="top">
+                  100 km/h (62 mph) 
+
+                </td>
+                <td valign="top">
+                  90 km/h (56 mph)<sup xmlns:str="http://xsltsl.org/string">a</sup>
+                </td>
+              </tr>
+            </tbody>
+          </table><br>
+        <p class="footnote" xmlns:str="http://xsltsl.org/string"><sup>a</sup>The <abbr title="Electronic Locking Differential">ELD</abbr>  system engages/re-engages at or below the speed noted.</p><br xmlns:str="http://xsltsl.org/string">
+        <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_2" xmlns:str="http://xsltsl.org/string"></a>
+          <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+            <abbr title="Electronic Locking Differential">ELD</abbr>  Engagement Speeds — <abbr title="2-Wheel Drive">2WD</abbr>  Vehicles 
+</b></p>
+          <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="center">
+    <col align="center">
+    <col align="center">
+  </colgroup>
+            
+            
+            
+            
+            <thead>
+              <tr>
+                <th align="center" valign="top">
+                  Switch Position 
+
+                </th>
+                <th align="center" valign="top">
+                  Engage 
+
+                </th>
+                <th align="center" valign="top">
+                  Disengage 
+
+                </th>
+                <th align="center" valign="top">
+                  Re-engage 
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td valign="top">
+                  Off 
+
+                </td>
+                <td valign="top">
+                  N/A 
+
+                </td>
+                <td valign="top">
+                  N/A 
+
+                </td>
+                <td valign="top">
+                  N/A 
+
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  On 
+
+                </td>
+                <td valign="top">
+                  31 km/h (19 mph) 
+
+                  <sup xmlns:str="http://xsltsl.org/string">a</sup>
+                </td>
+                <td valign="top">
+                  42 km/h (25 mph) 
+
+                </td>
+                <td valign="top">
+                  31 km/h (19 mph)<sup xmlns:str="http://xsltsl.org/string">a</sup>
+                </td>
+              </tr>
+            </tbody>
+          </table><br>
+        <p class="footnote" xmlns:str="http://xsltsl.org/string"><sup>a</sup>The <abbr title="Electronic Locking Differential">ELD</abbr>  system engages/re-engages at or below the speed noted.</p><br xmlns:str="http://xsltsl.org/string">
+        <p xmlns:str="http://xsltsl.org/string">When the operator activates the <abbr title="Electronic Locking Differential">ELD</abbr> , the <abbr title="Electronic Locking Differential">ELD</abbr>  icon displays in the <abbr title="Instrument Panel Cluster">IPC</abbr>  message center. If the vehicle is driven above the disengage speed, the <abbr title="Instrument Panel Cluster">IPC</abbr>  message center no longer displays the <abbr title="Electronic Locking Differential">ELD</abbr>  icon, alerting the operator that the <abbr title="Electronic Locking Differential">ELD</abbr>  is disengaged. Once the vehicle drops below the re-engage speed, the <abbr title="Instrument Panel Cluster">IPC</abbr>  message center displays the <abbr title="Electronic Locking Differential">ELD</abbr>  icon again. If there is a malfunction with the <abbr title="Electronic Locking Differential">ELD</abbr>  system, a "CHECK LOCKING DIFFERENTIAL" message is displayed in the <abbr title="Instrument Panel Cluster">IPC</abbr>  message center, letting the operator know the <abbr title="Electronic Locking Differential">ELD</abbr>  is not engaged. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The differential locks when a <abbr title="Pulse Width Modulated">PWM</abbr>  controlled magnetic field coil located inside the differential energizes. A collar within the differential moves toward a differential side gear and engages a dog clutch within the differential. This locks the differential side gears and creates the locked differential. 
+</p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Transfer Case Control Module">TCCM</abbr>  activates the <abbr title="Electronic Locking Differential">ELD</abbr> . When the <abbr title="Electronic Locking Differential">ELD</abbr>  is engaged, the <abbr title="Transfer Case Control Module">TCCM</abbr>  sends <abbr title="Pulse Width Modulated">PWM</abbr>  voltage to the <abbr title="Electronic Locking Differential">ELD</abbr>  field coil located in the differential. This voltage is initially 98% duty cycle, and then tapers off to 40% duty cycle after 30 seconds. In order for the <abbr title="Transfer Case Control Module">TCCM</abbr>  to activate the <abbr title="Electronic Locking Differential">ELD</abbr> , certain conditions must be met. 
+</p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>
+            <abbr title="Transfer Case Control Module">TCCM</abbr>  Input Conditions 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            
+              <abbr title="Mode Select Switch">MSS</abbr>  set to <abbr title="Electronic Locking Differential">ELD</abbr>  position 
+
+          </li>
+          <li>
+            Average rear wheel speed versus average front wheel speed must be less than 7 km/h (4.3 mph) (via <abbr title="High Speed Controller Area Network">HS-CAN</abbr>  communication from ABS module) 
+
+          </li>
+          <li>
+            Operating range (voltage between 9-16 volts) 
+
+          </li>
+          <li>
+            DTC setting range (voltage between 10-15 volts) 
+
+          </li>
+          <li>
+            Ignition in the ON position 
+
+          </li>
+          <li>
+            
+              Throttle Position (TP)
+       less than 50% 
+
+          </li>
+        </ul>
+      
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern. 
+
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect for obvious signs of mechanical or electrical damage. 
+
+      </li>
+</ol>
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string">
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            </b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                 
+              </th>
+              <th align="center" valign="top">
+                 
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    Rear axle assembly 
+
+                  </li>
+                  <li>
+                    Matching tire sizes 
+
+                  </li>
+                </ul>
+              </td>
+              <td valign="top">
+                <ul type="disc" xmlns:str="http://xsltsl.org/string">
+                  <li>
+                    
+                      Battery Junction Box (BJB)
+       fuses: 
+
+                    <ul style="list-style-type: square">
+              <li>
+                      20 (20A) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      29 (10A) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      54 (5A) 
+
+                    </li>
+            </ul>
+                    <ul style="list-style-type: square">
+              <li>
+                      68 (25A) 
+
+                    </li>
+            </ul>
+                  </li>
+                  <li>
+                    
+                      Body Control Module (BCM)
+       fuse 34 (10A) (vehicles with <abbr title="Electronic Locking Differential">ELD</abbr>  only) 
+
+                  </li>
+                  <li>
+                    Wiring, terminals or connectors 
+
+                  </li>
+                  <li>
+                    
+                      Mode Select Switch (MSS)
+      
+                    
+                  </li>
+                  <li>
+                    
+                      Electronic Locking Differential (ELD)
+       field coil 
+
+                  </li>
+                  <li>
+                    
+                      Transfer Case Control Module (TCCM)
+      
+                    
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step. 
+
+      </li>
+</ol>
+      <ol start="4. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          Make sure to use the latest scan tool software release. 
+
+        </i></p>
+        If the cause is not visually evident, connect the scan tool to the <abbr title="Data Link Connector">DLC</abbr> . 
+
+      </li>
+</ol>
+      <ol start="5. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        <p><b>NOTE: </b><i>
+          The <abbr title="Vehicle Communication Module">VCM</abbr>  LED prove out confirms power and ground from the <abbr title="Data Link Connector">DLC</abbr>  are provided to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </i></p>
+        If the scan tool does not communicate with the <abbr title="Vehicle Communication Module">VCM</abbr> : 
+
+        <ul type="disc">
+      <li>
+          check the <abbr title="Vehicle Communication Module">VCM</abbr>  connection to the vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          check the scan tool connection to the <abbr title="Vehicle Communication Module">VCM</abbr> . 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0EHDAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EHDAE"></span>, No Power To The Scan Tool, to diagnose no power to the scan tool. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="6. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the scan tool does not communicate with the vehicle: 
+
+        <ul type="disc">
+      <li>
+          verify the ignition is in the ON position. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          verify the scan tool operation with a known good vehicle. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          refer to <a data-linkid="ID0EEEAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EEEAE"></span> to diagnose no response from the PCM. 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="7. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the network test. 
+
+        <ul type="disc">
+      <li>
+          If the scan tool responds with no communication for one or more modules, refer to <a data-linkid="ID0EVEAE" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EVEAE"></span>. 
+
+        </li>
+    </ul>
+        <ul type="disc">
+      <li>
+          If the network test passes, retrieve and record <abbr title="Continuous Memory Diagnostic Trouble Codes">CMDTCs</abbr> . 
+
+        </li>
+    </ul>
+      </li>
+</ol>
+      <ol start="8. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Carry out the self-test diagnostics for the <abbr title="Transfer Case Control Module">TCCM</abbr> . 
+
+      </li>
+</ol>
+      <ol start="9. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the DTCs retrieved are related to the concern, go to the <abbr title="Transfer Case Control Module">TCCM</abbr>  DTC Chart in this section. For all other DTCs, refer to <a data-linkid="ID0EAGAE" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0EAGAE"></span>. 
+
+      </li>
+</ol>
+      <ol start="10. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If no DTCs related to the concern are retrieved, GO to <a data-ajax="false" href="#SC5">Symptom Chart — Electronic Locking Differential (ELD) System</a> in this section. 
+
+      </li>
+</ol>
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>DTC Charts 
+</b></p>
+      <a name="table_3" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            
+          Transfer Case Control Module (TCCM)
+       DTC Chart — <abbr title="Electronic Locking Differential">ELD</abbr>  System 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          This module utilizes a 5-character DTC followed by a 2-character failure type code. The failure type code provides information about specific fault conditions such as opens or shorts to ground. have an additional 2-character DTC status code suffix to assist in determining DTC history. 
+
+        </i></p>
+        <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+          Network DTCs (U-codes) are often a result of intermittent concerns such as damaged wiring or low battery voltage occurrences. Additionally, vehicle repair procedures such as module reprogramming often set network DTCs. Replacing a module to resolve a network DTC is unlikely to resolve the concern. To prevent repeat network DTC concerns, inspect all network wiring, especially connectors. Test the vehicle battery, refer to <a data-linkid="ID0ETHAE" data-sectnum="414-01" class="section-link">Section 
+          414-01</a><span id="spanID0ETHAE"></span>. 
+
+        </i></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                DTC 
+
+              </th>
+              <th align="center" valign="top">
+                Description 
+
+              </th>
+              <th align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                P0562:00 
+
+              </td>
+              <td valign="top">
+                System Voltage Low: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-searchnum="308-07A_s4p9301q702358:PS2-M" data-callfrom="procsub1" data-procuid="n1334637" class="publication-content" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test M</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0563:00 
+
+              </td>
+              <td valign="top">
+                System Voltage High: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-searchnum="308-07A_s4p9301q702358:PS2-M" data-callfrom="procsub1" data-procuid="n1334637" class="publication-content" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test M</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P185A:00 
+
+              </td>
+              <td valign="top">
+                Differential Lock-Up Input Switch Circuit High: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-Y" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test Y</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P185B:00 
+
+              </td>
+              <td valign="top">
+                Differential Lock-Up Indicator Circuit Low: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-Z" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test Z</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P185C:00 
+
+              </td>
+              <td valign="top">
+                Differential Lock-Up Indicator Circuit High: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-AA" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test AA</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P185D:00 
+
+              </td>
+              <td valign="top">
+                Differential Lock-Up Control Circuit Performance: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-AB" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test AB</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P187C:00 
+
+              </td>
+              <td valign="top">
+                Differential Lock-Up Control Circuit/Open: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-AC" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test AC</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P187D:00 
+
+              </td>
+              <td valign="top">
+                Differential Lock-Up Control Circuit Low: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-AC" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test AC</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P187E:00 
+
+              </td>
+              <td valign="top">
+                Differential Lock-Up Control Circuit High: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-AD" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test AD</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0100:00 
+
+              </td>
+              <td valign="top">
+                Lost Communication With ECM/PCM "A": No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-AE" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test AE</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0121:00 
+
+              </td>
+              <td valign="top">
+                Lost Communication With Anti-Lock Brake System (ABS) Control Module: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-AF" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test AF</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0140:00 
+
+              </td>
+              <td valign="top">
+                Lost Communication With Body Control Module (BCM): No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#PS2-AG" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test AG</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U0418:00 
+
+              </td>
+              <td valign="top">
+                Invalid Data Received From Brake System Control Module: No Sub Type Information 
+
+              </td>
+              <td valign="top">
+                REFER to <a data-linkid="ID0E5SAE" data-sectnum="206-09" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          206-09</a><span id="spanID0E5SAE" xmlns:str="http://xsltsl.org/string"></span> to diagnose the wheel speed sensor concern. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2300:54 
+
+              </td>
+              <td valign="top">
+                Central Configuration: Missing Calibration 
+
+              </td>
+              <td valign="top">
+                This DTC can set if one or more expected configuration data identifications is missing (gearbox type, tire circumference) from the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> . CARRY OUT a self-test of the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> . If DTCs are present, REFER to <a data-linkid="ID0EGUAE" data-sectnum="419-10" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-10</a><span id="spanID0EGUAE" xmlns:str="http://xsltsl.org/string"></span>. If no DTCs are present, CLEAR the DTCs. CARRY OUT a self-test. If U2300:54 returns, INSTALL a new <abbr title="Transfer Case Control Module" xmlns:str="http://xsltsl.org/string">TCCM</abbr> . REFER to <a data-linkid="ID0ERUAE" data-for="308-07A_s3p705375q0" data-procuid="n1128203" class="expand-link" xmlns:str="http://xsltsl.org/string">Transfer Case Control Module (TCCM)</a><span id="spanID0ERUAE" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2300:55 
+
+              </td>
+              <td valign="top">
+                Central Configuration: Not Configured 
+
+              </td>
+              <td valign="top">
+                This DTC can set upon power up only until all expected configuration data parameters (gearbox type, axle ratio, tire circumference) is received from the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> . CARRY OUT a self-test of the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> . If DTCs are present, REFER to <a data-linkid="ID0EYVAE" data-sectnum="419-10" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-10</a><span id="spanID0EYVAE" xmlns:str="http://xsltsl.org/string"></span>. If no DTCs are present, CLEAR the DTCs. CARRY OUT self-test. If U2300:55 returns, INSTALL a new <abbr title="Transfer Case Control Module" xmlns:str="http://xsltsl.org/string">TCCM</abbr> . REFER to <a data-linkid="ID0EDWAE" data-for="308-07A_s3p705375q0" data-procuid="n1128203" class="expand-link" xmlns:str="http://xsltsl.org/string">Transfer Case Control Module (TCCM)</a><span id="spanID0EDWAE" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2300:56 
+
+              </td>
+              <td valign="top">
+                Central Configuration: Invalid / Incompatible Configuration 
+
+              </td>
+              <td valign="top">
+                This DTC can set if one expected configuration data parameter is out of range (gearbox type, axle ratio, tire circumference) from the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> . CARRY OUT a self-test of the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> . If DTCs are present, REFER to <a data-linkid="ID0EKXAE" data-sectnum="419-10" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-10</a><span id="spanID0EKXAE" xmlns:str="http://xsltsl.org/string"></span>. If no DTCs are present, CLEAR the DTCs. CARRY OUT a self-test. If U2300:56 returns, INSTALL a new <abbr title="Transfer Case Control Module" xmlns:str="http://xsltsl.org/string">TCCM</abbr> . REFER to <a data-linkid="ID0EVXAE" data-for="308-07A_s3p705375q0" data-procuid="n1128203" class="expand-link" xmlns:str="http://xsltsl.org/string">Transfer Case Control Module (TCCM)</a><span id="spanID0EVXAE" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U2300:64 
+
+              </td>
+              <td valign="top">
+                Central Configuration: Signal Plausibility Failure 
+
+              </td>
+              <td valign="top">
+                This DTC can set if the expected axle ratio or tire circumference is out of range from the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> . CARRY OUT a self-test of the <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> . If DTCs are present, REFER to <a data-linkid="ID0E3YAE" data-sectnum="419-10" class="section-link" xmlns:str="http://xsltsl.org/string">Section 
+          419-10</a><span id="spanID0E3YAE" xmlns:str="http://xsltsl.org/string"></span>. If no DTCs are present, CLEAR the DTCs. CARRY OUT a self-test. If U2300:64 returns, INSTALL a new <abbr title="Transfer Case Control Module" xmlns:str="http://xsltsl.org/string">TCCM</abbr> . REFER to <a data-linkid="ID0EHZAE" data-for="308-07A_s3p705375q0" data-procuid="n1128203" class="expand-link" xmlns:str="http://xsltsl.org/string">Transfer Case Control Module (TCCM)</a><span id="spanID0EHZAE" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:41 
+
+              </td>
+              <td valign="top">
+                Control Module: General Checksum Failure 
+
+              </td>
+              <td valign="top">
+                CLEAR the DTC. REPEAT the self-test. If DTC U3000:41 is retrieved, INSTALL a new <abbr title="Transfer Case Control Module" xmlns:str="http://xsltsl.org/string">TCCM</abbr> . REFER to <a data-linkid="ID0EI1AE" data-for="308-07A_s3p705375q0" data-procuid="n1128203" class="expand-link" xmlns:str="http://xsltsl.org/string">Transfer Case Control Module (TCCM)</a><span id="spanID0EI1AE" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:46 
+
+              </td>
+              <td valign="top">
+                Control Module: Calibration / Parameter Memory Failure 
+
+              </td>
+              <td valign="top">
+                CLEAR the DTC. REPEAT the self-test. If DTC U3000:46 is retrieved, INSTALL a new <abbr title="Transfer Case Control Module" xmlns:str="http://xsltsl.org/string">TCCM</abbr> . REFER to <a data-linkid="ID0EJ2AE" data-for="308-07A_s3p705375q0" data-procuid="n1128203" class="expand-link" xmlns:str="http://xsltsl.org/string">Transfer Case Control Module (TCCM)</a><span id="spanID0EJ2AE" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U3000:49 
+
+              </td>
+              <td valign="top">
+                Control Module: Internal Electronic Failure 
+
+              </td>
+              <td valign="top">
+                CLEAR the DTC. REPEAT the self-test. If DTC U3000:49 is retrieved, INSTALL a new <abbr title="Transfer Case Control Module" xmlns:str="http://xsltsl.org/string">TCCM</abbr> . REFER to <a data-linkid="ID0EK3AE" data-for="308-07A_s3p705375q0" data-procuid="n1128203" class="expand-link" xmlns:str="http://xsltsl.org/string">Transfer Case Control Module (TCCM)</a><span id="spanID0EK3AE" xmlns:str="http://xsltsl.org/string"></span> in this section. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                U300D:11 
+
+              </td>
+              <td valign="top">
+                Ignition Input On/Start: Circuit Short To Ground 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-searchnum="308-07A_s4p9301q702358:PS2-L" data-callfrom="procsub1" data-procuid="n1334637" class="publication-content" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test L</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                All other <abbr title="Transfer Case Control Module" xmlns:str="http://xsltsl.org/string">TCCM</abbr>  DTCs 
+
+              </td>
+              <td valign="top">
+                — 
+
+              </td>
+              <td valign="top">
+                REFER to the <abbr title="Transfer Case Control Module" xmlns:str="http://xsltsl.org/string">TCCM</abbr>  DTC Chart in of this section. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart — Electronic Locking Differential (ELD) System 
+</b></p>
+      <a name="SC5" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>No communication with the <abbr title="Transfer Case Control Module">TCCM</abbr> </li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Scan tool 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Data Link Connector">DLC</abbr> 
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Transfer Case Control Module">TCCM</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>CHECK the module communications network. REFER to <a data-linkid="ID0EWAAG" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EWAAG"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Rear wheels binding when turning corners with the <abbr title="Mode Select Switch">MSS</abbr>  in <abbr title="2-Wheel Drive">2WD</abbr>  or OFF 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Electronic Locking Differential">ELD</abbr>  field coil 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Transfer Case Control Module">TCCM</abbr> 
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Rear differential 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#PS2-AD">GO to Pinpoint Test AD</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_5" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <a name="procsub2_2" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-Y" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test Y: DTC P185A:00 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','034')">34</a> , Four-Wheel Drive Systems for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the <abbr title="Mode Select Switch">MSS</abbr>  is engaged to lock the rear differential, the <abbr title="Transfer Case Control Module">TCCM</abbr>  sends a voltage signal through the <abbr title="Mode Select Switch">MSS</abbr>  to ground pulling the voltage low. When the <abbr title="Transfer Case Control Module">TCCM</abbr>  senses the voltage is low it activates the <abbr title="Electronic Locking Differential">ELD</abbr> . 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC P185A:00 (Differential Lock-Up Input Switch Circuit High: No Sub Type Information) — When not in locking mode, the <abbr title="Transfer Case Control Module">TCCM</abbr>  senses whether the <abbr title="Electronic Locking Differential">ELD</abbr>  mode switch circuit has low voltage and if the differential is always engaged. This DTC will not set unless the <abbr title="Mode Select Switch">MSS</abbr>  is set to 2H or OFF. If the <abbr title="Electronic Locking Differential">ELD</abbr>  is functioning normally, the differential will immediately lock when the <abbr title="Mode Select Switch">MSS</abbr>  is activated and the <abbr title="Electronic Locking Differential">ELD</abbr>  operating conditions are qualified. This DTC will only display during the self-test function. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">This pinpoint test is intended to diagnose the following: 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            
+              <abbr title="Mode Select Switch">MSS</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Transfer Case Control Module">TCCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="Y" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST Y : DTC P185A:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTE: </b><i>
+            Make sure the battery is fully charged before carrying out this pinpoint test. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="Y1" data-ajax="false"></a><b>Y1 
+                CHECK FOR TCCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                Failure to place the <abbr title="Mode Select Switch">MSS</abbr>  in 2H or OFF prior to carrying out a self-test of the <abbr title="Transfer Case Control Module">TCCM</abbr>  (to disable the <abbr title="Electronic Locking Differential">ELD</abbr>  field coil) results in an inaccurate self-test. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Set the <abbr title="Mode Select Switch">MSS</abbr>  in 2H (<abbr title="Electronic Shift-On-The-Fly">ESOF</abbr>  or 2 speed-torque-on-demand). 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Set the <abbr title="Mode Select Switch">MSS</abbr>  in OFF (<abbr title="2-Wheel Drive">2WD</abbr> ). 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self-Test — <abbr title="Transfer Case Control Module">TCCM</abbr> .
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any DTCs present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                If only DTC P185A:00 is retrieved, GO to <a data-ajax="false" href="#Y2">Y2</a>. 
+
+                <br>For any other DTCs, REFER to the <abbr title="Transfer Case Control Module">TCCM</abbr>  DTC Chart in this section. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                IDENTIFY the customer concern and GO to <a data-ajax="false" href="#SC5">Symptom Chart — Electronic Locking Differential (ELD) System</a> in this section. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="Y2" data-ajax="false"></a><b>Y2 
+                CHECK FOR A SHORT TO GROUND ON THE LOCKER MODE SWITCH CIRCUIT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Transfer Case Control Module">TCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2371A','')">C2371A</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Mode Select Switch">MSS</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C284','')">C284</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Mode Select Switch">MSS</abbr> <a href="javascript:connectorlinkwithpin('ED2','C284','5')">C284</a> Pin 5, , circuit CCF32 (WH/GN), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=n0161180&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#Y3">Y3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit.. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="Y3" data-ajax="false"></a><b>Y3 
+                CHECK THE LOCKER MODE SWITCH GROUND CIRCUIT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Mode Select Switch">MSS</abbr> <a href="javascript:connectorlinkwithpin('ED2','C284','1')">C284</a> Pin 1, circuit GD133 (BK), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0161165&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 3 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#Y4">Y4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="Y4" data-ajax="false"></a><b>Y4 
+                CHECK FOR A STUCK MSS </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Mode Select Switch">MSS</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C284','')">C284</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Activating and deactivating the <abbr title="Mode Select Switch">MSS</abbr> , measure the resistance between <abbr title="Transfer Case Control Module">TCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2371A','15')">C2371A</a> Pin 15, circuit CCF32 (WH/GN), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=E181447-enusa&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 3 ohms with the <abbr title="Mode Select Switch">MSS</abbr>  activated and greater than 10,000 ohms with the <abbr title="Mode Select Switch">MSS</abbr>  de-activated? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#Y5">Y5</a>
+                
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Mode Select Switch">MSS</abbr> . REFER to <a data-linkid="ID0EUUAG" data-for="308-07A_s3p9302q0" data-procuid="n1125768" class="expand-link">Mode Select Switch (MSS)</a><span id="spanID0EUUAG"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="Y5" data-ajax="false"></a><b>Y5 
+                CHECK FOR CORRECT TCCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect and inspect all <abbr title="Transfer Case Control Module">TCCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Repair: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion (install new connector or terminals - clean module pins) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged or bent pins - install new terminals/pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins - install new pins as necessary 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all <abbr title="Transfer Case Control Module">TCCM</abbr>  connectors. Make sure they are seated correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Transfer Case Control Module">TCCM</abbr> . REFER to <a data-linkid="ID0EYXAG" data-for="308-07A_s3p705375q0" data-procuid="n1128203" class="expand-link">Transfer Case Control Module (TCCM)</a><span id="spanID0EYXAG"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. ADDRESS the root cause of the connector or pin issues. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_3" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-Z" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test Z: DTC P185B:00 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','034')">34</a> , Four-Wheel Drive Systems for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the <abbr title="Mode Select Switch">MSS</abbr>  is engaged to lock the rear differential, a <abbr title="Pulse Width Modulated">PWM</abbr>  signal is sent to the <abbr title="Electronic Locking Differential">ELD</abbr>  field coil by the <abbr title="Transfer Case Control Module">TCCM</abbr>  through the differential lock control circuit. This <abbr title="Pulse Width Modulated">PWM</abbr>  signal is initially 98% duty cycle to lock the differential and decreases to 40% duty cycle once the differential is locked. If the differential does not lock, the <abbr title="Transfer Case Control Module">TCCM</abbr>  continues to send the signal for a set amount of time. Once the differential is locked, the indicator will illuminate steady. 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC P185B:00 (Differential Lock-Up Indicator Circuit Low: No Sub Type Information) — When not in locking mode, the <abbr title="Transfer Case Control Module">TCCM</abbr>  C2371A-20 senses the indicator circuit is shorted to ground and the indicator is always illuminated. This DTC should not set for an open circuit. 
+
+          </li>
+        </ul>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            
+              <abbr title="Transfer Case Control Module">TCCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="Z" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST Z : DTC P185B:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTE: </b><i>
+            Make sure the battery is fully charged before performing this pinpoint test. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="Z1" data-ajax="false"></a><b>Z1 
+                CHECK THE TCCM 4WD  SWITCH STATUS (4X4_SW) PID 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — <abbr title="Transfer Case Control Module">TCCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Set the <abbr title="Mode Select Switch">MSS</abbr>  to 4H and pull the knob to lock the rear differential. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Monitor the 4X4_SW PID. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the 4X4_SW PID indicate 4H mode? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#Z2">Z2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Mode Select Switch">MSS</abbr> . REFER to <a data-linkid="ID0EO5AG" data-for="308-07A_s3p9302q0" data-procuid="n1125768" class="expand-link">Mode Select Switch (MSS)</a><span id="spanID0EO5AG"></span> in this section. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="Z2" data-ajax="false"></a><b>Z2 
+                CHECK THE REAR ELD  INDICATOR CIRCUIT FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Transfer Case Control Module">TCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2371A','')">C2371A</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Mode Select Switch">MSS</abbr> 
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Transfer Case Control Module">TCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2371A','20')">C2371A</a> Pin 20, circuit CCF33 (GY/YE), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=n0090963&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#Z3">Z3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CCF33 (GY/YE). CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="Z3" data-ajax="false"></a><b>Z3 
+                CHECK FOR CORRECT TCCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect and inspect all <abbr title="Transfer Case Control Module">TCCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Repair: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion (install new connector or terminals - clean module pins) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged or bent pins - install new terminals/pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins - install new pins as necessary 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all <abbr title="Transfer Case Control Module">TCCM</abbr>  connectors. Make sure they are seated correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Transfer Case Control Module">TCCM</abbr> . REFER to <a data-linkid="ID0E5EBG" data-for="308-07A_s3p705375q0" data-procuid="n1128203" class="expand-link">Transfer Case Control Module (TCCM)</a><span id="spanID0E5EBG"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. ADDRESS the root cause of the connector or pin issues. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_4" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-AA" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test AA: DTC P185C:00 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','034')">34</a> , Four-Wheel Drive Systems for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the <abbr title="Mode Select Switch">MSS</abbr>  is engaged to lock the rear differential, a <abbr title="Pulse Width Modulated">PWM</abbr>  signal is sent to the <abbr title="Electronic Locking Differential">ELD</abbr>  field coil by the <abbr title="Transfer Case Control Module">TCCM</abbr>  through the differential lock control circuit. This <abbr title="Pulse Width Modulated">PWM</abbr>  signal is initially 98% duty cycle to lock the differential and decreases to 40% duty cycle once the differential is locked. When the differential is fully locked, the indicator will illuminate steady. 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC P185C:00 (Differential Lock-Up Indicator Circuit High: No Sub Type Information) — When the driver engages the <abbr title="Electronic Locking Differential">ELD</abbr>  the <abbr title="Transfer Case Control Module">TCCM</abbr>  C2371A-20 senses the indicator circuit has high voltage and is not illuminated. 
+
+          </li>
+        </ul>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            
+              <abbr title="Transfer Case Control Module">TCCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="AA" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST AA : DTC P185C:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTE: </b><i>
+            Make sure the battery is fully charged before performing this pinpoint test. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AA1" data-ajax="false"></a><b>AA1 
+                OPERATE THE ELD  INDICATOR USING THE TCCM  REAR LOCKING DIFF LAMP OUTPUT CONTROL OPTIONAL (DIFF_LAMP_OS) PID 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — <abbr title="Transfer Case Control Module">TCCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Command the DIFF_LAMP_OS PID on. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the <abbr title="Electronic Locking Differential">ELD</abbr>  indicator in the <abbr title="Mode Select Switch">MSS</abbr>  illuminate? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AA5">AA5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AA2">AA2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AA2" data-ajax="false"></a><b>AA2 
+                CHECK THE ELD  INDICATOR CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Transfer Case Control Module">TCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2371A','')">C2371A</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Mode Select Switch">MSS</abbr> 
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between <abbr title="Transfer Case Control Module">TCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2371A','20')">C2371A</a> Pin 20, circuit CCF33 (GY/YE), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=n0090961&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR circuit CCF33 (GY/YE). CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AA3">AA3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AA3" data-ajax="false"></a><b>AA3 
+                CHECK FOR VOLTAGE TO THE MSS </b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure and record the battery voltage at the battery. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=AJ0210a&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between <abbr title="Mode Select Switch">MSS</abbr> <a href="javascript:connectorlinkwithpin('ED2','C284','7')">C284</a> Pin 7, circuit CBP34 (VT/BN), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=n0090958&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the voltage equal the recorded battery voltage? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AA4">AA4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                VERIFY <abbr title="Body Control Module">BCM</abbr>  fuse 34 (10A) is OK. If OK, REPAIR circuit CBP34 (VT/BN). If not OK, REFER to the Wiring Diagrams manual to identify the possible causes of the circuit short. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AA4" data-ajax="false"></a><b>AA4 
+                CHECK THE TCCM  GROUND CIRCUIT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Transfer Case Control Module">TCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2371B','')">C2371B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <a href="javascript:connectorlinkwithpin('ED2','C2371B','3')">C2371B</a> Pin 3, circuit GD123 (BK/GY), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=n0090962&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 3 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AA5">AA5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit GD123 (BK/GY). CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AA5" data-ajax="false"></a><b>AA5 
+                CHECK FOR CORRECT TCCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect and inspect all <abbr title="Transfer Case Control Module">TCCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Repair: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion (install new connector or terminals - clean module pins) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged or bent pins - install new terminals/pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins - install new pins as necessary 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all <abbr title="Transfer Case Control Module">TCCM</abbr>  connectors. Make sure they are seated correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Transfer Case Control Module">TCCM</abbr> . REFER to <a data-linkid="ID0EBXBG" data-for="308-07A_s3p705375q0" data-procuid="n1128203" class="expand-link">Transfer Case Control Module (TCCM)</a><span id="spanID0EBXBG"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. ADDRESS the root cause of the connector or pin issues. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_5" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-AB" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test AB: DTC P185D:00 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','034')">34</a> , Four-Wheel Drive Systems for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the <abbr title="Mode Select Switch">MSS</abbr>  is engaged to lock the rear differential, a <abbr title="Pulse Width Modulated">PWM</abbr>  signal is sent to the <abbr title="Electronic Locking Differential">ELD</abbr>  field coil by the <abbr title="Transfer Case Control Module">TCCM</abbr>  through the differential lock control circuit. This <abbr title="Pulse Width Modulated">PWM</abbr>  signal is initially 98% duty cycle to lock the differential and decreases to 40% duty cycle once the differential is locked. If the differential does not lock, the <abbr title="Transfer Case Control Module">TCCM</abbr>  continues to send the signal for a set amount of time. Once the differential is locked, the indicator will illuminate steady. 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC P185D:00 (Differential Lock-up Control Circuit Performance: No Sub Type Information) — The <abbr title="Transfer Case Control Module">TCCM</abbr>  sends a signal to the lock up solenoid to lock the differential. After several unsuccessful attempts, the <abbr title="Transfer Case Control Module">TCCM</abbr>  sets this DTC alerting the driver the <abbr title="Electronic Locking Differential">ELD</abbr>  is inoperative. Fault may be due to a wheel speed condition or due to a mechanical failure within the driveline/axle subsystem. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">This pinpoint test is intended to diagnose the following: 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            
+              <abbr title="Electronic Locking Differential">ELD</abbr>  field coil 
+
+          </li>
+        </ul>
+        <a name="AB" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST AB : DTC P185D:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTE: </b><i>
+            Make sure the battery is fully charged before carrying out this pinpoint test. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AB1" data-ajax="false"></a><b>AB1 
+                CHECK THE ABS MODULE WHEEL SPEED SENSOR PIDS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — ABS Module 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                While driving the vehicle at 30 km/h (18 mph), monitor the following wheel speed sensor PIDs: 
+
+                <ul style="list-style-type: square">
+                  <li>
+                    Left Front Wheel Speed Sensor (LF_WSPD) 
+
+                  </li>
+                  <li>
+                    Left Rear Wheel Speed Sensor (LR_WSPD) 
+
+                  </li>
+                  <li>
+                    Right Front Wheel Speed Sensor (RF_WSPD) 
+
+                  </li>
+                  <li>
+                    Right Rear Wheel Speed Sensor (RR_WSPD) 
+
+                  </li>
+                </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Compare the speedometer reading to the wheel speed sensor PIDs. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Do the wheel speed sensor PIDs and speedometer speeds match within 1.5 km/h (1 mph)? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AB2">AB2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                VERIFY that the 4 road wheels are the same size and have similar tread depth. CHECK the ABS for faults. REFER to <a data-linkid="ID0EX4BG" data-sectnum="206-09" class="section-link">Section 
+          206-09</a><span id="spanID0EX4BG"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AB2" data-ajax="false"></a><b>AB2 
+                CHECK RESISTANCE OF THE ELD  FIELD COIL 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Electronic Locking Differential">ELD</abbr>  Field Coil 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                <b>NOTE: </b><i>
+                   If the temperatures are exceptionally high, a higher than normal resistance reading could result. A lower temperature could result in a lower resistance reading. 
+
+                </i><p class="singlespace"></p>
+                Measure the resistance between <abbr title="Electronic Locking Differential">ELD</abbr>  field coil C4359 pins 1 and 2, component side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0091387&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance between 2-4 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AB3">AB3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Electronic Locking Differential">ELD</abbr>  field coil. REFER to <a data-linkid="ID0E4AAI" data-sectnum="205-02B" class="section-link">Section 
+          205-02B</a><span id="spanID0E4AAI"></span>. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AB3" data-ajax="false"></a><b>AB3 
+                CHECK THE ELD  FIELD COIL GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Electronic Locking Differential">ELD</abbr>  field coil <a href="javascript:connectorlinkwithpin('ED2','C4359','2')">C4359</a> Pin 2, circuit GD123 (BK/GY), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=n0090955&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 3 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EXCAI" data-sectnum="205-02B" class="section-link">Section 
+          205-02B</a><span id="spanID0EXCAI"></span> to repair the rear differential. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit GD123 (BK/GY). CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_6" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-AC" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test AC: DTC P187C:00 and P187D:00 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','034')">34</a> , Four-Wheel Drive Systems for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the <abbr title="Mode Select Switch">MSS</abbr>  is engaged to lock the rear differential, a <abbr title="Pulse Width Modulated">PWM</abbr>  signal is sent to the <abbr title="Electronic Locking Differential">ELD</abbr>  field coil by the <abbr title="Transfer Case Control Module">TCCM</abbr>  through the differential lock control circuit. This <abbr title="Pulse Width Modulated">PWM</abbr>  signal is initially 98% duty cycle to lock the differential and decreases to 40% duty cycle once the differential is locked. If the differential lock control circuit is open or shorted to ground, the <abbr title="Transfer Case Control Module">TCCM</abbr>  senses a signal is not reaching the differential and sets a DTC. 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC P187C:00 (Differential Lock-Up Control Circuit/Open: No Sub Type Information) — The <abbr title="Transfer Case Control Module">TCCM</abbr>  sends a signal to the differential to lock the differential. The <abbr title="Transfer Case Control Module">TCCM</abbr>  C2371B pin 9 senses that the differential lock control circuit is open. The <abbr title="Electronic Locking Differential">ELD</abbr>  differential is not engaged. 
+
+          </li>
+          <li>
+            DTC P187D:00 (Differential Lock-Up Control Circuit Low: No Sub Type Information) — The <abbr title="Transfer Case Control Module">TCCM</abbr>  sends a signal to lock the differential. The <abbr title="Transfer Case Control Module">TCCM</abbr>  C2371B pin 9 senses that the differential lock control circuit is shorted to ground. The <abbr title="Electronic Locking Differential">ELD</abbr>  differential is not engaged. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">This pinpoint test is intended to diagnose the following: 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            
+              <abbr title="Transfer Case Control Module">TCCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="AC" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST AC : DTC P187C:00 AND P187D:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTE: </b><i>
+            Make sure the battery is fully charged before carrying out this pinpoint test. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AC1" data-ajax="false"></a><b>AC1 
+                CHECK FOR TCCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                Failure to place the <abbr title="Mode Select Switch">MSS</abbr>  in 2H or OFF prior to carrying out a self-test of the <abbr title="Transfer Case Control Module">TCCM</abbr>  (to disable the <abbr title="Electronic Locking Differential">ELD</abbr>  field coil) results in inaccurate self-test. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Set the <abbr title="Mode Select Switch">MSS</abbr>  in 2H (<abbr title="Electronic Shift-On-The-Fly">ESOF</abbr>  or 2 speed-torque-on-demand). 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Set the <abbr title="Mode Select Switch">MSS</abbr>  in OFF (<abbr title="2-Wheel Drive">2WD</abbr> ). 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self-Test — <abbr title="Transfer Case Control Module">TCCM</abbr> .
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any DTCs present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For DTC P187C:00, GO to <a data-ajax="false" href="#AC4">AC4</a>. 
+
+                <br>For DTC P187D:00, GO to <a data-ajax="false" href="#AC2">AC2</a>. 
+
+                <br>For all other DTCs, REFER to the <abbr title="Transfer Case Control Module">TCCM</abbr>  DTC Chart in this section. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                IDENTIFY the customer concern and GO to <a data-ajax="false" href="#SC5">Symptom Chart — Electronic Locking Differential (ELD) System</a> in this section. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AC2" data-ajax="false"></a><b>AC2 
+                CHECK FOR TCCM  DTCS WITH THE ELD  FIELD COIL DISCONNECTED 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Electronic Locking Differential">ELD</abbr>  Field Coil 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Set the <abbr title="Mode Select Switch">MSS</abbr>  in 2H (<abbr title="Electronic Shift-On-The-Fly">ESOF</abbr>  or 2 speed-torque-on-demand). 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Set the <abbr title="Mode Select Switch">MSS</abbr>  in OFF (<abbr title="2-Wheel Drive">2WD</abbr> ). 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self-Test — <abbr title="Transfer Case Control Module">TCCM</abbr> .
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                CLEAR the DTCs. REPEAT the self-test. Does DTC P187D:00 return? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AC3">AC3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new field coil. REFER to <a data-linkid="ID0EMQAI" data-sectnum="205-02B" class="section-link">Section 
+          205-02B</a><span id="spanID0EMQAI"></span>. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AC3" data-ajax="false"></a><b>AC3 
+                CHECK THE ELD  DIFFERENTIAL LOCK CONTROL CIRCUIT FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Transfer Case Control Module">TCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2371B','')">C2371B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Transfer Case Control Module">TCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2371B','9')">C2371B</a> Pin 9, circuit CCF31 (BN/VT), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=n0090960&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance greater than 10,000 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AC4">AC4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CCF31 (BN/VT). CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AC4" data-ajax="false"></a><b>AC4 
+                CHECK THE ELD  DIFFERENTIAL LOCK CONTROL CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Transfer Case Control Module">TCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2371B','')">C2371B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Electronic Locking Differential">ELD</abbr>  Field Coil 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Transfer Case Control Module">TCCM</abbr> <a href="javascript:connectorlinkwithpin('ED2','C2371B','9')">C2371B</a> Pin 9, circuit CCF31 (BN/VT), harness side and <abbr title="Electronic Locking Differential">ELD</abbr>  field coil <a href="javascript:connectorlinkwithpin('ED2','C4359','1')">C4359</a> Pin 1, circuit CCF31 (BN/VT), harness side. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=n0090956&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 3 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AC5">AC5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR circuit CCF31 (BN/VT). CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AC5" data-ajax="false"></a><b>AC5 
+                CHECK THE ELD  DIFFERENTIAL LOCK GROUND CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                
+                Measure the resistance between <abbr title="Electronic Locking Differential">ELD</abbr> <a href="javascript:connectorlinkwithpin('ED2','C4359','2')">C4359</a> Pin 2, harness side and ground 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0165201&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the resistance less than 3 ohms? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Electronic Locking Differential">ELD</abbr>  field coil. If concern still exists, GO to <a data-ajax="false" href="#AC6">AC6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REPAIR the circuit. CLEAR the DTCs. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AC6" data-ajax="false"></a><b>AC6 
+                CHECK FOR CORRECT TCCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect and inspect all <abbr title="Transfer Case Control Module">TCCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Repair: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion (install new connector or terminals - clean module pins) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged or bent pins - install new terminals/pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins - install new pins as necessary 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all <abbr title="Transfer Case Control Module">TCCM</abbr>  connectors. Make sure they are seated correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Transfer Case Control Module">TCCM</abbr> . REFER to <a data-linkid="ID0EG3AI" data-for="308-07A_s3p705375q0" data-procuid="n1128203" class="expand-link">Transfer Case Control Module (TCCM)</a><span id="spanID0EG3AI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. ADDRESS the root cause of the connector or pin issues. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_7" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-AD" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test AD: Rear Wheels Binding When Turning Corners With the <abbr title="Electronic Locking Differential">ELD</abbr>  OFF 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','034')">34</a> , Four-Wheel Drive Systems for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">When the <abbr title="Mode Select Switch">MSS</abbr>  is engaged to lock the rear differential, a <abbr title="Pulse Width Modulated">PWM</abbr>  signal is sent to the <abbr title="Electronic Locking Differential">ELD</abbr>  field coil by the <abbr title="Transfer Case Control Module">TCCM</abbr>  through the differential lock control circuit. This <abbr title="Pulse Width Modulated">PWM</abbr>  signal is initially 98% duty cycle to lock the differential and decreases to 40% duty cycle once the differential is locked. If the differential does not lock, the <abbr title="Transfer Case Control Module">TCCM</abbr>  continues to send the signal for a set amount of time. Once the differential is locked, the indicator will illuminate steady. 
+</p>
+        
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            DTC P187E:00 (Differential Lock-Up Control Circuit High: No Sub Type Information) — The <abbr title="Transfer Case Control Module">TCCM</abbr>  sends a signal to lock the differential. This DTC sets when the <abbr title="Transfer Case Control Module">TCCM</abbr>  C2371B-9 senses that the differential lock control circuit is shorted to battery voltage. The differential is constantly engaged. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">This pinpoint test is intended to diagnose the following: 
+</p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            Wiring, terminals or connectors 
+
+          </li>
+          <li>
+            
+              <abbr title="Electronic Locking Differential">ELD</abbr>  field coil 
+
+          </li>
+          <li>
+            
+              <abbr title="Transfer Case Control Module">TCCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="AD" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST AD : REAR WHEELS BINDING WHEN TURNING CORNERS WITH THE ELD  OFF 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b>NOTE: </b><i>
+            Make sure the battery is fully charged before carrying out this pinpoint test. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AD1" data-ajax="false"></a><b>AD1 
+                CHECK FOR VOLTAGE TO THE ELD  FIELD COIL 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Electronic Locking Differential">ELD</abbr>  Field Coil 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Set the <abbr title="Mode Select Switch">MSS</abbr>  in 2H (<abbr title="Electronic Shift-On-The-Fly">ESOF</abbr>  or 2 speed-torque-on-demand). 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Set the <abbr title="Mode Select Switch">MSS</abbr>  in OFF (<abbr title="2-Wheel Drive">2WD</abbr> ). 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between <abbr title="Electronic Locking Differential">ELD</abbr>  field coil <a href="javascript:connectorlinkwithpin('ED2','C4359','1')">C4359</a> Pin 1, circuit CCF31 (BN/VT), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=n0090954&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AD2">AD2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0E5EBI" data-sectnum="205-02B" class="section-link">Section 
+          205-02B</a><span id="spanID0E5EBI"></span> to repair the rear differential. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AD2" data-ajax="false"></a><b>AD2 
+                CHECK THE ELD  FIELD COIL CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect:  
+                    <abbr title="Transfer Case Control Module">TCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2371B','')">C2371B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                
+                Measure the voltage between field coil <a href="javascript:connectorlinkwithpin('ED2','C4359','1')">C4359</a> Pin 1, circuit CCF31 (BN/VT), harness side and ground. 
+
+              </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=n0090954&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is any voltage present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REPAIR circuit CCF31 (BN/VT). CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AD3">AD3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AD3" data-ajax="false"></a><b>AD3 
+                CHECK THE TCCM  REAR LOCKING DIFFERENTIAL PWM  OUTPUT CONTROL (DIFF_PWM_OS) PID 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Electronic Locking Differential">ELD</abbr>  Field Coil 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect:  
+                    <abbr title="Transfer Case Control Module">TCCM</abbr> 
+                    <a href="javascript:connectorlinkwithpin('ED2','C2371B','')">C2371B</a>
+                  .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — <abbr title="Transfer Case Control Module">TCCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                With the <abbr title="Mode Select Switch">MSS</abbr>  in 2H or OFF (depending upon vehicle option content), monitor the DIFF_PWM_OS PID. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the DIFF_PWM_OS PID read OFF? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AD4">AD4</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Mode Select Switch">MSS</abbr> . REFER to <a data-linkid="ID0EIMBI" data-for="308-07A_s3p9302q0" data-procuid="n1125768" class="expand-link">Mode Select Switch (MSS)</a><span id="spanID0EIMBI"></span> in this section. CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AD4" data-ajax="false"></a><b>AD4 
+                CHECK FOR CORRECT TCCM  OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Disconnect and inspect all <abbr title="Transfer Case Control Module">TCCM</abbr>  connectors. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Repair: 
+
+                <ul style="list-style-type: square">
+            <li>
+                  corrosion (install new connector or terminals - clean module pins) 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  damaged or bent pins - install new terminals/pins 
+
+                </li>
+          </ul>
+                <ul style="list-style-type: square">
+            <li>
+                  pushed-out pins - install new pins as necessary 
+
+                </li>
+          </ul>
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Connect all <abbr title="Transfer Case Control Module">TCCM</abbr>  connectors. Make sure they are seated correctly. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Operate the system and verify the concern is still present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is the concern still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Transfer Case Control Module">TCCM</abbr> . REFER to <a data-linkid="ID0EMPBI" data-for="308-07A_s3p705375q0" data-procuid="n1128203" class="expand-link">Transfer Case Control Module (TCCM)</a><span id="spanID0EMPBI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. ADDRESS the root cause of the connector or pin issues. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_8" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-AE" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test AE: DTC U0100:00 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U0100:00 (Lost Communication With ECM/PCM "A": No Sub-Type Information) — sets in continuous memory in the <abbr title="Transfer Case Control Module">TCCM</abbr>  if data messages received from the PCM over the <abbr title="High Speed Controller Area Network">HS-CAN</abbr>  are missing for 5 seconds or longer with ignition in RUN and battery voltage in range. For a complete list of all network messages, refer to <a data-linkid="ID0EXQBI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EXQBI"></span>. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            PCM 
+
+          </li>
+          <li>
+            
+              <abbr title="Transfer Case Control Module">TCCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="AE" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST AE : DTC U0100:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="AE1" data-ajax="false"></a><b>AE1 
+                CHECK THE TCCM  CONTINUOUS MEMORY DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  
+                    <abbr title="Transfer Case Control Module">TCCM</abbr>  Self-Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait 10 seconds. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Repeat the <abbr title="Transfer Case Control Module">TCCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0100:00 retrieved again? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AE2">AE2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AE2" data-ajax="false"></a><b>AE2 
+                RETRIEVE THE RECORDED DTCS FROM THE PCM KOEO  SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for recorded DTCs from the PCM <abbr title="Key ON Engine OFF">KOEO</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC P0562:00 or P0563:00 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0ECWBI" data-sectnum="414-00" class="section-link">Section 
+          414-00</a><span id="spanID0ECWBI"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AE3">AE3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AE3" data-ajax="false"></a><b>AE3 
+                RETRIEVE THE RECORDED DTCS FROM THE TCCM  SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for recorded DTCs from the <abbr title="Transfer Case Control Module">TCCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC P0562:00 or P0563:00 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-searchnum="308-07A_s4p9301q702358:PS2-M" data-callfrom="procsub1" data-procuid="n1334637" class="publication-content">GO to Pinpoint Test M</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AE4">AE4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AE4" data-ajax="false"></a><b>AE4 
+                CHECK FOR DTC U0100:00 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self-Test — All <abbr title="Continuous Memory Diagnostic Trouble Codes">CMDTCs</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve the continuous memory DTCs from all modules. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0100:00 in the <abbr title="Restraints Control Module">RCM</abbr> , or DTC U0100:87 in the <abbr title="Body Control Module">BCM</abbr> ? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new PCM. REFER to <a data-linkid="ID0EU1BI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EU1BI"></span>. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Transfer Case Control Module">TCCM</abbr> . REFER to <a data-linkid="ID0EI2BI" data-for="308-07A_s3p705375q0" data-procuid="n1128203" class="expand-link">Transfer Case Control Module (TCCM)</a><span id="spanID0EI2BI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_9" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-AF" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test AF: DTC U0121:00 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U0121:00 (Lost Communication With Anti-Lock Brake System (ABS) Control Module: No Sub-Type Information) — sets in continuous memory in the <abbr title="Transfer Case Control Module">TCCM</abbr>  if data messages received from the ABS module over the <abbr title="High Speed Controller Area Network">HS-CAN</abbr>  are missing for 5 seconds or longer with ignition in RUN and battery voltage in range. For a complete list of all network messages, refer to <a data-linkid="ID0EL3BI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EL3BI"></span>. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            ABS module 
+
+          </li>
+          <li>
+            
+              <abbr title="Transfer Case Control Module">TCCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="AF" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST AF : DTC U0121:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="AF1" data-ajax="false"></a><b>AF1 
+                VERIFY THE CUSTOMER CONCERN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Verify there is an observable symptom present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is an observable symptom present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AF2">AF2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AF2" data-ajax="false"></a><b>AF2 
+                CHECK THE COMMUNICATION NETWORK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Network Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Carry out the network test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the ABS module pass the network test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AF3">AF3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0E2ACI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0E2ACI"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AF3" data-ajax="false"></a><b>AF3 
+                RETRIEVE THE RECORDED DTCS FROM THE ABS MODULE SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for recorded DTCs from the ABS module self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC B11E8:16 (B1318) or DTC B11E8:17 (B1317) recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EACCI" data-sectnum="206-09" class="section-link">Section 
+          206-09</a><span id="spanID0EACCI"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AF4">AF4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AF4" data-ajax="false"></a><b>AF4 
+                RETRIEVE THE RECORDED DTCS FROM THE TCCM  SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for recorded DTCs from the <abbr title="Transfer Case Control Module">TCCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC P0562:00 or P0563:00 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  <a data-searchnum="308-07A_s4p9301q702358:PS2-M" data-callfrom="procsub1" data-procuid="n1334637" class="publication-content">GO to Pinpoint Test M</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AF5">AF5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AF5" data-ajax="false"></a><b>AF5 
+                RECHECK THE TCCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during the <abbr title="Programmable Module Installation">PMI</abbr>  or the <abbr title="Programmable Module Installation">PMI</abbr>  may not have been carried out. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait 10 seconds. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Repeat the <abbr title="Transfer Case Control Module">TCCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0121:00 still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                INSTALL a new ABS module. REFER to <a data-linkid="ID0EYGCI" data-sectnum="206-09" class="section-link">Section 
+          206-09</a><span id="spanID0EYGCI"></span>. CLEAR the DTCs. REPEAT the <abbr title="Transfer Case Control Module">TCCM</abbr>  self-test. 
+
+              <br>
+                If DTC U0121:00 is still present, INSTALL a new <abbr title="Transfer Case Control Module">TCCM</abbr> . REFER to <a data-linkid="ID0EPHCI" data-for="308-07A_s3p705375q0" data-procuid="n1128203" class="expand-link">Transfer Case Control Module (TCCM)</a><span id="spanID0EPHCI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_10" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-AG" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test AG: DTC U0140:00 
+</b></p>
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            DTC U0140:00 (Lost Communication With Body Control Module: No Sub-Type Information) — sets in continuous memory in the <abbr title="Transfer Case Control Module">TCCM</abbr>  if data messages received from the <abbr title="Body Control Module">BCM</abbr>  over the <abbr title="High Speed Controller Area Network">HS-CAN</abbr>  are missing for 5 seconds or longer with ignition in RUN and battery voltage in range. For a complete list of all network messages, refer to <a data-linkid="ID0EAJCI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EAJCI"></span>. 
+
+          </li>
+        </ul>
+        <p xmlns:str="http://xsltsl.org/string">
+          <b>This pinpoint test is intended to diagnose the following:</b>
+        </p>
+        <ul type="disc" xmlns:str="http://xsltsl.org/string">
+          <li>
+            
+              <abbr title="Body Control Module">BCM</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Transfer Case Control Module">TCCM</abbr> 
+            
+          </li>
+        </ul>
+        <a name="AG" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST AG : DTC U0140:00 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td class="gray"><a name="AG1" data-ajax="false"></a><b>AG1 
+                VERIFY THE CUSTOMER CONCERN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Verify there is an observable symptom present. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is an observable symptom present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AG2">AG2</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating normally at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AG2" data-ajax="false"></a><b>AG2 
+                CHECK THE COMMUNICATION NETWORK 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Network Test 
+.
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Carry out the network test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the pass the network test? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AG3">AG3</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EXNCI" data-sectnum="418-00" class="section-link">Section 
+          418-00</a><span id="spanID0EXNCI"></span>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AG3" data-ajax="false"></a><b>AG3 
+                RETRIEVE THE RECORDED DTCS FROM THE BCM  SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for recorded DTCs from the <abbr title="Body Control Module">BCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U3003:16 or DTC U3003:17 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  <a data-linkid="ID0EKPCI" data-sectnum="419-10" class="section-link">Section 
+          419-10</a><span id="spanID0EKPCI"></span>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AG4">AG4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AG4" data-ajax="false"></a><b>AG4 
+                RETRIEVE THE RECORDED DTCS FROM THE TCCM  SELF-TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Check for recorded DTCs from the <abbr title="Transfer Case Control Module">TCCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC P0562:00 or P0563:00 recorded? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  <a data-searchnum="308-07A_s4p9301q702358:PS2-M" data-callfrom="procsub1" data-procuid="n1334637" class="publication-content">GO to Pinpoint Test M</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AG5">AG5</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AG5" data-ajax="false"></a><b>AG5 
+                RECHECK THE TCCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <p class="singlespace"><b>NOTE: </b><i>
+                If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during the or the may not have been carried out. 
+
+              </i></p>
+              <ul class="nospace">
+        <li>
+                Clear the DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait 10 seconds. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Repeat the <abbr title="Transfer Case Control Module">TCCM</abbr>  self-test. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0140:00 still present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AG6">AG6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AG6" data-ajax="false"></a><b>AG6 
+                CHECK FOR DTC U0140 OR DTC U0140:00 SET IN OTHER MODULES 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Clear all DTCs. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition OFF. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Wait 10 seconds. 
+
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self-Test — All <abbr title="Continuous Memory Diagnostic Trouble Codes">CMDTCs</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Retrieve the continuous memory DTCs from all modules. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Is DTC U0140 or U0140:00 set in more than one module? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                INSTALL a new <abbr title="Transfer Case Control Module">TCCM</abbr> . REFER to <a data-linkid="ID0EZWCI" data-for="308-07A_s3p705375q0" data-procuid="n1128203" class="expand-link">Transfer Case Control Module (TCCM)</a><span id="spanID0EZWCI"></span> in this section. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+      <a name="procsub2_11" xmlns:str="http://xsltsl.org/string"></a><a name="PS2-AH" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test AH: Neutral Flat Tow Functional Test 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','034')">34</a> , Four-Wheel Drive System for schematic and connector information.<br>
+        </p>
+        
+          <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+          <p xmlns:str="http://xsltsl.org/string">Neutral flat tow operates by shifting the transfer case shift motor into the NEUTRAL position, locking the transfer case in NEUTRAL. The <abbr title="Transfer Case Control Module">TCCM</abbr>  sends the transfer case shift motor NEUTRAL position status to the <abbr title="Instrument Panel Cluster">IPC</abbr>  over the <abbr title="High Speed Controller Area Network">HS-CAN</abbr> . 
+</p>
+        
+        <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+          
+          <li>
+            
+              <abbr title="Instrument Panel Cluster">IPC</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Transfer Case Control Module">TCCM</abbr> 
+            
+          </li>
+          <li>
+            
+              <abbr title="Transmission Range">TR</abbr>  sensor from PCM 
+
+          </li>
+          <li>
+            Ignition switch 
+
+          </li>
+        </ul>
+        <a name="AH" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST AH : NEUTRAL FLAT TOW FUNCTIONAL TEST 
+</b></center>
+  </caption>
+          
+          <tr>
+    <td><b><img src="/content/images/workshop/warning.jpg">WARNING: 
+            Shifting the transfer case to its neutral position for neutral flat towing may allow the vehicle to be able to roll even if the transmission is in park (P). Make sure the foot brake is depressed and the vehicle is in a secure and safe position while the transfer case is being shifted to its neutral position. Failure to follow this instruction may result in serious personal injury.
+          </b></td>
+  </tr>
+          <tr>
+    <td><b><img src="/content/images/workshop/warning.jpg">WARNING: 
+            Do not disconnect the battery during neutral flat towing. Doing so will prevent the transfer case from shifting properly and may allow the vehicle to roll even if the transmission is in park (P). Failure to follow this instruction may result in serious personal injury.
+          </b></td>
+  </tr>
+          <tr>
+    <td><b>NOTICE: 
+            
+              <abbr title="2-Wheel Drive">2WD</abbr>  vehicles cannot be towed with any wheels on the ground as vehicle or transmission damage may occur. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td><b>NOTICE: 
+            Failing to put the transfer case in its NEUTRAL position will damage vehicle components. 
+
+          </b></td>
+  </tr>
+          <tr>
+    <td><b>NOTE: </b><i>
+            
+              <abbr title="Four-Wheel Drive">4WD</abbr>  vehicles can only be flat towed with all wheels on the ground by placing the transfer case in its NEUTRAL position. 
+
+          </i></td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AH1" data-ajax="false"></a><b>AH1 
+                CHECK NEUTRAL FLAT TOW ACTIVATION AND DEACTIVATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Activate neutral flat tow. Refer to <a data-linkid="ID0ET2CI" data-for="308-07A_s5p707328q0" data-procuid="n1377339" class="expand-link">Neutral Flat Tow Activation and Deactivation</a><span id="spanID0ET2CI"></span> in this section. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the <abbr title="Instrument Panel Cluster">IPC</abbr>  indicate neutral flat tow is activated? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                RETURN the vehicle to the customer. ADVISE the customer about the correct Neutral Flat Tow Activation and Deactivation procedure. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AH2">AH2</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AH2" data-ajax="false"></a><b>AH2 
+                CHECK NEUTRAL FLAT TOW ACTIVATION WHILE MONITORING THE TCCM  4WD MODES (4WD_MODES) PID 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Ignition ON. 
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — <abbr title="Transfer Case Control Module">TCCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Monitor the 4WD_MODES PID. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the PID indicate NEUTRAL? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                 REFER to <a data-linkid="ID0EY5CI" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EY5CI"></span> to diagnose <abbr title="Instrument Panel Cluster">IPC</abbr>  faults. After the repair is complete, CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AH3">AH3</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AH3" data-ajax="false"></a><b>AH3 
+                CHECK FOR TCCM  DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  Self-Test — <abbr title="Transfer Case Control Module">TCCM</abbr> .
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Are any DTCs present? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                 REFER to the <abbr title="Transfer Case Control Module">TCCM</abbr>  DTC Chart in this section. After the repair is complete, CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AH4">AH4</a>. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AH4" data-ajax="false"></a><b>AH4 
+                CHECK TCCM  BRAKE ON/OFF (4X4_BOO) PID 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — <abbr title="Transfer Case Control Module">TCCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Monitor the 4X4_BOO PID while pressing the brake pedal. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the PID agree with the brake pedal position? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AH5">AH5</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                REFER to <a data-linkid="ID0EZDDI" data-sectnum="417-01" class="section-link">Section 
+          417-01</a><span id="spanID0EZDDI"></span> to diagnose stoplamp system faults. After the repair is complete, CLEAR the DTCs. TEST the system for normal operation. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AH5" data-ajax="false"></a><b>AH5 
+                CHECK THE TCCM  IGNITION POSITION (KEY_POS_4X4) PID 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — <abbr title="Transfer Case Control Module">TCCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Monitor the KEY_POS_4X4 PID with the ignition in the ON position. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the PID indicate Ignition On? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                
+                  GO to <a data-ajax="false" href="#AH6">AH6</a>. 
+
+              </td>
+          </tr>
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                 REFER to <a data-linkid="ID0EDGDI" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0EDGDI"></span> for further diagnosis of the ignition switch. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+          <tr>
+    <td class="gray"><a name="AH6" data-ajax="false"></a><b>AH6 
+                CHECK THE TCCM  NEUTRAL INDICATOR (NEUTRAL) PID 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+            
+              
+              <ul class="nospace">
+        <li>
+                Enter the following diagnostic mode on the scan tool:  DataLogger — <abbr title="Transfer Case Control Module">TCCM</abbr> .
+              </li>
+      </ul>
+              <ul class="nospace">
+        <li>
+                Monitor the NEUTRAL PID with the gear selector in neutral position. 
+
+              </li>
+      </ul>
+              <br><b data-content-type="stepquestion">
+                Does the PID indicate TRUE? 
+
+              </b>
+            
+            <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+                For vehicles equipped with the <abbr title="Electronic Shift-On-The-Fly">ESOF</abbr>  system, <a data-searchnum="308-07A_s4p9301q6990:PS2-B" data-callfrom="procsub1" data-procuid="n1334636" class="publication-content">GO to Pinpoint Test B</a> to diagnose the transfer case shift motor. 
+
+              <br>
+                For vehicles equipped with the 2-speed torque-on-demand system, <a data-searchnum="308-07A_s4p9301q702358:PS2-P" data-callfrom="procsub1" data-procuid="n1334637" class="publication-content">GO to Pinpoint Test P</a> to diagnose the transfer case shift motor. 
+
+              </td>
+          </tr>
+              
+              
+              <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+                 REFER to <a data-linkid="ID0E3IDI" data-sectnum="307-01" class="section-link">Section 
+          307-01</a><span id="spanID0E3IDI"></span> for diagnosis of the <abbr title="Transmission Range">TR</abbr>  sensor. 
+
+              </td>
+          </tr>
+              
+            </table>
+      </center><br><br>
+          </td>
+  </tr>
+        </table><br xmlns:str="http://xsltsl.org/string">
+      
+    
+  
+
+

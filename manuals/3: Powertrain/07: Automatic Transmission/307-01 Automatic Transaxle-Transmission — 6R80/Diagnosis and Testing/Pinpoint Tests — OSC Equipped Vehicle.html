@@ -1,0 +1,4267 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="307-01" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="307-01 Automatic Transaxle/Transmission — 6R80" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n1274096" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>307-01 Automatic Transaxle/Transmission — 6R80</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      09/12/2016</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="Pinpoint Tests — OSC Equipped Vehicle" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>Pinpoint Tests
+ — OSC Equipped Vehicle</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('307-01','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-IV Digital Multimeter
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST2834A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan tool
+          <br>
+        </td>
+      </tr>
+    </table>
+    <p xmlns:str="http://xsltsl.org/string">When the electrical connector or solenoid body is disconnected, inspect the connector for terminal condition, corrosion and contamination. Also inspect the connector seal for damage. Clean, repair or install new components as required. 
+</p>
+    <p xmlns:str="http://xsltsl.org/string">Power is routed through the Transmission Solenoid Power Control (TSPC) relay (inside the PCM) to all transmission solenoids. If the power circuit to the transmission solenoids or the TSPC relay fails open, then all solenoids are failed electrically OFF. CHECK for open, short to ground or the transmission connector disconnected. The TSPC relay will disable power to the transmission solenoids when certain transmission DTCs are set. 
+</p>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Shift Solenoid Pre-Diagnosis 
+</b></p>
+      <a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            Solenoid Operation Chart 
+</b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="center">
+    <col align="center">
+    <col align="center">
+    <col align="center">
+    <col align="center">
+    <col align="center">
+    <col align="center">
+  </colgroup>
+          
+          
+          
+          
+          
+          
+          
+          
+          <thead>
+            <tr>
+              <th rowspan="2" align="center" valign="top">
+                Selector Lever Position 
+
+              </th>
+              <th rowspan="2" align="center" valign="top">
+                PCM Commanded Gear 
+
+              </th>
+              <th colspan="5" align="center" valign="top">
+                Shift Solenoid 
+
+              </th>
+              <th rowspan="2" align="center" valign="top">
+                TCC NL 
+
+              </th>
+            </tr>
+            <tr>
+              <th align="center" valign="top">
+                SSA NL (1,2,3,4) 
+
+              </th>
+              <th align="center" valign="top">
+                SSB NH (3,5,R) 
+
+              </th>
+              <th align="center" valign="top">
+                SSC NL (CB 2,6) 
+
+              </th>
+              <th align="center" valign="top">
+                SSD NH (CB L,R/C 4,5,6) 
+
+              </th>
+              <th align="center" valign="top">
+                SSE NC 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                P 
+
+              </td>
+              <td valign="top">
+                P 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                R 
+
+              </td>
+              <td valign="top">
+                R 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                N 
+
+              </td>
+              <td valign="top">
+                N 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+                <sup xmlns:str="http://xsltsl.org/string">a</sup>
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                D 
+
+              </td>
+              <td valign="top">
+                1 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+                <sup xmlns:str="http://xsltsl.org/string">b</sup>
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                 
+              </td>
+              <td valign="top">
+                2 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                 
+              </td>
+              <td valign="top">
+                3 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                On/Off 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                 
+              </td>
+              <td valign="top">
+                4 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                On/Off 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                 
+              </td>
+              <td valign="top">
+                5 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                On/Off 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                 
+              </td>
+              <td valign="top">
+                6 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                On/Off 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                M 
+
+                <sup xmlns:str="http://xsltsl.org/string">c</sup>
+              </td>
+              <td valign="top">
+                — 
+
+              </td>
+              <td valign="top">
+                — 
+
+              </td>
+              <td valign="top">
+                — 
+
+              </td>
+              <td valign="top">
+                — 
+
+              </td>
+              <td valign="top">
+                — 
+
+              </td>
+              <td valign="top">
+                — 
+
+              </td>
+              <td valign="top">
+                — 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                2 
+
+              </td>
+              <td valign="top">
+                2 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                1 
+
+              </td>
+              <td valign="top">
+                1 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+              <td valign="top">
+                On 
+
+              </td>
+              <td valign="top">
+                Off 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+        
+          <p xmlns:str="http://xsltsl.org/string">CB = Clutch brake 
+</p>
+          <p xmlns:str="http://xsltsl.org/string">NC = Normally closed 
+</p>
+          <p xmlns:str="http://xsltsl.org/string">NH = Normally high 
+</p>
+          <p xmlns:str="http://xsltsl.org/string">NL = Normally low 
+</p>
+        
+      <p class="footnote" xmlns:str="http://xsltsl.org/string"><sup>a</sup>Solenoid state will change if vehicle is moving forward with the selector lever in the NEUTRAL position.</p>
+<p class="footnote" xmlns:str="http://xsltsl.org/string"><sup>b</sup>Solenoid is On when vehicle is above 3 mph.</p>
+<p class="footnote" xmlns:str="http://xsltsl.org/string"><sup>c</sup>All gears available upon driver request.</p><br xmlns:str="http://xsltsl.org/string">
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">
+        <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','030')">30</a>  for schematic and connector information.<br>
+      </p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+        Refer to all TSBs and On-Line Automotive Service Information System (OASIS)
+       messages that pertain to the transmission concern and follow the procedure as described. 
+
+      </i></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+        Vehicles equipped with a 3.7L engine use PCM <a href="javascript:connectorlinkwithpin('ED2','C175T','')">C175T</a>. 
+
+      </i></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+        Vehicles equipped with a 5.0L or 6.2L engine use PCM <a href="javascript:connectorlinkwithpin('ED2','C1381T','')">C1381T</a>. 
+
+      </i></p>
+      <p xmlns:str="http://xsltsl.org/string"><b>NOTE: </b><i>
+        Vehicles equipped with a 3.5L engine use PCM <a href="javascript:connectorlinkwithpin('ED2','C1551E','')">C1551E</a>. 
+
+      </i></p>
+      <a name="A" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST A : TRANSMISSION CONTROL SOLENOIDS 
+</b></center>
+  </caption>
+        
+        <tr>
+    <td><b>NOTE: </b><i>
+          Refer to the Transmission Vehicle Harness Connector illustration within the <a data-linkid="ID0EDDAE" data-for="307-01_s4p9004q0" data-procuid="n1274095" class="expand-link">Transmission Connector Layouts</a><span id="spanID0EDDAE"></span> procedure. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Refer to the Transmission Leadframe Connector illustration within the <a data-linkid="ID0ENDAE" data-for="307-01_s4p9004q0" data-procuid="n1274095" class="expand-link">Transmission Connector Layouts</a><span id="spanID0ENDAE"></span> procedure. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          If the scan tool is unable to access the transmission PIDs, refer to Powertrain Control/Emissions Diagnosis (PC/ED) manual. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Read and record all DTCs. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="A1" data-ajax="false"></a><b>A1 
+                CHECK THE SOLENOID POWER CIRCUIT FOR VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <p class="singlespace"><b>NOTE: </b><i>
+              The <abbr title="Powertrain Control Module">PCM</abbr>  removes power from the Transmission Solenoid Power Control (TSPC) circuit when the key is on and the transmission harness is disconnected. Use the meter’s min/max function to record the voltage before the <abbr title="Powertrain Control Module">PCM</abbr>  removes power. 
+
+            </i></p>
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  Transmission <a href="javascript:connectorlinkwithpin('ED2','C1575','')">C1575</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect the connector for damaged or pushed out terminals, corrosion, loose wires and missing or damaged seals. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              <b>NOTE: </b><i>
+                Use a meter with a min/max feature and/or recording capabilities to obtain accurate measurements. 
+
+              </i><p class="singlespace"></p>
+              Set the meter to measure DC voltage. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Set the meter range to greater than 15 volts. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Enable the min/max or recording feature. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              <b>NOTE: </b><i>
+                Make sure all test connections are made at the transmission harness connector before the ignition key is turned to the ON position. 
+
+              </i><p class="singlespace"></p>
+              Connect the meter to <a href="javascript:connectorlinkwithpin('ED2','C1575','7')">C1575</a> Pin 7 and ground. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Measure: 
+
+              <br><br><a name="table_2"></a><span id="spanID0ECHAE"><a href="javascript:ppttablelink('spanID0ECHAE','ED2','C1575','Ground')">Click to display connectors</a></span>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                  
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th valign="top">
+                        Positive Lead 
+
+                      </th>
+                      <th valign="top">
+                        Measurement / Action 
+
+                      </th>
+                      <th valign="top">
+                        Negative Lead 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','7')">C1575</a> Pin 7
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=dc-v&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the maximum recorded voltage greater than 11 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#A4">A4</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#A2">A2</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="A2" data-ajax="false"></a><b>A2 
+                CHECK THE SOLENOID POWER CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  
+                  <abbr title="Powertrain Control Module">PCM</abbr> 
+                  <a href="javascript:connectorlinkwithpin('ED2','C175T','')">C175T</a> (3.7L Engine) 
+.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  
+                  <abbr title="Powertrain Control Module">PCM</abbr> 
+                  <a href="javascript:connectorlinkwithpin('ED2','C1381T','')">C1381T</a> (5.0L and 6.2L Engines) 
+.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  
+                  <abbr title="Powertrain Control Module">PCM</abbr> 
+                  <a href="javascript:connectorlinkwithpin('ED2','C1551E','')">C1551E</a> (3.5L Gasoline Turbocharged Direct Injection (GTDI)
+       Engine) 
+.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect the connector for damaged or pushed out terminals, corrosion, loose wires and missing or damaged seals. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Vehicle equipped with 3.7L engine, measure: 
+
+              <br><br><a name="table_3"></a><span id="spanID0EPNAE"><a href="javascript:ppttablelink('spanID0EPNAE','ED2','C175E','C1575')">Click to display connectors</a></span>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                  
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th valign="top">
+                        Positive Lead 
+
+                      </th>
+                      <th valign="top">
+                        Measurement / Action 
+
+                      </th>
+                      <th valign="top">
+                        Negative Lead 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C175E','80')">C175E</a> Pin 80
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','7')">C1575</a> Pin 7
+                         
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Vehicle equipped with 5.0L or 6.2L engine, measure: 
+
+              <br><br><a name="table_4"></a><span id="spanID0E6PAE"><a href="javascript:ppttablelink('spanID0E6PAE','ED2','C1381T','C1575')">Click to display connectors</a></span>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                  
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th valign="top">
+                        Positive Lead 
+
+                      </th>
+                      <th valign="top">
+                        Measurement / Action 
+
+                      </th>
+                      <th valign="top">
+                        Negative Lead 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1381T','50')">C1381T</a> Pin 50
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','7')">C1575</a> Pin 7
+                         
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Vehicle equipped with 3.5L engine, measure: 
+
+              <br><br><a name="table_5"></a><span id="spanID0EPSAE"><a href="javascript:ppttablelink('spanID0EPSAE','ED2','C1551E','C1575')">Click to display connectors</a></span>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                  
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th valign="top">
+                        Positive Lead 
+
+                      </th>
+                      <th valign="top">
+                        Measurement / Action 
+
+                      </th>
+                      <th valign="top">
+                        Negative Lead 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1551E','80')">C1551E</a> Pin 80
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','7')">C1575</a> Pin 7
+                         
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the resistance less than 3 ohms? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#A3">A3</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REPAIR transmission vehicle harness circuit for an open. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="A3" data-ajax="false"></a><b>A3 
+                CHECK THE SOLENOID POWER CIRCUIT FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Vehicle equipped with 3.7L engine, measure: 
+
+              <br><br><a name="table_6"></a><span id="spanID0EFWAE"><a href="javascript:ppttablelink('spanID0EFWAE','ED2','C175E','Ground')">Click to display connectors</a></span>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                  
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th valign="top">
+                        Positive Lead 
+
+                      </th>
+                      <th valign="top">
+                        Measurement / Action 
+
+                      </th>
+                      <th valign="top">
+                        Negative Lead 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C175E','80')">C175E</a> Pin 80
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Vehicle equipped with 5.0L or 6.2L engine, measure: 
+
+              <br><br><a name="table_7"></a><span id="spanID0EVYAE"><a href="javascript:ppttablelink('spanID0EVYAE','ED2','C1381T','Ground')">Click to display connectors</a></span>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                  
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th valign="top">
+                        Positive Lead 
+
+                      </th>
+                      <th valign="top">
+                        Measurement / Action 
+
+                      </th>
+                      <th valign="top">
+                        Negative Lead 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1381T','50')">C1381T</a> Pin 50
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Vehicle equipped with 3.5L engine, measure: 
+
+              <br><br><a name="table_8"></a><span id="spanID0EF2AE"><a href="javascript:ppttablelink('spanID0EF2AE','ED2','C1551E','Ground')">Click to display connectors</a></span>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                  
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th valign="top">
+                        Positive Lead 
+
+                      </th>
+                      <th valign="top">
+                        Measurement / Action 
+
+                      </th>
+                      <th valign="top">
+                        Negative Lead 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1551E','80')">C1551E</a> Pin 80
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the resistance greater than 10,000 ohms? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              INSTALL a new <abbr title="Powertrain Control Module">PCM</abbr> , REFER to <a data-linkid="ID0EG5AE" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EG5AE"></span>. PROGRAM the <abbr title="Powertrain Control Module">PCM</abbr>  with the latest calibration level. PERFORM the Solenoid Body Strategy Data Download procedure. REFER to <a data-linkid="ID0ER5AE" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0ER5AE"></span>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REPAIR transmission vehicle harness circuit for a short to ground. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="A4" data-ajax="false"></a><b>A4 
+                CHECK SOLENOID CONTROL CIRCUITS FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  
+                  <abbr title="Powertrain Control Module">PCM</abbr> 
+                  <a href="javascript:connectorlinkwithpin('ED2','C175T','')">C175T</a> (3.7L Engine) 
+.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  
+                  <abbr title="Powertrain Control Module">PCM</abbr> 
+                  <a href="javascript:connectorlinkwithpin('ED2','C1381T','')">C1381T</a> (5.0L and 6.2L Engines) 
+.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  
+                  <abbr title="Powertrain Control Module">PCM</abbr> 
+                  <a href="javascript:connectorlinkwithpin('ED2','C1551E','')">C1551E</a> (3.5L <abbr title="Gasoline Turbocharged Direct Injection">GTDI</abbr>  Engine) 
+.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect the connector for damaged or pushed out terminals, corrosion, loose wires and missing or damaged seals. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Vehicles equipped with a 3.7L engine, measure the resistance of the solenoid control circuits using the following chart: 
+
+              <br><br><a name="table_9"></a><span id="spanID0ECCAG"><a href="javascript:ppttablelink('spanID0ECCAG','ED2','C175T','C1575')">Click to display connectors</a></span>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                  
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th valign="top">
+                        Positive Lead 
+
+                      </th>
+                      <th valign="top">
+                        Measurement / Action 
+
+                      </th>
+                      <th valign="top">
+                        Negative Lead 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C175T','45')">C175T</a> Pin 45
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','9')">C1575</a> Pin 9
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C175T','43')">C175T</a> Pin 43
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','14')">C1575</a> Pin 14
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C175T','44')">C175T</a> Pin 44
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','13')">C1575</a> Pin 13
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C175T','10')">C175T</a> Pin 10
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','10')">C1575</a> Pin 10
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C175T','11')">C175T</a> Pin 11
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','8')">C1575</a> Pin 8
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C175T','34')">C175T</a> Pin 34
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','16')">C1575</a> Pin 16
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C175T','46')">C175T</a> Pin 46
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','3')">C1575</a> Pin 3
+                         
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Vehicles equipped with a 5.0L or 6.2L engine, measure the resistance of the solenoid control circuits using the following chart: 
+
+              <br><br><a name="table_10"></a><span id="spanID0EGKAG"><a href="javascript:ppttablelink('spanID0EGKAG','ED2','C1381T','C1575')">Click to display connectors</a></span>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                  
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th valign="top">
+                        Positive Lead 
+
+                      </th>
+                      <th valign="top">
+                        Measurement / Action 
+
+                      </th>
+                      <th valign="top">
+                        Negative Lead 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1381T','43')">C1381T</a> Pin 43
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','9')">C1575</a> Pin 9
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1381T','44')">C1381T</a> Pin 44
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','14')">C1575</a> Pin 14
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1381T','45')">C1381T</a> Pin 45
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','13')">C1575</a> Pin 13
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1381T','10')">C1381T</a> Pin 10
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','10')">C1575</a> Pin 10
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1381T','11')">C1381T</a> Pin 11
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','8')">C1575</a> Pin 8
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1381T','34')">C1381T</a> Pin 34
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','16')">C1575</a> Pin 16
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1381T','46')">C1381T</a> Pin 46
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','3')">C1575</a> Pin 3
+                         
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Vehicles equipped with a 3.5L engine, measure the resistance of the solenoid control circuits using the following chart. 
+
+              <br><br><a name="table_11"></a><span id="spanID0EKSAG"><a href="javascript:ppttablelink('spanID0EKSAG','ED2','C1551E','C1575')">Click to display connectors</a></span>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                  
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th valign="top">
+                        Positive Lead 
+
+                      </th>
+                      <th valign="top">
+                        Measurement / Action 
+
+                      </th>
+                      <th valign="top">
+                        Negative Lead 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1551E','60')">C1551E</a> Pin 60
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','9')">C1575</a> Pin 9
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1551E','45')">C1551E</a> Pin 45
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','14')">C1575</a> Pin 14
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1551E','75')">C1551E</a> Pin 75
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','13')">C1575</a> Pin 13
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1551E','30')">C1551E</a> Pin 30
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','10')">C1575</a> Pin 10
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1551E','2')">C1551E</a> Pin 2
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','8')">C1575</a> Pin 8
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1551E','59')">C1551E</a> Pin 59
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','16')">C1575</a> Pin 16
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1551E','44')">C1551E</a> Pin 44
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','3')">C1575</a> Pin 3
+                         
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the resistance less than 3 ohms on the suspect circuit? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#A5">A5</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+               REPAIR the transmission vehicle harness circuit. CLEAR the <abbr title="Diagnostic Trouble Codes">DTCs</abbr> . 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="A5" data-ajax="false"></a><b>A5 
+                CHECK SOLENOID CONTROL CIRCUITS FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Measure the resistance between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','')">C1575</a>, harness side and ground using the following chart: 
+
+              <br><br><a name="table_12"></a><span id="spanID0E62AG"><a href="javascript:ppttablelink('spanID0E62AG','ED2','C1575','Ground')">Click to display connectors</a></span>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                  
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th valign="top">
+                        Positive Lead 
+
+                      </th>
+                      <th valign="top">
+                        Measurement / Action 
+
+                      </th>
+                      <th valign="top">
+                        Negative Lead 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','7')">C1575</a> Pin 7
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','9')">C1575</a> Pin 9
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','14')">C1575</a> Pin 14
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','13')">C1575</a> Pin 13
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','10')">C1575</a> Pin 10
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','8')">C1575</a> Pin 8
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','16')">C1575</a> Pin 16
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','3')">C1575</a> Pin 3
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the resistance greater than 10,000 ohms on the suspect circuit? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#A6">A6</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REPAIR the transmission vehicle harness circuit. CLEAR the <abbr title="Diagnostic Trouble Codes">DTCs</abbr> . 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="A6" data-ajax="false"></a><b>A6 
+                CHECK SOLENOID CONTROL CIRCUITS FOR A SHORT TO POWER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Measure the voltage between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','')">C1575</a>, harness side and ground using the following chart: 
+
+              <br><br><a name="table_13"></a><span id="spanID0EYGBG"><a href="javascript:ppttablelink('spanID0EYGBG','ED2','C1575','Ground')">Click to display connectors</a></span>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                  
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th valign="top">
+                        Positive Lead 
+
+                      </th>
+                      <th valign="top">
+                        Measurement / Action 
+
+                      </th>
+                      <th valign="top">
+                        Negative Lead 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','9')">C1575</a> Pin 9
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=dc-v&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','14')">C1575</a> Pin 14
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=dc-v&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','13')">C1575</a> Pin 13
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=dc-v&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','10')">C1575</a> Pin 10
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=dc-v&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','8')">C1575</a> Pin 8
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=dc-v&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','16')">C1575</a> Pin 16
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=dc-v&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <a href="javascript:connectorlinkwithpin('ED2','C1575','3')">C1575</a> Pin 3
+                         
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=dc-v&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                          Ground
+                         
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is any voltage present? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              REPAIR the circuit for a short to power. CLEAR the <abbr title="Diagnostic Trouble Codes">DTCs</abbr> .
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#A7">A7</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="A7" data-ajax="false"></a><b>A7 
+                CHECK FOR FLUID CONTAMINATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              REMOVE the transmission fluid pan. REFER to <a data-linkid="ID0EJQBG" data-for="307-01_s5p272q0" data-procuid="n1262469" class="expand-link">Transmission Fluid Drain and Refill</a><span id="spanID0EJQBG"></span>. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect for fine metallic contamination at the molded leadframe to solenoid connections. 
+
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is visible metallic contamination present? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              REMOVE and discard the foam strip if equipped. REMOVE and CLEAN the molded lead frame and solenoid terminals with clean transmission fluid. GO to <a data-ajax="false" href="#A8">A8</a>
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#A8">A8</a>
+              
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="A8" data-ajax="false"></a><b>A8 
+                CHECK MOLDED LEADFRAME RESISTANCE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Measure resistance of the suspect solenoid circuit between the transmission harness connector <a href="javascript:connectorlinkwithpin('ED2','C1575','')">C1575</a>, <b>component side</b>, and the transmission molded leadframe using the table below: 
+
+              <br><br><a name="table_14"></a><span id="spanID0EJSBG"><a href="javascript:ppttablelink('spanID0EJSBG','ED2','C1575','https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0110912width250')">Click to display connectors</a></span>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+                  
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th valign="top">
+                        Positive Lead 
+
+                      </th>
+                      <th valign="top">
+                        Measurement / Action 
+
+                      </th>
+                      <th valign="top">
+                        Negative Lead 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        
+                        <p class="singlespace"></p> Transmission leadframe connector, <a href="javascript:connectorlinkwithpin('ED2','C1575','9')">C1575</a> Pin 9
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                        <p class="singlespace"></p> Transmission molded leadframe, pin 9 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                        <p class="singlespace"></p> Transmission leadframe connector, <a href="javascript:connectorlinkwithpin('ED2','C1575','14')">C1575</a> Pin 14
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                        <p class="singlespace"></p> Transmission molded leadframe, pin 14 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                        <p class="singlespace"></p> Transmission leadframe connector, <a href="javascript:connectorlinkwithpin('ED2','C1575','13')">C1575</a> Pin 13
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                        <p class="singlespace"></p>Transmission molded leadframe, pin 13 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                        <p class="singlespace"></p> Transmission leadframe connector, <a href="javascript:connectorlinkwithpin('ED2','C1575','10')">C1575</a> Pin 10
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                        <p class="singlespace"></p>Transmission molded leadframe, pin 10 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                        <p class="singlespace"></p> Transmission leadframe connector, <a href="javascript:connectorlinkwithpin('ED2','C1575','8')">C1575</a> Pin 8
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                        <p class="singlespace"></p>Transmission molded leadframe, pin 8 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                        <p class="singlespace"></p> Transmission leadframe connector, <a href="javascript:connectorlinkwithpin('ED2','C1575','16')">C1575</a> Pin 16
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                        <p class="singlespace"></p>Transmission molded leadframe, pin 16 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                        <p class="singlespace"></p> Transmission leadframe connector, <a href="javascript:connectorlinkwithpin('ED2','C1575','3')">C1575</a> Pin 3
+                      </td>
+                      <td valign="top">
+                        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ohms&amp;w=99&amp;t=JPG" border="0" width="99">
+                      </td>
+                      <td valign="top">
+                        
+                        <p class="singlespace"></p>Transmission molded leadframe, pin 3 
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the resistance less than 3 ohms on the suspect circuit? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#A9">A9</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              INSTALL a new molded leadframe. INSTALL new foam strip (Service Part Number FL3Z- 14B167-A) between molded leadframe and the solenoids. REFER to <a data-linkid="ID0EF2BG" data-for="307-01_s2p7426q0" data-procuid="n1281752" class="expand-link">Shift Solenoids (SS)</a><span id="spanID0EF2BG"></span>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="A9" data-ajax="false"></a><b>A9 
+                CHECK SOLENOID RESISTANCE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Measure and record the resistance of the suspected solenoid. <a data-linkid="ID0EZ2BG" data-for="307-01_s2p7426q0" data-procuid="n1281752" class="expand-link">Shift Solenoids (SS)</a><span id="spanID0EZ2BG"></span>. Compare the recorded value with the chart below. 
+
+              <br><br><a name="table_15"></a>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th align="center" valign="top">
+                        Solenoid 
+
+                      </th>
+                      <th align="center" valign="top">
+                        Ohms 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        
+                          <abbr title="Shift Solenoid A">SSA</abbr> 
+                         
+                      </td>
+                      <td valign="top">
+                        4.8 to 5.6 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <abbr title="Shift Solenoid B">SSB</abbr> 
+                         
+                      </td>
+                      <td valign="top">
+                        4.8 to 5.6 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <abbr title="Shift Solenoid C">SSC</abbr> 
+                         
+                      </td>
+                      <td valign="top">
+                        4.8 to 5.6 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <abbr title="Shift Solenoid D">SSD</abbr> 
+                         
+                      </td>
+                      <td valign="top">
+                        4.8 to 5.6 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <abbr title="Shift Solenoid E">SSE</abbr> 
+                         
+                      </td>
+                      <td valign="top">
+                        17.5 to 18.6 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <abbr title="Line Pressure Control">LPC</abbr>  solenoid 
+
+                      </td>
+                      <td valign="top">
+                        4.8 to 5.6 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        
+                          <abbr title="Torque Converter Clutch">TCC</abbr>  solenoid 
+
+                      </td>
+                      <td valign="top">
+                        4.8 to 5.6 
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the solenoid resistance within specification? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              The system is operating correctly at this time. INSTALL new foam strip (Service Part Number FL3Z-14B167-A) between molded leadframe and the solenoids. REFER to <a data-linkid="ID0EXCAI" data-for="307-01_s2p7426q0" data-procuid="n1281752" class="expand-link">Shift Solenoids (SS)</a><span id="spanID0EXCAI"></span>
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              INSTALL a new solenoid for the solenoid that failed the resistance check. INSTALL new foam strip (Service Part Number FL3Z-14B167-A) between molded leadframe and the solenoids. REFER to <a data-linkid="ID0EDDAI" data-for="307-01_s2p7426q0" data-procuid="n1281752" class="expand-link">Shift Solenoids (SS)</a><span id="spanID0EDDAI"></span>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+      </table><br xmlns:str="http://xsltsl.org/string">
+      <a name="B" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST B : 
+          TFT  SENSOR 
+</b></center>
+  </caption>
+        
+        <tr>
+    <td><b>NOTE: </b><i>
+          Refer to the Transmission Vehicle Harness Connector illustration within the <a data-linkid="ID0E3DAI" data-for="307-01_s4p9004q0" data-procuid="n1274095" class="expand-link">Transmission Connector Layouts</a><span id="spanID0E3DAI"></span> procedure. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Refer to the Transmission Leadframe Connector illustration within the <a data-linkid="ID0EGEAI" data-for="307-01_s4p9004q0" data-procuid="n1274095" class="expand-link">Transmission Connector Layouts</a><span id="spanID0EGEAI"></span> procedure. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          If the scan tool is unable to access the transmission PIDs, refer to Powertrain Control/Emissions Diagnosis (PC/ED) manual. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Read and record all DTCs. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="B1" data-ajax="false"></a><b>B1 
+                CHECK TFT  INPUT SIGNAL 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  Transmission Vehicle Harness <a href="javascript:connectorlinkwithpin('ED2','C1575','')">C1575</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect the connector for damaged or pushed out terminals, corrosion, loose wires and missing or damaged seals. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Connect the scan tool. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Enter the following diagnostic mode on the scan tool:  TFT PIDs: TFT and TFTV 
+.
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Does the TFT PID display -40°C (-40°F) and the TFTV PID display 4.96 to 5.10 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#B2">B2</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REPAIR vehicle harness circuit for a short to ground. CLEAR the DTCs. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="B2" data-ajax="false"></a><b>B2 
+                CHECK TFT  SIGNAL INPUT CIRCUIT FOR VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              
+              Measure the voltage between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','6')">C1575</a> Pin 6, circuit, harness side and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0115874&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the voltage between 4.8 and 5.1 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#B3">B3</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              INSPECT and REPAIR transmission vehicle harness circuit VET27 (BN/YE) for an open. If an open circuit is not found, REPLACE the PCM, REFER to <a data-linkid="ID0EQJAI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EQJAI"></span>. PROGRAM the PCM with the latest calibration level. PERFORM the Solenoid Body Strategy Data Download procedure. REFER to <a data-linkid="ID0EVJAI" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0EVJAI"></span> in this section. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="B3" data-ajax="false"></a><b>B3 
+                CHECK TFT  SIGNAL RETURN CIRCUIT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              
+              Connect a fused jumper between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','5')">C1575</a> Pin 5 and <a href="javascript:connectorlinkwithpin('ED2','C1575','6')">C1575</a> Pin 6, harness side. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0115873&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Does the TFT PID display 190°-195°C (374°-383°F) and the TFTV PID display 0 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#B4">B4</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              INSPECT and REPAIR the transmission vehicle harness signal return circuit for an open. If an open circuit is not found, REPLACE the PCM, REFER to <a data-linkid="ID0EYLAI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EYLAI"></span>. PROGRAM the PCM with the latest calibration level. PERFORM the Solenoid Body Strategy Data Download procedure. REFER to <a data-linkid="ID0E4LAI" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0E4LAI"></span> in this section. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="B4" data-ajax="false"></a><b>B4 
+                CHECK TFT  SENSOR RESISTANCE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              
+              Measure the resistance between the transmission molded leadframe <a href="javascript:connectorlinkwithpin('ED2','C1575','5')">C1575</a> Pin 5 and <a href="javascript:connectorlinkwithpin('ED2','C1575','6')">C1575</a> Pin 6, component side using the following chart. 
+
+              <br><br><a name="table_16"></a>
+                <p class="singlespace"><b>
+             
+            
+                  Transmission Fluid Temperature (TFT)
+      
+                </b></p>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                  
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th align="center" valign="top">
+                        °C 
+
+                      </th>
+                      <th align="center" valign="top">
+                        °F 
+
+                      </th>
+                      <th align="center" valign="top">
+                        Resistance 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        -40 to -20 
+
+                      </td>
+                      <td valign="top">
+                        -40 to -4 
+
+                      </td>
+                      <td valign="top">
+                        967K-284K 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        -19 to -1 
+
+                      </td>
+                      <td valign="top">
+                        -3 to 31 
+
+                      </td>
+                      <td valign="top">
+                        284K-100K 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        0-20 
+
+                      </td>
+                      <td valign="top">
+                        32-68 
+
+                      </td>
+                      <td valign="top">
+                        100K-37K 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        21-40 
+
+                      </td>
+                      <td valign="top">
+                        69-104 
+
+                      </td>
+                      <td valign="top">
+                        37K-16K 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        41-70 
+
+                      </td>
+                      <td valign="top">
+                        105-158 
+
+                      </td>
+                      <td valign="top">
+                        16K-5K 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        71-90 
+
+                      </td>
+                      <td valign="top">
+                        159-194 
+
+                      </td>
+                      <td valign="top">
+                        5K-2.7K 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        91-110 
+
+                      </td>
+                      <td valign="top">
+                        195-230 
+
+                      </td>
+                      <td valign="top">
+                        2.7K-1.5K 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        111-130 
+
+                      </td>
+                      <td valign="top">
+                        231-266 
+
+                      </td>
+                      <td valign="top">
+                        1.5K-0.8K 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        131-150 
+
+                      </td>
+                      <td valign="top">
+                        267-302 
+
+                      </td>
+                      <td valign="top">
+                        0.8K-0.54K 
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0110073&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Does the temperature to resistance specifications match? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              REFER to <a data-linkid="ID0EWVAI" data-for="307-01_s4p271q0" data-procuid="n1274098" class="expand-link">Diagnosis By Symptom</a><span id="spanID0EWVAI"></span> in this section to diagnose an overheating concern. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              INSPECT and CLEAN the <abbr title="Transmission Fluid Temperature">TFT</abbr>  sensor on the molded leadframe for metallic contamination. INSTALL a new molded leadframe if no debris was found, REFER to <a data-linkid="ID0EJWAI" data-for="307-01_s2p7426q0" data-procuid="n1281752" class="expand-link">Shift Solenoids (SS)</a><span id="spanID0EJWAI"></span> in this section. CLEAR the DTCs. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+      </table><br xmlns:str="http://xsltsl.org/string">
+      
+        <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Test C: DTCs P705, P706, P707, P708, P709, P1702, P1921 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">
+          <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','030')">30</a>  for schematic and connector information.<br>
+        </p>
+      
+      
+        <p xmlns:str="http://xsltsl.org/string"><b>Normal Operation 
+</b></p>
+        <p xmlns:str="http://xsltsl.org/string">The <abbr title="Transmission Range">TR</abbr>  sensor has a set of Hall-effect sensors that have a pattern of ON/OFF states which are dependent on the PARK, REVERSE, NEUTRAL, DRIVE, 3, 2 or 1 position of the manual valve. The <abbr title="Transmission Range">TR</abbr>  sensor has digital sensor (hall effect) that converts the shifter position into a bit pattern, and a micro controller that converts the 4 bit signal into a 125 Hz pulse width modulated signal. The <abbr title="Transmission Range">TR</abbr>  sensor also provides signals for the starting system and the reverse lights. The PCM uses the <abbr title="Transmission Range">TR</abbr>  sensor signal as an input for its strategy for shifting and <abbr title="Torque Converter Clutch">TCC</abbr>  operation. The PCM also uses the <abbr title="Transmission Range">TR</abbr>  sensor signal for transmission fault detection and diagnostics. The <abbr title="Transmission Range">TR</abbr>  sensor is integral to the leadframe. <abbr title="Diagnostic Trouble Code">DTC</abbr> s P0705, P0706, P0707, P0708, P0709, P1702 and P1921 cannot be set by an incorrectly adjusted selector lever cable. 
+</p>
+      
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_17" xmlns:str="http://xsltsl.org/string"></a>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                DTC Description 
+
+              </th>
+              <th align="center" valign="top">
+                Fault Trigger Condition 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                P0705 — Transmission Range Sensor "A" Circuit (PRNDL Input) sensor 
+
+              </td>
+              <td valign="top">
+                This <abbr title="Diagnostic Trouble Code" xmlns:str="http://xsltsl.org/string">DTC</abbr>  sets with <abbr title="Diagnostic Trouble Code" xmlns:str="http://xsltsl.org/string">DTC</abbr>  P1702. The PCM sets this <abbr title="Diagnostic Trouble Code" xmlns:str="http://xsltsl.org/string">DTC</abbr>  when it has detected the <abbr title="Transmission Range" xmlns:str="http://xsltsl.org/string">TR</abbr>  sensor signal duty cycle is within range but does not match the calibrated bit pattern. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                 P0706 — Transmission Range Sensor "A" Circuit Range/Performance 
+
+              </td>
+              <td valign="top">
+                This <abbr title="Diagnostic Trouble Code" xmlns:str="http://xsltsl.org/string">DTC</abbr>  sets with <abbr title="Diagnostic Trouble Code" xmlns:str="http://xsltsl.org/string">DTC</abbr>  P1702. The PCM sets this <abbr title="Diagnostic Trouble Code" xmlns:str="http://xsltsl.org/string">DTC</abbr>  when it has detected a <abbr title="Transmission Range" xmlns:str="http://xsltsl.org/string">TR</abbr>  sensor signal duty cycle that is out of range. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0707 — Transmission Range Sensor "A" Circuit Low 
+
+              </td>
+              <td valign="top">
+                This <abbr title="Diagnostic Trouble Code" xmlns:str="http://xsltsl.org/string">DTC</abbr>  sets with <abbr title="Diagnostic Trouble Code" xmlns:str="http://xsltsl.org/string">DTC</abbr>  P1702. The PCM detected a <abbr title="Transmission Range" xmlns:str="http://xsltsl.org/string">TR</abbr>  sensor signal duty cycle is out of range. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0708 — Transmission Range Sensor "A" Circuit High 
+
+              </td>
+              <td valign="top">
+                This <abbr title="Diagnostic Trouble Code" xmlns:str="http://xsltsl.org/string">DTC</abbr>  sets with <abbr title="Diagnostic Trouble Code" xmlns:str="http://xsltsl.org/string">DTC</abbr>  P1702. The PCM detected a <abbr title="Transmission Range" xmlns:str="http://xsltsl.org/string">TR</abbr>  sensor signal duty cycle is out of range. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0709 — Transmission Range Sensor "A" Circuit Intermittent 
+
+              </td>
+              <td valign="top">
+                This <abbr title="Diagnostic Trouble Code" xmlns:str="http://xsltsl.org/string">DTC</abbr>  sets with <abbr title="Diagnostic Trouble Code" xmlns:str="http://xsltsl.org/string">DTC</abbr>  P1702. The PCM detected a <abbr title="Transmission Range" xmlns:str="http://xsltsl.org/string">TR</abbr>  sensor signal duty cycle is not out of range but is invalid. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P1702 — Transmission Range Sensor Circuit Intermittent 
+
+              </td>
+              <td valign="top">
+                This <abbr title="Diagnostic Trouble Code" xmlns:str="http://xsltsl.org/string">DTC</abbr>  sets with P0705, P0706, P0707, P0708 or P0709, service P1702 last. The PCM detected that the <abbr title="Transmission Range" xmlns:str="http://xsltsl.org/string">TR</abbr>  sensor signal duty cycle is not out of range but is invalid. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P1921 — Transmission Range Signal 
+
+              </td>
+              <td valign="top">
+                This<abbr title="Diagnostic Trouble Code" xmlns:str="http://xsltsl.org/string">DTC</abbr>  sets with P0705, P0706, P0707, P0708 or P0709, service P1921 last. The PCM detected that the <abbr title="Transmission Range" xmlns:str="http://xsltsl.org/string">TR</abbr>  sensor signal duty cycle is out of range. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <p class="nobottom" xmlns:str="http://xsltsl.org/string"><b>This pinpoint test is intended to diagnose the following: 
+</b></p>
+<ul type="disc" xmlns:str="http://xsltsl.org/string">
+        
+        <li>
+          Wiring, terminals or connectors 
+
+        </li>
+        <li>
+          
+            <abbr title="Transmission Range">TR</abbr>  sensor/Leadframe 
+
+        </li>
+        <li>
+          PCM 
+
+        </li>
+      </ul>
+      <a name="C" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST C : DTCS P705, P706, P707, P708, P709, P1702, P1921 
+</b></center>
+  </caption>
+        
+        <tr>
+    <td><b>NOTE: </b><i>
+          Refer to the Transmission Vehicle Harness Connector illustration within the <a data-linkid="ID0EDCBI" data-for="307-01_s4p9004q0" data-procuid="n1274095" class="expand-link">Transmission Connector Layouts</a><span id="spanID0EDCBI"></span> procedure in this section. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Refer to the Transmission Leadframe Connector illustration within the <a data-linkid="ID0ENCBI" data-for="307-01_s4p9004q0" data-procuid="n1274095" class="expand-link">Transmission Connector Layouts</a><span id="spanID0ENCBI"></span> procedure in this section. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          If the scan tool is unable to access the transmission PIDs, refer to Powertrain Control/Emissions Diagnosis (PC/ED) manual. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Read and record all DTCs. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="C1" data-ajax="false"></a><b>C1 
+                VERIFY DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Select PARK. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Connect the scan tool. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Carry out the Key ON Engine OFF (KOEO)
+       then the Key ON Engine Running (KOER)
+       test. 
+
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Are Transmission Range (TR)
+       sensor DTCs present? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#C2">C2</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              If no <abbr title="Diagnostic Trouble Code">DTC</abbr> s are present, REFER to <a data-linkid="ID0EXFBI" data-for="307-01_s4p271q0" data-procuid="n1274098" class="expand-link">Diagnosis By Symptom</a><span id="spanID0EXFBI"></span> to diagnose any symptoms that may be present. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="C2" data-ajax="false"></a><b>C2 
+                CHECK TR  SENSOR ELECTRICAL OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Enter the following diagnostic mode on the scan tool:  TR PIDs: TR_DC and TR_FREQ 
+.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Move the selector lever into each range and stop. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Observe the following PIDs: TR_DC and TR_FREQ while wiggling the harness or driving the vehicle. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Compare the PID: TR_DC to the selector lever position duty cycle, using the following chart. 
+
+              <br><br><a name="table_18"></a>
+                <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+            <colgroup>
+              <col align="center">
+              <col align="center">
+            </colgroup>
+                  
+                  
+                  <thead>
+                    <tr>
+                      <th align="center" valign="top">
+                        Selector Lever Position 
+
+                      </th>
+                      <th align="center" valign="top">
+                        Range (% Duty Cycle) 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        P 
+
+                      </td>
+                      <td valign="top">
+                        8.0 — 25.8 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        R 
+
+                      </td>
+                      <td valign="top">
+                        30.50 — 39.31 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        N 
+
+                      </td>
+                      <td valign="top">
+                        40.54 — 52.49 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        D 
+
+                      </td>
+                      <td valign="top">
+                        54.35 — 71.15 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        M 
+
+                      </td>
+                      <td valign="top">
+                        65.15 — 82 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        2 
+
+                      </td>
+                      <td valign="top">
+                        70.55 — 85.61 
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">
+                        1 
+
+                      </td>
+                      <td valign="top">
+                        75.25 — 88.91 
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><br>
+              <br>
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+               Is the TR_FREQ between 100 to 150 Hz? 
+
+              <p class="singlespace"></p> Is the TR_DC within range? 
+
+              <p class="singlespace"></p> Does the TR_DC and TR_FREQ remain steady when the harness is wiggled or the vehicle driven? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              The problem is not in the <abbr title="Transmission Range">TR</abbr>  sensor system. Concern may be intermittent, INSPECT and REPAIR any loose connectors or backed out terminals. If OK, REFER to <a data-linkid="ID0EANBI" data-for="307-01_s4p271q0" data-procuid="n1274098" class="expand-link">Diagnosis By Symptom</a><span id="spanID0EANBI"></span> in this section for further diagnosis. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#C3">C3</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="C3" data-ajax="false"></a><b>C3 
+                CHECK TR  SENSOR VPWR CIRCUIT FOR POWER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  Transmission Vehicle Harness <a href="javascript:connectorlinkwithpin('ED2','C1575','')">C1575</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect the connector for damaged or pushed out terminals, corrosion, loose wires and missing or damaged seals. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Measure the voltage between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','12')">C1575</a> Pin 12, harness side and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0122894&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the voltage greater than 11 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#C4">C4</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              INSPECT and REPAIR for an open or short to ground. If a circuit fault is not found, INSTALL a new PCM, REFER to <a data-linkid="ID0ENQBI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0ENQBI"></span>. PROGRAM the PCM with the latest calibration level. PERFORM the Solenoid Body Strategy Data Download procedure. REFER to <a data-linkid="ID0ESQBI" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0ESQBI"></span> in this section. CLEAR the DTCs. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="C4" data-ajax="false"></a><b>C4 
+                CHECK TR  SENSOR SIGNAL CIRCUIT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              
+              Measure the voltage between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','4')">C1575</a> Pin 4, harness side and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0115875&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the voltage greater than 4.8 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#C5">C5</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              INSPECT and REPAIR vehicle harness for an open. If an open circuit is not found, INSTALL a new PCM, REFER to <a data-linkid="ID0ERSBI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0ERSBI"></span>. PERFORM the Solenoid Body Strategy Data Download procedure. REFER to <a data-linkid="ID0EWSBI" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0EWSBI"></span> in this section. CLEAR the DTCs. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="C5" data-ajax="false"></a><b>C5 
+                CHECK TR  SENSOR GROUND CIRCUIT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              
+              Measure the voltage between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','4')">C1575</a> Pin 4 and <a href="javascript:connectorlinkwithpin('ED2','C1575','11')">C1575</a> Pin 11. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0115876&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the voltage greater than 4.8 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#C6">C6</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+               INSPECT and REPAIR transmission vehicle harness for an open. If an open circuit is not found, INSTALL a new PCM, REFER to <a data-linkid="ID0EZUBI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EZUBI"></span>. PERFORM the Solenoid Body Strategy Data Download procedure. REFER to <a data-linkid="ID0E5UBI" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0E5UBI"></span> in this section. CLEAR the DTCs. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="C6" data-ajax="false"></a><b>C6 
+                CHECK TR  SENSOR TO MANUAL VALVE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Drain the transmission fluid and remove the transmission fluid pan. Refer to <a data-linkid="ID0EZVBI" data-for="307-01_s2p786q0" data-procuid="n1133940" class="expand-link">Fluid Pan, Gasket and Filter</a><span id="spanID0EZVBI"></span> in this section. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Check the connection between the <abbr title="Transmission Range">TR</abbr>  sensor and the manual control valve. Refer to <a data-linkid="ID0EJWBI" data-for="307-01_s10p282q0" data-procuid="n1678005" class="expand-link">Transmission</a><span id="spanID0EJWBI"></span> in this section. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect the molded leadframe for metallic contamination, refer to <a data-linkid="ID0ETWBI" data-for="307-01_s2p7426q0" data-procuid="n1281752" class="expand-link">Shift Solenoids (SS)</a><span id="spanID0ETWBI"></span>. 
+
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the <abbr title="Transmission Range">TR</abbr>  sensor connected to the manual valve and the molded leadframe free of debris? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              INSTALL a new <abbr title="Transmission Range">TR</abbr>  sensor, REFER to <a data-linkid="ID0EVXBI" data-for="307-01_s2p7426q0" data-procuid="n1281752" class="expand-link">Shift Solenoids (SS)</a><span id="spanID0EVXBI"></span> in this section. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              CONNECT the <abbr title="Transmission Range">TR</abbr>  sensor to the manual valve, REFER to <a data-linkid="ID0EIYBI" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0EIYBI"></span> in this section. CLEAN all debris from the molded leadframe. RUN the Key ON Engine OFF (KOEO)
+       self-test. If DTCs return, INSTALL a new <abbr title="Transmission Range">TR</abbr>  sensor/leadframe, REFER to <a data-linkid="ID0EYYBI" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0EYYBI"></span> in this section. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+      </table><br xmlns:str="http://xsltsl.org/string">
+      <a name="D" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST D : 
+          TSS  SENSOR 
+</b></center>
+  </caption>
+        
+        <tr>
+    <td><b>NOTE: </b><i>
+          Refer to the Transmission Vehicle Harness Connector illustration within the <a data-linkid="ID0ERZBI" data-for="307-01_s4p9004q0" data-procuid="n1274095" class="expand-link">Transmission Connector Layouts</a><span id="spanID0ERZBI"></span> procedure in this section. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Refer to the Transmission Leadframe Connector illustration within the <a data-linkid="ID0E2ZBI" data-for="307-01_s4p9004q0" data-procuid="n1274095" class="expand-link">Transmission Connector Layouts</a><span id="spanID0E2ZBI"></span> procedure in this section. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          If the scan tool is unable to access the transmission PIDs, refer to Powertrain Control/Emissions Diagnosis (PC/ED) manual. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Always drive the vehicle in a safe manner according to driving conditions and obey all traffic laws. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Read and record all DTCs. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          If DTCs P0705, P0706, P0707, P0708, P0709, P1702, P1705 and/or P1921 are set, diagnose those DTCs first. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="D1" data-ajax="false"></a><b>D1 
+                DRIVE CYCLE TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Connect the scan tool. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Enter the following diagnostic mode on the scan tool:  TSS PID: TSS_SRC 
+.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Monitor the TSS_SRC PID while road testing the vehicle. Drive the vehicle so the transmission upshifts and downshifts through all the gears. 
+
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Does the <abbr title="Turbine Shaft Speed">TSS</abbr>  sensor rpm increase and decrease with engine rpm and vehicle speed? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              REFER to <a data-linkid="ID0EO3BI" data-for="307-01_s4p8997q0" data-procuid="n1274093" class="expand-link">Shift Point Road Test</a><span id="spanID0EO3BI"></span> in this section for further diagnosis. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#D2">D2</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="D2" data-ajax="false"></a><b>D2 
+                CHECK TSS  SENSOR SIGNAL CIRCUIT FOR POWER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  Transmission Vehicle Harness <a href="javascript:connectorlinkwithpin('ED2','C1575','')">C1575</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Measure the voltage between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','1')">C1575</a> Pin 1 and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0115878&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the voltage less than 4.8 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#D3">D3</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#D6">D6</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="D3" data-ajax="false"></a><b>D3 
+                CHECK THE TSS  SENSOR SIGNAL CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C175T','')">C175T</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect the connector for damaged or pushed out terminals, corrosion, loose wires and missing or damaged seals. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Vehicles equipped with a 3.7L engine, measure the resistance between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','1')">C1575</a> Pin 1 and PCM <a href="javascript:connectorlinkwithpin('ED2','C175T','16')">C175T</a> Pin 16. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123865&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1381T','')">C1381T</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect the connector for damaged or pushed out terminals, corrosion, loose wires and missing or damaged seals. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Vehicles equipped with a 5.0L or 6.2L engine, measure the resistance between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','1')">C1575</a> Pin 1 and PCM <a href="javascript:connectorlinkwithpin('ED2','C1381T','1')">C1381T</a> Pin 1. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123866&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1551E','')">C1551E</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect the connector for damaged or pushed out terminals, corrosion, loose wires and missing or damaged seals. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Vehicles equipped with a 3.5L engine, measure the resistance between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','1')">C1575</a> Pin 1 and PCM <a href="javascript:connectorlinkwithpin('ED2','C1551E','27')">C1551E</a> Pin 27. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123867&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the resistance less than 5 ohms? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#D4">D4</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+               INSPECT and REPAIR transmission vehicle harness <abbr title="Turbine Shaft Speed">TSS</abbr>  signal circuit for an open. If an open circuit is not found, REPLACE the PCM, REFER to <a data-linkid="ID0EBFCI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EBFCI"></span>. PERFORM the Solenoid Body Strategy Data Download procedure. REFER to <a data-linkid="ID0EGFCI" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0EGFCI"></span> in this section. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="D4" data-ajax="false"></a><b>D4 
+                CHECK THE TSS  SENSOR SIGNAL CIRCUIT FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              
+              Measure the resistance between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','1')">C1575</a> Pin 1 and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123868&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the resistance greater than 10,000 ohms? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#D5">D5</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+               INSPECT and REPAIR transmission vehicle harness <abbr title="Turbine Shaft Speed">TSS</abbr>  signal circuit for a short to ground. If a short to ground is not found, REPLACE the PCM, REFER to <a data-linkid="ID0ELHCI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0ELHCI"></span>. PERFORM the Solenoid Body Strategy Data Download procedure. REFER to <a data-linkid="ID0EQHCI" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0EQHCI"></span> in this section. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="D5" data-ajax="false"></a><b>D5 
+                CHECK THE TSS  SENSOR SIGNAL CIRCUIT FOR A SHORT TO POWER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Connect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C175T','')">C175T</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Connect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1381T','')">C1381T</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Connect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1551E','')">C1551E</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Measure for voltage between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','1')">C1575</a> Pin 1, and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0115878&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is voltage greater than 5.1 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+               INSPECT and REPAIR transmission vehicle harness <abbr title="Turbine Shaft Speed">TSS</abbr>  signal circuit for a short to power. If a short to power is not found, REPLACE the PCM, REFER to <a data-linkid="ID0E3KCI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0E3KCI"></span>. PERFORM the Solenoid Body Strategy Data Download procedure. REFER to <a data-linkid="ID0EBLCI" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0EBLCI"></span> in this section. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#D6">D6</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="D6" data-ajax="false"></a><b>D6 
+                CHECK THE TSS  SENSOR GROUND CIRCUIT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              
+              Measure the voltage between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','1')">C1575</a> Pin 1 and <a href="javascript:connectorlinkwithpin('ED2','C1575','5')">C1575</a> Pin 5. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0133891&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is voltage less than 4.8 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              REPAIR the transmission vehicle harness signal return circuit for an open. If an open is not found, REPLACE the PCM, REFER to <a data-linkid="ID0EFNCI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EFNCI"></span>. PROGRAM the PCM with the latest calibration level. PERFORM the Solenoid Body Strategy Data Download procedure. REFER to <a data-linkid="ID0EKNCI" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0EKNCI"></span> in this section. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REPLACE the molded leadframe, REFER to <a data-linkid="ID0EXNCI" data-for="307-01_s2p7426q0" data-procuid="n1281752" class="expand-link">Shift Solenoids (SS)</a><span id="spanID0EXNCI"></span> in this section. CLEAR the DTCs. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+      </table><br xmlns:str="http://xsltsl.org/string">
+      <a name="E" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST E : 
+          OSS  SENSOR 
+</b></center>
+  </caption>
+        
+        <tr>
+    <td><b>NOTE: </b><i>
+          Refer to the Transmission Vehicle Harness Connector illustration within the <a data-linkid="ID0EQOCI" data-for="307-01_s4p9004q0" data-procuid="n1274095" class="expand-link">Transmission Connector Layouts</a><span id="spanID0EQOCI"></span> procedure in this section. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Refer to the Transmission Leadframe Connector illustration within the <a data-linkid="ID0E1OCI" data-for="307-01_s4p9004q0" data-procuid="n1274095" class="expand-link">Transmission Connector Layouts</a><span id="spanID0E1OCI"></span> procedure in this section. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          If the scan tool is unable to access the transmission PIDs, refer to Powertrain Control/Emissions Diagnosis (PC/ED) manual. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Always drive the vehicle in a safe manner according to driving conditions and obey all traffic laws. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Read and record all DTCs. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          If DTCs P0705, P0706, P0707, P0708, P0709, P1702, P1705 and/or P1921 are set, diagnose those DTCs first. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="E1" data-ajax="false"></a><b>E1 
+                DRIVE CYCLE TEST 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Connect the scan tool. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Enter the following diagnostic mode on the scan tool:  OSS PID: OSS_SRC 
+.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Monitor the Output Shaft Speed (OSS)
+       sensor PID while road testing the vehicle. Drive the vehicle so the transmission upshifts and downshifts through all the gears. 
+
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Does the <abbr title="Output Shaft Speed">OSS</abbr>  sensor rpm increase and decrease with engine rpm and vehicle speed? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              REFER to <a data-linkid="ID0EURCI" data-for="307-01_s4p8997q0" data-procuid="n1274093" class="expand-link">Shift Point Road Test</a><span id="spanID0EURCI"></span> in this section for further diagnosis. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#E2">E2</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="E2" data-ajax="false"></a><b>E2 
+                CHECK OSS  SENSOR SIGNAL CIRCUIT FOR POWER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  Transmission Vehicle Harness <a href="javascript:connectorlinkwithpin('ED2','C1575','')">C1575</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Measure the voltage between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','15')">C1575</a> Pin 15 and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123874&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the voltage less than 4.8 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#E3">E3</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#E6">E6</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="E3" data-ajax="false"></a><b>E3 
+                CHECK THE OSS  SENSOR SIGNAL CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C175T','')">C175T</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect the connector for damaged or pushed out terminals, corrosion, loose wires and missing or damaged seals. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Vehicles equipped with a 3.7L engine, measure the resistance between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','15')">C1575</a> Pin 15 and PCM <a href="javascript:connectorlinkwithpin('ED2','C175T','25')">C175T</a> Pin 25. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123870&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1381T','')">C1381T</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect the connector for damaged or pushed out terminals, corrosion, loose wires and missing or damaged seals. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Vehicles equipped with a 5.0L or 6.2L engine, measure the resistance between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','15')">C1575</a> Pin 15 and PCM <a href="javascript:connectorlinkwithpin('ED2','C1381T','14')">C1381T</a> Pin 14. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123871&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1551E','')">C1551E</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect the connector for damaged or pushed out terminals, corrosion, loose wires and missing or damaged seals. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Vehicles equipped with a 3.5L engine, measure the resistance between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','15')">C1575</a> Pin 15 and PCM <a href="javascript:connectorlinkwithpin('ED2','C1551E','12')">C1551E</a> Pin 12. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123872&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the resistance less than 5 ohms? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#E4">E4</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+               INSPECT and REPAIR transmission vehicle harness <abbr title="Output Shaft Speed">OSS</abbr>  signal circuit for an open. If an open circuit is not found, REPLACE the PCM, REFER to <a data-linkid="ID0EG1CI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EG1CI"></span>. PERFORM the Solenoid Body Strategy Data Download procedure. REFER to <a data-linkid="ID0EL1CI" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0EL1CI"></span> in this section. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="E4" data-ajax="false"></a><b>E4 
+                CHECK THE OSS  SENSOR SIGNAL CIRCUIT FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              
+              Measure the resistance between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','15')">C1575</a> Pin 15 and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123873&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the resistance greater than 10,000 ohms? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#E5">E5</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+               INSPECT and REPAIR transmission vehicle harness <abbr title="Output Shaft Speed">OSS</abbr>  signal circuit for a short to ground. If a short to ground is not found, REPLACE the PCM, REFER to <a data-linkid="ID0EQ3CI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EQ3CI"></span>. PERFORM the Solenoid Body Strategy Data Download procedure. REFER to <a data-linkid="ID0EV3CI" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0EV3CI"></span> in this section. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="E5" data-ajax="false"></a><b>E5 
+                CHECK THE OSS  SENSOR SIGNAL CIRCUIT FOR A SHORT TO POWER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Connect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C175T','')">C175T</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Connect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1381T','')">C1381T</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Connect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1551E','')">C1551E</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Measure for voltage between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','15')">C1575</a> Pin 15, and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123874&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is voltage greater than 5.1 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+               INSPECT and REPAIR transmission vehicle harness <abbr title="Output Shaft Speed">OSS</abbr>  signal circuit for a short to power. If a short to power is not found, INSTALL a new PCM, REFER to <a data-linkid="ID0EBADI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EBADI"></span>. PERFORM the Solenoid Body Strategy Data Download procedure. REFER to <a data-linkid="ID0EGADI" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0EGADI"></span> in this section. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#E6">E6</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="E6" data-ajax="false"></a><b>E6 
+                CHECK THE OSS  SENSOR GROUND CIRCUIT 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              
+              Measure the voltage between the transmission vehicle harness <a href="javascript:connectorlinkwithpin('ED2','C1575','15')">C1575</a> Pin 15 and <a href="javascript:connectorlinkwithpin('ED2','C1575','5')">C1575</a> Pin 5. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123905&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is voltage less than 4.8 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              REPAIR the transmission vehicle harness signal return circuit for an open. If an open is not found, REPLACE the PCM, REFER to <a data-linkid="ID0EKCDI" data-sectnum="303-14" class="section-link">Section 
+          303-14</a><span id="spanID0EKCDI"></span>. PROGRAM the PCM with the latest calibration level. PERFORM the Solenoid Body Strategy Data Download procedure. REFER to <a data-linkid="ID0EPCDI" data-for="307-01_s4p704499q0" data-procuid="n1226349" class="expand-link">Solenoid Body Strategy</a><span id="spanID0EPCDI"></span> in this section. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REPLACE the molded leadframe, REFER to <a data-linkid="ID0E3CDI" data-for="307-01_s9p2490q0" data-procuid="n1235421" class="expand-link">Main Control</a><span id="spanID0E3CDI"></span> in this section. CLEAR the DTCs. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+      </table><br xmlns:str="http://xsltsl.org/string">
+    
+  
+
+

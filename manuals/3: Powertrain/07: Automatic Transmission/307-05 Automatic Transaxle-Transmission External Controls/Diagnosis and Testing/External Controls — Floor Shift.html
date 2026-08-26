@@ -1,0 +1,2884 @@
+
+
+
+  <meta name="tps_variantid" content="" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_bookcode" content="SD2" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_sectionnumber" content="307-05" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_section_title" content="307-05 Automatic Transaxle/Transmission External Controls" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_ss_title" content="Diagnosis and Testing" xmlns:str="http://xsltsl.org/string">
+<meta name="tps_procfilename" content="n2252363" xmlns:str="http://xsltsl.org/string">
+<div id="taginfo" xmlns:str="http://xsltsl.org/string"></div>
+<table cellspacing="0" cellpadding="2" width="100%" xmlns:str="http://xsltsl.org/string">
+  <tr>
+    <td align="left"><i>307-05 Automatic Transaxle/Transmission External Controls</i></td>
+    <td align="right"><i>2013 F-150</i></td>
+  </tr>
+  <tr>
+    <td><i>Diagnosis and Testing</i></td>
+    <td align="right"><i><a class="bookinfosmall" href="javascript:load_sgmlid();">Procedure revision date:
+      10/13/2016</a></i></td>
+  </tr>
+</table>
+<hr xmlns:str="http://xsltsl.org/string">
+    <meta name="tps_proctitle" content="External Controls — Floor Shift" xmlns:str="http://xsltsl.org/string">
+<h1 xmlns:str="http://xsltsl.org/string">
+  <center>External Controls
+ — Floor Shift</center>
+</h1>
+<p xmlns:str="http://xsltsl.org/string">
+  <center><span class="show-vin"><a class="nounderline" href="javascript:partlink('307-05','')"><img title="Ford Ecat Electronic Parts Catalog" border="0" src="/content/images/workshop/FordEcat.jpg"></a></span></center>
+</p>
+    <br xmlns:str="http://xsltsl.org/string"><table border="1" cellpadding="3" cellspacing="0" width="50%" xmlns:str="http://xsltsl.org/string">
+  <caption>Special Tool(s)</caption>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=ST3093A&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Fluke 77-IV Digital Multimeter
+          <br>FLU77-4 or equivalent 
+
+        </td>
+      </tr>
+      <tr valign="top">
+        <td>
+          <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=st2834a&amp;w=99&amp;t=JPG" border="0" width="99">
+        </td>
+        <td>
+          Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan tool
+          <br>
+        </td>
+      </tr>
+    </table>
+    <a name="procsub1_1" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Inspection and Verification 
+</b></p>
+      <ol start="1. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Verify the customer concern by operating the transmission external control. 
+
+      </li>
+</ol>
+      <ol start="2. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        Visually inspect for obvious signs of mechanical and electrical damage; refer to the following chart: 
+
+        <br><br>
+          <p class="singlespace"><b>
+             
+            
+            Visual Inspection Chart
+          </b></p>
+          <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+      <colgroup>
+        <col align="left">
+        <col align="left">
+      </colgroup>
+            
+            
+            <thead>
+              <tr>
+                <th align="center" valign="top">
+                  
+                    Mechanical
+                   
+                </th>
+                <th align="center" valign="top">
+                  
+                    Electrical
+                   
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td valign="top">
+                  <ul type="disc">
+                    <li>
+                      Damaged Brake Shift Interlock Actuator (BSIA)
+      
+                    </li>
+                    <li>
+                      Damaged Tow/Haul switch 
+
+                    </li>
+                    <li>
+                      Damaged SelectShift™ switch 
+
+                    </li>
+                  </ul>
+                </td>
+                <td valign="top">
+                  <ul type="disc">
+                    <li>
+                      Failed fuse(s): 
+
+                      <ul style="list-style-type: square">
+                  <li>
+                        
+                          Body Control Module (BCM)
+       18 (10A) 
+
+                      </li>
+                </ul>
+                      <ul style="list-style-type: square">
+                  <li>
+                        
+                          <abbr title="Body Control Module">BCM</abbr>  42 (5A) 
+
+                      </li>
+                </ul>
+                    </li>
+                    <li>
+                      PCM 
+
+                    </li>
+                    <li>
+                      Loose or damaged connections 
+
+                    </li>
+                    <li>
+                      Damaged wiring harness 
+
+                    </li>
+                    <li>
+                      Corroded or damaged terminals 
+
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table><br>
+        <br>
+      </li>
+</ol>
+      <ol start="3. " xmlns:str="http://xsltsl.org/string">
+  <li>
+        If the fault is not visually evident, determine the symptom. GO to <a data-ajax="false" href="#SC2">Symptom Chart — External Controls, Floor Shift</a> or GO to <a data-ajax="false" href="#SC3">Symptom Chart — NVH Floor Shift</a>. 
+
+      </li>
+</ol>
+    
+    <a name="procsub1_2" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>DTC Chart 
+</b></p>
+      <a name="table_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p class="singlespace" xmlns:str="http://xsltsl.org/string"><b>
+             
+            DTC Chart 
+</b></p>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="center">
+    <col align="center">
+    <col align="left">
+    <col align="left">
+    <col align="left">
+  </colgroup>
+          
+          
+          
+          
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                DTC 
+
+              </th>
+              <th align="center" valign="top">
+                Component 
+
+              </th>
+              <th align="center" valign="top">
+                Description 
+
+              </th>
+              <th align="center" valign="top">
+                Condition 
+
+              </th>
+              <th align="center" valign="top">
+                Symptom 
+
+              </th>
+              <th align="center" valign="top">
+                Action 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                B1319:11 
+
+              </td>
+              <td valign="top">
+                
+                  Brake Shift Interlock Actuator (BSIA)
+      , <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> 
+              </td>
+              <td valign="top">
+                Shift Interlock (BSI) Output Circuit: Circuit short to ground 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Brake Shift Interlock Actuator" xmlns:str="http://xsltsl.org/string">BSIA</abbr>  system malfunction 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Brake Shift Interlock Actuator" xmlns:str="http://xsltsl.org/string">BSIA</abbr>  inoperative. 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#E" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test E</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                B1319:15 
+
+              </td>
+              <td valign="top">
+                
+                  Brake Shift Interlock Actuator (BSIA)
+      , <abbr title="Body Control Module" xmlns:str="http://xsltsl.org/string">BCM</abbr> 
+              </td>
+              <td valign="top">
+                Shift Interlock (BSI) Output Circuit: Circuit short to voltage or open 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Brake Shift Interlock Actuator" xmlns:str="http://xsltsl.org/string">BSIA</abbr>  system malfunction 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Brake Shift Interlock Actuator" xmlns:str="http://xsltsl.org/string">BSIA</abbr>  inoperative. 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#E" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test E</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0815 
+
+              </td>
+              <td valign="top">
+                Upshift Switch Circuit 
+
+              </td>
+              <td valign="top">
+                Upshift switch concerns, open or shorted circuit 
+
+              </td>
+              <td valign="top">
+                The PCM signal input voltage status is out of range 
+
+              </td>
+              <td valign="top">
+                Upshift switch inoperative. 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#H" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test H</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P0816 
+
+              </td>
+              <td valign="top">
+                Downshift Switch Circuit 
+
+              </td>
+              <td valign="top">
+                Downshift switch concerns, open or shorted circuit 
+
+              </td>
+              <td valign="top">
+                The PCM signal input voltage status is out of range 
+
+              </td>
+              <td valign="top">
+                Downshift switch inoperative. 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#H" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test H</a>. 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                P1780 
+
+              </td>
+              <td valign="top">
+                Tow/Haul Switch 
+
+              </td>
+              <td valign="top">
+                
+                  Transmission Control Switch (TCS)
+      (Overdrive (O/D)
+       cancel) circuit out of self-test range 
+
+              </td>
+              <td valign="top">
+                The PCM did not receive a Tow/Haul switch input during the Key ON Engine Running (KOER)
+       self-test 
+
+              </td>
+              <td valign="top">
+                Tow/Haul is inoperative or does not operate correctly. 
+
+              </td>
+              <td valign="top">
+                
+                  <a data-ajax="false" href="#G" xmlns:str="http://xsltsl.org/string">GO to Pinpoint Test G</a>. 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+    
+    <a name="procsub1_3" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart — External Controls, Floor Shift 
+</b></p>
+      <a name="SC2" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart — External Controls, Floor Shift 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The Brake Shift Interlock Actuator (BSIA)
+       system does not release/lock correctly 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Circuitry 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Fuse(s): 
+</li>
+      </ul>
+              
+                <ul class="subnospace">
+        <li>
+                  Body Control Module (BCM)
+       18 (10A) 
+</li>
+      </ul>
+              
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Brake Shift Interlock Actuator">BSIA</abbr> 
+              </li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#E">GO to Pinpoint Test E</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Selector lever cable 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>VERIFY selector lever cable adjustment. REFER to <a data-linkid="ID0ELNAC" data-for="307-05_s5p8689q3683" data-procuid="n1275172" class="expand-link">Selector Lever Cable Adjustment — Floor Shift</a><span id="spanID0ELNAC"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The shift control is out of correct gear relationship 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Selector lever cable and bracket 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Selector lever linkage 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#F">GO to Pinpoint Test F</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>
+              Transmission Range (TR)
+       indicator (PRNDL) does not correspond to the selected gear 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Selector lever cable bracket 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>TIGHTEN bolts holding selector lever cable bracket. REFER to <a data-linkid="ID0EQPAC" data-for="307-05_s5p8689q3683" data-procuid="n1275172" class="expand-link">Selector Lever Cable Adjustment — Floor Shift</a><span id="spanID0EQPAC"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Selector lever cable loose at the selector lever 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>SECURE selector lever cable. REFER to <a data-linkid="ID0EOAAE" data-for="307-05_s5p8689q3683" data-procuid="n1275172" class="expand-link">Selector Lever Cable Adjustment — Floor Shift</a><span id="spanID0EOAAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Selector lever cable 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>VERIFY selector lever cable adjustment. REFER to <a data-linkid="ID0ELBAE" data-for="307-05_s5p8689q3683" data-procuid="n1275172" class="expand-link">Selector Lever Cable Adjustment — Floor Shift</a><span id="spanID0ELBAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>
+              <abbr title="Transmission Range">TR</abbr>  indicator (PRNDL) does not illuminate 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                Instrument Panel Cluster (IPC)
+       malfunction 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Circuitry 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REFER to <a data-linkid="ID0E2CAE" data-sectnum="413-00" class="section-link">Section 
+          413-00</a><span id="spanID0E2CAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Transmission Range">TR</abbr>  sensor 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>CHECK for <abbr title="Transmission Range">TR</abbr>  sensor DTCs. REFER to <a data-linkid="ID0EGEAE" data-sectnum="307-01" class="section-link">Section 
+          307-01</a><span id="spanID0EGEAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The ignition key cannot be returned to the OFF position or the ignition key can be turned to the OFF position when the selector lever is not in PARK 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Ignition lock cylinder 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Key removal inhibit solenoid (part of the ignition switch) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Park detect switch (part of the selector lever) 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Selector lever cable 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Mechanical damage to the selector lever, selector lever cable or selector lever knob 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REFER to <a data-linkid="ID0E4FAE" data-sectnum="211-05" class="section-link">Section 
+          211-05</a><span id="spanID0E4FAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The PRNDL indicator does not illuminate P 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Wiring, terminals or connectors 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Powertrain Control Module">PCM</abbr>  concern 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Instrument Panel Cluster">IPC</abbr> 
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Park detect switch (part of the selector lever) 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REFER to <a data-linkid="ID0EYHAE" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EYHAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The Tow/Haul switch does not operate correctly 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Tow/Haul switch 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Tow/Haul switch not cycled during self-test 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Circuitry 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#G">GO to Pinpoint Test G</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The Tow/Haul lamp is not operating correctly 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Instrument Panel Cluster">IPC</abbr> 
+              </li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>PCM 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Circuitry 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>REFER to <a data-linkid="ID0ENKAE" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0ENKAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>The SelectShift™ switch is not operating correctly 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li> SelectShift™ switch 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>PCM 
+</li>
+      </ul>
+            
+            
+              <ul class="nospace">
+        <li>Circuitry 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#H">GO to Pinpoint Test H</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Water enters inside the vehicle 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Cable assembly grommet 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>SECURE grommet to floor panel. REFER to <a data-linkid="ID0ERMAE" data-for="307-05_s3p8688q3683" data-procuid="n1490327" class="expand-link">Selector Lever Cable — Floor Shift</a><span id="spanID0ERMAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Torn selector lever cable assembly grommet 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL a new selector lever cable. REFER to <a data-linkid="ID0EONAE" data-for="307-05_s3p8688q3683" data-procuid="n1490327" class="expand-link">Selector Lever Cable — Floor Shift</a><span id="spanID0EONAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Excessive shift effort 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Selector lever cable 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL a new selector lever cable. REFER to <a data-linkid="ID0ELOAE" data-for="307-05_s3p8688q3683" data-procuid="n1490327" class="expand-link">Selector Lever Cable — Floor Shift</a><span id="spanID0ELOAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Cable bracket 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>ADJUST cable. TIGHTEN cable bracket screws. REFER to <a data-linkid="ID0EIPAE" data-for="307-05_s3p8688q3683" data-procuid="n1490327" class="expand-link">Selector Lever Cable — Floor Shift</a><span id="spanID0EIPAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Selector lever will not shift from PARK 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Selector lever cable 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>VERIFY selector lever cable adjustment. REFER to <a data-linkid="ID0EFQAE" data-for="307-05_s5p8689q3683" data-procuid="n1275172" class="expand-link">Selector Lever Cable Adjustment — Floor Shift</a><span id="spanID0EFQAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Selector lever knob 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL a new selector lever knob. REFER to <a data-linkid="ID0ECRAE" data-for="307-05_s3p1140q0" data-procuid="n1490323" class="expand-link">Selector Lever Knob</a><span id="spanID0ECRAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Broken selector lever cable 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL a new selector lever cable. REFER to <a data-linkid="ID0E6RAE" data-for="307-05_s3p8688q3683" data-procuid="n1490327" class="expand-link">Selector Lever Cable — Floor Shift</a><span id="spanID0E6RAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                Brake Shift Interlock Actuator (BSIA)
+       system failure 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <a data-ajax="false" href="#E">GO to Pinpoint Test E</a>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Vehicle will not crank/start in park but will crank/start in neutral 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Selector lever cable 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>VERIFY selector lever cable adjustment. REFER to <a data-linkid="ID0E6TAE" data-for="307-05_s5p8689q3683" data-procuid="n1275172" class="expand-link">Selector Lever Cable Adjustment — Floor Shift</a><span id="spanID0E6TAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>
+                <abbr title="Transmission Range">TR</abbr>  sensor 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>CHECK for <abbr title="Transmission Range">TR</abbr>  sensor DTCs. REFER to <a data-linkid="ID0EJVAE" data-sectnum="307-01" class="section-link">Section 
+          307-01</a><span id="spanID0EJVAE"></span>. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_4" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Symptom Chart — NVH Floor Shift 
+</b></p>
+      <a name="SC3" xmlns:str="http://xsltsl.org/string"></a><table width="90%" cellpadding="3" cellspacing="0" border="1" rules="groups" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center>Symptom Chart — NVH Floor Shift 
+</center>
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <tr valign="top">
+    <th>Condition</th>
+    <th>Possible Causes</th>
+    <th>Action</th>
+  </tr>
+  <tbody></tbody>
+        
+        <tr>
+    <td colspan="3"><b>NOTE: </b><i>
+          NVH symptoms should be identified using the diagnostic tools that are available. For a list of these tools, an explanation of their uses and a glossary of common terms, refer to <a data-linkid="ID0ECWAE" data-sectnum="100-04" class="section-link">Section 
+          100-04</a><span id="spanID0ECWAE"></span>. Since it is possible any one of multiple systems may be the cause of a symptom, it may be necessary to use a process of elimination type of diagnostic approach to pinpoint the responsible system. If this is not the causal system for the symptom, refer back to <a data-linkid="ID0EHWAE" data-sectnum="100-04" class="section-link">Section 
+          100-04</a><span id="spanID0EHWAE"></span> for the next likely system and continue diagnosis. 
+
+        </i></td>
+  </tr>
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Vibration — a high frequency (20-80 Hz) that is felt through the seat or selector lever. Changes with engine speed 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Selector lever cable incorrectly routed, grounded out or loose 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>CHECK the selector lever cable. REPAIR as necessary. REFER to <a data-linkid="ID0EDXAE" data-for="307-05_s3p8688q3683" data-procuid="n1490327" class="expand-link">Selector Lever Cable — Floor Shift</a><span id="spanID0EDXAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tbody></tbody>
+  <tr valign="top">
+    <td>
+            <ul class="nospace">
+        <li>Rattle, buzz or other noise 
+</li>
+      </ul>
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Selector lever loose 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>TIGHTEN the selector lever bolts. REFER to <a data-linkid="ID0EAYAE" data-for="307-05_s3p4385q3683" data-procuid="n1490325" class="expand-link">Selector Lever — Floor Shift</a><span id="spanID0EAYAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Selector lever knob 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL a new selector lever knob. REFER to <a data-linkid="ID0E4YAE" data-for="307-05_s3p1140q0" data-procuid="n1490323" class="expand-link">Selector Lever Knob</a><span id="spanID0E4YAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Selector lever 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>INSTALL a new selector lever. REFER to <a data-linkid="ID0E1ZAE" data-for="307-05_s3p4385q3683" data-procuid="n1490325" class="expand-link">Selector Lever — Floor Shift</a><span id="spanID0E1ZAE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+        
+          <tr valign="top">
+    <td>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>Cable assembly grommet 
+</li>
+      </ul>
+            
+          </td>
+    <td>
+            
+              <ul class="nospace">
+        <li>SECURE the grommet to the floor panel. REFER to <a data-linkid="ID0EX1AE" data-for="307-05_s3p8688q3683" data-procuid="n1490327" class="expand-link">Selector Lever Cable — Floor Shift</a><span id="spanID0EX1AE"></span> in this section. 
+</li>
+      </ul>
+            
+          </td>
+  </tr>
+          
+          
+        
+      </table>
+    
+    <a name="procsub1_5" xmlns:str="http://xsltsl.org/string"></a>
+      <p xmlns:str="http://xsltsl.org/string"><b>Pinpoint Tests 
+</b></p>
+      <p xmlns:str="http://xsltsl.org/string">
+        <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','030')">30</a> , Transmission Controls for schematic and connector information.<br>
+      </p>
+      <p xmlns:str="http://xsltsl.org/string">
+        <br>Refer to Wiring Diagrams Cell <a href="javascript:wiringlink('ED2','037')">37</a> , Shift Interlock for schematic and connector information.<br>
+      </p>
+      <a name="figure_1" xmlns:str="http://xsltsl.org/string"></a>
+        <p xmlns:str="http://xsltsl.org/string"><b> Selector Lever Connector — C3245 
+</b></p>
+        <img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123644&amp;w=250&amp;t=JPG" border="1" width="250" xmlns:str="http://xsltsl.org/string">
+      
+      <br xmlns:str="http://xsltsl.org/string"><br xmlns:str="http://xsltsl.org/string"><a name="table_2" xmlns:str="http://xsltsl.org/string"></a>
+        <br><table cellspacing="0" cellpadding="3" border="1" width="100%">
+  <colgroup>
+    <col align="center">
+    <col align="center">
+  </colgroup>
+          
+          
+          <thead>
+            <tr>
+              <th align="center" valign="top">
+                Pin Number 
+
+              </th>
+              <th align="center" valign="top">
+                Circuit Function 
+
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td valign="top">
+                1 
+
+              </td>
+              <td valign="top">
+                
+                  <abbr title="Brake Shift Interlock Actuator" xmlns:str="http://xsltsl.org/string">BSIA</abbr>  Power 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                2 
+
+              </td>
+              <td valign="top">
+                Key Lock Solenoid (inhibit removal) 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                3 
+
+              </td>
+              <td valign="top">
+                Transmission Park Detect 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                4 
+
+              </td>
+              <td valign="top">
+                Illumination 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                5 
+
+              </td>
+              <td valign="top">
+                Ground 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                6 
+
+              </td>
+              <td valign="top">
+                Tow/Haul Power 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                7 
+
+              </td>
+              <td valign="top">
+                Tow/Haul Signal 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                8 
+
+              </td>
+              <td valign="top">
+                Not Used 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                9 
+
+              </td>
+              <td valign="top">
+                SelectShift™ Upshift 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                10 
+
+              </td>
+              <td valign="top">
+                SelectShift™ Downshift 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                11 
+
+              </td>
+              <td valign="top">
+                SelectShift™ Ground 
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                12 
+
+              </td>
+              <td valign="top">
+                Not Used 
+
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+      <br xmlns:str="http://xsltsl.org/string">
+      <a name="E" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST E : THE BSIA  SYSTEM DOES NOT RELEASE/LOCK CORRECTLY 
+</b></center>
+  </caption>
+        
+        <tr>
+    <td><b>NOTE: </b><i>
+          Inspect the selector lever cable before proceeding with this pinpoint test. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="E1" data-ajax="false"></a><b>E1 
+                CHECK THE STOPLAMPS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Apply the brake pedal and observe the stoplamps. 
+
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Do the stoplamps operate correctly? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#E2">E2</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REFER to <a data-linkid="ID0EGFAG" data-sectnum="417-01" class="section-link">Section 
+          417-01</a><span id="spanID0EGFAG"></span>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="E2" data-ajax="false"></a><b>E2 
+                CHECK THE BSIA  POWER CIRCUIT FOR VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Disconnect:  Floor Shifter <a href="javascript:connectorlinkwithpin('ED2','C3245','')">C3245</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Measure the voltage between the <abbr title="Brake Shift Interlock Actuator">BSIA</abbr> <a href="javascript:connectorlinkwithpin('ED2','C3245','1')">C3245</a> Pin 1, circuit CET53 (BU/OG), harness side and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123687&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Apply the brake pedal. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              With the brake pedal applied, measure the voltage between the <abbr title="Brake Shift Interlock Actuator">BSIA</abbr> <a href="javascript:connectorlinkwithpin('ED2','C3245','1')">C3245</a> Pin 1, circuit CET53 (BU/OG), harness side and ground. 
+
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the voltage greater than 10 volts with the brake pedal applied and 0 volts with the brake pedal not applied? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#E3">E3</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              VERIFY the <abbr title="Body Control Module">BCM</abbr>  fuse 18 (10A) is OK, If OK REPAIR circuit CET53 (BU/OG) for an open. CLEAR the DTC. TEST the system for normal operation. If not OK, REFER to the Wiring Diagrams manual to identify the possible causes of the circuit short. 
+
+              <br>If voltage was present with the brake pedal not applied, GO to <a data-ajax="false" href="#E4">E4</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="E3" data-ajax="false"></a><b>E3 
+                CHECK THE BSIA  GROUND CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Measure the resistance between the selector lever <a href="javascript:connectorlinkwithpin('ED2','C3245','5')">C3245</a> Pin 5, circuit GD138 (BK/WH), harness side and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123686&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the resistance less than 5 ohms? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              INSTALL a new selector lever. REFER to <a data-linkid="ID0EXKAG" data-for="307-05_s3p4385q3683" data-procuid="n1490325" class="expand-link">Selector Lever — Floor Shift</a><span id="spanID0EXKAG"></span> in this section. CLEAR the DTC. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REPAIR circuit GD138 (BK/WH) for an open. CLEAR the DTC. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="E4" data-ajax="false"></a><b>E4 
+                CHECK THE BSIA  OUTPUT CIRCUIT FOR A SHORT TO POWER 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Disconnect:  
+                  <abbr title="Body Control Module">BCM</abbr> 
+                  <a href="javascript:connectorlinkwithpin('ED2','C2280B','')">C2280B</a>
+                .
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect <a href="javascript:connectorlinkwithpin('ED2','C3245','')">C3245</a> and <a href="javascript:connectorlinkwithpin('ED2','C2280B','')">C2280B</a> for damaged, pushed-out terminals or loose wires. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Measure the voltage between the selector lever <a href="javascript:connectorlinkwithpin('ED2','C3245','1')">C3245</a> Pin 1, circuit CET53 (BU/OG), harness side and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123687&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is any voltage present? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              REPAIR circuit CET53 (BU/OG) for a short to power. CLEAR the DTC. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#E5">E5</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="E5" data-ajax="false"></a><b>E5 
+                CHECK FOR CORRECT BCM OPERATION 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Disconnect all <abbr title="Body Control Module">BCM</abbr>  connectors. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Check for: 
+
+              <ul style="list-style-type: square">
+                <li>
+                  corrosion 
+
+                </li>
+                <li>
+                  damaged pins 
+
+                </li>
+                <li>
+                  pushed-out pins 
+
+                </li>
+              </ul>
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Connect all the <abbr title="Body Control Module">BCM</abbr>  connectors and make sure they seat correctly. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Operate the system and verify the concern is still present. 
+
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the concern still present? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                INSTALL a new  <span class="popup" title="body control module" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM</span>. Refer to the appropriate Removal and Installation procedure in Section 419-10.
+                            . CLEAR the DTC. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+      </table><br xmlns:str="http://xsltsl.org/string">
+      <a name="F" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST F : THE SHIFT CONTROL IS OUT OF CORRECT GEAR RELATIONSHIP 
+</b></center>
+  </caption>
+        
+        <tr>
+    <td class="gray"><a name="F1" data-ajax="false"></a><b>F1 
+                CHECK THE SHIFT CONTROL LINKAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Apply the brake pedal. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Gain access to the selector lever linkage. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Position the selector lever in all ranges. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Observe all selector lever linkage during operation. 
+
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the selector lever linkage damaged? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              INSTALL a new selector lever. REFER to <a data-linkid="ID0E2SAG" data-for="307-05_s3p4385q3683" data-procuid="n1490325" class="expand-link">Selector Lever — Floor Shift</a><span id="spanID0E2SAG"></span> in this section. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#F2">F2</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="F2" data-ajax="false"></a><b>F2 
+                CHECK THE SELECTOR LEVER CABLE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Check the selector lever cable and bracket installation and tightness. 
+
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the selector lever cable correctly installed and adjusted? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              VERIFY the selector lever cable adjustment. ADJUST the selector lever cable if necessary. REFER to <a data-linkid="ID0EMUAG" data-for="307-05_s5p8689q3683" data-procuid="n1275172" class="expand-link">Selector Lever Cable Adjustment — Floor Shift</a><span id="spanID0EMUAG"></span> in this section. GO to <a data-ajax="false" href="#F3">F3</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REPAIR as necessary. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="F3" data-ajax="false"></a><b>F3 
+                CHECK THE LINKAGE/CABLE FOR CORRECT GEAR RELATIONSHIP 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Apply the brake pedal. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Position the selector lever in all ranges. 
+
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Does the indicator match the gear selection? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              System OK. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REFER to <a data-linkid="ID0EIWAG" data-for="307-05_s3p8688q3683" data-procuid="n1490327" class="expand-link">Selector Lever Cable — Floor Shift</a><span id="spanID0EIWAG"></span> in this section. TEST the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+      </table><br xmlns:str="http://xsltsl.org/string">
+      <a name="G" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST G : THE TOW/HAUL SWITCH DOES NOT OPERATE CORRECTLY 
+</b></center>
+  </caption>
+        
+        <tr>
+    <td><b>NOTE: </b><i>
+          Vehicles equipped with a 3.7L engine use PCM <a href="javascript:connectorlinkwithpin('ED2','C175T','')">C175T</a>. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Vehicles equipped with a 5.0L or 6.2L engine use PCM <a href="javascript:connectorlinkwithpin('ED2','C1381T','')">C1381T</a>. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Vehicles equipped with a 3.5L engine use PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a>. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="G1" data-ajax="false"></a><b>G1 
+                CHECK DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Connect the scan tool. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Start the engine and RUN the Key ON Engine Running (KOER)
+       self-test. 
+
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is DTC P1780 set? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#G2">G2</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              No trouble found with the Tow/Haul system. REFER to <a data-linkid="ID0EMZAG" data-sectnum="413-01" class="section-link">Section 
+          413-01</a><span id="spanID0EMZAG"></span> if Tow/Haul lamp does not illuminate. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="G2" data-ajax="false"></a><b>G2 
+                CHECK THE BCM  FUSE 42 (5A) 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Remove Body Control Module (BCM)
+       fuse 42 (5A). 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Check fuse:  
+                  <abbr title="Body Control Module">BCM</abbr>  42 (5A) 
+.
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the resistance less than 5 ohms? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#G4">G4</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#G3">G3</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="G3" data-ajax="false"></a><b>G3 
+                CHECK THE TOW/HAUL POWER CIRCUIT FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Disconnect:  Selector Lever <a href="javascript:connectorlinkwithpin('ED2','C3245','')">C3245</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  
+                  <abbr title="Body Control Module">BCM</abbr> 
+                  <a href="javascript:connectorlinkwithpin('ED2','C2280B','')">C2280B</a>
+                .
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect <a href="javascript:connectorlinkwithpin('ED2','C3245','')">C3245</a> and <a href="javascript:connectorlinkwithpin('ED2','C2280B','')">C2280B</a> for damaged, pushed-out terminals or loose wires. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Measure the resistance between the selector lever <a href="javascript:connectorlinkwithpin('ED2','C3245','6')">C3245</a> Pin 6, circuit CBP42 (GN), harness side and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123688&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the resistance greater than 10,000 ohms? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#G4">G4</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REPAIR circuit CBP42 (GN) for a short to ground. CLEAR the DTC. RERUN the <abbr title="Key ON Engine Running">KOER</abbr>  self-test and test the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="G4" data-ajax="false"></a><b>G4 
+                CHECK THE TOW/HAUL POWER CIRCUIT FOR VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Disconnect:  Selector Lever <a href="javascript:connectorlinkwithpin('ED2','C3245','')">C3245</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect <a href="javascript:connectorlinkwithpin('ED2','C3245','')">C3245</a> for damaged, pushed-out terminals or loose wires. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Measure the voltage between the selector lever <a href="javascript:connectorlinkwithpin('ED2','C3245','6')">C3245</a> Pin 6, circuit CBP42 (GN), harness side and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123689&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the voltage greater than 10 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#G5">G5</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REPAIR circuit CBP42 (GN) for an open. CLEAR the DTC. RERUN the <abbr title="Key ON Engine Running">KOER</abbr>  self-test and test the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="G5" data-ajax="false"></a><b>G5 
+                CHECK THE TOW/HAUL INPUT CIRCUIT FOR A SHORT TO GROUND 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C175T','')">C175T</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1381T','')">C1381T</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect the connector for damaged, pushed-out terminals, corrosion or loose wires. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Measure the resistance between the selector lever <a href="javascript:connectorlinkwithpin('ED2','C3245','7')">C3245</a> Pin 7, circuit CET34 (BN/GN) and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123690&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the resistance greater than 10,000 ohms? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#G6">G6</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REPAIR circuit CET34 (BN/GN) for a short to ground. CLEAR the DTC. RERUN the <abbr title="Key ON Engine Running">KOER</abbr>  self-test and test the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="G6" data-ajax="false"></a><b>G6 
+                CHECK THE TOW/HAUL INPUT CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Connect the scan tool. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Enter the following diagnostic mode on the scan tool:  TCS_DEPRES 
+.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Connect a fused jumper from the selector lever switch, <a href="javascript:connectorlinkwithpin('ED2','C3245','6')">C3245</a> Pin 6 circuit CBP42 (GN) to <a href="javascript:connectorlinkwithpin('ED2','C3245','7')">C3245</a> Pin 7 circuit CET34 (BN/GN) harness side. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123691&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Does the TCS_DEPRES PID display YES? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              REPLACE the selector lever. REFER to <a data-linkid="ID0EUHBG" data-for="307-05_s3p4385q3683" data-procuid="n1490325" class="expand-link">Selector Lever — Floor Shift</a><span id="spanID0EUHBG"></span> in this section. CLEAR the DTC. RERUN the <abbr title="Key ON Engine Running">KOER</abbr>  self-test and test the system for normal operation. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              INSPECT and REPAIR circuit CET34 (BN/GN) for an open. If an open circuit is not found, REPLACE the PCM. PERFORM the Solenoid Body Strategy Data Download procedure. REFER to <a data-linkid="ID0EHIBG" data-sectnum="307-01" class="section-link">Section 
+          307-01</a><span id="spanID0EHIBG"></span>. RERUN the <abbr title="Key ON Engine Running">KOER</abbr>  self-test and test the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+      </table><br xmlns:str="http://xsltsl.org/string">
+      <a name="H" xmlns:str="http://xsltsl.org/string"></a><table width="96%" cellpadding="3" cellspacing="0" border="1" xmlns:str="http://xsltsl.org/string">
+  <caption>
+    <center><b>PINPOINT TEST H : THE SELECTSHIFT™ SWITCH IS NOT OPERATING CORRECTLY 
+</b></center>
+  </caption>
+        
+        <tr>
+    <td><b>NOTE: </b><i>
+          Vehicles equipped with a 3.7L engine use PCM <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a>. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Vehicles equipped with a 5.0L or 6.2L engine use PCM <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a>. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td><b>NOTE: </b><i>
+          Vehicles equipped with a 3.5L engine use PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a>. 
+
+        </i></td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="H1" data-ajax="false"></a><b>H1 
+                CHECK DTCS 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Connect the scan tool. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Start the engine and RUN the Key ON Engine Running (KOER)
+       self-test. 
+
+            </li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is DTC P0815 set? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#H2">H2</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#H5">H5</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="H2" data-ajax="false"></a><b>H2 
+                CHECK THE UPSHIFT CIRCUIT FOR VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  Selector Lever <a href="javascript:connectorlinkwithpin('ED2','C3245','')">C3245</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect <a href="javascript:connectorlinkwithpin('ED2','C3245','')">C3245</a> for damaged, pushed-out terminals, corrosion or loose wires. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Measure the voltage between the selector lever <a href="javascript:connectorlinkwithpin('ED2','C3245','9')">C3245</a> Pin 9, circuit CET43 (GY), harness side and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123692&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the voltage greater than 10 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#H4">H4</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#H3">H3</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="H3" data-ajax="false"></a><b>H3 
+                CHECK THE UPSHIFT CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect the connector for damaged, pushed-out terminals, corrosion or loose wires. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              For 3.7L engine vehicles, measure the resistance between the Tow/Haul switch <a href="javascript:connectorlinkwithpin('ED2','C3245','9')">C3245</a> Pin 9, circuit CET43 (GY) and PCM <a href="javascript:connectorlinkwithpin('ED2','C175B','23')">C175B</a> Pin 23, harness side. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123693&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              For 5.0L or 6.2L engine vehicles, measure the resistance between the Tow/Haul switch <a href="javascript:connectorlinkwithpin('ED2','C3245','9')">C3245</a> Pin 9, circuit CET43 (GY) and PCM <a href="javascript:connectorlinkwithpin('ED2','C1381B','23')">C1381B</a> Pin 23, harness side. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123693&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              For 3.5L engine vehicles, measure the resistance between the Tow/Haul switch <a href="javascript:connectorlinkwithpin('ED2','C3245','9')">C3245</a> Pin 9, circuit CET43 (GY) and PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','89')">C1551B</a> Pin 89, harness side. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123758&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the resistance less than 5 ohms? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#H4">H4</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REPAIR circuit CET43 (GY) for an open. CLEAR the DTCs. RERUN the <abbr title="Key ON Engine Running">KOER</abbr>  self-test and test the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="H4" data-ajax="false"></a><b>H4 
+                CHECK THE SIGNAL RETURN CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Connect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Connect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Connect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Measure the voltage between the selector lever <a href="javascript:connectorlinkwithpin('ED2','C3245','9')">C3245</a> Pin 9, circuit CET43 (GY) and <a href="javascript:connectorlinkwithpin('ED2','C3245','11')">C3245</a> Pin 11, circuit RE407 (YE/VT) harness side. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123694&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the voltage greater than 10 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              INSTALL a new selector lever, REFER to <a data-linkid="ID0EAWBG" data-for="307-05_s3p4385q3683" data-procuid="n1490325" class="expand-link">Selector Lever — Floor Shift</a><span id="spanID0EAWBG"></span> in this section. CLEAR the DTCs. RERUN the <abbr title="Key ON Engine Running">KOER</abbr>  self-test and test the system for normal operation. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REPAIR the signal return circuit RE407 (YE/VT) for an open. If an open circuit is not found, REPLACE the PCM. PROGRAM the PCM with the latest calibration level. PERFORM the solenoid strategy download procedure, REFER to solenoid body strategy in <a data-linkid="ID0ETWBG" data-sectnum="307-01" class="section-link">Section 
+          307-01</a><span id="spanID0ETWBG"></span>. RERUN the <abbr title="Key ON Engine Running">KOER</abbr>  self-test and test the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="H5" data-ajax="false"></a><b>H5 
+                CHECK THE DOWNSHIFT CIRCUIT FOR VOLTAGE 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  Selector Lever <a href="javascript:connectorlinkwithpin('ED2','C3245','')">C3245</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect <a href="javascript:connectorlinkwithpin('ED2','C3245','')">C3245</a> for damaged, pushed-out terminals, corrosion or loose wires. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Ignition ON. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Measure the voltage between the selector lever <a href="javascript:connectorlinkwithpin('ED2','C3245','10')">C3245</a> Pin 10, circuit CET42 (GN/VT), harness side and ground. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123695&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the voltage greater than 10 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#H7">H7</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#H6">H6</a>. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="H6" data-ajax="false"></a><b>H6 
+                CHECK THE DOWNSHIFT CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Ignition OFF. 
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Disconnect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Inspect the connector for damaged, pushed-out terminals, corrosion or loose wires. 
+
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              For 3.7L engine vehicles, measure the resistance between the selector lever <a href="javascript:connectorlinkwithpin('ED2','C3245','10')">C3245</a> Pin 10, circuit CET42 (GN/VT) and PCM <a href="javascript:connectorlinkwithpin('ED2','C175B','24')">C175B</a> Pin 24, harness side. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123696&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              For 5.0L or 6.2L engine vehicles, measure the resistance between the Tow/Haul switch <a href="javascript:connectorlinkwithpin('ED2','C3245','10')">C3245</a> Pin 10, circuit CET42 (GN/VT) and PCM <a href="javascript:connectorlinkwithpin('ED2','C1381B','24')">C1381B</a> Pin 24, harness side. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123759&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              For 3.5L engine vehicles, measure the resistance between the Tow/Haul switch <a href="javascript:connectorlinkwithpin('ED2','C3245','10')">C3245</a> Pin 10, circuit CET42 (GN/VT) and PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','88')">C1551B</a> Pin 88, harness side. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123760&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the resistance less than 5 ohms? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              
+                GO to <a data-ajax="false" href="#H7">H7</a>. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              REPAIR circuit CET42 (GN/VT) for an open. CLEAR the DTCs. RERUN the <abbr title="Key ON Engine Running">KOER</abbr>  self-test and test the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+        <tr>
+    <td class="gray"><a name="H7" data-ajax="false"></a><b>H7 
+                CHECK THE SIGNAL RETURN CIRCUIT FOR AN OPEN 
+</b></td>
+  </tr>
+  <tr>
+    <td>
+          
+            
+            <ul class="nospace">
+        <li>
+              Connect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C175B','')">C175B</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Connect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1381B','')">C1381B</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              Connect:  PCM <a href="javascript:connectorlinkwithpin('ED2','C1551B','')">C1551B</a>.
+            </li>
+      </ul>
+            <ul class="nospace">
+        <li>
+              
+              Measure the voltage between the selector lever <a href="javascript:connectorlinkwithpin('ED2','C3245','10')">C3245</a> Pin 10, circuit CET42 (GN/VT) and <a href="javascript:connectorlinkwithpin('ED2','C3245','11')">C3245</a> Pin 11, circuit RE407 (YE/VT) harness side. 
+
+            </li>
+      </ul>
+      <ul class="none">
+        <li><img class="popphoto publication-image" src="https://www.fordservicecontent.com/images/imagen/imagen2.dll?id=N0123697&amp;w=250&amp;t=JPG" border="0" width="250"></li>
+      </ul>
+            <br><b data-content-type="stepquestion">
+              Is the voltage greater than 10 volts? 
+
+            </b>
+          
+          <br><br><center>
+        <table width="90%" cellpadding="3" cellspacing="0" border="1">
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>Yes</b></td>
+            <td align="left">
+              INSTALL a new selector lever, REFER to <a data-linkid="ID0EEBAI" data-for="307-05_s3p4385q3683" data-procuid="n1490325" class="expand-link">Selector Lever — Floor Shift</a><span id="spanID0EEBAI"></span> in this section. CLEAR the DTCs. RERUN the <abbr title="Key ON Engine Running">KOER</abbr>  self-test and test the system for normal operation. 
+
+            </td>
+          </tr>
+            
+            <tr>
+            <td class="gray" width="5%" valign="top"><b>No</b></td>
+            <td align="left">
+              INSPECT and REPAIR the signal return circuit RE407 (YE/VT) for an open. If an open circuit is not found, REPLACE the PCM. PROGRAM the PCM with the latest calibration level. PERFORM the solenoid strategy download procedure, REFER to solenoid body strategy in <a data-linkid="ID0EXBAI" data-sectnum="307-01" class="section-link">Section 
+          307-01</a><span id="spanID0EXBAI"></span>. RERUN the <abbr title="Key ON Engine Running">KOER</abbr>  self-test and test the system for normal operation. 
+
+            </td>
+          </tr>
+            
+          </table>
+      </center><br><br>
+        </td>
+  </tr>
+      </table><br xmlns:str="http://xsltsl.org/string">
+    
+  
+
+
